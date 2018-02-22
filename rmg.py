@@ -38,7 +38,7 @@ import argparse
 import logging
 import rmgpy
 
-from rmgpy.rmg.main import RMG, initializeLog, processProfileStats, makeProfileGraph
+from rmgpy.rmg.main import RMG, initializeLog, processProfileStats, makeProfileGraph, process_profile_history
 
 ################################################################################
 
@@ -81,8 +81,13 @@ def parseCommandLineArguments():
     parser.add_argument('-p', '--profile', action='store_true', help='run under cProfile to gather profiling statistics, and postprocess them if job completes')
     parser.add_argument('-P', '--postprocess', action='store_true', help='postprocess profiling statistics from previous [failed] run; does not run the simulation')
 
-    parser.add_argument('-t', '--walltime', type=str, nargs=1, default='0',
-        metavar='HH:MM:SS', help='set the maximum execution time')
+    parser.add_argument('-pi', '--profile-iterations', action='store_true',
+                        help='run under cProfile and save independent statistics for each iteration')
+    parser.add_argument('-Pi', '--postprocess-iterations', action='store_true',
+                        help='postprocess profiling statistics from previous [failed] run; does not run the simulation')
+
+    parser.add_argument('-t', '--walltime', type=str, nargs=1, default='00:00:00:00',
+                        metavar='DD:HH:MM:SS', help='set the maximum execution time')
 
     return parser.parse_args()
 
@@ -115,6 +120,9 @@ if __name__ == '__main__':
         args.output_directory = inputDirectory
     if args.scratch_directory == '':
         args.scratch_directory = inputDirectory
+
+    if args.profile_iterations and (args.profile or args.postprocess):
+        raise ValueError('The --profile-iterations cannot be set at the same time as --profile or --postprocess.')
 
     if args.postprocess:
         print "Postprocessing the profiler statistics (will be appended to RMG.log)"
@@ -157,7 +165,17 @@ if __name__ == '__main__':
         log_file = os.path.join(args.output_directory,'RMG.log')
         processProfileStats(stats_file, log_file)
         makeProfileGraph(stats_file)
-        
+
+    elif args.profile_iterations:
+        if os.path.exists('profile.log'):
+            os.remove('profile.log')
+        rmg = RMG(inputFile=args.file, outputDirectory=args.output_directory, profile=True)
+        rmg.execute(**kwargs)
+        process_profile_history(args.output_directory)
+
+    elif args.postprocess_iterations:
+        process_profile_history(args.output_directory)
+
     else:
 
         rmg = RMG(inputFile=inputFile, outputDirectory=output_dir)
