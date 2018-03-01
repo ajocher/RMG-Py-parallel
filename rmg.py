@@ -159,7 +159,7 @@ if __name__ == '__main__':
         if os.path.exists('profile.log'):
             os.remove('profile.log')
         logging.info('Initiating RMG run with per iteration profiling using cProfile...')
-        rmg = RMG(inputFile=args.file, outputDirectory=args.output_directory, profile=True)
+        rmg = RMG(inputFile=inputFile, outputDirectory=output_dir, profile=True)
         rmg.execute(**kwargs)
 
     elif not args.postprocess:
