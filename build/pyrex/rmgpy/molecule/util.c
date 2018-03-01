@@ -822,14 +822,13 @@ static char __pyx_k_rmgpy_molecule_util[] = "rmgpy.molecule.util";
 static char __pyx_k_retrieveElementCount[] = "retrieveElementCount";
 static char __pyx_k_agglomerate_locals_lambda[] = "agglomerate.<locals>.<lambda>";
 static char __pyx_k_generate_combo_locals_lambda[] = "generate_combo.<locals>.<lambda>";
-static char __pyx_k_Users_agnes_PycharmProjects_RMG[] = "/Users/agnes/PycharmProjects/RMG-parallel/RMG-Py/rmgpy/molecule/util.py";
+static char __pyx_k_data1_ajocher_codes_RMG_RMG_par[] = "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/molecule/util.py";
 static PyObject *__pyx_kp_s_;
 static PyObject *__pyx_kp_s_A_Z_A_Z;
 static PyObject *__pyx_n_s_Exception;
 static PyObject *__pyx_n_s_I;
 static PyObject *__pyx_kp_s_InChI_1;
 static PyObject *__pyx_n_s_Molecule;
-static PyObject *__pyx_kp_s_Users_agnes_PycharmProjects_RMG;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_kp_s__3;
 static PyObject *__pyx_kp_s_a_z_0_9;
@@ -844,6 +843,7 @@ static PyObject *__pyx_n_s_combinations;
 static PyObject *__pyx_n_s_combos;
 static PyObject *__pyx_n_s_combos_one_sample;
 static PyObject *__pyx_n_s_count;
+static PyObject *__pyx_kp_s_data1_ajocher_codes_RMG_RMG_par;
 static PyObject *__pyx_n_s_element;
 static PyObject *__pyx_n_s_element_count;
 static PyObject *__pyx_n_s_filter;
@@ -3171,7 +3171,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_I, __pyx_k_I, sizeof(__pyx_k_I), 0, 0, 1, 1},
   {&__pyx_kp_s_InChI_1, __pyx_k_InChI_1, sizeof(__pyx_k_InChI_1), 0, 0, 1, 0},
   {&__pyx_n_s_Molecule, __pyx_k_Molecule, sizeof(__pyx_k_Molecule), 0, 0, 1, 1},
-  {&__pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_k_Users_agnes_PycharmProjects_RMG, sizeof(__pyx_k_Users_agnes_PycharmProjects_RMG), 0, 0, 1, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_kp_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 0},
   {&__pyx_kp_s_a_z_0_9, __pyx_k_a_z_0_9, sizeof(__pyx_k_a_z_0_9), 0, 0, 1, 0},
@@ -3186,6 +3185,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_combos, __pyx_k_combos, sizeof(__pyx_k_combos), 0, 0, 1, 1},
   {&__pyx_n_s_combos_one_sample, __pyx_k_combos_one_sample, sizeof(__pyx_k_combos_one_sample), 0, 0, 1, 1},
   {&__pyx_n_s_count, __pyx_k_count, sizeof(__pyx_k_count), 0, 0, 1, 1},
+  {&__pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_k_data1_ajocher_codes_RMG_RMG_par, sizeof(__pyx_k_data1_ajocher_codes_RMG_RMG_par), 0, 0, 1, 0},
   {&__pyx_n_s_element, __pyx_k_element, sizeof(__pyx_k_element), 0, 0, 1, 1},
   {&__pyx_n_s_element_count, __pyx_k_element_count, sizeof(__pyx_k_element_count), 0, 0, 1, 1},
   {&__pyx_n_s_filter, __pyx_k_filter, sizeof(__pyx_k_filter), 0, 0, 1, 1},
@@ -3269,7 +3269,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__4 = PyTuple_Pack(10, __pyx_n_s_obj, __pyx_n_s_element_count, __pyx_n_s_mf, __pyx_n_s_pieces, __pyx_n_s_piece, __pyx_n_s_match, __pyx_n_s_element, __pyx_n_s_count, __pyx_n_s_atom, __pyx_n_s_updated_count); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 6; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 10, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_n_s_retrieveElementCount, 6, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 6; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 10, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_n_s_retrieveElementCount, 6, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 6; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
   /* "rmgpy/molecule/util.py":37
  *         raise Exception
@@ -3281,7 +3281,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(7, __pyx_n_s_sample, __pyx_n_s_list_of_samples, __pyx_n_s_partitions, __pyx_n_s_sample_lists, __pyx_n_s_s, __pyx_n_s_one_sample_list, __pyx_n_s_index); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_n_s_partition, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_n_s_partition, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
   /* "rmgpy/molecule/util.py":80
  * 
@@ -3293,7 +3293,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(3, __pyx_n_s_groups, __pyx_n_s_result, __pyx_n_s_singletons); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_n_s_agglomerate, 80, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_n_s_agglomerate, 80, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
   /* "rmgpy/molecule/util.py":104
  *     return result
@@ -3305,7 +3305,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__10 = PyTuple_Pack(7, __pyx_n_s_samples, __pyx_n_s_sample_spaces, __pyx_n_s_combos, __pyx_n_s_sample, __pyx_n_s_sample_space, __pyx_n_s_combos_one_sample, __pyx_n_s_tup); if (unlikely(!__pyx_tuple__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_n_s_generate_combo, 104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_n_s_generate_combo, 104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
   /* "rmgpy/molecule/util.py":124
  *     return combos
@@ -3317,7 +3317,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__12 = PyTuple_Pack(5, __pyx_n_s_to_be_swapped, __pyx_n_s_sample, __pyx_n_s_original, __pyx_n_s_central, __pyx_n_s_new_partner); if (unlikely(!__pyx_tuple__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_n_s_swap, 124, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_n_s_swap, 124, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;

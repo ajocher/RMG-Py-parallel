@@ -1,0 +1,107 @@
+[2018-02-27 18:56:15,629] launcher  INFO    SCOOP 0.7 2.0 on linux2 using Python 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) [GCC 4.4.7 20120313 (Red Hat 4.4.7-1)], API: 1013
+[2018-02-27 18:56:15,629] launcher  INFO    Detected SLURM environment.
+[2018-02-27 18:56:15,629] launcher  INFO    Deploying 120 worker(s) over 1 host(s).
+[2018-02-27 18:56:15,630] launcher  DEBUG   Using hostname/ip: "node01" as external broker reference.
+[2018-02-27 18:56:15,630] launcher  DEBUG   The python executable to execute the program with is: /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python.
+[2018-02-27 18:56:15,630] launcher  INFO    Worker d--istribution: 
+[2018-02-27 18:56:15,630] launcher  INFO       node01:	119 + origin
+[2018-02-27 18:56:15,835] brokerLaunch (127.0.0.1:35969) DEBUG   Local broker launched on ports 35969, 46100.
+[2018-02-27 18:56:15,835] launcher  (127.0.0.1:35969) DEBUG   Initialising local origin worker 120 [node01].
+[2018-02-27 18:56:15,835] launcher  (127.0.0.1:35969) DEBUG   node01: Launching 'env PYTHONPATH=:/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/::/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/ /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python -m scoop.launch.__main__ 120 2 --size 120 --workingDirectory /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120 --brokerHostname 127.0.0.1 --externalBrokerHostname node01 --taskPort 35969 --metaPort 46100 --origin --backend=ZMQ -vv ../../../../../rmg.py input.py'
+Removing old /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/RMG_backup.log
+Moving /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/RMG.log to /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/RMG_backup.log
+
+Global RMG Settings:
+   database.directory   = /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input (Default, relative to RMG-Py source code)
+RMG execution initiated at Tue Feb 27 18:56:57 2018
+
+#########################################################
+# RMG-Py - Reaction Mechanism Generator in Python       #
+# Version: 2.0.0                                        #
+# Authors: RMG Developers (rmg_dev@mit.edu)             #
+# P.I.s:   William H. Green (whgreen@mit.edu)           #
+#          Richard H. West (r.west@neu.edu)             #
+# Website: http://reactionmechanismgenerator.github.io/ #
+#########################################################
+
+The current git HEAD for RMG-Py is:
+	4bee0e28ac97257f43b27e244684a03ea38d0a5f
+	Mon Feb 26 15:44:45 2018 -0500
+
+The current git HEAD for RMG-database is:
+	282488238f69b2c76e22fb6cc8cc6eafe26d9948
+	Mon Feb 26 15:52:50 2018 -0500
+
+Reading input file "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/input.py"...
+# Data sources
+database(
+    thermoLibraries = ['primaryThermoLibrary'],
+    reactionLibraries = [],
+    seedMechanisms = [],
+    kineticsDepositories = ['training'],
+    kineticsFamilies = 'default',
+    kineticsEstimator = 'rate rules',
+)
+
+# List of species
+species(
+    label='ethane',
+    reactive=True,
+    structure=SMILES("CC"),
+)
+
+# Reaction systems
+simpleReactor(
+    temperature=(1350,'K'),
+    pressure=(1.0,'bar'),
+    initialMoleFractions={
+        "ethane": 1.0,
+    },
+    terminationConversion={
+        'ethane': 0.9,
+    },
+    terminationTime=(1e6,'s'),
+)
+
+simulator(
+    atol=1e-16,
+    rtol=1e-8,
+)
+
+model(
+    toleranceKeepInEdge=0.0,
+    toleranceMoveToCore=0.1,
+    toleranceInterruptSimulation=0.1,
+    maximumEdgeSpecies=100000,
+)
+
+options(
+    units='si',
+    saveRestartPeriod=None,
+    generateOutputHTML=True,
+    generatePlots=False,
+    saveEdgeSpecies=True,
+    saveSimulationProfiles=True,
+)
+
+Warning: Generate Output HTML option was turned on. Note that this will slow down model generation.
+Warning: Edge species saving was turned on. This will slow down model generation for large simulations.
+[2018-02-27 18:56:58,546] shared    (192.168.2.1:60828)         Sending global variables ['speciesConstraints']...
+[2018-02-27 18:56:58,647] shared    (192.168.2.1:60828)         Sending global variables ['speciesConstraints']...
+[2018-02-27 18:56:58,850] shared    (192.168.2.1:60828)         Sending global variables ['quantumMechanics']...
+[2018-02-27 18:56:58,950] shared    (192.168.2.1:60828)         Sending global variables ['quantumMechanics']...
+
+Loading thermodynamics library from primaryThermoLibrary.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/thermo/libraries...
+Loading thermodynamics group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/thermo/groups...
+[2018-02-27 18:57:02,157] shared    (192.168.2.1:60828)         Sending global variables ['thermo']...
+[2018-02-27 18:57:04,945] shared    (192.168.2.1:60828)         Sending global variables ['thermo']...
+Loading transport library from PrimaryTransportLibrary.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/libraries...
+Loading transport library from GRI-Mech.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/libraries...
+Loading transport group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/groups...
+[2018-02-27 18:57:44,323] shared    (192.168.2.1:60828)         Sending global variables ['transport']...
+[2018-02-27 18:57:44,449] shared    (192.168.2.1:60828)         Sending global variables ['transport']...
+[2018-02-27 18:57:44,771] shared    (192.168.2.1:60828)         Sending global variables ['forbidden']...
+[2018-02-27 18:57:44,873] shared    (192.168.2.1:60828)         Sending global variables ['forbidden']...
+Loading default kinetics families from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/kinetics/families
+[2018-02-27 18:57:49,569] shared    (192.168.2.1:60828)         Sending global variables ['kinetics']...
+[2018-02-27 18:57:53,094] shared    (192.168.2.1:60828)         Sending global variables ['kinetics']...

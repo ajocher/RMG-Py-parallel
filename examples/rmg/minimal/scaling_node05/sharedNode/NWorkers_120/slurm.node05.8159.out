@@ -1,0 +1,1806 @@
+[2018-02-27 15:28:31,638] launcher  INFO    SCOOP 0.7 2.0 on linux2 using Python 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) [GCC 4.4.7 20120313 (Red Hat 4.4.7-1)], API: 1013
+[2018-02-27 15:28:31,639] launcher  INFO    Detected SLURM environment.
+[2018-02-27 15:28:31,639] launcher  INFO    Deploying 120 worker(s) over 1 host(s).
+[2018-02-27 15:28:31,639] launcher  DEBUG   Using hostname/ip: "node05" as external broker reference.
+[2018-02-27 15:28:31,639] launcher  DEBUG   The python executable to execute the program with is: /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python.
+[2018-02-27 15:28:31,639] launcher  INFO    Worker d--istribution: 
+[2018-02-27 15:28:31,639] launcher  INFO       node05:	119 + origin
+[2018-02-27 15:28:32,200] brokerLaunch (127.0.0.1:45464) DEBUG   Local broker launched on ports 45464, 44437.
+[2018-02-27 15:28:32,201] launcher  (127.0.0.1:45464) DEBUG   Initialising local origin worker 120 [node05].
+[2018-02-27 15:28:32,201] launcher  (127.0.0.1:45464) DEBUG   node05: Launching 'env PYTHONPATH=:/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/::/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/ /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python -m scoop.launch.__main__ 120 2 --size 120 --workingDirectory /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node05/NWorkers_120 --brokerHostname 127.0.0.1 --externalBrokerHostname node05 --taskPort 45464 --metaPort 44437 --origin --backend=ZMQ -vv ../../../../../rmg.py input.py'
+Removing old /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node05/NWorkers_120/RMG_backup.log
+Moving /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node05/NWorkers_120/RMG.log to /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node05/NWorkers_120/RMG_backup.log
+
+Global RMG Settings:
+   database.directory   = /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input (Default, relative to RMG-Py source code)
+RMG execution initiated at Tue Feb 27 15:29:21 2018
+
+#########################################################
+# RMG-Py - Reaction Mechanism Generator in Python       #
+# Version: 2.0.0                                        #
+# Authors: RMG Developers (rmg_dev@mit.edu)             #
+# P.I.s:   William H. Green (whgreen@mit.edu)           #
+#          Richard H. West (r.west@neu.edu)             #
+# Website: http://reactionmechanismgenerator.github.io/ #
+#########################################################
+
+The current git HEAD for RMG-Py is:
+	4bee0e28ac97257f43b27e244684a03ea38d0a5f
+	Mon Feb 26 15:44:45 2018 -0500
+
+The current git HEAD for RMG-database is:
+	282488238f69b2c76e22fb6cc8cc6eafe26d9948
+	Mon Feb 26 15:52:50 2018 -0500
+
+Reading input file "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node05/NWorkers_120/input.py"...
+# Data sources
+database(
+    thermoLibraries = ['primaryThermoLibrary'],
+    reactionLibraries = [],
+    seedMechanisms = [],
+    kineticsDepositories = ['training'],
+    kineticsFamilies = 'default',
+    kineticsEstimator = 'rate rules',
+)
+
+# List of species
+species(
+    label='ethane',
+    reactive=True,
+    structure=SMILES("CC"),
+)
+
+# Reaction systems
+simpleReactor(
+    temperature=(1350,'K'),
+    pressure=(1.0,'bar'),
+    initialMoleFractions={
+        "ethane": 1.0,
+    },
+    terminationConversion={
+        'ethane': 0.9,
+    },
+    terminationTime=(1e6,'s'),
+)
+
+simulator(
+    atol=1e-16,
+    rtol=1e-8,
+)
+
+model(
+    toleranceKeepInEdge=0.0,
+    toleranceMoveToCore=0.1,
+    toleranceInterruptSimulation=0.1,
+    maximumEdgeSpecies=100000,
+)
+
+options(
+    units='si',
+    saveRestartPeriod=None,
+    generateOutputHTML=True,
+    generatePlots=False,
+    saveEdgeSpecies=True,
+    saveSimulationProfiles=True,
+)
+
+Warning: Generate Output HTML option was turned on. Note that this will slow down model generation.
+Warning: Edge species saving was turned on. This will slow down model generation for large simulations.
+[2018-02-27 15:29:23,679] shared    (192.168.2.5:54329)         Sending global variables ['speciesConstraints']...
+[2018-02-27 15:29:23,780] shared    (192.168.2.5:54329)         Sending global variables ['speciesConstraints']...
+[2018-02-27 15:29:23,988] shared    (192.168.2.5:54329)         Sending global variables ['quantumMechanics']...
+[2018-02-27 15:29:24,089] shared    (192.168.2.5:54329)         Sending global variables ['quantumMechanics']...
+
+Loading thermodynamics library from primaryThermoLibrary.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/thermo/libraries...
+Loading thermodynamics group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/thermo/groups...
+[2018-02-27 15:29:25,741] shared    (192.168.2.5:54329)         Sending global variables ['thermo']...
+[2018-02-27 15:29:26,408] shared    (192.168.2.5:54329)         Sending global variables ['thermo']...
+Loading transport library from PrimaryTransportLibrary.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/libraries...
+Loading transport library from GRI-Mech.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/libraries...
+Loading transport group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/groups...
+[2018-02-27 15:34:20,070] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:20,188] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:20,306] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:20,423] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:20,540] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:20,657] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:20,774] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:20,894] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,011] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,128] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,250] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,367] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,485] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,601] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,719] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,835] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:21,951] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,068] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,185] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,302] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,418] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,535] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,652] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,774] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:22,888] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,004] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,123] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,240] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,357] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,471] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,582] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,700] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,817] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:23,932] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,049] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,164] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,281] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,398] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,522] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,641] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,759] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,879] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:24,995] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,113] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,231] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,349] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,466] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,582] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,700] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,817] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:25,929] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,045] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,162] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,279] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,398] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,518] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,641] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,759] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,876] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:26,990] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,105] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,220] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,339] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,458] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,574] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,697] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,810] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:27,928] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,044] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,162] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,278] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,400] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,521] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,633] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,749] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,871] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:28,995] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,117] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,229] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,342] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,459] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,575] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,692] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,809] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:29,924] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:30,038] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:30,155] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:30,271] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:30,389] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:30,805] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:30,922] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,039] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,157] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,275] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,394] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,512] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,630] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,748] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,865] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:31,983] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,099] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,218] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,341] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,459] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,572] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,689] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,806] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:32,922] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,041] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,158] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,271] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,386] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,502] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,621] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,736] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,852] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:33,969] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,086] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,204] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,320] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,444] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,562] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,679] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,799] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:34,916] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,035] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,153] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,269] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,386] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,503] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,621] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,747] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,874] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:35,987] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,104] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,231] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,350] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,466] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,597] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,713] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,827] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:36,948] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,066] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,182] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,299] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,414] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,533] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,650] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,771] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:37,897] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:38,009] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:38,123] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:38,241] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:38,358] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:38,662] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:38,777] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:38,893] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,011] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,122] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,238] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,352] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,465] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,580] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,696] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:39,813] shared    (192.168.2.5:54329)         Sending global variables ['transport']...
+[2018-02-27 15:34:45,634] shared    (192.168.2.5:54329)         Sending global variables ['forbidden']...
+[2018-02-27 15:34:45,740] shared    (192.168.2.5:54329)         Sending global variables ['forbidden']...
+Loading default kinetics families from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/kinetics/families
+[2018-02-27 15:34:49,054] shared    (192.168.2.5:54329)         Sending global variables ['kinetics']...
+[2018-02-27 15:34:50,612] shared    (192.168.2.5:54329)         Sending global variables ['kinetics']...
+Loading frequencies group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/statmech/groups...
+[2018-02-27 15:34:59,929] shared    (192.168.2.5:54329)         Sending global variables ['statmech']...
+[2018-02-27 15:35:00,033] shared    (192.168.2.5:54329)         Sending global variables ['statmech']...
+Loading Platts additivity group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/solvation/groups...
+[2018-02-27 15:35:00,459] shared    (192.168.2.5:54329)         Sending global variables ['solvation']...
+[2018-02-27 15:35:00,629] shared    (192.168.2.5:54329)         Sending global variables ['solvation']...
+Adding rate rules from training set in kinetics families...
+Filling in rate rules in kinetics families by averaging...
+NOT generating reactions for unreactive species Ar
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    Ar
+Created 0 new edge species
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 1 species and 0 reactions
+    The model edge has 1 species and 0 reactions
+
+
+NOT generating reactions for unreactive species He
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    He
+Created 0 new edge species
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 2 species and 0 reactions
+    The model edge has 1 species and 0 reactions
+
+
+NOT generating reactions for unreactive species Ne
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    Ne
+Created 0 new edge species
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 3 species and 0 reactions
+    The model edge has 1 species and 0 reactions
+
+
+NOT generating reactions for unreactive species N2
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    N2
+Created 0 new edge species
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 4 species and 0 reactions
+    The model edge has 1 species and 0 reactions
+
+
+Adding species ethane(1) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    ethane(1)
+Created 0 new edge species
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 5 species and 0 reactions
+    The model edge has 0 species and 0 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 5 new edge species
+    [CH2](2)
+    C(3)
+    [CH3](4)
+    C[CH2](5)
+    [H](6)
+Added 0 new core reactions
+Created 3 new edge reactions
+    [CH2](2) + C(3) <=> ethane(1)
+    [CH3](4) + [CH3](4) <=> ethane(1)
+    C[CH2](5) + [H](6) <=> ethane(1)
+
+After model enlargement:
+    The model core has 5 species and 0 reactions
+    The model edge has 5 species and 3 reactions
+
+
+Completed initial enlarge edge step...
+Saving current model core to Chemkin file...
+Chemkin file contains 0 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 0 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 3 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 3 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:00
+    Memory used: 461.95 MB
+
+Conducting simulation of reaction system 1...
+At time 1.0000e-15 s, species [CH3](4) exceeded the minimum rate for moving to model core
+    Characteristic rate: 0.0000e+00 mol/m^3*s
+    [CH3](4) rate: 3.5853e+03 mol/m^3*s
+    ethane(1) conversion: 0         
+At time 1.0000e-15 s, species [CH3](4) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 0.0000e+00 mol/m^3*s
+    [CH3](4) rate: 3.5853e+03 mol/m^3*s
+    ethane(1) conversion: 0         
+
+
+Adding species [CH3](4) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [CH3](4)
+Created 0 new edge species
+Moved 1 reactions from edge to core
+    [CH3](4) + [CH3](4) <=> ethane(1)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 6 species and 1 reactions
+    The model edge has 4 species and 2 reactions
+
+
+[2018-02-27 15:35:23,204] scoopzmq  (192.168.2.5:52229) DEBUG   192.168.2.5:52229: Could not send result directly to peer 192.168.2.5:54329, routing through broker.
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 1 new edge species
+    [CH2](7)
+Added 0 new core reactions
+Created 2 new edge reactions
+    [CH3](4) + ethane(1) <=> C(3) + C[CH2](5)
+    [CH2](7) + C(3) <=> [CH3](4) + [CH3](4)
+
+After model enlargement:
+    The model core has 6 species and 1 reactions
+    The model edge has 5 species and 4 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 1 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 1 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 5 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 5 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:01
+    Memory used: 463.31 MB
+
+Conducting simulation of reaction system 1...
+At time 6.5878e-07 s, species C[CH2](5) exceeded the minimum rate for moving to model core
+    Characteristic rate: 3.7272e+03 mol/m^3*s
+    C[CH2](5) rate: 3.8981e+02 mol/m^3*s (0.1046)
+    ethane(1) conversion: 0.0001294 
+At time 6.5878e-07 s, species C[CH2](5) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 3.7272e+03 mol/m^3*s
+    C[CH2](5) rate: 3.8981e+02 mol/m^3*s (0.1046)
+    ethane(1) conversion: 0.0001294 
+
+
+Adding species C[CH2](5) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    C[CH2](5)
+Created 0 new edge species
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 7 species and 1 reactions
+    The model edge has 4 species and 4 reactions
+
+
+Generating kinetics for new reactions...
+[2018-02-27 15:35:26,216] scoopzmq  (192.168.2.5:54329) Warning:  Lost track of future ('192.168.2.5:54329', 28):WorkerWrapper(Species(index=10, label="CCC", thermo=('192.168.2.5:54329', 28):WorkerWrapper(...){}=None, molecule=[Molecule(SMILES="CCC")], molecularWeight=(44.0956,'amu'), energyTransferModel=SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85)),){}=None. Resending it...
+Warning: Lost track of future ('192.168.2.5:54329', 28):WorkerWrapper(Species(index=10, label="CCC", thermo=('192.168.2.5:54329', 28):WorkerWrapper(...){}=None, molecule=[Molecule(SMILES="CCC")], molecularWeight=(44.0956,'amu'), energyTransferModel=SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85)),){}=None. Resending it...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 4 new edge species
+    C=C(8)
+    [CH2][CH2](9)
+    CCC(10)
+    CCCC(11)
+Added 0 new core reactions
+Created 7 new edge reactions
+    C=C(8) + [H](6) <=> C[CH2](5)
+    [H](6) + [CH2][CH2](9) <=> C[CH2](5)
+    [CH3](4) + C[CH2](5) <=> C=C(8) + C(3)
+    [CH2](7) + ethane(1) <=> [CH3](4) + C[CH2](5)
+    [CH3](4) + C[CH2](5) <=> CCC(10)
+    C[CH2](5) + C[CH2](5) <=> C=C(8) + ethane(1)
+    C[CH2](5) + C[CH2](5) <=> CCCC(11)
+
+After model enlargement:
+    The model core has 7 species and 1 reactions
+    The model edge has 8 species and 11 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 1 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 1 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 12 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 12 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:05
+    Memory used: 463.33 MB
+
+Conducting simulation of reaction system 1...
+At time 6.7423e-07 s, species C(3) exceeded the minimum rate for moving to model core
+    Characteristic rate: 3.7145e+03 mol/m^3*s
+    C(3) rate: 3.8733e+02 mol/m^3*s (0.1043)
+    ethane(1) conversion: 0.0001323 
+At time 6.7423e-07 s, species C(3) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 3.7145e+03 mol/m^3*s
+    C(3) rate: 3.8733e+02 mol/m^3*s (0.1043)
+    ethane(1) conversion: 0.0001323 
+
+
+Adding species C(3) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    C(3)
+Created 0 new edge species
+Moved 1 reactions from edge to core
+    [CH3](4) + ethane(1) <=> C(3) + C[CH2](5)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 8 species and 2 reactions
+    The model edge has 7 species and 10 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 1 new edge species
+    [H][H](12)
+Added 0 new core reactions
+Created 2 new edge reactions
+    [CH2](2) + [H][H](12) <=> C(3)
+    [CH3](4) + [H](6) <=> C(3)
+
+After model enlargement:
+    The model core has 8 species and 2 reactions
+    The model edge has 8 species and 12 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 2 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 2 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 14 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 14 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:05
+    Memory used: 463.34 MB
+
+Conducting simulation of reaction system 1...
+At time 2.0020e-07 s, species [H](6) exceeded the minimum rate for moving to model core
+    Characteristic rate: 3.9368e+03 mol/m^3*s
+    [H](6) rate: 4.4065e+02 mol/m^3*s (0.1119)
+    ethane(1) conversion: 4.15e-05  
+At time 2.0020e-07 s, species [H](6) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 3.9368e+03 mol/m^3*s
+    [H](6) rate: 4.4065e+02 mol/m^3*s (0.1119)
+    ethane(1) conversion: 4.15e-05  
+
+
+Adding species [H](6) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [H](6)
+Created 0 new edge species
+Moved 2 reactions from edge to core
+    C[CH2](5) + [H](6) <=> ethane(1)
+    [CH3](4) + [H](6) <=> C(3)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 9 species and 4 reactions
+    The model edge has 7 species and 10 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 0 new edge species
+Added 0 new core reactions
+Created 5 new edge reactions
+    [H](6) + ethane(1) <=> C[CH2](5) + [H][H](12)
+    [CH2](7) + [H][H](12) <=> [CH3](4) + [H](6)
+    C[CH2](5) + [H](6) <=> C=C(8) + [H][H](12)
+    C(3) + [H](6) <=> [CH3](4) + [H][H](12)
+    [H](6) + [H](6) <=> [H][H](12)
+
+After model enlargement:
+    The model core has 9 species and 4 reactions
+    The model edge has 7 species and 15 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 4 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 4 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 19 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 19 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:06
+    Memory used: 463.38 MB
+
+Conducting simulation of reaction system 1...
+At time 1.8929e-07 s, species C=C(8) exceeded the minimum rate for moving to model core
+    Characteristic rate: 3.9473e+03 mol/m^3*s
+    C=C(8) rate: 4.6443e+02 mol/m^3*s (0.1177)
+    ethane(1) conversion: 3.943e-05 
+At time 1.8929e-07 s, species C=C(8) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 3.9473e+03 mol/m^3*s
+    C=C(8) rate: 4.6443e+02 mol/m^3*s (0.1177)
+    ethane(1) conversion: 3.943e-05 
+
+
+Adding species C=C(8) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    C=C(8)
+Created 0 new edge species
+Moved 3 reactions from edge to core
+    C=C(8) + [H](6) <=> C[CH2](5)
+    [CH3](4) + C[CH2](5) <=> C=C(8) + C(3)
+    C[CH2](5) + C[CH2](5) <=> C=C(8) + ethane(1)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 10 species and 7 reactions
+    The model edge has 6 species and 12 reactions
+
+
+[2018-02-27 15:35:30,990] _types    (192.168.2.5:54329) Warning:  192.168.2.5:54329: Received an unexpected future: ('192.168.2.5:54329', 28)
+Warning: 192.168.2.5:54329: Received an unexpected future: ('192.168.2.5:54329', 28)
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 5 new edge species
+    [CH]=C(13)
+    [CH2]CC(14)
+    [CH2]CCC(15)
+    [CH2]CC[CH2](16)
+    C1CCC1(17)
+Added 0 new core reactions
+Created 12 new edge reactions
+    [H](6) + [CH]=C(13) <=> C=C(8)
+    [CH2][CH2](9) <=> C=C(8)
+    [CH2](7) + C[CH2](5) <=> C=C(8) + [CH3](4)
+    C(3) + [CH]=C(13) <=> C=C(8) + [CH3](4)
+    C=C(8) + [CH3](4) <=> [CH2]CC(14)
+    C[CH2](5) + [CH2][CH2](9) <=> C=C(8) + C[CH2](5)
+    [CH]=C(13) + ethane(1) <=> C=C(8) + C[CH2](5)
+    C=C(8) + C[CH2](5) <=> [CH2]CCC(15)
+    [H][H](12) + [CH]=C(13) <=> C=C(8) + [H](6)
+    C[CH2](5) + [CH]=C(13) <=> C=C(8) + C=C(8)
+    [CH2]CC[CH2](16) <=> C=C(8) + C=C(8)
+    C=C(8) + C=C(8) <=> C1CCC1(17)
+
+After model enlargement:
+    The model core has 10 species and 7 reactions
+    The model edge has 11 species and 24 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 7 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 7 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 31 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 31 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:14
+    Memory used: 463.38 MB
+
+Conducting simulation of reaction system 1...
+At time 3.4285e-07 s, species [H][H](12) exceeded the minimum rate for moving to model core
+    Characteristic rate: 3.8699e+03 mol/m^3*s
+    [H][H](12) rate: 3.9642e+02 mol/m^3*s (0.1024)
+    ethane(1) conversion: 7.279e-05 
+At time 3.4285e-07 s, species [H][H](12) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 3.8699e+03 mol/m^3*s
+    [H][H](12) rate: 3.9642e+02 mol/m^3*s (0.1024)
+    ethane(1) conversion: 7.279e-05 
+
+
+Adding species [H][H](12) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [H][H](12)
+Created 0 new edge species
+Moved 4 reactions from edge to core
+    [H](6) + ethane(1) <=> C[CH2](5) + [H][H](12)
+    C[CH2](5) + [H](6) <=> C=C(8) + [H][H](12)
+    C(3) + [H](6) <=> [CH3](4) + [H][H](12)
+    [H](6) + [H](6) <=> [H][H](12)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 11 species and 11 reactions
+    The model edge has 10 species and 20 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 0 new edge species
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 11 species and 11 reactions
+    The model edge has 10 species and 20 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 11 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 11 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 31 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 31 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:14
+    Memory used: 463.39 MB
+
+Conducting simulation of reaction system 1...
+At time 1.5383e-04 s, species [CH2]CC(14) exceeded the minimum rate for moving to model core
+    Characteristic rate: 1.0219e+04 mol/m^3*s
+    [CH2]CC(14) rate: 1.0317e+03 mol/m^3*s (0.101)
+    ethane(1) conversion: 0.1568    
+At time 1.5383e-04 s, species [CH2]CC(14) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 1.0219e+04 mol/m^3*s
+    [CH2]CC(14) rate: 1.0317e+03 mol/m^3*s (0.101)
+    ethane(1) conversion: 0.1568    
+
+
+Adding species [CH2]CC(14) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [CH2]CC(14)
+Created 0 new edge species
+Moved 1 reactions from edge to core
+    C=C(8) + [CH3](4) <=> [CH2]CC(14)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 12 species and 12 reactions
+    The model edge has 9 species and 19 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 7 new edge species
+    C=CC(18)
+    C[CH]C(19)
+    [CH2][CH]C(20)
+    [CH2]C[CH2](21)
+    CCCCC(22)
+    [CH2]CCCC(23)
+    CCCCCC(24)
+Added 0 new core reactions
+Created 27 new edge reactions
+    [H](6) + C=CC(18) <=> [CH2]CC(14)
+    [CH2](2) + C[CH2](5) <=> [CH2]CC(14)
+    [CH2]CC(14) <=> C[CH]C(19)
+    [CH3](4) + [CH2][CH2](9) <=> [CH2]CC(14)
+    [H](6) + [CH2][CH]C(20) <=> [CH2]CC(14)
+    [H](6) + [CH2]C[CH2](21) <=> [CH2]CC(14)
+    [CH2]CC(14) + ethane(1) <=> C[CH2](5) + CCC(10)
+    [CH3](4) + [CH2]CC(14) <=> C(3) + C=CC(18)
+    [CH2](7) + CCC(10) <=> [CH3](4) + [CH2]CC(14)
+    [CH3](4) + [CH2]CC(14) <=> C(3) + [CH2]C[CH2](21)
+    [CH3](4) + [CH2]CC(14) <=> CCCC(11)
+    C[CH2](5) + [CH2]CC(14) <=> C=CC(18) + ethane(1)
+    C[CH2](5) + [CH2]CC(14) <=> C=C(8) + CCC(10)
+    [CH2]C[CH2](21) + ethane(1) <=> C[CH2](5) + [CH2]CC(14)
+    C[CH2](5) + [CH2]CC(14) <=> CCCCC(22)
+    C(3) + [CH2]CC(14) <=> [CH3](4) + CCC(10)
+    [H](6) + [CH2]CC(14) <=> [H][H](12) + C=CC(18)
+    [H](6) + [CH2]CC(14) <=> [H][H](12) + [CH2]C[CH2](21)
+    [H](6) + [CH2]CC(14) <=> CCC(10)
+    C[CH2](5) + [CH2][CH]C(20) <=> C=C(8) + [CH2]CC(14)
+    C[CH2](5) + [CH2]C[CH2](21) <=> C=C(8) + [CH2]CC(14)
+    [CH]=C(13) + CCC(10) <=> C=C(8) + [CH2]CC(14)
+    C=C(8) + [CH2]CC(14) <=> [CH2]CCCC(23)
+    [H][H](12) + [CH2]CC(14) <=> [H](6) + CCC(10)
+    [CH2]CC(14) + [CH2]CC(14) <=> CCC(10) + C=CC(18)
+    [CH2]CC(14) + [CH2]CC(14) <=> [CH2]C[CH2](21) + CCC(10)
+    [CH2]CC(14) + [CH2]CC(14) <=> CCCCCC(24)
+
+After model enlargement:
+    The model core has 12 species and 12 reactions
+    The model edge has 16 species and 46 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 12 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 12 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 58 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 58 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:15
+    Memory used: 463.47 MB
+
+Conducting simulation of reaction system 1...
+At time 3.4519e-04 s, species [CH]=C(13) exceeded the minimum rate for moving to model core
+    Characteristic rate: 6.3386e+03 mol/m^3*s
+    [CH]=C(13) rate: 6.4854e+02 mol/m^3*s (0.1023)
+    ethane(1) conversion: 0.2893    
+At time 3.4519e-04 s, species [CH]=C(13) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 6.3386e+03 mol/m^3*s
+    [CH]=C(13) rate: 6.4854e+02 mol/m^3*s (0.1023)
+    ethane(1) conversion: 0.2893    
+
+
+Adding species [CH]=C(13) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [CH]=C(13)
+Created 0 new edge species
+Moved 5 reactions from edge to core
+    [H](6) + [CH]=C(13) <=> C=C(8)
+    C(3) + [CH]=C(13) <=> C=C(8) + [CH3](4)
+    [CH]=C(13) + ethane(1) <=> C=C(8) + C[CH2](5)
+    [H][H](12) + [CH]=C(13) <=> C=C(8) + [H](6)
+    C[CH2](5) + [CH]=C(13) <=> C=C(8) + C=C(8)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 13 species and 17 reactions
+    The model edge has 15 species and 41 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 6 new edge species
+    C#C(25)
+    [CH]=[CH](26)
+    C=CCC(27)
+    [CH2]CC=C(28)
+    C=CCCC(29)
+    C=CC=C(30)
+Added 0 new core reactions
+Created 21 new edge reactions
+    [H](6) + C#C(25) <=> [CH]=C(13)
+    [H](6) + [CH]=[CH](26) <=> [CH]=C(13)
+    [CH3](4) + [CH]=C(13) <=> C(3) + C#C(25)
+    C=C(8) + [CH2](7) <=> [CH3](4) + [CH]=C(13)
+    [CH3](4) + [CH]=C(13) <=> C(3) + [CH]=[CH](26)
+    [CH3](4) + [CH]=C(13) <=> C=CC(18)
+    C[CH2](5) + [CH]=C(13) <=> C#C(25) + ethane(1)
+    [CH]=[CH](26) + ethane(1) <=> C[CH2](5) + [CH]=C(13)
+    C[CH2](5) + [CH]=C(13) <=> C=CCC(27)
+    [H](6) + [CH]=C(13) <=> [H][H](12) + C#C(25)
+    [H](6) + [CH]=C(13) <=> [CH]=[CH](26) + [H][H](12)
+    C[CH2](5) + [CH]=[CH](26) <=> C=C(8) + [CH]=C(13)
+    C=C(8) + [CH]=C(13) <=> [CH2]CC=C(28)
+    [CH]=C(13) + [CH2]CC(14) <=> CCC(10) + C#C(25)
+    [CH]=C(13) + [CH2]CC(14) <=> C=C(8) + C=CC(18)
+    [CH]=C(13) + [CH2]CC(14) <=> C=C(8) + [CH2]C[CH2](21)
+    [CH]=[CH](26) + CCC(10) <=> [CH]=C(13) + [CH2]CC(14)
+    [CH]=C(13) + [CH2]CC(14) <=> C=CCCC(29)
+    [CH]=C(13) + [CH]=C(13) <=> C=C(8) + C#C(25)
+    C=C(8) + [CH]=[CH](26) <=> [CH]=C(13) + [CH]=C(13)
+    [CH]=C(13) + [CH]=C(13) <=> C=CC=C(30)
+
+After model enlargement:
+    The model core has 13 species and 17 reactions
+    The model edge has 21 species and 62 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 17 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 17 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 79 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 79 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:17
+    Memory used: 463.47 MB
+
+Conducting simulation of reaction system 1...
+At time 5.4599e-06 s, species C#C(25) exceeded the minimum rate for moving to model core
+    Characteristic rate: 1.7930e+04 mol/m^3*s
+    C#C(25) rate: 1.8473e+03 mol/m^3*s (0.103)
+    ethane(1) conversion: 0.004961  
+At time 5.4599e-06 s, species C#C(25) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 1.7930e+04 mol/m^3*s
+    C#C(25) rate: 1.8473e+03 mol/m^3*s (0.103)
+    ethane(1) conversion: 0.004961  
+
+
+Adding species C#C(25) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    C#C(25)
+Created 0 new edge species
+Moved 5 reactions from edge to core
+    [H](6) + C#C(25) <=> [CH]=C(13)
+    [CH3](4) + [CH]=C(13) <=> C(3) + C#C(25)
+    C[CH2](5) + [CH]=C(13) <=> C#C(25) + ethane(1)
+    [H](6) + [CH]=C(13) <=> [H][H](12) + C#C(25)
+    [CH]=C(13) + [CH]=C(13) <=> C=C(8) + C#C(25)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 14 species and 22 reactions
+    The model edge has 20 species and 57 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 7 new edge species
+    [C]#C(31)
+    [CH]=CC(32)
+    [CH]=CCC(33)
+    [CH]=CC[CH2](34)
+    [CH]=CCCC(35)
+    [CH]=CC=C(36)
+    [CH]=CC=[CH](37)
+Added 0 new core reactions
+Created 17 new edge reactions
+    [H](6) + [C]#C(31) <=> C#C(25)
+    [CH2](7) + [CH]=C(13) <=> [CH3](4) + C#C(25)
+    C(3) + [C]#C(31) <=> [CH3](4) + C#C(25)
+    [CH3](4) + C#C(25) <=> [CH]=CC(32)
+    [CH2][CH2](9) + [CH]=C(13) <=> C[CH2](5) + C#C(25)
+    [C]#C(31) + ethane(1) <=> C[CH2](5) + C#C(25)
+    C[CH2](5) + C#C(25) <=> [CH]=CCC(33)
+    [H][H](12) + [C]#C(31) <=> [H](6) + C#C(25)
+    [CH]=CC[CH2](34) <=> C=C(8) + C#C(25)
+    [CH2][CH]C(20) + [CH]=C(13) <=> [CH2]CC(14) + C#C(25)
+    [CH2]C[CH2](21) + [CH]=C(13) <=> [CH2]CC(14) + C#C(25)
+    CCC(10) + [C]#C(31) <=> [CH2]CC(14) + C#C(25)
+    [CH2]CC(14) + C#C(25) <=> [CH]=CCCC(35)
+    [CH]=[CH](26) + [CH]=C(13) <=> [CH]=C(13) + C#C(25)
+    C=C(8) + [C]#C(31) <=> [CH]=C(13) + C#C(25)
+    [CH]=C(13) + C#C(25) <=> [CH]=CC=C(36)
+    [CH]=CC=[CH](37) <=> C#C(25) + C#C(25)
+
+After model enlargement:
+    The model core has 14 species and 22 reactions
+    The model edge has 27 species and 74 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 22 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 22 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 96 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 96 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:18
+    Memory used: 463.47 MB
+
+Conducting simulation of reaction system 1...
+At time 6.4111e-04 s, species [CH]=CC(32) exceeded the minimum rate for moving to model core
+    Characteristic rate: 3.8657e+03 mol/m^3*s
+    [CH]=CC(32) rate: 3.8738e+02 mol/m^3*s (0.1002)
+    ethane(1) conversion: 0.4556    
+At time 6.4111e-04 s, species [CH]=CC(32) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 3.8657e+03 mol/m^3*s
+    [CH]=CC(32) rate: 3.8738e+02 mol/m^3*s (0.1002)
+    ethane(1) conversion: 0.4556    
+
+
+Adding species [CH]=CC(32) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [CH]=CC(32)
+Created 0 new edge species
+Moved 1 reactions from edge to core
+    [CH3](4) + C#C(25) <=> [CH]=CC(32)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 15 species and 23 reactions
+    The model edge has 26 species and 73 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 12 new edge species
+    C#CC(38)
+    C=[C]C(39)
+    [CH2]C=C(40)
+    [CH]=C[CH2](41)
+    [CH]=[C]C(42)
+    CC=CC(43)
+    CC=CCC(44)
+    [CH2]CC=CC(45)
+    CC=CCCC(46)
+    C=CC=CC(47)
+    [CH]=CC=CC(48)
+    CC=CC=CC(49)
+Added 0 new core reactions
+Created 46 new edge reactions
+    [H](6) + C#CC(38) <=> [CH]=CC(32)
+    [CH2](2) + [CH]=C(13) <=> [CH]=CC(32)
+    [CH]=CC(32) <=> C=[C]C(39)
+    [CH]=CC(32) <=> [CH2]C=C(40)
+    [CH3](4) + [CH]=[CH](26) <=> [CH]=CC(32)
+    [H](6) + [CH]=C[CH2](41) <=> [CH]=CC(32)
+    [H](6) + [CH]=[C]C(42) <=> [CH]=CC(32)
+    [CH]=CC(32) + ethane(1) <=> C[CH2](5) + C=CC(18)
+    [CH3](4) + [CH]=CC(32) <=> C(3) + C#CC(38)
+    [CH3](4) + [CH]=CC(32) <=> [CH2](7) + C=CC(18)
+    [CH3](4) + [CH]=CC(32) <=> C(3) + [CH]=C[CH2](41)
+    [CH3](4) + [CH]=CC(32) <=> C(3) + [CH]=[C]C(42)
+    [CH3](4) + [CH]=CC(32) <=> CC=CC(43)
+    C[CH2](5) + [CH]=CC(32) <=> C#CC(38) + ethane(1)
+    C[CH2](5) + [CH]=CC(32) <=> C=C(8) + C=CC(18)
+    C[CH2](5) + [CH]=CC(32) <=> [CH]=C[CH2](41) + ethane(1)
+    [CH]=[C]C(42) + ethane(1) <=> C[CH2](5) + [CH]=CC(32)
+    C[CH2](5) + [CH]=CC(32) <=> CC=CCC(44)
+    C(3) + [CH]=CC(32) <=> [CH3](4) + C=CC(18)
+    [H](6) + [CH]=CC(32) <=> C#CC(38) + [H][H](12)
+    [H](6) + [CH]=CC(32) <=> [CH]=C[CH2](41) + [H][H](12)
+    [H](6) + [CH]=CC(32) <=> [CH]=[C]C(42) + [H][H](12)
+    [H](6) + [CH]=CC(32) <=> C=CC(18)
+    C[CH2](5) + [CH]=C[CH2](41) <=> C=C(8) + [CH]=CC(32)
+    C=C(8) + [CH]=CC(32) <=> [CH]=C(13) + C=CC(18)
+    C=C(8) + [CH]=CC(32) <=> [CH2]CC=CC(45)
+    [CH]=CC(32) + [H][H](12) <=> [H](6) + C=CC(18)
+    [CH]=CC(32) + [CH2]CC(14) <=> C#CC(38) + CCC(10)
+    [CH]=CC(32) + [CH2]CC(14) <=> C=CC(18) + C=CC(18)
+    [CH]=CC(32) + [CH2]CC(14) <=> [CH2]C[CH2](21) + C=CC(18)
+    [CH]=CC(32) + [CH2]CC(14) <=> [CH]=C[CH2](41) + CCC(10)
+    [CH]=[C]C(42) + CCC(10) <=> [CH]=CC(32) + [CH2]CC(14)
+    [CH]=CC(32) + [CH2]CC(14) <=> CC=CCCC(46)
+    [CH]=CC(32) + [CH]=C(13) <=> C=C(8) + C#CC(38)
+    [CH]=CC(32) + [CH]=C(13) <=> C=CC(18) + C#C(25)
+    [CH]=[CH](26) + C=CC(18) <=> [CH]=CC(32) + [CH]=C(13)
+    [CH]=CC(32) + [CH]=C(13) <=> C=C(8) + [CH]=C[CH2](41)
+    [CH]=CC(32) + [CH]=C(13) <=> C=C(8) + [CH]=[C]C(42)
+    [CH]=CC(32) + [CH]=C(13) <=> C=CC=CC(47)
+    [CH]=C[CH2](41) + [CH]=C(13) <=> [CH]=CC(32) + C#C(25)
+    [C]#C(31) + C=CC(18) <=> [CH]=CC(32) + C#C(25)
+    [CH]=CC(32) + C#C(25) <=> [CH]=CC=CC(48)
+    [CH]=CC(32) + [CH]=CC(32) <=> C#CC(38) + C=CC(18)
+    [CH]=CC(32) + [CH]=CC(32) <=> [CH]=C[CH2](41) + C=CC(18)
+    [CH]=CC(32) + [CH]=CC(32) <=> [CH]=[C]C(42) + C=CC(18)
+    [CH]=CC(32) + [CH]=CC(32) <=> CC=CC=CC(49)
+
+After model enlargement:
+    The model core has 15 species and 23 reactions
+    The model edge has 38 species and 119 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 23 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 23 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 142 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 142 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:19
+    Memory used: 463.53 MB
+
+Conducting simulation of reaction system 1...
+At time 1.2596e-03 s, species [CH2]CC=C(28) exceeded the minimum rate for moving to model core
+    Characteristic rate: 1.7807e+03 mol/m^3*s
+    [CH2]CC=C(28) rate: 1.7897e+02 mol/m^3*s (0.1005)
+    ethane(1) conversion: 0.6368    
+At time 1.2596e-03 s, species [CH2]CC=C(28) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 1.7807e+03 mol/m^3*s
+    [CH2]CC=C(28) rate: 1.7897e+02 mol/m^3*s (0.1005)
+    ethane(1) conversion: 0.6368    
+
+
+Adding species [CH2]CC=C(28) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [CH2]CC=C(28)
+Created 0 new edge species
+Moved 1 reactions from edge to core
+    C=C(8) + [CH]=C(13) <=> [CH2]CC=C(28)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 16 species and 24 reactions
+    The model edge has 37 species and 118 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 37 new edge species
+    [CH2]C1CC1(50)
+    [CH]1CCC1(51)
+    C=C[CH]C(52)
+    C=[C]CC(53)
+    [CH2][CH]C=C(54)
+    [CH2]C[C]=C(55)
+    [CH2][CH]C[CH2](56)
+    [CH2]C[CH]C(57)
+    [CH2]CC([CH2])C(58)
+    [CH2]C[CH]CC(59)
+    [CH2]CC([CH2])CC(60)
+    [CH2]C[CH]CCC(61)
+    C=CCCCC(62)
+    [CH2]CCCC=C(63)
+    [CH2]C[CH]CC[CH2](64)
+    [CH2]CC([CH2])C[CH2](65)
+    [CH2]CC1CCC1(66)
+    [CH2]CC([CH2])CCC(67)
+    [CH2]C[CH]CCCC(68)
+    C=CCCCCC(69)
+    [CH2]CC([CH2])C=C(70)
+    [CH2]C[CH]CC=C(71)
+    C=CCCC=C(72)
+    [CH]=CCCC=C(73)
+    [CH]=CC[CH]C[CH2](74)
+    [CH]=CC([CH2])C[CH2](75)
+    [CH2]CC([CH2])C=CC(76)
+    [CH2]C[CH]CC=CC(77)
+    C=CCCC=CC(78)
+    [CH2]CC([CH2])CCC=C(79)
+    [CH2]C[CH]CCCC=C(80)
+    [CH2]C[CH]CC[CH]C[CH2](81)
+    [CH2]C[CH]CC([CH2])C[CH2](82)
+    [CH2]CC([CH2])C([CH2])C[CH2](83)
+    C=CCCCCC=C(84)
+    [CH2]CC1CC(C[CH2])C1(85)
+    [CH2]CC1CCC1C[CH2](86)
+Added 0 new core reactions
+Created 107 new edge reactions
+    [CH2]CC=C(28) <=> [CH2]C1CC1(50)
+    [CH2]CC=C(28) <=> [CH]1CCC1(51)
+    [H](6) + C=CC=C(30) <=> [CH2]CC=C(28)
+    C=C[CH]C(52) <=> [CH2]CC=C(28)
+    C=[C]CC(53) <=> [CH2]CC=C(28)
+    [CH]=CCC(33) <=> [CH2]CC=C(28)
+    [CH2][CH2](9) + [CH]=C(13) <=> [CH2]CC=C(28)
+    [CH2][CH]C=C(54) + [H](6) <=> [CH2]CC=C(28)
+    [CH2]C[C]=C(55) + [H](6) <=> [CH2]CC=C(28)
+    [H](6) + [CH]=CC[CH2](34) <=> [CH2]CC=C(28)
+    [CH2][CH]C[CH2](56) <=> [CH2]CC=C(28)
+    C[CH2](5) + [CH2]CC[CH2](16) <=> [CH2]CC=C(28) + ethane(1)
+    [CH2]C[CH]C(57) + C[CH2](5) <=> [CH2]CC=C(28) + ethane(1)
+    [CH2]CC=C(28) + ethane(1) <=> C[CH2](5) + C=CCC(27)
+    [CH3](4) + [CH2]CC=C(28) <=> C(3) + C=CC=C(30)
+    [CH2](7) + [CH2]CC[CH2](16) <=> [CH3](4) + [CH2]CC=C(28)
+    [CH2](7) + [CH2]C[CH]C(57) <=> [CH3](4) + [CH2]CC=C(28)
+    [CH2](7) + C=CCC(27) <=> [CH3](4) + [CH2]CC=C(28)
+    [CH3](4) + [CH2]CC=C(28) <=> [CH2]C[C]=C(55) + C(3)
+    C(3) + [CH]=CC[CH2](34) <=> [CH3](4) + [CH2]CC=C(28)
+    [CH3](4) + [CH2]CC=C(28) <=> [CH2]CC([CH2])C(58)
+    [CH3](4) + [CH2]CC=C(28) <=> [CH2]C[CH]CC(59)
+    [CH3](4) + [CH2]CC=C(28) <=> C=CCCC(29)
+    C[CH2](5) + [CH2]CC=C(28) <=> C=CC=C(30) + ethane(1)
+    C[CH2](5) + [CH2]CC=C(28) <=> C=C(8) + C=CCC(27)
+    [CH2][CH2](9) + [CH2]CC[CH2](16) <=> C[CH2](5) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [CH2][CH2](9) <=> C[CH2](5) + [CH2]CC=C(28)
+    [CH2]C[C]=C(55) + ethane(1) <=> C[CH2](5) + [CH2]CC=C(28)
+    [CH]=CC[CH2](34) + ethane(1) <=> C[CH2](5) + [CH2]CC=C(28)
+    C[CH2](5) + [CH2]CC=C(28) <=> [CH2]CC([CH2])CC(60)
+    C[CH2](5) + [CH2]CC=C(28) <=> [CH2]C[CH]CCC(61)
+    C[CH2](5) + [CH2]CC=C(28) <=> C=CCCCC(62)
+    [CH3](4) + [CH2]CC[CH2](16) <=> C(3) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [CH3](4) <=> C(3) + [CH2]CC=C(28)
+    [CH3](4) + C=CCC(27) <=> C(3) + [CH2]CC=C(28)
+    [H](6) + [CH2]CC=C(28) <=> [H][H](12) + C=CC=C(30)
+    [H](6) + [CH2]CC=C(28) <=> [CH2]C[C]=C(55) + [H][H](12)
+    [CH]=CC[CH2](34) + [H][H](12) <=> [H](6) + [CH2]CC=C(28)
+    [H](6) + [CH2]CC=C(28) <=> [CH2]CC[CH2](16)
+    [H](6) + [CH2]CC=C(28) <=> [CH2]C[CH]C(57)
+    [H](6) + [CH2]CC=C(28) <=> C=CCC(27)
+    [CH]=C(13) + [CH2]CC[CH2](16) <=> C=C(8) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [CH]=C(13) <=> C=C(8) + [CH2]CC=C(28)
+    [CH2][CH]C=C(54) + C[CH2](5) <=> C=C(8) + [CH2]CC=C(28)
+    C[CH2](5) + [CH]=CC[CH2](34) <=> C=C(8) + [CH2]CC=C(28)
+    [CH]=C(13) + C=CCC(27) <=> C=C(8) + [CH2]CC=C(28)
+    C=C(8) + [CH2]CC=C(28) <=> [CH2]CCCC=C(63)
+    [CH2]C[CH]CC[CH2](64) <=> C=C(8) + [CH2]CC=C(28)
+    [CH2]CC([CH2])C[CH2](65) <=> C=C(8) + [CH2]CC=C(28)
+    C=C(8) + [CH2]CC=C(28) <=> [CH2]CC1CCC1(66)
+    [H](6) + [CH2]CC[CH2](16) <=> [H][H](12) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [H](6) <=> [H][H](12) + [CH2]CC=C(28)
+    [H](6) + C=CCC(27) <=> [H][H](12) + [CH2]CC=C(28)
+    [CH2]CC=C(28) + [CH2]CC(14) <=> CCC(10) + C=CC=C(30)
+    [CH2]CC=C(28) + [CH2]CC(14) <=> C=CCC(27) + C=CC(18)
+    [CH2][CH]C(20) + [CH2]CC[CH2](16) <=> [CH2]CC=C(28) + [CH2]CC(14)
+    [CH2]C[CH]C(57) + [CH2][CH]C(20) <=> [CH2]CC=C(28) + [CH2]CC(14)
+    [CH2]C[CH2](21) + [CH2]CC[CH2](16) <=> [CH2]CC=C(28) + [CH2]CC(14)
+    [CH2]C[CH]C(57) + [CH2]C[CH2](21) <=> [CH2]CC=C(28) + [CH2]CC(14)
+    [CH2]C[CH2](21) + C=CCC(27) <=> [CH2]CC=C(28) + [CH2]CC(14)
+    [CH2]CC=C(28) + [CH2]CC(14) <=> [CH2]C[C]=C(55) + CCC(10)
+    [CH]=CC[CH2](34) + CCC(10) <=> [CH2]CC=C(28) + [CH2]CC(14)
+    [CH2]CC=C(28) + [CH2]CC(14) <=> [CH2]CC([CH2])CCC(67)
+    [CH2]CC=C(28) + [CH2]CC(14) <=> [CH2]C[CH]CCCC(68)
+    [CH2]CC=C(28) + [CH2]CC(14) <=> C=CCCCCC(69)
+    [CH]=C(13) + [CH2]CC=C(28) <=> C=C(8) + C=CC=C(30)
+    [CH]=C(13) + [CH2]CC=C(28) <=> C=CCC(27) + C#C(25)
+    [CH]=[CH](26) + [CH2]CC[CH2](16) <=> [CH]=C(13) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [CH]=[CH](26) <=> [CH]=C(13) + [CH2]CC=C(28)
+    [CH]=[CH](26) + C=CCC(27) <=> [CH]=C(13) + [CH2]CC=C(28)
+    [CH]=C(13) + [CH2]CC=C(28) <=> C=C(8) + [CH2]C[C]=C(55)
+    C=C(8) + [CH]=CC[CH2](34) <=> [CH]=C(13) + [CH2]CC=C(28)
+    [CH]=C(13) + [CH2]CC=C(28) <=> [CH2]CC([CH2])C=C(70)
+    [CH]=C(13) + [CH2]CC=C(28) <=> [CH2]C[CH]CC=C(71)
+    [CH]=C(13) + [CH2]CC=C(28) <=> C=CCCC=C(72)
+    [CH2][CH]C=C(54) + [CH]=C(13) <=> [CH2]CC=C(28) + C#C(25)
+    [CH]=CC[CH2](34) + [CH]=C(13) <=> [CH2]CC=C(28) + C#C(25)
+    [C]#C(31) + C=CCC(27) <=> [CH2]CC=C(28) + C#C(25)
+    [CH2]CC=C(28) + C#C(25) <=> [CH]=CCCC=C(73)
+    [CH]=CC[CH]C[CH2](74) <=> [CH2]CC=C(28) + C#C(25)
+    [CH]=CC([CH2])C[CH2](75) <=> [CH2]CC=C(28) + C#C(25)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> C=CC(18) + C=CC=C(30)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> C#CC(38) + C=CCC(27)
+    [CH]=C[CH2](41) + [CH2]CC[CH2](16) <=> [CH]=CC(32) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [CH]=C[CH2](41) <=> [CH]=CC(32) + [CH2]CC=C(28)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> [CH]=C[CH2](41) + C=CCC(27)
+    [CH]=[C]C(42) + C=CCC(27) <=> [CH]=CC(32) + [CH2]CC=C(28)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> [CH2]C[C]=C(55) + C=CC(18)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> [CH]=CC[CH2](34) + C=CC(18)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> [CH2]CC([CH2])C=CC(76)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> [CH2]C[CH]CC=CC(77)
+    [CH]=CC(32) + [CH2]CC=C(28) <=> C=CCCC=CC(78)
+    [CH2]CC=C(28) + [CH2]CC=C(28) <=> C=CCC(27) + C=CC=C(30)
+    [CH2][CH]C=C(54) + [CH2]CC[CH2](16) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH2][CH]C=C(54) + [CH2]C[CH]C(57) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH]=CC[CH2](34) + [CH2]CC[CH2](16) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [CH]=CC[CH2](34) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH2]CC=C(28) + [CH2]CC=C(28) <=> [CH2]C[C]=C(55) + C=CCC(27)
+    [CH]=CC[CH2](34) + C=CCC(27) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH2]CC=C(28) + [CH2]CC=C(28) <=> [CH2]CC([CH2])CCC=C(79)
+    [CH2]CC=C(28) + [CH2]CC=C(28) <=> [CH2]C[CH]CCCC=C(80)
+    [CH2]C[CH]CC[CH]C[CH2](81) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH2]C[CH]CC([CH2])C[CH2](82) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH2]CC([CH2])C([CH2])C[CH2](83) <=> [CH2]CC=C(28) + [CH2]CC=C(28)
+    [CH2]CC=C(28) + [CH2]CC=C(28) <=> C=CCCCCC=C(84)
+    [CH2]CC=C(28) + [CH2]CC=C(28) <=> [CH2]CC1CC(C[CH2])C1(85)
+    [CH2]CC=C(28) + [CH2]CC=C(28) <=> [CH2]CC1CCC1C[CH2](86)
+
+After model enlargement:
+    The model core has 16 species and 24 reactions
+    The model edge has 74 species and 225 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 24 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 24 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 249 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 249 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:21
+    Memory used: 463.54 MB
+
+Conducting simulation of reaction system 1...
+At time 1.4158e-04 s, species [CH2]C1CC1(50) exceeded the minimum rate for moving to model core
+    Characteristic rate: 1.1227e+04 mol/m^3*s
+    [CH2]C1CC1(50) rate: 1.1322e+03 mol/m^3*s (0.1008)
+    ethane(1) conversion: 0.1525    
+At time 1.4158e-04 s, species [CH2]C1CC1(50) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 1.1227e+04 mol/m^3*s
+    [CH2]C1CC1(50) rate: 1.1322e+03 mol/m^3*s (0.1008)
+    ethane(1) conversion: 0.1525    
+
+
+Adding species [CH2]C1CC1(50) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    [CH2]C1CC1(50)
+Created 0 new edge species
+Moved 1 reactions from edge to core
+    [CH2]CC=C(28) <=> [CH2]C1CC1(50)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 17 species and 25 reactions
+    The model edge has 73 species and 224 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 18 new edge species
+    C=C1CC1(87)
+    C[C]1CC1(88)
+    CC1[CH]C1(89)
+    [CH2][C]1CC1(90)
+    [CH2]C1[CH]C1(91)
+    [CH2]C([CH2])[CH2](92)
+    CC1CC1(93)
+    CCC1CC1(94)
+    CCCC1CC1(95)
+    [CH2]CCC1CC1(96)
+    CCCCC1CC1(97)
+    C=CCC1CC1(98)
+    [CH]=CCC1CC1(99)
+    CC=CCC1CC1(100)
+    [CH2]CC([CH2])CC1CC1(101)
+    [CH2]C[CH]CCC1CC1(102)
+    C=CCCCC1CC1(103)
+    C1CC1CCC1CC1(104)
+Added 0 new core reactions
+Created 57 new edge reactions
+    [H](6) + C=C1CC1(87) <=> [CH2]C1CC1(50)
+    [CH2](2) + [CH2]C=C(40) <=> [CH2]C1CC1(50)
+    [CH2]C1CC1(50) <=> C[C]1CC1(88)
+    CC1[CH]C1(89) <=> [CH2]C1CC1(50)
+    [H](6) + [CH2][C]1CC1(90) <=> [CH2]C1CC1(50)
+    [H](6) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50)
+    [CH2][CH]C[CH2](56) <=> [CH2]C1CC1(50)
+    [CH2]C([CH2])[CH2](92) <=> [CH2]C1CC1(50)
+    [CH2]C1CC1(50) + ethane(1) <=> C[CH2](5) + CC1CC1(93)
+    [CH2]C1CC1(50) + [CH3](4) <=> C(3) + C=C1CC1(87)
+    [CH2](7) + CC1CC1(93) <=> [CH2]C1CC1(50) + [CH3](4)
+    C(3) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50) + [CH3](4)
+    [CH2]C1CC1(50) + [CH3](4) <=> CCC1CC1(94)
+    [CH2]C1CC1(50) + C[CH2](5) <=> C=C1CC1(87) + ethane(1)
+    [CH2]C1CC1(50) + C[CH2](5) <=> C=C(8) + CC1CC1(93)
+    [CH2]C1[CH]C1(91) + ethane(1) <=> [CH2]C1CC1(50) + C[CH2](5)
+    [CH2]C1CC1(50) + C[CH2](5) <=> CCCC1CC1(95)
+    [CH2]C1CC1(50) + C(3) <=> [CH3](4) + CC1CC1(93)
+    [CH2]C1CC1(50) + [H](6) <=> [H][H](12) + C=C1CC1(87)
+    [CH2]C1CC1(50) + [H](6) <=> [H][H](12) + [CH2]C1[CH]C1(91)
+    [CH2]C1CC1(50) + [H](6) <=> CC1CC1(93)
+    C[CH2](5) + [CH2]C1[CH]C1(91) <=> C=C(8) + [CH2]C1CC1(50)
+    [CH]=C(13) + CC1CC1(93) <=> C=C(8) + [CH2]C1CC1(50)
+    C=C(8) + [CH2]C1CC1(50) <=> [CH2]CCC1CC1(96)
+    [CH2]C1CC1(50) + [H][H](12) <=> [H](6) + CC1CC1(93)
+    [CH2]C1CC1(50) + [CH2]CC(14) <=> CCC(10) + C=C1CC1(87)
+    [CH2]C1CC1(50) + [CH2]CC(14) <=> C=CC(18) + CC1CC1(93)
+    [CH2]C1CC1(50) + [CH2]CC(14) <=> [CH2]C[CH2](21) + CC1CC1(93)
+    [CH2]C1CC1(50) + [CH2]CC(14) <=> CCC(10) + [CH2]C1[CH]C1(91)
+    [CH2]C1CC1(50) + [CH2]CC(14) <=> CCCCC1CC1(97)
+    [CH2]C1CC1(50) + [CH]=C(13) <=> C=C(8) + C=C1CC1(87)
+    [CH2]C1CC1(50) + [CH]=C(13) <=> C#C(25) + CC1CC1(93)
+    [CH]=[CH](26) + CC1CC1(93) <=> [CH2]C1CC1(50) + [CH]=C(13)
+    [CH2]C1CC1(50) + [CH]=C(13) <=> C=C(8) + [CH2]C1[CH]C1(91)
+    [CH2]C1CC1(50) + [CH]=C(13) <=> C=CCC1CC1(98)
+    [CH]=C(13) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50) + C#C(25)
+    [C]#C(31) + CC1CC1(93) <=> [CH2]C1CC1(50) + C#C(25)
+    [CH2]C1CC1(50) + C#C(25) <=> [CH]=CCC1CC1(99)
+    [CH2]C1CC1(50) + [CH]=CC(32) <=> C=CC(18) + C=C1CC1(87)
+    [CH2]C1CC1(50) + [CH]=CC(32) <=> C#CC(38) + CC1CC1(93)
+    [CH2]C1CC1(50) + [CH]=CC(32) <=> [CH]=C[CH2](41) + CC1CC1(93)
+    [CH]=[C]C(42) + CC1CC1(93) <=> [CH2]C1CC1(50) + [CH]=CC(32)
+    [CH2]C1CC1(50) + [CH]=CC(32) <=> C=CC(18) + [CH2]C1[CH]C1(91)
+    [CH2]C1CC1(50) + [CH]=CC(32) <=> CC=CCC1CC1(100)
+    [CH2]C1CC1(50) + [CH2]CC=C(28) <=> C=CCC(27) + C=C1CC1(87)
+    [CH2]C1CC1(50) + [CH2]CC=C(28) <=> C=CC=C(30) + CC1CC1(93)
+    [CH2]CC[CH2](16) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50) + [CH2]CC=C(28)
+    [CH2]C[CH]C(57) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50) + [CH2]CC=C(28)
+    [CH2]C1CC1(50) + [CH2]CC=C(28) <=> [CH2]C[C]=C(55) + CC1CC1(93)
+    [CH]=CC[CH2](34) + CC1CC1(93) <=> [CH2]C1CC1(50) + [CH2]CC=C(28)
+    C=CCC(27) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50) + [CH2]CC=C(28)
+    [CH2]C1CC1(50) + [CH2]CC=C(28) <=> [CH2]CC([CH2])CC1CC1(101)
+    [CH2]C1CC1(50) + [CH2]CC=C(28) <=> [CH2]C[CH]CCC1CC1(102)
+    [CH2]C1CC1(50) + [CH2]CC=C(28) <=> C=CCCCC1CC1(103)
+    [CH2]C1CC1(50) + [CH2]C1CC1(50) <=> C=C1CC1(87) + CC1CC1(93)
+    [CH2]C1CC1(50) + [CH2]C1CC1(50) <=> [CH2]C1[CH]C1(91) + CC1CC1(93)
+    [CH2]C1CC1(50) + [CH2]C1CC1(50) <=> C1CC1CCC1CC1(104)
+
+After model enlargement:
+    The model core has 17 species and 25 reactions
+    The model edge has 91 species and 281 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 25 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 25 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 306 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 306 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:23
+    Memory used: 472.77 MB
+
+Conducting simulation of reaction system 1...
+At time 1.3927e-03 s, species C=CC=C(30) exceeded the minimum rate for moving to model core
+    Characteristic rate: 1.5636e+03 mol/m^3*s
+    C=CC=C(30) rate: 1.5873e+02 mol/m^3*s (0.1015)
+    ethane(1) conversion: 0.6631    
+At time 1.3927e-03 s, species C=CC=C(30) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 1.5636e+03 mol/m^3*s
+    C=CC=C(30) rate: 1.5873e+02 mol/m^3*s (0.1015)
+    ethane(1) conversion: 0.6631    
+
+
+Adding species C=CC=C(30) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    C=CC=C(30)
+Created 0 new edge species
+Moved 6 reactions from edge to core
+    [CH]=C(13) + [CH]=C(13) <=> C=CC=C(30)
+    [H](6) + C=CC=C(30) <=> [CH2]CC=C(28)
+    [CH3](4) + [CH2]CC=C(28) <=> C(3) + C=CC=C(30)
+    C[CH2](5) + [CH2]CC=C(28) <=> C=CC=C(30) + ethane(1)
+    [H](6) + [CH2]CC=C(28) <=> [H][H](12) + C=CC=C(30)
+    [CH]=C(13) + [CH2]CC=C(28) <=> C=C(8) + C=CC=C(30)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 18 species and 31 reactions
+    The model edge has 90 species and 275 reactions
+
+
+Generating kinetics for new reactions...
+
+Summary of Secondary Model Edge Enlargement
+---------------------------------
+Added 0 new core species
+Created 35 new edge species
+    [CH]=C[CH]C(105)
+    C=[C]C=C(106)
+    [CH2]C(C)C=C(107)
+    C=C[CH]CC(108)
+    [CH2]C(C=C)CC(109)
+    C=C[CH]CCC(110)
+    [CH2]CC[CH]C=C(111)
+    C1=CCCCC1(112)
+    C=CC1CCC1(113)
+    [CH2]C(C=C)CCC(114)
+    C=C[CH]CCCC(115)
+    [CH2]C(C=C)C=C(116)
+    C=C[CH]CC=C(117)
+    [CH]=CC[CH]C=C(118)
+    [CH]=CC([CH2])C=C(119)
+    C1=CCC=CC1(120)
+    [CH2]C(C=C)C=CC(121)
+    C=C[CH]CC=CC(122)
+    [CH2]C(C=C)CCC=C(123)
+    C=C[CH]CCCC=C(124)
+    [CH2]C[CH]CC[CH]C=C(125)
+    [CH2]C[CH]CC([CH2])C=C(126)
+    [CH2]CC([CH2])C[CH]C=C(127)
+    [CH2]CC([CH2])C([CH2])C=C(128)
+    [CH2]CC1CC=CCC1(129)
+    [CH2]CC1CC(C=C)C1(130)
+    [CH2]CC1CCC1C=C(131)
+    [CH2]C(C=C)CC1CC1(132)
+    C=C[CH]CCC1CC1(133)
+    C=C[CH]CC[CH]C=C(134)
+    [CH2]C(C=C)C[CH]C=C(135)
+    [CH2]C(C=C)C([CH2])C=C(136)
+    C=CC1CC=CCC1(137)
+    C=CC1CC(C=C)C1(138)
+    C=CC1CCC1C=C(139)
+Added 0 new core reactions
+Created 84 new edge reactions
+    [CH]=CC[CH2](34) <=> C=CC=C(30)
+    [CH]=C[CH]C(105) <=> C=CC=C(30)
+    [H](6) + C=[C]C=C(106) <=> C=CC=C(30)
+    [H](6) + [CH]=CC=C(36) <=> C=CC=C(30)
+    [CH2][CH]C=C(54) <=> C=CC=C(30)
+    C=C[CH]C(52) + C[CH2](5) <=> C=CC=C(30) + ethane(1)
+    [CH2](7) + [CH2]CC=C(28) <=> [CH3](4) + C=CC=C(30)
+    [CH2](7) + C=C[CH]C(52) <=> [CH3](4) + C=CC=C(30)
+    [CH3](4) + C=CC=C(30) <=> C(3) + C=[C]C=C(106)
+    C(3) + [CH]=CC=C(36) <=> [CH3](4) + C=CC=C(30)
+    [CH3](4) + C=CC=C(30) <=> [CH2]C(C)C=C(107)
+    [CH3](4) + C=CC=C(30) <=> C=C[CH]CC(108)
+    [CH2][CH2](9) + [CH2]CC=C(28) <=> C[CH2](5) + C=CC=C(30)
+    C=C[CH]C(52) + [CH2][CH2](9) <=> C[CH2](5) + C=CC=C(30)
+    C[CH2](5) + C=CC=C(30) <=> C=[C]C=C(106) + ethane(1)
+    [CH]=CC=C(36) + ethane(1) <=> C[CH2](5) + C=CC=C(30)
+    C[CH2](5) + C=CC=C(30) <=> [CH2]C(C=C)CC(109)
+    C[CH2](5) + C=CC=C(30) <=> C=C[CH]CCC(110)
+    C=C[CH]C(52) + [CH3](4) <=> C(3) + C=CC=C(30)
+    [H](6) + C=CC=C(30) <=> [H][H](12) + C=[C]C=C(106)
+    [CH]=CC=C(36) + [H][H](12) <=> [H](6) + C=CC=C(30)
+    [H](6) + C=CC=C(30) <=> C=C[CH]C(52)
+    C=C[CH]C(52) + [CH]=C(13) <=> C=C(8) + C=CC=C(30)
+    C[CH2](5) + [CH]=CC=C(36) <=> C=C(8) + C=CC=C(30)
+    [CH2]CC[CH]C=C(111) <=> C=C(8) + C=CC=C(30)
+    [CH2]CC([CH2])C=C(70) <=> C=C(8) + C=CC=C(30)
+    C=C(8) + C=CC=C(30) <=> C1=CCCCC1(112)
+    C=C(8) + C=CC=C(30) <=> C=CC1CCC1(113)
+    C=C[CH]C(52) + [H](6) <=> [H][H](12) + C=CC=C(30)
+    [CH2][CH]C(20) + [CH2]CC=C(28) <=> [CH2]CC(14) + C=CC=C(30)
+    C=C[CH]C(52) + [CH2][CH]C(20) <=> [CH2]CC(14) + C=CC=C(30)
+    [CH2]C[CH2](21) + [CH2]CC=C(28) <=> [CH2]CC(14) + C=CC=C(30)
+    C=C[CH]C(52) + [CH2]C[CH2](21) <=> [CH2]CC(14) + C=CC=C(30)
+    [CH2]CC(14) + C=CC=C(30) <=> CCC(10) + C=[C]C=C(106)
+    [CH]=CC=C(36) + CCC(10) <=> [CH2]CC(14) + C=CC=C(30)
+    [CH2]CC(14) + C=CC=C(30) <=> [CH2]C(C=C)CCC(114)
+    [CH2]CC(14) + C=CC=C(30) <=> C=C[CH]CCCC(115)
+    [CH]=[CH](26) + [CH2]CC=C(28) <=> [CH]=C(13) + C=CC=C(30)
+    C=C[CH]C(52) + [CH]=[CH](26) <=> [CH]=C(13) + C=CC=C(30)
+    [CH]=C(13) + C=CC=C(30) <=> C=C(8) + C=[C]C=C(106)
+    C=C(8) + [CH]=CC=C(36) <=> [CH]=C(13) + C=CC=C(30)
+    [CH]=C(13) + C=CC=C(30) <=> [CH2]C(C=C)C=C(116)
+    [CH]=C(13) + C=CC=C(30) <=> C=C[CH]CC=C(117)
+    [CH]=CC=C(36) + [CH]=C(13) <=> C=CC=C(30) + C#C(25)
+    [CH]=CC[CH]C=C(118) <=> C=CC=C(30) + C#C(25)
+    [CH]=CC([CH2])C=C(119) <=> C=CC=C(30) + C#C(25)
+    C=CC=C(30) + C#C(25) <=> C1=CCC=CC1(120)
+    [CH]=C[CH2](41) + [CH2]CC=C(28) <=> [CH]=CC(32) + C=CC=C(30)
+    C=C[CH]C(52) + [CH]=C[CH2](41) <=> [CH]=CC(32) + C=CC=C(30)
+    [CH]=CC(32) + C=CC=C(30) <=> C=CC(18) + C=[C]C=C(106)
+    [CH]=CC(32) + C=CC=C(30) <=> [CH]=CC=C(36) + C=CC(18)
+    [CH]=CC(32) + C=CC=C(30) <=> [CH2]C(C=C)C=CC(121)
+    [CH]=CC(32) + C=CC=C(30) <=> C=C[CH]CC=CC(122)
+    [CH2][CH]C=C(54) + [CH2]CC=C(28) <=> [CH2]CC=C(28) + C=CC=C(30)
+    C=C[CH]C(52) + [CH2][CH]C=C(54) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH]=CC[CH2](34) + [CH2]CC=C(28) <=> [CH2]CC=C(28) + C=CC=C(30)
+    C=C[CH]C(52) + [CH]=CC[CH2](34) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH]=CC=C(36) + [CH2]CC[CH2](16) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH2]C[CH]C(57) + [CH]=CC=C(36) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH2]CC=C(28) + C=CC=C(30) <=> C=CCC(27) + C=[C]C=C(106)
+    [CH]=CC=C(36) + C=CCC(27) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH2]CC=C(28) + C=CC=C(30) <=> [CH2]C(C=C)CCC=C(123)
+    [CH2]CC=C(28) + C=CC=C(30) <=> C=C[CH]CCCC=C(124)
+    [CH2]C[CH]CC[CH]C=C(125) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH2]C[CH]CC([CH2])C=C(126) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH2]CC([CH2])C[CH]C=C(127) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH2]CC([CH2])C([CH2])C=C(128) <=> [CH2]CC=C(28) + C=CC=C(30)
+    [CH2]CC=C(28) + C=CC=C(30) <=> [CH2]CC1CC=CCC1(129)
+    [CH2]CC=C(28) + C=CC=C(30) <=> [CH2]CC1CC(C=C)C1(130)
+    [CH2]CC=C(28) + C=CC=C(30) <=> [CH2]CC1CCC1C=C(131)
+    [CH2]CC=C(28) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50) + C=CC=C(30)
+    C=C[CH]C(52) + [CH2]C1[CH]C1(91) <=> [CH2]C1CC1(50) + C=CC=C(30)
+    [CH2]C1CC1(50) + C=CC=C(30) <=> C=[C]C=C(106) + CC1CC1(93)
+    [CH]=CC=C(36) + CC1CC1(93) <=> [CH2]C1CC1(50) + C=CC=C(30)
+    [CH2]C1CC1(50) + C=CC=C(30) <=> [CH2]C(C=C)CC1CC1(132)
+    [CH2]C1CC1(50) + C=CC=C(30) <=> C=C[CH]CCC1CC1(133)
+    [CH]=CC=C(36) + [CH2]CC=C(28) <=> C=CC=C(30) + C=CC=C(30)
+    C=C[CH]C(52) + [CH]=CC=C(36) <=> C=CC=C(30) + C=CC=C(30)
+    C=C[CH]CC[CH]C=C(134) <=> C=CC=C(30) + C=CC=C(30)
+    [CH2]C(C=C)C[CH]C=C(135) <=> C=CC=C(30) + C=CC=C(30)
+    [CH2]C(C=C)C([CH2])C=C(136) <=> C=CC=C(30) + C=CC=C(30)
+    C=CC=C(30) + C=CC=C(30) <=> C=CC1CC=CCC1(137)
+    C=CC=C(30) + C=CC=C(30) <=> C=CC1CC(C=C)C1(138)
+    C=CC=C(30) + C=CC=C(30) <=> C=CC1CCC1C=C(139)
+
+After model enlargement:
+    The model core has 18 species and 31 reactions
+    The model edge has 125 species and 359 reactions
+
+
+Saving current model core to Chemkin file...
+Chemkin file contains 31 reactions.
+Saving current model to verbose Chemkin file...
+Chemkin file contains 31 reactions.
+Saving current model core and edge to Chemkin file...
+Chemkin file contains 390 reactions.
+Saving current core and edge to verbose Chemkin file...
+Chemkin file contains 390 reactions.
+Saving current model core to HTML file...
+Saving current model edge to HTML file...
+Updating RMG execution statistics...
+    Execution time (DD:HH:MM:SS): 00:00:06:25
+    Memory used: 479.06 MB
+
+Conducting simulation of reaction system 1...
+At time 7.5524e-04 s, species C=C[CH]C(52) exceeded the minimum rate for moving to model core
+    Characteristic rate: 3.2480e+03 mol/m^3*s
+    C=C[CH]C(52) rate: 3.3110e+02 mol/m^3*s (0.1019)
+    ethane(1) conversion: 0.499     
+At time 7.5524e-04 s, species C=C[CH]C(52) exceeded the minimum rate for simulation interruption
+    Characteristic rate: 3.2480e+03 mol/m^3*s
+    C=C[CH]C(52) rate: 3.3110e+02 mol/m^3*s (0.1019)
+    ethane(1) conversion: 0.499     
+
+
+Adding species C=C[CH]C(52) to model core
+Generating kinetics for new reactions...
+
+Summary of Model Enlargement
+---------------------------------
+Added 1 new core species
+    C=C[CH]C(52)
+Created 0 new edge species
+Moved 6 reactions from edge to core
+    C=C[CH]C(52) <=> [CH2]CC=C(28)
+    C=C[CH]C(52) + C[CH2](5) <=> C=CC=C(30) + ethane(1)
+    C=C[CH]C(52) + [CH3](4) <=> C(3) + C=CC=C(30)
+    [H](6) + C=CC=C(30) <=> C=C[CH]C(52)
+    C=C[CH]C(52) + [CH]=C(13) <=> C=C(8) + C=CC=C(30)
+    C=C[CH]C(52) + [H](6) <=> [H][H](12) + C=CC=C(30)
+Added 0 new core reactions
+Created 0 new edge reactions
+
+After model enlargement:
+    The model core has 19 species and 37 reactions
+    The model edge has 124 species and 353 reactions
+
+
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/scoop_framework/util.py", line 112, in __call__
+    return self.myfn(*args, **kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/react.py", line 96, in reactMolecules
+    rxns = family.generateReactions(molecules)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1308, in generateReactions
+    reactionList.extend(self.__generateReactions(reactants, forward=True))
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1439, in __generateReactions
+    productStructures = self.__generateProductStructures(reactantStructures, [mapA, mapB], forward)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1195, in __generateProductStructures
+    if self.isMoleculeForbidden(struct):
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1233, in isMoleculeForbidden
+    forbidden_structures = getDB('forbidden')
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/rmg.py", line 264, in getDB
+    raise e
+Exception
+
+[2018-02-27 15:35:49,413] _control  (192.168.2.5:58079) DEBUG   The following error occured on a worker:
+Exception()
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/scoop_framework/util.py", line 112, in __call__
+    return self.myfn(*args, **kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/react.py", line 96, in reactMolecules
+    rxns = family.generateReactions(molecules)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1308, in generateReactions
+    reactionList.extend(self.__generateReactions(reactants, forward=True))
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1439, in __generateReactions
+    productStructures = self.__generateProductStructures(reactantStructures, [mapA, mapB], forward)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1195, in __generateProductStructures
+    if self.isMoleculeForbidden(struct):
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1233, in isMoleculeForbidden
+    forbidden_structures = getDB('forbidden')
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/rmg.py", line 264, in getDB
+    raise e
+Exception
+
+[2018-02-27 15:35:49,834] _control  (192.168.2.5:54329)         The following error occured on a worker:
+Exception()
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../rmg.py", line 164, in <module>
+    rmg.execute(**kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 634, in execute
+    bimolecularReact=self.bimolecularReact)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/model.py", line 621, in enlarge
+    rxns = reactAll(self.core.species, numOldCoreSpecies, unimolecularReact, bimolecularReact)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/react.py", line 155, in reactAll
+    rxns = list(react(*spcTuples))
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/futures.py", line 99, in _mapGenerator
+    for future in _waitAll(*futures):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/futures.py", line 360, in _waitAll
+    for f in _waitAny(future):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/futures.py", line 323, in _waitAny
+    raise future.exceptionValue
+Exception
+
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../rmg.py", line 164, in <module>
+    rmg.execute(**kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 634, in execute
+    bimolecularReact=self.bimolecularReact)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/model.py", line 621, in enlarge
+    rxns = reactAll(self.core.species, numOldCoreSpecies, unimolecularReact, bimolecularReact)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/react.py", line 155, in reactAll
+    rxns = list(react(*spcTuples))
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/futures.py", line 99, in _mapGenerator
+    for future in _waitAll(*futures):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/futures.py", line 360, in _waitAll
+    for f in _waitAny(future):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/futures.py", line 323, in _waitAny
+    raise future.exceptionValue
+Exception
+
+[2018-02-27 15:35:52,031] launcher  (127.0.0.1:45464) INFO    Root process is done.
+[2018-02-27 15:35:52,031] workerLaunch (127.0.0.1:45464) DEBUG   Closing workers on node05 (120 workers).
+[2018-02-27 15:35:52,032] brokerLaunch (127.0.0.1:45464) DEBUG   Closing local broker.
+[2018-02-27 15:35:52,032] launcher  (127.0.0.1:45464) INFO    Finished cleaning spawned subprocesses.

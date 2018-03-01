@@ -1,0 +1,178 @@
+[2018-02-27 18:34:16,510] launcher  INFO    SCOOP 0.7 2.0 on linux2 using Python 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) [GCC 4.4.7 20120313 (Red Hat 4.4.7-1)], API: 1013
+[2018-02-27 18:34:16,510] launcher  INFO    Detected SLURM environment.
+[2018-02-27 18:34:16,511] launcher  INFO    Deploying 120 worker(s) over 1 host(s).
+[2018-02-27 18:34:16,511] launcher  DEBUG   Using hostname/ip: "node01" as external broker reference.
+[2018-02-27 18:34:16,511] launcher  DEBUG   The python executable to execute the program with is: /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python.
+[2018-02-27 18:34:16,511] launcher  INFO    Worker d--istribution: 
+[2018-02-27 18:34:16,511] launcher  INFO       node01:	119 + origin
+[2018-02-27 18:34:16,805] brokerLaunch (127.0.0.1:37346) DEBUG   Local broker launched on ports 37346, 37004.
+[2018-02-27 18:34:16,805] launcher  (127.0.0.1:37346) DEBUG   Initialising local origin worker 120 [node01].
+[2018-02-27 18:34:16,805] launcher  (127.0.0.1:37346) DEBUG   node01: Launching 'env PYTHONPATH=:/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/::/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/ /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python -m scoop.launch.__main__ 120 2 --size 120 --workingDirectory /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120 --brokerHostname 127.0.0.1 --externalBrokerHostname node01 --taskPort 37346 --metaPort 37004 --origin --backend=ZMQ -vv ../../../../../rmg.py input.py'
+Removing old /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/RMG_backup.log
+Moving /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/RMG.log to /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/RMG_backup.log
+
+Global RMG Settings:
+   database.directory   = /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input (Default, relative to RMG-Py source code)
+RMG execution initiated at Tue Feb 27 18:35:33 2018
+
+#########################################################
+# RMG-Py - Reaction Mechanism Generator in Python       #
+# Version: 2.0.0                                        #
+# Authors: RMG Developers (rmg_dev@mit.edu)             #
+# P.I.s:   William H. Green (whgreen@mit.edu)           #
+#          Richard H. West (r.west@neu.edu)             #
+# Website: http://reactionmechanismgenerator.github.io/ #
+#########################################################
+
+The current git HEAD for RMG-Py is:
+	4bee0e28ac97257f43b27e244684a03ea38d0a5f
+	Mon Feb 26 15:44:45 2018 -0500
+
+The current git HEAD for RMG-database is:
+	282488238f69b2c76e22fb6cc8cc6eafe26d9948
+	Mon Feb 26 15:52:50 2018 -0500
+
+Reading input file "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/NWorkers_120/input.py"...
+# Data sources
+database(
+    thermoLibraries = ['primaryThermoLibrary'],
+    reactionLibraries = [],
+    seedMechanisms = [],
+    kineticsDepositories = ['training'],
+    kineticsFamilies = 'default',
+    kineticsEstimator = 'rate rules',
+)
+
+# List of species
+species(
+    label='ethane',
+    reactive=True,
+    structure=SMILES("CC"),
+)
+
+# Reaction systems
+simpleReactor(
+    temperature=(1350,'K'),
+    pressure=(1.0,'bar'),
+    initialMoleFractions={
+        "ethane": 1.0,
+    },
+    terminationConversion={
+        'ethane': 0.9,
+    },
+    terminationTime=(1e6,'s'),
+)
+
+simulator(
+    atol=1e-16,
+    rtol=1e-8,
+)
+
+model(
+    toleranceKeepInEdge=0.0,
+    toleranceMoveToCore=0.1,
+    toleranceInterruptSimulation=0.1,
+    maximumEdgeSpecies=100000,
+)
+
+options(
+    units='si',
+    saveRestartPeriod=None,
+    generateOutputHTML=True,
+    generatePlots=False,
+    saveEdgeSpecies=True,
+    saveSimulationProfiles=True,
+)
+
+Warning: Generate Output HTML option was turned on. Note that this will slow down model generation.
+Warning: Edge species saving was turned on. This will slow down model generation for large simulations.
+[2018-02-27 18:35:34,024] shared    (192.168.2.1:64674)         Sending global variables ['speciesConstraints']...
+[2018-02-27 18:35:34,124] shared    (192.168.2.1:64674)         Sending global variables ['speciesConstraints']...
+[2018-02-27 18:35:34,327] shared    (192.168.2.1:64674)         Sending global variables ['quantumMechanics']...
+[2018-02-27 18:35:34,427] shared    (192.168.2.1:64674)         Sending global variables ['quantumMechanics']...
+
+Loading thermodynamics library from primaryThermoLibrary.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/thermo/libraries...
+Loading thermodynamics group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/thermo/groups...
+[2018-02-27 18:35:36,000] shared    (192.168.2.1:64674)         Sending global variables ['thermo']...
+[2018-02-27 18:35:36,846] shared    (192.168.2.1:64674)         Sending global variables ['thermo']...
+Loading transport library from PrimaryTransportLibrary.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/libraries...
+Loading transport library from GRI-Mech.py in /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/libraries...
+Loading transport group database from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/transport/groups...
+[2018-02-27 18:35:48,967] shared    (192.168.2.1:64674)         Sending global variables ['transport']...
+[2018-02-27 18:35:49,080] shared    (192.168.2.1:64674)         Sending global variables ['transport']...
+[2018-02-27 18:35:49,428] shared    (192.168.2.1:64674)         Sending global variables ['forbidden']...
+[2018-02-27 18:35:49,532] shared    (192.168.2.1:64674)         Sending global variables ['forbidden']...
+Loading default kinetics families from /data1/ajocher/codes/RMG/RMG_parallel/RMG-database/input/kinetics/families
+[2018-02-27 18:36:43,871] shared    (192.168.2.1:64674)         Sending global variables ['kinetics']...
+[2018-02-27 18:37:35,165] _control  (192.168.2.1:64674)         The following error occured on a worker:
+UnpicklingError('pickle data was truncated',)
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../rmg.py", line 164, in <module>
+    rmg.execute(**kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 506, in execute
+    self.initialize(**kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 372, in initialize
+    self.loadDatabase()
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 303, in loadDatabase
+    depository = False, # Don't bother loading the depository information, as we don't use it
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/rmg.py", line 101, in load
+    kineticsDepositories
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/rmg.py", line 167, in loadKinetics
+    broadcast(self.kinetics, 'kinetics')
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/scoop_framework/util.py", line 89, in wrapper
+    return func(*args, **kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/scoop_framework/util.py", line 130, in broadcast
+    shared.setConst(**kwargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/fallbacks.py", line 66, in wrapper
+    return func(*args, **kwargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/shared.py", line 70, in wrapper
+    _control.execQueue.socket.pumpInfoSocket()
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_comm/scoopzmq.py", line 305, in pumpInfoSocket
+    varValue = pickle.loads(msg[2])
+UnpicklingError: pickle data was truncated
+
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../rmg.py", line 164, in <module>
+    rmg.execute(**kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 506, in execute
+    self.initialize(**kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 372, in initialize
+    self.loadDatabase()
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 303, in loadDatabase
+    depository = False, # Don't bother loading the depository information, as we don't use it
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/rmg.py", line 101, in load
+    kineticsDepositories
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/rmg.py", line 167, in loadKinetics
+    broadcast(self.kinetics, 'kinetics')
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/scoop_framework/util.py", line 89, in wrapper
+    return func(*args, **kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/scoop_framework/util.py", line 130, in broadcast
+    shared.setConst(**kwargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/fallbacks.py", line 66, in wrapper
+    return func(*args, **kwargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/shared.py", line 70, in wrapper
+    _control.execQueue.socket.pumpInfoSocket()
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_comm/scoopzmq.py", line 305, in pumpInfoSocket
+    varValue = pickle.loads(msg[2])
+UnpicklingError: pickle data was truncated
+
+[2018-02-27 18:37:38,665] launcher  (127.0.0.1:37346) INFO    Root process is done.
+[2018-02-27 18:37:39,317] workerLaunch (127.0.0.1:37346) DEBUG   Closing workers on node01 (120 workers).
+[2018-02-27 18:37:39,317] brokerLaunch (127.0.0.1:37346) DEBUG   Closing local broker.
+[2018-02-27 18:37:39,317] launcher  (127.0.0.1:37346) INFO    Finished cleaning spawned subprocesses.
