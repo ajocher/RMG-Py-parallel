@@ -101,6 +101,7 @@ SPECIES
     S(277)              ! CCCCCCCCCCCC[C]1C=CC=CC1Cc1ccccc1(277)
     S(278)              ! CCCCCCCCCCCCC1C=C[CH]C(C=1)Cc1ccccc1(278)
     S(7491)             ! [CH2]CCCCCCCCCCC(7491)
+    S(7999)             ! CCCCCCCCCCCC[C]1C=CC=CC1CCCCCCCCCCCC(7999)
 END
 
 
@@ -954,6 +955,18 @@ S(7491)                 C 12 H 25           G100.000   5000.000  1506.16       1
  2.03002625E+01 8.48923452E-02-3.58583222E-05 6.57739765E-09-4.47657362E-13    2
 -2.22315097E+04-6.69571874E+01-2.67164718E+00 1.45900509E-01-9.66172472E-05    3
  3.34710439E-08-4.91162011E-12-1.53116669E+04 5.32773458E+01                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) +
+! group(Cs-(Cds-Cds)(Cds-Cds)HH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-
+! CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
+S(7999)                 C 30 H 55           G100.000   5000.000  1463.97       1
+ 5.22320986E+01 1.92879984E-01-8.08429588E-05 1.48101360E-08-1.00904435E-12    2
+-6.66358417E+04-2.17522938E+02-1.36069874E+01 3.72772767E-01-2.65164017E-04    3
+ 9.87471764E-08-1.53429195E-11-4.73586470E+04 1.25206964E+02                   4
 
 END
 
@@ -11560,6 +11573,13 @@ RAD11(24)+PDD(1)=S(228)                             2.760e+03 2.410     1.770
 ! Exact match found for rate rule [Cds-HH_Cds-HH;CsJ-CsHH]
 ! Multiplied by reaction path degeneracy 2
 C2ene(37)+DECYL(56)=S(7491)                         3.980e+03 2.440     5.370    
+
+! Reaction index: Chemkin #1549; RMG #57244
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(7999); S(7491), S(7999); 
+! Exact match found for rate rule [Cds-CdH_Cds-CdCs;CsJ-CsHH]
+! Multiplied by reaction path degeneracy 2
+S(7491)+PDD(1)=S(7999)                              3.440e+03 2.410     2.970    
 
 END
 
