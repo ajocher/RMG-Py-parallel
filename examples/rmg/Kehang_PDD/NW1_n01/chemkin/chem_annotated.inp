@@ -100,8 +100,10 @@ SPECIES
     S(274)              ! CCCCCCCCCCCCC1C=CC([CH]C=1)CCCCCCCCCCC(274)
     S(277)              ! CCCCCCCCCCCC[C]1C=CC=CC1Cc1ccccc1(277)
     S(278)              ! CCCCCCCCCCCCC1C=C[CH]C(C=1)Cc1ccccc1(278)
+    S(6423)             ! CCCCCCCCC1CCCC2C=CC=C[C]21(6423)
     S(7491)             ! [CH2]CCCCCCCCCCC(7491)
     S(7999)             ! CCCCCCCCCCCC[C]1C=CC=CC1CCCCCCCCCCCC(7999)
+    S(8000)             ! CCCCCCCCCCCCC1C=C[CH]C(C=1)CCCCCCCCCCCC(8000)
 END
 
 
@@ -945,6 +947,16 @@ S(278)                  C 25 H 37           G100.000   5000.000  1144.48       1
 -1.99666627E+04-1.93429874E+02-9.66329142E+00 2.60224121E-01-1.41341735E-04    3
  1.37839689E-08 8.78103111E-12-3.41997141E+03 9.49758740E+01                   4
 
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)CsCsH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) +
+! group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) +
+! group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)HH)
+! + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-
+! CdsCsH) + other(R) + polycyclic(s2_6_6_diene_0_3) + radical(C=CCJC=C)
+S(6423)                 C 18 H 29           G100.000   5000.000  1077.01       1
+ 2.83793651E+01 1.06971338E-01-4.38326976E-05 8.18952262E-09-5.74898525E-13    2
+-1.63991479E+04-1.20875314E+02-4.84151024E+00 1.61092097E-01-2.27456737E-05    3
+-6.45741697E-08 3.01756994E-11-5.22634821E+03 6.05095069E+01                   4
+
 ! Thermo group additivity estimation: group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)Cs(CsRR)RR)) + other(R) + group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)Cs(CsRR)RR)) +
 ! other(R) + group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)Cs(CsRR)RR)) + other(R) + group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)Cs(CsRR)RR)) + other(R) + group(Cs-
 ! CsCsHH) + gauche(Cs(Cs(CsRR)Cs(CsRR)RR)) + other(R) + group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)Cs(CsRR)RR)) + other(R) + group(Cs-CsCsHH) +
@@ -964,6 +976,18 @@ S(7491)                 C 12 H 25           G100.000   5000.000  1506.16       1
 ! group(Cs-(Cds-Cds)(Cds-Cds)HH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-
 ! CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
 S(7999)                 C 30 H 55           G100.000   5000.000  1463.97       1
+ 5.22320986E+01 1.92879984E-01-8.08429588E-05 1.48101360E-08-1.00904435E-12    2
+-6.66358417E+04-2.17522938E+02-1.36069874E+01 3.72772767E-01-2.65164017E-04    3
+ 9.87471764E-08-1.53429195E-11-4.73586470E+04 1.25206964E+02                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) +
+! group(Cs-(Cds-Cds)(Cds-Cds)HH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-
+! CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
+S(8000)                 C 30 H 55           G100.000   5000.000  1463.97       1
  5.22320986E+01 1.92879984E-01-8.08429588E-05 1.48101360E-08-1.00904435E-12    2
 -6.66358417E+04-2.17522938E+02-1.36069874E+01 3.72772767E-01-2.65164017E-04    3
  9.87471764E-08-1.53429195E-11-4.73586470E+04 1.25206964E+02                   4
@@ -11580,6 +11604,238 @@ C2ene(37)+DECYL(56)=S(7491)                         3.980e+03 2.440     5.370
 ! Exact match found for rate rule [Cds-CdH_Cds-CdCs;CsJ-CsHH]
 ! Multiplied by reaction path degeneracy 2
 S(7491)+PDD(1)=S(7999)                              3.440e+03 2.410     2.970    
+
+! Reaction index: Chemkin #1550; RMG #57245
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(8000); S(7491), S(8000); 
+! Exact match found for rate rule [Cds-CdH_Cds-CdH;CsJ-CsHH]
+! Multiplied by reaction path degeneracy 2
+S(7491)+PDD(1)=S(8000)                              3.020e+03 2.410     3.390    
+
+! Reaction index: Chemkin #1551; RMG #47213
+! Template reaction: Disproportionation
+! Flux pairs: RAD10(23), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD10(23)=C18H28(82)+PDD(1)                 2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1552; RMG #47219
+! Template reaction: Disproportionation
+! Flux pairs: RAD9(22), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD9(22)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1553; RMG #47225
+! Template reaction: Disproportionation
+! Flux pairs: RAD8(21), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD8(21)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1554; RMG #47231
+! Template reaction: Disproportionation
+! Flux pairs: RAD7(20), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD7(20)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1555; RMG #47237
+! Template reaction: Disproportionation
+! Flux pairs: RAD6(19), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD6(19)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1556; RMG #47243
+! Template reaction: Disproportionation
+! Flux pairs: RAD5(18), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD5(18)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1557; RMG #47249
+! Template reaction: Disproportionation
+! Flux pairs: RAD4(17), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD4(17)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1558; RMG #47255
+! Template reaction: Disproportionation
+! Flux pairs: RAD3(16), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD3(16)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1559; RMG #47261
+! Template reaction: Disproportionation
+! Flux pairs: RAD2(15), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD2(15)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1560; RMG #47267
+! Template reaction: Disproportionation
+! Flux pairs: RAD11(24), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(6423)+RAD11(24)=C18H28(82)+PDD(1)                 2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1561; RMG #47273
+! Template reaction: Disproportionation
+! Flux pairs: RAD1(14), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;C/H/NdDe_Csrad]
+S(6423)+RAD1(14)=C18H28(82)+PDD(1)                  7.630e+11 0.000     -0.550   
+
+! Reaction index: Chemkin #1562; RMG #47279
+! Template reaction: Disproportionation
+! Flux pairs: RAD12(25), PDD(1); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+RAD12(25)=C18H28(82)+PDD(1)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1563; RMG #47386
+! Template reaction: Disproportionation
+! Flux pairs: BENZYL(58), TOLUENE(2); S(6423), C18H28(82); 
+! Estimated using template [C_pri_rad;Csec_Rrad] for rate rule [C_rad/H2/Cb;C/H/NdDe_Csrad]
+S(6423)+BENZYL(58)=C18H28(82)+TOLUENE(2)            5.418e+11 0.000     -0.043   
+
+! Reaction index: Chemkin #1564; RMG #47508
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;C/H/NdDe_Csrad]
+S(6423)+EBZYL2(60)=C18H28(82)+ETHBENZ(4)            7.630e+11 0.000     -0.550   
+
+! Reaction index: Chemkin #1565; RMG #47514
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL(59), ETHBENZ(4); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+EBZYL(59)=C18H28(82)+ETHBENZ(4)             8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1566; RMG #47576
+! Template reaction: Disproportionation
+! Flux pairs: A3yl(61), BENZ3(5); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A3yl(61)=C18H28(82)+BENZ3(5)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1567; RMG #47644
+! Template reaction: Disproportionation
+! Flux pairs: A4yl(62), BENZ4(6); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A4yl(62)=C18H28(82)+BENZ4(6)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1568; RMG #47718
+! Template reaction: Disproportionation
+! Flux pairs: A5yl(63), BENZ5(7); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A5yl(63)=C18H28(82)+BENZ5(7)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1569; RMG #47798
+! Template reaction: Disproportionation
+! Flux pairs: A6yl(64), BENZ6(8); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A6yl(64)=C18H28(82)+BENZ6(8)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1570; RMG #47884
+! Template reaction: Disproportionation
+! Flux pairs: A7yl(65), BENZ7(9); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A7yl(65)=C18H28(82)+BENZ7(9)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1571; RMG #47976
+! Template reaction: Disproportionation
+! Flux pairs: A8yl(66), BENZ8(10); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A8yl(66)=C18H28(82)+BENZ8(10)               8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1572; RMG #48074
+! Template reaction: Disproportionation
+! Flux pairs: A9yl(67), BENZ9(11); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A9yl(67)=C18H28(82)+BENZ9(11)               8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1573; RMG #48178
+! Template reaction: Disproportionation
+! Flux pairs: A10yl(68), BENZ10(12); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+A10yl(68)=C18H28(82)+BENZ10(12)             8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1574; RMG #48697
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); S(6423), C18H28(82); 
+! Estimated using template [C_methyl;Csec_Rrad] for rate rule [C_methyl;C/H/NdDe_Csrad]
+S(6423)+METHYL(47)=C18H28(82)+C1(26)                6.020e+12 -0.320    0.000    
+
+! Reaction index: Chemkin #1575; RMG #48703
+! Template reaction: Disproportionation
+! Flux pairs: ETHYL(48), C2(27); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+ETHYL(48)=C18H28(82)+C2(27)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1576; RMG #48715
+! Template reaction: Disproportionation
+! Flux pairs: PROPYL(49), C3(28); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+PROPYL(49)=C18H28(82)+C3(28)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1577; RMG #48727
+! Template reaction: Disproportionation
+! Flux pairs: BUTYL(50), C4(29); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+BUTYL(50)=C18H28(82)+C4(29)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1578; RMG #48745
+! Template reaction: Disproportionation
+! Flux pairs: PENTYL(51), C5(30); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+PENTYL(51)=C18H28(82)+C5(30)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1579; RMG #48763
+! Template reaction: Disproportionation
+! Flux pairs: HEXYL(52), C6(31); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+HEXYL(52)=C18H28(82)+C6(31)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1580; RMG #48787
+! Template reaction: Disproportionation
+! Flux pairs: HEPTYL(53), C7(32); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+HEPTYL(53)=C18H28(82)+C7(32)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1581; RMG #48811
+! Template reaction: Disproportionation
+! Flux pairs: OCTYL(54), C8(33); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+OCTYL(54)=C18H28(82)+C8(33)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1582; RMG #48841
+! Template reaction: Disproportionation
+! Flux pairs: NONYL(55), C9(34); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+NONYL(55)=C18H28(82)+C9(34)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1583; RMG #48871
+! Template reaction: Disproportionation
+! Flux pairs: DECYL(56), C10(35); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+DECYL(56)=C18H28(82)+C10(35)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1584; RMG #48907
+! Template reaction: Disproportionation
+! Flux pairs: UDECYL(57), C11(36); S(6423), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(6423)+UDECYL(57)=C18H28(82)+C11(36)               8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1585; RMG #55671
+! Template reaction: Intra_R_Add_Exocyclic
+! Flux pairs: PDDJ4(79), S(6423); 
+! Exact match found for rate rule [R7_SSSS_D;doublebond_intra_HCd_pri;radadd_intra_cs2H]
+PDDJ4(79)=S(6423)                                   1.040e+10 0.210     5.560    
+DUPLICATE
+
+! Reaction index: Chemkin #1586; RMG #55674
+! Template reaction: Intra_R_Add_Endocyclic
+! Flux pairs: PDDJ4(79), S(6423); 
+! Estimated using template [R6_SSS_D;doublebond_intra_secDe_HCd;radadd_intra_cs2H] for rate rule
+! [R6_CsCsCs_RH_D;doublebond_intra_secDe_HCd;radadd_intra_cs2H]
+PDDJ4(79)=S(6423)                                   1.480e+09 0.190     7.380    
+DUPLICATE
+
+! Reaction index: Chemkin #1587; RMG #60022
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C18H28(82), S(6423); H(83), S(6423); 
+! Exact match found for rate rule [Cds-CdCs_Cds-CdCs;HJ]
+H(83)+C18H28(82)=S(6423)                            1.160e+08 1.640     1.430    
 
 END
 
