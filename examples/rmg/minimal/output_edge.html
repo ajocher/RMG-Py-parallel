@@ -234,7 +234,11 @@ $(document).ready(function() {
 
 <h1>RMG Output</h1>
 
+<<<<<<< HEAD
 <h2>Species (224)</h2>
+=======
+<h2>Species (7)</h2>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 
 <form id='thermoSelector' action="">
 <input type="checkbox" id="thermoComment" name="detail" value="thermoComment" onclick="updateThermoDetails(this);" checked="false"><label for="thermoComment"><b>Show Thermo Details</b></label><br>
@@ -337,6 +341,54 @@ $(document).ready(function() {
     <td class="SMILES" valign="top">[CH2]</td>
     
   <td class="MW" valign="top">14.03</td>
+    
+</tr>
+
+
+<tr class="species">
+    <td class="index" valign="top">
+    8.</td>
+    
+    
+ <td class="thermo" valign="top">
+ 
+
+        <table class="thermo" align="left">
+            <tr>
+                <th>H298</th>
+                <th>S298</th>
+                <th>Cp300</th>
+                <th>Cp500</th>
+                <th>Cp1000</th>
+                <th>Cp1500</th>
+            </tr>
+            <tr>
+                <td>
+                                    
+                12.52
+                 </td>
+                <td>
+                52.47
+                </td>
+                <td>10.24</td>
+                <td>14.93</td>
+                <td>22.36</td>
+                <td>26.40</td>
+            </tr>
+<tr><td colspan="6" class="thermoComment">
+<div id="thermoComment" class="thermoComment">Thermo group additivity estimation: group(Cds-CdsHH) + gauche(CsOsCdSs) +<br>other(R) + group(Cds-CdsHH) + gauche(CsOsCdSs) + other(R)</div>
+</td></tr>
+        </table>
+    
+  
+
+ </td>
+    
+    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A><img src="species/C=C(8).png" alt="C2H4(8)" title="C2H4(8)"></a></td>
+    <td class="label" valign="top">C2H4(8)</td>
+    <td class="SMILES" valign="top">C=C</td>
+    
+  <td class="MW" valign="top">28.05</td>
     
 </tr>
 
@@ -487,7 +539,7 @@ $(document).ready(function() {
 
 <tr class="species">
     <td class="index" valign="top">
-    15.</td>
+    12.</td>
     
     
  <td class="thermo" valign="top">
@@ -505,18 +557,18 @@ $(document).ready(function() {
             <tr>
                 <td>
                                     
-                18.74
+                -0.00
                  </td>
                 <td>
-                78.71
+                31.23
                 </td>
-                <td>22.56</td>
-                <td>33.29</td>
-                <td>50.44</td>
-                <td>58.93</td>
+                <td>6.92</td>
+                <td>6.97</td>
+                <td>7.22</td>
+                <td>7.72</td>
             </tr>
 <tr><td colspan="6" class="thermoComment">
-<div id="thermoComment" class="thermoComment">Thermo group additivity estimation: group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)CsRR))<br>+ other(R) + group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)CsRR)) + other(R) + group(Cs-<br>CsHHH) + gauche(Cs(Cs(CsRR)RRR)) + other(R) + group(Cs-CsHHH) +<br>gauche(Cs(Cs(CsRR)RRR)) + other(R) + radical(RCCJ)</div>
+<div id="thermoComment" class="thermoComment">Thermo library: primaryThermoLibrary</div>
 </td></tr>
         </table>
     
@@ -524,253 +576,65 @@ $(document).ready(function() {
 
  </td>
     
-    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A><img src="species/[CH2]CCC(15).png" alt="C4H9(15)" title="C4H9(15)"></a></td>
-    <td class="label" valign="top">C4H9(15)</td>
-    <td class="SMILES" valign="top">[CH2]CCC</td>
+    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A><img src="species/[H][H](12).png" alt="H2(12)" title="H2(12)"></a></td>
+    <td class="label" valign="top">H2(12)</td>
+    <td class="SMILES" valign="top">[H][H]</td>
     
-  <td class="MW" valign="top">57.11</td>
+  <td class="MW" valign="top">2.02</td>
     
 </tr>
 
+</table>
 
-<tr class="species">
-    <td class="index" valign="top">
-    16.</td>
-    
-    
- <td class="thermo" valign="top">
- 
+<h2>Reactions (15)</h2>
 
-        <table class="thermo" align="left">
-            <tr>
-                <th>H298</th>
-                <th>S298</th>
-                <th>Cp300</th>
-                <th>Cp500</th>
-                <th>Cp1000</th>
-                <th>Cp1500</th>
-            </tr>
-            <tr>
-                <td>
-                                    
-                67.73
-                 </td>
-                <td>
-                80.75
-                </td>
-                <td>21.79</td>
-                <td>31.39</td>
-                <td>46.75</td>
-                <td>54.27</td>
-            </tr>
-<tr><td colspan="6" class="thermoComment">
-<div id="thermoComment" class="thermoComment">Thermo group additivity estimation: group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)CsRR))<br>+ other(R) + group(Cs-CsCsHH) + gauche(Cs(Cs(CsRR)CsRR)) + other(R) + group(Cs-<br>CsHHH) + gauche(Cs(Cs(CsRR)RRR)) + other(R) + group(Cs-CsHHH) +<br>gauche(Cs(Cs(CsRR)RRR)) + other(R) + radical(RCCJ) + radical(RCCJ)</div>
-</td></tr>
-        </table>
-    
+<form id='familySelector' action="">
+<h4>Reaction families:</h4>
+    <input type="checkbox" id="1_2_Insertion_carbene" name="family" value="1_2_Insertion_carbene" checked="checked" onclick="updateFamily(this);"><label for="1_2_Insertion_carbene">1,2_Insertion_carbene (2 rxns)</label><br>
+    <input type="checkbox" id="Disproportionation" name="family" value="Disproportionation" checked="checked" onclick="updateFamily(this);"><label for="Disproportionation">Disproportionation (3 rxns)</label><br>
+    <input type="checkbox" id="H_Abstraction" name="family" value="H_Abstraction" checked="checked" onclick="updateFamily(this);"><label for="H_Abstraction">H_Abstraction (5 rxns)</label><br>
+    <input type="checkbox" id="R_Addition_MultipleBond" name="family" value="R_Addition_MultipleBond" checked="checked" onclick="updateFamily(this);"><label for="R_Addition_MultipleBond">R_Addition_MultipleBond (1 rxn)</label><br>
+    <input type="checkbox" id="R_Recombination" name="family" value="R_Recombination" checked="checked" onclick="updateFamily(this);"><label for="R_Recombination">R_Recombination (4 rxns)</label><br>
+
+<a href="javascript:checkAllFamilies();" onclick="checkAllFamilies()">check all</a> &nbsp; &nbsp; <a href="javascript:uncheckAllFamilies();" onclick="uncheckAllFamilies();">uncheck all</a><br>
+
+<h4>Reaction Details:</h4>
+<input type="checkbox" id="kinetics" name="detail" value="kinetics" onclick="updateDetails(this);"><label for="kinetics">Kinetics</label><br>
+<input type="checkbox" id="energy" name="detail" value="energy" onclick="updateDetails(this);"><label for="energy">Heats of Reaction</label><br>
+<input type="checkbox" id="chemkin" name="detail" value="chemkin" onclick="updateDetails(this);"><label for="chemkin">Chemkin strings</label><br>
+<a href="javascript:checkAllDetails();" onclick="checkAllDetails()">check all</a> &nbsp; &nbsp; <a href="javascript:uncheckAllDetails();" onclick="uncheckAllDetails();">uncheck all</a>
+</form>
+
+<h4>Reaction Filter:</h4>
+
+<form id="reactionFilter">
+  Reactant 1: <input type="text" id="reactant1" value=""> &nbsp;
+  Reactant 2: <input type="text" id="reactant2" value=""> &nbsp;
+  Product 1: <input type="text" id="product1" value=""> &nbsp;
+  Product 2: <input type="text" id="product2" value=""><br><br>
+
   
+</form>
 
- </td>
-    
-    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A><img src="species/[CH2]CC[CH2](16).png" alt="C4H8(16)" title="C4H8(16)"></a></td>
-    <td class="label" valign="top">C4H8(16)</td>
-    <td class="SMILES" valign="top">[CH2]CC[CH2]</td>
-    
-  <td class="MW" valign="top">56.11</td>
-    
+<input type="button" onclick="submitReactionFilter()" value="Search"> &nbsp;
+<input type="button" onclick="resetReactionFilter()" value="Clear Filter"> 
+
+<h4>Reaction List:</h4>
+
+<table class="reactionList">
+<thead>
+<tr><th>Index</th><th colspan="3" style="text-align: center;">Reaction</th><th>Family</th></tr>
+</thead>
+
+<tbody class="reaction">
+<tr class="1_2_Insertion_carbene rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3D1%20C%20u0%20p1%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product1%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A" title="Search on RMG website" class="searchlink">1.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p1%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH2](2).png" alt="CH2(2)" title="CH2(2), MW = 14.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/C(3).png" alt="C(3)" title="C(3), MW = 16.04 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/ethane(1).png" alt="ethane(1)" title="ethane(1), MW = 30.07 g/mol"></a></td>
+    <td class="family">1,2_Insertion_carbene</td>
 </tr>
-
-
-<tr class="species">
-    <td class="index" valign="top">
-    17.</td>
-    
-    
- <td class="thermo" valign="top">
- 
-
-        <table class="thermo" align="left">
-            <tr>
-                <th>H298</th>
-                <th>S298</th>
-                <th>Cp300</th>
-                <th>Cp500</th>
-                <th>Cp1000</th>
-                <th>Cp1500</th>
-            </tr>
-            <tr>
-                <td>
-                                    
-                6.48
-                 </td>
-                <td>
-                63.35
-                </td>
-                <td>17.44</td>
-                <td>29.60</td>
-                <td>47.60</td>
-                <td>56.35</td>
-            </tr>
-<tr><td colspan="6" class="thermoComment">
-<div id="thermoComment" class="thermoComment">Thermo group additivity estimation: group(Cs-CsCsHH) + other(R) + group(Cs-<br>CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) +<br>ring(Cyclobutane)</div>
-</td></tr>
-        </table>
-    
-  
-
- </td>
-    
-    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A><img src="species/C1CCC1(17).png" alt="C1CCC1(17)" title="C1CCC1(17)"></a></td>
-    <td class="label" valign="top">C1CCC1(17)</td>
-    <td class="SMILES" valign="top">C1CCC1</td>
-    
-  <td class="MW" valign="top">56.11</td>
-    
-</tr>
-
-
-<tr class="species">
-    <td class="index" valign="top">
-    18.</td>
-    
-    
- <td class="thermo" valign="top">
- 
-
-        <table class="thermo" align="left">
-            <tr>
-                <th>H298</th>
-                <th>S298</th>
-                <th>Cp300</th>
-                <th>Cp500</th>
-                <th>Cp1000</th>
-                <th>Cp1500</th>
-            </tr>
-            <tr>
-                <td>
-                                    
-                4.65
-                 </td>
-                <td>
-                63.81
-                </td>
-                <td>15.45</td>
-                <td>22.64</td>
-                <td>34.38</td>
-                <td>40.37</td>
-            </tr>
-<tr><td colspan="6" class="thermoComment">
-<div id="thermoComment" class="thermoComment">Thermo group additivity estimation: group(Cs-(Cds-Cds)HHH) + gauche(Cs(RRRR)) +<br>other(R) + group(Cds-CdsCsH) + gauche(CsOsCdSs) + other(R) + group(Cds-CdsHH) +<br>gauche(CsOsCdSs) + other(R)</div>
-</td></tr>
-        </table>
-    
-  
-
- </td>
-    
-    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B7%2CS%7D%0A3%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A9%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A><img src="species/C=CC(18).png" alt="C3H6(18)" title="C3H6(18)"></a></td>
-    <td class="label" valign="top">C3H6(18)</td>
-    <td class="SMILES" valign="top">C=CC</td>
-    
-  <td class="MW" valign="top">42.08</td>
-    
-</tr>
-
-
-<tr class="species">
-    <td class="index" valign="top">
-    19.</td>
-    
-    
- <td class="thermo" valign="top">
- 
-
-        <table class="thermo" align="left">
-            <tr>
-                <th>H298</th>
-                <th>S298</th>
-                <th>Cp300</th>
-                <th>Cp500</th>
-                <th>Cp1000</th>
-                <th>Cp1500</th>
-            </tr>
-            <tr>
-                <td>
-                                    
-                21.02
-                 </td>
-                <td>
-                69.01
-                </td>
-                <td>16.52</td>
-                <td>23.97</td>
-                <td>37.57</td>
-                <td>44.34</td>
-            </tr>
-<tr><td colspan="6" class="thermoComment">
-<div id="thermoComment" class="thermoComment">Thermo group additivity estimation: group(Cs-CsCsHH) + gauche(Cs(CsCsRR)) +<br>other(R) + group(Cs-CsHHH) + gauche(Cs(Cs(CsRR)RRR)) + other(R) + group(Cs-<br>CsHHH) + gauche(Cs(Cs(CsRR)RRR)) + other(R) + radical(CCJC)</div>
-</td></tr>
-        </table>
-    
-  
-
- </td>
-    
-    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A3%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B2%2CS%7D%20%7B10%2CS%7D%0A4%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A><img src="species/C[CH]C(19).png" alt="C3H7(19)" title="C3H7(19)"></a></td>
-    <td class="label" valign="top">C3H7(19)</td>
-    <td class="SMILES" valign="top">C[CH]C</td>
-    
-  <td class="MW" valign="top">43.09</td>
-    
-</tr>
-
-
-<tr class="species">
-    <td class="index" valign="top">
-    20.</td>
-    
-    
- <td class="thermo" valign="top">
- 
-
-        <table class="thermo" align="left">
-            <tr>
-                <th>H298</th>
-                <th>S298</th>
-                <th>Cp300</th>
-                <th>Cp500</th>
-                <th>Cp1000</th>
-                <th>Cp1500</th>
-            </tr>
-            <tr>
-                <td>
-                                    
-                70.01
-                 </td>
-                <td>
-                73.80
-                </td>
-                <td>15.75</td>
-                <td>22.08</td>
-                <td>33.87</td>
-                <td>39.68</td>
-            </tr>
-<tr><td colspan="6" class="thermoComment">
-<div id="thermoComment" class="thermoComment">Thermo group additivity estimation: group(Cs-CsCsHH) + gauche(Cs(CsCsRR)) +<br>other(R) + group(Cs-CsHHH) + gauche(Cs(Cs(CsRR)RRR)) + other(R) + group(Cs-<br>CsHHH) + gauche(Cs(Cs(CsRR)RRR)) + other(R) + radical(CCJC) + radical(RCCJ)</div>
-</td></tr>
-        </table>
-    
-  
-
- </td>
-    
-    <td class="structure" valign="top"><a href=http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CS%7D%20%7B7%2CS%7D%0A3%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A9%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A><img src="species/[CH2][CH]C(20).png" alt="C3H6(20)" title="C3H6(20)"></a></td>
-    <td class="label" valign="top">C3H6(20)</td>
-    <td class="SMILES" valign="top">[CH2][CH]C</td>
-    
-  <td class="MW" valign="top">42.08</td>
-    
-</tr>
+<<<<<<< HEAD
 
 
 <tr class="species">
@@ -31698,40 +31562,72 @@ C4H6(105)+C4H8(144)=C4H7(51)+C4H7(51)               2.420e+12 0.000     0.000
     <td class="family">Disproportionation</td>
 </tr>
 <tr class="kinetics Disproportionation hide_kinetics">
+=======
+<tr class="kinetics 1_2_Insertion_carbene hide_kinetics">
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
     <td colspan="4"><table class="KineticsData">
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>+6.5</td><td>+6.7</td><td>+6.8</td><td>+6.8</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(2.58385e+07,'m^3/(mol*s)'), n=-0.14, Ea=(5.0208,'kJ/mol'), T0=(1,'K'), comment="""Estimated using an average for rate rule [Cd_pri_rad;XH_s_Rrad]
 Multiplied by reaction path degeneracy 4""")</span></td>
+=======
+    <td>+7.2</td><td>+7.2</td><td>+7.2</td><td>+7.2</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(3.4939e+06,'m^3/(mol*s)'), n=0.189, Ea=(-1.48147,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [carbene;Cs_H] for rate rule [carbene;C_methane]
+Multiplied by reaction path degeneracy 8""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
-<tr class="energy Disproportionation hide_energy">
+<tr class="energy 1_2_Insertion_carbene hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = -84.70
     <br><b>S298 (cal/mol*K)</b> = -17.14
     <br><b>G298 (kcal/mol)</b> = -79.60</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -105.13
+    <br><b>S298 (cal/mol*K)</b> = -34.59
+    <br><b>G298 (kcal/mol)</b> = -94.82</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
-<tr class="chemkin Disproportionation hide_chemkin">
+<tr class="chemkin 1_2_Insertion_carbene hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: Disproportionation
 ! Flux pairs: C4H6(105), C4H7(51); C4H8(57), C4H7(51); 
 ! Estimated using an average for rate rule [Cd_pri_rad;XH_s_Rrad]
 ! Multiplied by reaction path degeneracy 4
 C4H8(57)+C4H6(105)=C4H7(51)+C4H7(51)                2.584e+13 -0.140    1.200    
+=======
+    <td colspan="4">! Template reaction: 1,2_Insertion_carbene
+! Flux pairs: CH2(2), ethane(1); C(3), ethane(1); 
+! Estimated using template [carbene;Cs_H] for rate rule [carbene;C_methane]
+! Multiplied by reaction path degeneracy 8
+CH2(2)+C(3)=ethane(1)                               3.494e+12 0.189     -0.354   
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="R_Addition_MultipleBond rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B8%2CD%7D%20%7B18%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B5%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A" title="Search on RMG website" class="searchlink">621.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B8%2CD%7D%20%7B18%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B5%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/[CH2][CH]C(C)C(C)C=C(227).png" alt="C8H14(227)" title="C8H14(227), MW = 110.20 g/mol"></a></td>
     <td class="family">R_Addition_MultipleBond</td>
+=======
+<tr class="H_Abstraction rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3Dmultiplicity%203%0A1%20C%20u2%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product2%3Dmultiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A" title="Search on RMG website" class="searchlink">5.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/C(3).png" alt="C(3)" title="C(3), MW = 16.04 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20C%20u2%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH2](7).png" alt="CH2(7)" title="CH2(7), MW = 14.03 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH3](4).png" alt="CH3(4)" title="CH3(4), MW = 15.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH3](4).png" alt="CH3(4)" title="CH3(4), MW = 15.03 g/mol"></a></td>
+    <td class="family">H_Abstraction</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics R_Addition_MultipleBond hide_kinetics">
     <td></td>
@@ -31739,32 +31635,59 @@ C4H8(57)+C4H6(105)=C4H7(51)+C4H7(51)                2.584e+13 -0.140    1.200
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-1.0</td><td>+2.2</td><td>+3.4</td><td>+4.1</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.00188149,'m^3/(mol*s)'), n=2.445, Ea=(46.6462,'kJ/mol'), T0=(1,'K'), comment="""Estimated using an average for rate rule [Cd_R;CsJ-CdCsH]""")</span></td>
+=======
+    <td>+2.5</td><td>+4.4</td><td>+5.2</td><td>+5.6</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(3.62866,'m^3/(mol*s)'), n=1.73, Ea=(25.899,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [Cs_H;CH2_triplet] for rate rule [C_methane;CH2_triplet]
+Multiplied by reaction path degeneracy 4""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="energy R_Addition_MultipleBond hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = 7.13
     <br><b>S298 (cal/mol*K)</b> = -27.50
     <br><b>G298 (kcal/mol)</b> = 15.33</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -5.96
+    <br><b>S298 (cal/mol*K)</b> = 1.63
+    <br><b>G298 (kcal/mol)</b> = -6.45</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin R_Addition_MultipleBond hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: R_Addition_MultipleBond
 ! Flux pairs: C4H7(51), C8H14(227); C4H7(51), C8H14(227); 
 ! Estimated using an average for rate rule [Cd_R;CsJ-CdCsH]
 C4H7(51)+C4H7(51)=C8H14(227)                        1.881e+03 2.445     11.149   
+=======
+    <td colspan="4">! Template reaction: H_Abstraction
+! Flux pairs: CH2(7), CH3(4); C(3), CH3(4); 
+! Estimated using template [Cs_H;CH2_triplet] for rate rule [C_methane;CH2_triplet]
+! Multiplied by reaction path degeneracy 4
+C(3)+CH2(7)=CH3(4)+CH3(4)                           3.629e+06 1.730     6.190    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
 <tr class="R_Addition_MultipleBond rxnStart">
+<<<<<<< HEAD
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B6%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B7%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B5%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B4%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B8%2CD%7D%20%7B18%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A" title="Search on RMG website" class="searchlink">622.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B6%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B7%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B5%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B4%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B8%2CD%7D%20%7B18%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/[CH2]C([CH]C)C(C)C=C(228).png" alt="C8H14(228)" title="C8H14(228), MW = 110.20 g/mol"></a></td>
+=======
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A__reactant2%3D1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A" title="Search on RMG website" class="searchlink">6.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C=C(8).png" alt="C2H4(8)" title="C2H4(8), MW = 28.05 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td class="family">R_Addition_MultipleBond</td>
 </tr>
 <tr class="kinetics R_Addition_MultipleBond hide_kinetics">
@@ -31773,6 +31696,7 @@ C4H7(51)+C4H7(51)=C8H14(227)                        1.881e+03 2.445     11.149
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-1.3</td><td>+2.1</td><td>+3.3</td><td>+4.1</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.00262357,'m^3/(mol*s)'), n=2.41, Ea=(49.5799,'kJ/mol'), T0=(1,'K'), comment="""Estimated using an average for rate rule [Cds_Cds;CsJ-CdCsH]""")</span></td>
 </tr>
@@ -31781,25 +31705,52 @@ C4H7(51)+C4H7(51)=C8H14(227)                        1.881e+03 2.445     11.149
     <td colspan="3"><b>H298 (kcal/mol)</b> = 7.13
     <br><b>S298 (cal/mol*K)</b> = -27.20
     <br><b>G298 (kcal/mol)</b> = 15.24</td>
+=======
+    <td>+6.6</td><td>+7.4</td><td>+7.7</td><td>+8.0</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(4.62e+08,'cm^3/(mol*s)'), n=1.64, Ea=(4.22584,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Exact match found for rate rule [Cds-HH_Cds-HH;HJ]
+Multiplied by reaction path degeneracy 2""")</span></td>
+</tr>
+<tr class="energy R_Addition_MultipleBond hide_energy">
+    <td></td>
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -36.03
+    <br><b>S298 (cal/mol*K)</b> = -20.01
+    <br><b>G298 (kcal/mol)</b> = -30.06</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin R_Addition_MultipleBond hide_chemkin">
     <td></td>
     <td colspan="4">! Template reaction: R_Addition_MultipleBond
+<<<<<<< HEAD
 ! Flux pairs: C4H7(51), C8H14(228); C4H7(51), C8H14(228); 
 ! Estimated using an average for rate rule [Cds_Cds;CsJ-CdCsH]
 C4H7(51)+C4H7(51)=C8H14(228)                        2.624e+03 2.410     11.850   
+=======
+! Flux pairs: C2H4(8), C2H5(5); H(6), C2H5(5); 
+! Exact match found for rate rule [Cds-HH_Cds-HH;HJ]
+! Multiplied by reaction path degeneracy 2
+H(6)+C2H4(8)=C2H5(5)                                4.620e+08 1.640     1.010    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="R_Addition_MultipleBond rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B8%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%20%7B18%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CD%7D%20%7B20%2CS%7D%0A6%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B8%2CS%7D%20%7B22%2CS%7D%0A7%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B5%2CD%7D%20%7B19%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B21%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A" title="Search on RMG website" class="searchlink">623.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B8%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%20%7B18%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CD%7D%20%7B20%2CS%7D%0A6%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B8%2CS%7D%20%7B22%2CS%7D%0A7%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B5%2CD%7D%20%7B19%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B21%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A"><img src="species/C[CH][CH]CCC=CC(229).png" alt="C8H14(229)" title="C8H14(229), MW = 110.20 g/mol"></a></td>
     <td class="family">R_Addition_MultipleBond</td>
+=======
+<tr class="R_Recombination rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A__reactant2%3Dmultiplicity%203%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A" title="Search on RMG website" class="searchlink">7.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/[CH2][CH2](9).png" alt="C2H4(9)" title="C2H4(9), MW = 28.05 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a></td>
+    <td class="family">R_Recombination</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics R_Addition_MultipleBond hide_kinetics">
     <td></td>
@@ -31807,33 +31758,62 @@ C4H7(51)+C4H7(51)=C8H14(228)                        2.624e+03 2.410     11.850
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-0.9</td><td>+2.7</td><td>+4.1</td><td>+4.8</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.00850306,'m^3/(mol*s)'), n=2.51889, Ea=(53.4665,'kJ/mol'), T0=(1,'K'), comment="""Estimated using an average for rate rule [Cd_R;CsJ-CdHH]""")</span></td>
+=======
+    <td>+7.6</td><td>+7.6</td><td>+7.6</td><td>+7.6</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(2.28355e+07,'m^3/(mol*s)'), n=0.0622222, Ea=(-1.02276,'kJ/mol'), T0=(1,'K'), comment="""Estimated using an average for rate rule [Y_rad;H_rad]
+Multiplied by reaction path degeneracy 2""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="energy R_Addition_MultipleBond hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = 4.17
     <br><b>S298 (cal/mol*K)</b> = -20.80
     <br><b>G298 (kcal/mol)</b> = 10.37</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -101.10
+    <br><b>S298 (cal/mol*K)</b> = -29.46
+    <br><b>G298 (kcal/mol)</b> = -92.32</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin R_Addition_MultipleBond hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: R_Addition_MultipleBond
 ! Flux pairs: C4H7(51), C8H14(229); C4H7(51), C8H14(229); 
 ! Estimated using an average for rate rule [Cd_R;CsJ-CdHH]
 C4H7(51)+C4H7(51)=C8H14(229)                        8.503e+03 2.519     12.779   
+=======
+    <td colspan="4">! Template reaction: R_Recombination
+! Flux pairs: C2H4(9), C2H5(5); H(6), C2H5(5); 
+! Estimated using an average for rate rule [Y_rad;H_rad]
+! Multiplied by reaction path degeneracy 2
+H(6)+C2H4(9)=C2H5(5)                                2.284e+13 0.062     -0.244   
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="H_Abstraction rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3D1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B3%2CD%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product2%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B4%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B2%2CD%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A" title="Search on RMG website" class="searchlink">624.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B3%2CD%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=CCC(27).png" alt="C4H8(27)" title="C4H8(27), MW = 56.11 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B4%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B2%2CD%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A"><img src="species/[CH2]C=[C]C(142).png" alt="C4H6(142)" title="C4H6(142), MW = 54.09 g/mol"></a></td>
     <td class="family">H_Abstraction</td>
+=======
+<tr class="Disproportionation rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product2%3D1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A" title="Search on RMG website" class="searchlink">8.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH3](4).png" alt="CH3(4)" title="CH3(4), MW = 15.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/C(3).png" alt="C(3)" title="C(3), MW = 16.04 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C=C(8).png" alt="C2H4(8)" title="C2H4(8), MW = 28.05 g/mol"></a></td>
+    <td class="family">Disproportionation</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics H_Abstraction hide_kinetics">
     <td></td>
@@ -31841,6 +31821,7 @@ C4H7(51)+C4H7(51)=C8H14(229)                        8.503e+03 2.519     12.779
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-6.6</td><td>-0.1</td><td>+2.4</td><td>+3.8</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.0126,'cm^3/(mol*s)'), n=4.34, Ea=(100.039,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Exact match found for rate rule [Cd/H/NonDeC;C_rad/H/CdCs]""")</span></td>
 </tr>
@@ -31849,24 +31830,50 @@ C4H7(51)+C4H7(51)=C8H14(229)                        8.503e+03 2.519     12.779
     <td colspan="3"><b>H298 (kcal/mol)</b> = 23.91
     <br><b>S298 (cal/mol*K)</b> = 4.78
     <br><b>G298 (kcal/mol)</b> = 22.49</td>
+=======
+    <td>+7.0</td><td>+6.8</td><td>+6.7</td><td>+6.6</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(6.57e+14,'cm^3/(mol*s)','*|/',1.1), n=-0.68, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2500,'K'), comment="""Exact match found for rate rule [C_methyl;Cmethyl_Csrad]
+Multiplied by reaction path degeneracy 3""")</span></td>
+</tr>
+<tr class="energy Disproportionation hide_energy">
+    <td></td>
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -68.78
+    <br><b>S298 (cal/mol*K)</b> = -9.30
+    <br><b>G298 (kcal/mol)</b> = -66.01</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin H_Abstraction hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: H_Abstraction
 ! Flux pairs: C4H7(51), C4H6(142); C4H7(51), C4H8(27); 
 ! Exact match found for rate rule [Cd/H/NonDeC;C_rad/H/CdCs]
 C4H7(51)+C4H7(51)=C4H8(27)+C4H6(142)                1.260e-02 4.340     23.910   
+=======
+    <td colspan="4">! Template reaction: Disproportionation
+! Flux pairs: CH3(4), C(3); C2H5(5), C2H4(8); 
+! Exact match found for rate rule [C_methyl;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+CH3(4)+C2H5(5)=C(3)+C2H4(8)                         6.570e+14 -0.680    0.000    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
 <tr class="H_Abstraction rxnStart">
+<<<<<<< HEAD
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u2%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3D1%20%20C%20u0%20p0%20c0%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B4%2CD%7D%20%7B11%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A" title="Search on RMG website" class="searchlink">625.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u2%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/[CH]=C[CH]C(105).png" alt="C4H6(105)" title="C4H6(105), MW = 54.09 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B4%2CD%7D%20%7B11%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/CC=CC(43).png" alt="C4H8(43)" title="C4H8(43), MW = 56.11 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
+=======
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%203%0A1%20C%20u2%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product2%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A" title="Search on RMG website" class="searchlink">9.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20C%20u2%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH2](7).png" alt="CH2(7)" title="CH2(7), MW = 14.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/ethane(1).png" alt="ethane(1)" title="ethane(1), MW = 30.07 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH3](4).png" alt="CH3(4)" title="CH3(4), MW = 15.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td class="family">H_Abstraction</td>
 </tr>
 <tr class="kinetics H_Abstraction hide_kinetics">
@@ -31875,35 +31882,62 @@ C4H7(51)+C4H7(51)=C4H8(27)+C4H6(142)                1.260e-02 4.340     23.910
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>+3.8</td><td>+5.1</td><td>+5.9</td><td>+6.4</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.01332,'cm^3/(mol*s)'), n=4.34, Ea=(0.4184,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Estimated using template [C/H3/Cd;Cd_pri_rad] for rate rule [C/H3/Cd\H_Cd\H\Cs;Cd_pri_rad]
+=======
+    <td>+4.6</td><td>+6.2</td><td>+7.0</td><td>+7.5</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(5700,'cm^3/(mol*s)'), n=3.05, Ea=(13.0666,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Estimated using template [C/H3/Cs;Y_1centerbirad] for rate rule [C/H3/Cs\H3;CH2_triplet]
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 Multiplied by reaction path degeneracy 6""")</span></td>
 </tr>
 <tr class="energy H_Abstraction hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = -16.40
     <br><b>S298 (cal/mol*K)</b> = -4.31
     <br><b>G298 (kcal/mol)</b> = -15.11</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -9.67
+    <br><b>S298 (cal/mol*K)</b> = 4.53
+    <br><b>G298 (kcal/mol)</b> = -11.02</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin H_Abstraction hide_chemkin">
     <td></td>
     <td colspan="4">! Template reaction: H_Abstraction
+<<<<<<< HEAD
 ! Flux pairs: C4H8(43), C4H7(51); C4H6(105), C4H7(51); 
 ! Estimated using template [C/H3/Cd;Cd_pri_rad] for rate rule [C/H3/Cd\H_Cd\H\Cs;Cd_pri_rad]
 ! Multiplied by reaction path degeneracy 6
 C4H6(105)+C4H8(43)=C4H7(51)+C4H7(51)                1.332e-02 4.340     0.100    
+=======
+! Flux pairs: CH2(7), CH3(4); ethane(1), C2H5(5); 
+! Estimated using template [C/H3/Cs;Y_1centerbirad] for rate rule [C/H3/Cs\H3;CH2_triplet]
+! Multiplied by reaction path degeneracy 6
+CH2(7)+ethane(1)=CH3(4)+C2H5(5)                     5.700e+03 3.050     3.123    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="1_4_Linear_birad_scission rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%205%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B5%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CS%7D%20%7B18%2CS%7D%0A6%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B7%2CS%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B19%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A" title="Search on RMG website" class="searchlink">626.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%205%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B5%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CS%7D%20%7B18%2CS%7D%0A6%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B7%2CS%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B19%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/[CH2]C([CH]C)C[CH][CH]C(230).png" alt="C8H14(230)" title="C8H14(230), MW = 110.20 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="family">1,4_Linear_birad_scission</td>
+=======
+<tr class="R_Recombination rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3D1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A4%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A" title="Search on RMG website" class="searchlink">10.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH3](4).png" alt="CH3(4)" title="CH3(4), MW = 15.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A4%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A"><img src="species/CCC(10).png" alt="CCC(10)" title="CCC(10), MW = 44.10 g/mol"></a></td>
+    <td class="family">R_Recombination</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics 1_4_Linear_birad_scission hide_kinetics">
     <td></td>
@@ -31911,19 +31945,31 @@ C4H6(105)+C4H8(43)=C4H7(51)+C4H7(51)                1.332e-02 4.340     0.100
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>+13.3</td><td>+13.3</td><td>+13.3</td><td>+13.3</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(2e+13,'s^-1'), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Exact match found for rate rule [RJJ]
 Multiplied by reaction path degeneracy 4""")</span></td>
+=======
+    <td>+7.5</td><td>+7.5</td><td>+7.5</td><td>+7.5</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(3.37e+13,'cm^3/(mol*s)','*|/',2), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), comment="""Exact match found for rate rule [C_methyl;C_rad/H2/Cs]""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="energy 1_4_Linear_birad_scission hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = -71.66
     <br><b>S298 (cal/mol*K)</b> = 12.80
     <br><b>G298 (kcal/mol)</b> = -75.48</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -88.82
+    <br><b>S298 (cal/mol*K)</b> = -41.74
+    <br><b>G298 (kcal/mol)</b> = -76.38</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin 1_4_Linear_birad_scission hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: 1,4_Linear_birad_scission
 ! Flux pairs: C8H14(230), C4H7(51); C8H14(230), C4H7(51); 
 ! Exact match found for rate rule [RJJ]
@@ -32001,17 +32047,32 @@ Multiplied by reaction path degeneracy 2""")</span></td>
 ! Estimated using template [db;doublebond] for rate rule [db_2H;mb_db_HNd]
 ! Multiplied by reaction path degeneracy 2
 C4H7(51)+C4H7(51)=C8H14(232)                        1.384e+11 0.000     43.720   
+=======
+    <td colspan="4">! Template reaction: R_Recombination
+! Flux pairs: CH3(4), CCC(10); C2H5(5), CCC(10); 
+! Exact match found for rate rule [C_methyl;C_rad/H2/Cs]
+CH3(4)+C2H5(5)=CCC(10)                              3.370e+13 0.000     0.000    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="2_2_cycloaddition_Cd rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B11%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B17%2CS%7D%20%7B18%2CS%7D%20%7B19%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B6%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A" title="Search on RMG website" class="searchlink">629.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B11%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B17%2CS%7D%20%7B18%2CS%7D%20%7B19%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B6%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/[CH2]C1CC([CH]C)C1C(233).png" alt="C8H14(233)" title="C8H14(233), MW = 110.20 g/mol"></a></td>
     <td class="family">2+2_cycloaddition_Cd</td>
+=======
+<tr class="Disproportionation rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3D1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product2%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A" title="Search on RMG website" class="searchlink">11.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C=C(8).png" alt="C2H4(8)" title="C2H4(8), MW = 28.05 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/ethane(1).png" alt="ethane(1)" title="ethane(1), MW = 30.07 g/mol"></a></td>
+    <td class="family">Disproportionation</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics 2_2_cycloaddition_Cd hide_kinetics">
     <td></td>
@@ -32019,19 +32080,32 @@ C4H7(51)+C4H7(51)=C8H14(232)                        1.384e+11 0.000     43.720
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-14.0</td><td>-4.4</td><td>-1.2</td><td>+0.4</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(1.384e+11,'cm^3/(mol*s)'), n=0, Ea=(182.924,'kJ/mol'), T0=(1,'K'), Tmin=(723,'K'), Tmax=(786,'K'), comment="""Estimated using template [db;doublebond] for rate rule [db_2H;mb_db]
 Multiplied by reaction path degeneracy 2""")</span></td>
+=======
+    <td>+6.9</td><td>+6.8</td><td>+6.7</td><td>+6.7</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(6.9e+13,'cm^3/(mol*s)','*|/',1.1), n=-0.35, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2500,'K'), comment="""Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+Multiplied by reaction path degeneracy 3""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="energy 2_2_cycloaddition_Cd hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = 9.63
     <br><b>S298 (cal/mol*K)</b> = -36.01
     <br><b>G298 (kcal/mol)</b> = 20.36</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -65.07
+    <br><b>S298 (cal/mol*K)</b> = -12.20
+    <br><b>G298 (kcal/mol)</b> = -61.44</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin 2_2_cycloaddition_Cd hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: 2+2_cycloaddition_Cd
 ! Flux pairs: C4H7(51), C8H14(233); C4H7(51), C8H14(233); 
 ! Estimated using template [db;doublebond] for rate rule [db_2H;mb_db]
@@ -32071,89 +32145,161 @@ C4H7(51)+C4H7(51)=C8H14(233)                        1.384e+11 0.000     43.720
 ! Flux pairs: C4H7(51), C8H14(234); C4H7(51), C8H14(234); 
 ! Estimated using template [C_rad/H2/Cd;C_sec_rad] for rate rule [C_rad/H2/Cd;C_rad/H/CdCs]
 C4H7(51)+C4H7(51)=C8H14(234)                        3.425e+13 -0.175    -0.195   
+=======
+    <td colspan="4">! Template reaction: Disproportionation
+! Flux pairs: C2H5(5), ethane(1); C2H5(5), C2H4(8); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+C2H5(5)+C2H5(5)=C2H4(8)+ethane(1)                   6.900e+13 -0.350    0.000    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="Disproportionation rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3D1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CD%7D%20%7B5%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B6%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product2%3D1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B3%2CD%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A" title="Search on RMG website" class="searchlink">631.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CD%7D%20%7B5%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B6%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=CC=C(30).png" alt="C4H6(30)" title="C4H6(30), MW = 54.09 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B3%2CD%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=CCC(27).png" alt="C4H8(27)" title="C4H8(27), MW = 56.11 g/mol"></a></td>
     <td class="family">Disproportionation</td>
+=======
+<tr class="R_Recombination rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3D1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A" title="Search on RMG website" class="searchlink">12.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/CCCC(11).png" alt="CCCC(11)" title="CCCC(11), MW = 58.12 g/mol"></a></td>
+    <td class="family">R_Recombination</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
-<tr class="kinetics Disproportionation hide_kinetics">
+<tr class="kinetics R_Recombination hide_kinetics">
     <td></td>
     <td colspan="4"><table class="KineticsData">
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>+5.2</td><td>+5.2</td><td>+5.2</td><td>+5.2</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(1.5e+11,'cm^3/(mol*s)'), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2500,'K'), comment="""Estimated using template [C_sec_rad;Cmethyl_Csrad/H/Cd] for rate rule [C_rad/H/OneDeC;Cmethyl_Csrad/H/Cd]
 Multiplied by reaction path degeneracy 3""")</span></td>
+=======
+    <td>+7.1</td><td>+7.1</td><td>+7.1</td><td>+7.1</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(1.15e+13,'cm^3/(mol*s)','*|/',2), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1200,'K'), comment="""Exact match found for rate rule [C_rad/H2/Cs;C_rad/H2/Cs]""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
-<tr class="energy Disproportionation hide_energy">
+<tr class="energy R_Recombination hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = -39.78
     <br><b>S298 (cal/mol*K)</b> = -1.07
     <br><b>G298 (kcal/mol)</b> = -39.47</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -87.45
+    <br><b>S298 (cal/mol*K)</b> = -45.82
+    <br><b>G298 (kcal/mol)</b> = -73.80</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
-<tr class="chemkin Disproportionation hide_chemkin">
+<tr class="chemkin R_Recombination hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: Disproportionation
 ! Flux pairs: C4H7(51), C4H8(27); C4H7(51), C4H6(30); 
 ! Estimated using template [C_sec_rad;Cmethyl_Csrad/H/Cd] for rate rule [C_rad/H/OneDeC;Cmethyl_Csrad/H/Cd]
 ! Multiplied by reaction path degeneracy 3
 C4H7(51)+C4H7(51)=C4H6(30)+C4H8(27)                 1.500e+11 0.000     0.000    
+=======
+    <td colspan="4">! Template reaction: R_Recombination
+! Flux pairs: C2H5(5), CCCC(11); C2H5(5), CCCC(11); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_rad/H2/Cs]
+C2H5(5)+C2H5(5)=CCCC(11)                            1.150e+13 0.000     0.000    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="Disproportionation rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u2%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B11%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A" title="Search on RMG website" class="searchlink">632.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u2%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/[CH]=C[CH]C(105).png" alt="C4H6(105)" title="C4H6(105), MW = 54.09 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B11%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C[CH][CH]C(145).png" alt="C4H8(145)" title="C4H8(145), MW = 56.11 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="family">Disproportionation</td>
+=======
+<tr class="1_2_Insertion_carbene rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3D1%20C%20u0%20p1%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3D1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product1%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A" title="Search on RMG website" class="searchlink">13.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p1%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH2](2).png" alt="CH2(2)" title="CH2(2), MW = 14.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[H][H](12).png" alt="H2(12)" title="H2(12), MW = 2.02 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/C(3).png" alt="C(3)" title="C(3), MW = 16.04 g/mol"></a></td>
+    <td class="family">1,2_Insertion_carbene</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
-<tr class="kinetics Disproportionation hide_kinetics">
+<tr class="kinetics 1_2_Insertion_carbene hide_kinetics">
     <td></td>
     <td colspan="4"><table class="KineticsData">
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>+7.1</td><td>+6.9</td><td>+6.7</td><td>+6.6</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(9.12e+14,'cm^3/(mol*s)','*|/',1.5), n=-0.7, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2500,'K'), comment="""Exact match found for rate rule [Cd_pri_rad;Cmethyl_Csrad]
 Multiplied by reaction path degeneracy 6""")</span></td>
+=======
+    <td>+7.2</td><td>+7.1</td><td>+7.0</td><td>+7.1</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(287528,'m^3/(mol*s)'), n=0.444, Ea=(-5.08576,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [carbene;R_H] for rate rule [carbene;H2]
+Multiplied by reaction path degeneracy 4""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
-<tr class="energy Disproportionation hide_energy">
+<tr class="energy 1_2_Insertion_carbene hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = -82.05
     <br><b>S298 (cal/mol*K)</b> = -17.47
     <br><b>G298 (kcal/mol)</b> = -76.85</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -120.35
+    <br><b>S298 (cal/mol*K)</b> = -31.96
+    <br><b>G298 (kcal/mol)</b> = -110.83</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
-<tr class="chemkin Disproportionation hide_chemkin">
+<tr class="chemkin 1_2_Insertion_carbene hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: Disproportionation
 ! Flux pairs: C4H6(105), C4H7(51); C4H8(145), C4H7(51); 
 ! Exact match found for rate rule [Cd_pri_rad;Cmethyl_Csrad]
 ! Multiplied by reaction path degeneracy 6
 C4H6(105)+C4H8(145)=C4H7(51)+C4H7(51)               9.120e+14 -0.700    0.000    
+=======
+    <td colspan="4">! Template reaction: 1,2_Insertion_carbene
+! Flux pairs: CH2(2), C(3); H2(12), C(3); 
+! Estimated using template [carbene;R_H] for rate rule [carbene;H2]
+! Multiplied by reaction path degeneracy 4
+CH2(2)+H2(12)=C(3)                                  2.875e+11 0.444     -1.216   
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="R_Addition_MultipleBond rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B6%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B7%2CS%7D%20%7B19%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B8%2CD%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B18%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A" title="Search on RMG website" class="searchlink">633.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B6%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A5%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B7%2CS%7D%20%7B19%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B8%2CD%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B4%2CS%7D%20%7B5%2CS%7D%20%7B18%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/C=CC(C)C[CH][CH]C(235).png" alt="C8H14(235)" title="C8H14(235), MW = 110.20 g/mol"></a></td>
     <td class="family">R_Addition_MultipleBond</td>
+=======
+<tr class="H_Abstraction rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A__reactant2%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product2%3D1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A" title="Search on RMG website" class="searchlink">15.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/ethane(1).png" alt="ethane(1)" title="ethane(1), MW = 30.07 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[H][H](12).png" alt="H2(12)" title="H2(12), MW = 2.02 g/mol"></a></td>
+    <td class="family">H_Abstraction</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics R_Addition_MultipleBond hide_kinetics">
     <td></td>
@@ -32161,32 +32307,59 @@ C4H6(105)+C4H8(145)=C4H7(51)+C4H7(51)               9.120e+14 -0.700    0.000
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-1.0</td><td>+2.2</td><td>+3.4</td><td>+4.1</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.00188149,'m^3/(mol*s)'), n=2.445, Ea=(46.6462,'kJ/mol'), T0=(1,'K'), comment="""Estimated using an average for rate rule [Cd_R;CsJ-CdCsH]""")</span></td>
+=======
+    <td>+2.7</td><td>+5.2</td><td>+6.4</td><td>+7.1</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(2.17494e-06,'m^3/(mol*s)'), n=4.07, Ea=(25.4387,'kJ/mol'), T0=(1,'K'), comment="""Estimated using average of templates [C/H3/Cs;H_rad] + [C/H3/Cs\H3;Y_rad] for rate rule [C/H3/Cs\H3;H_rad]
+Multiplied by reaction path degeneracy 6""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="energy R_Addition_MultipleBond hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = 5.12
     <br><b>S298 (cal/mol*K)</b> = -22.65
     <br><b>G298 (kcal/mol)</b> = 11.87</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -3.11
+    <br><b>S298 (cal/mol*K)</b> = 8.61
+    <br><b>G298 (kcal/mol)</b> = -5.67</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin R_Addition_MultipleBond hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: R_Addition_MultipleBond
 ! Flux pairs: C4H7(51), C8H14(235); C4H7(51), C8H14(235); 
 ! Estimated using an average for rate rule [Cd_R;CsJ-CdCsH]
 C4H7(51)+C4H7(51)=C8H14(235)                        1.881e+03 2.445     11.149   
+=======
+    <td colspan="4">! Template reaction: H_Abstraction
+! Flux pairs: ethane(1), C2H5(5); H(6), H2(12); 
+! Estimated using average of templates [C/H3/Cs;H_rad] + [C/H3/Cs\H3;Y_rad] for rate rule [C/H3/Cs\H3;H_rad]
+! Multiplied by reaction path degeneracy 6
+H(6)+ethane(1)=C2H5(5)+H2(12)                       2.175e+00 4.070     6.080    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
 <tr class="H_Abstraction rxnStart">
+<<<<<<< HEAD
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3D1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B3%2CD%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u2%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A" title="Search on RMG website" class="searchlink">634.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CS%7D%20%7B8%2CS%7D%20%7B9%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CD%7D%20%7B10%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B3%2CD%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=CCC(27).png" alt="C4H8(27)" title="C4H8(27), MW = 56.11 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u2%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/[CH]=C[CH]C(105).png" alt="C4H6(105)" title="C4H6(105), MW = 54.09 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
+=======
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3D1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3Dmultiplicity%203%0A1%20C%20u2%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product1%3Dmultiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product2%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A" title="Search on RMG website" class="searchlink">16.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[H][H](12).png" alt="H2(12)" title="H2(12), MW = 2.02 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20C%20u2%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH2](7).png" alt="CH2(7)" title="CH2(7), MW = 14.03 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH3](4).png" alt="CH3(4)" title="CH3(4), MW = 15.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td class="family">H_Abstraction</td>
 </tr>
 <tr class="kinetics H_Abstraction hide_kinetics">
@@ -32195,20 +32368,32 @@ C4H7(51)+C4H7(51)=C8H14(235)                        1.881e+03 2.445     11.149
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>+4.5</td><td>+5.5</td><td>+6.2</td><td>+6.7</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.01692,'cm^3/(mol*s)'), n=4.34, Ea=(-5.0208,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Estimated using template [C/H2/CdCs;Cd_pri_rad] for rate rule [C/H2/Cd\H_Cd\H2/Cs\H3;Cd_pri_rad]
+=======
+    <td>+2.3</td><td>+3.7</td><td>+4.3</td><td>+4.7</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.680846,'m^3/(mol*s)'), n=1.61, Ea=(18.312,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [X_H;CH2_triplet] for rate rule [H2;CH2_triplet]
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 Multiplied by reaction path degeneracy 2""")</span></td>
 </tr>
 <tr class="energy H_Abstraction hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = -19.51
     <br><b>S298 (cal/mol*K)</b> = -6.90
     <br><b>G298 (kcal/mol)</b> = -17.45</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -6.56
+    <br><b>S298 (cal/mol*K)</b> = -4.08
+    <br><b>G298 (kcal/mol)</b> = -5.35</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin H_Abstraction hide_chemkin">
     <td></td>
     <td colspan="4">! Template reaction: H_Abstraction
+<<<<<<< HEAD
 ! Flux pairs: C4H6(105), C4H7(51); C4H8(27), C4H7(51); 
 ! Estimated using template [C/H2/CdCs;Cd_pri_rad] for rate rule [C/H2/Cd\H_Cd\H2/Cs\H3;Cd_pri_rad]
 ! Multiplied by reaction path degeneracy 2
@@ -32249,17 +32434,32 @@ Multiplied by reaction path degeneracy 2""")</span></td>
 ! Exact match found for rate rule [RJJ]
 ! Multiplied by reaction path degeneracy 2
 C8H14(236)=C4H7(51)+C4H7(51)                        1.000e+13 0.000     0.000    
+=======
+! Flux pairs: CH2(7), CH3(4); H2(12), H(6); 
+! Estimated using template [X_H;CH2_triplet] for rate rule [H2;CH2_triplet]
+! Multiplied by reaction path degeneracy 2
+H2(12)+CH2(7)=CH3(4)+H(6)                           6.808e+05 1.610     4.377    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="2_2_cycloaddition_Cd rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B2%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B2%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B8%2CS%7D%20%7B18%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B21%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B6%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A" title="Search on RMG website" class="searchlink">636.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B7%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B2%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B2%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B8%2CS%7D%20%7B18%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B21%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B6%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/C[CH]C1CC([CH]C)C1(237).png" alt="C8H14(237)" title="C8H14(237), MW = 110.20 g/mol"></a></td>
     <td class="family">2+2_cycloaddition_Cd</td>
+=======
+<tr class="Disproportionation rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A__product1%3D1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A__product2%3D1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A" title="Search on RMG website" class="searchlink">17.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A7%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C[CH2](5).png" alt="C2H5(5)" title="C2H5(5), MW = 29.06 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20C%20u0%20p0%20c0%20%7B1%2CD%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A6%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A"><img src="species/C=C(8).png" alt="C2H4(8)" title="C2H4(8), MW = 28.05 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[H][H](12).png" alt="H2(12)" title="H2(12), MW = 2.02 g/mol"></a></td>
+    <td class="family">Disproportionation</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics 2_2_cycloaddition_Cd hide_kinetics">
     <td></td>
@@ -32267,35 +32467,64 @@ C8H14(236)=C4H7(51)+C4H7(51)                        1.000e+13 0.000     0.000
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-14.0</td><td>-4.4</td><td>-1.2</td><td>+0.4</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(1.384e+11,'cm^3/(mol*s)'), n=0, Ea=(182.924,'kJ/mol'), T0=(1,'K'), Tmin=(723,'K'), Tmax=(786,'K'), comment="""Estimated using template [db;doublebond] for rate rule [db_2H;mb_db]
 Multiplied by reaction path degeneracy 2""")</span></td>
+=======
+    <td>+7.3</td><td>+7.3</td><td>+7.3</td><td>+7.3</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(2.166e+13,'cm^3/(mol*s)','*|/',2), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2500,'K'), comment="""Exact match found for rate rule [H_rad;Cmethyl_Csrad]
+Multiplied by reaction path degeneracy 6""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="energy 2_2_cycloaddition_Cd hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = 9.22
     <br><b>S298 (cal/mol*K)</b> = -32.61
     <br><b>G298 (kcal/mol)</b> = 18.94</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -68.18
+    <br><b>S298 (cal/mol*K)</b> = -3.59
+    <br><b>G298 (kcal/mol)</b> = -67.11</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin 2_2_cycloaddition_Cd hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: 2+2_cycloaddition_Cd
 ! Flux pairs: C4H7(51), C8H14(237); C4H7(51), C8H14(237); 
 ! Estimated using template [db;doublebond] for rate rule [db_2H;mb_db]
 ! Multiplied by reaction path degeneracy 2
 C4H7(51)+C4H7(51)=C8H14(237)                        1.384e+11 0.000     43.720   
+=======
+    <td colspan="4">! Template reaction: Disproportionation
+! Flux pairs: C2H5(5), C2H4(8); H(6), H2(12); 
+! Exact match found for rate rule [H_rad;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 6
+C2H5(5)+H(6)=C2H4(8)+H2(12)                         2.166e+13 0.000     0.000    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
+<<<<<<< HEAD
 <tr class="2_2_cycloaddition_Cd rxnStart">
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3Dmultiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B7%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B8%2CS%7D%20%7B18%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B21%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B6%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A" title="Search on RMG website" class="searchlink">637.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%203%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B7%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B8%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B13%2CS%7D%20%7B14%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B7%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B8%2CS%7D%20%7B18%2CS%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A7%20%20C%20u1%20p0%20c0%20%7B1%2CS%7D%20%7B5%2CS%7D%20%7B21%2CS%7D%0A8%20%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B6%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/C[CH]C1CCC1[CH]C(238).png" alt="C8H14(238)" title="C8H14(238), MW = 110.20 g/mol"></a></td>
     <td class="family">2+2_cycloaddition_Cd</td>
+=======
+<tr class="H_Abstraction rxnStart">
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3D1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A__product1%3Dmultiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A__product2%3D1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A" title="Search on RMG website" class="searchlink">18.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/1%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%20%7B5%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A5%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/C(3).png" alt="C(3)" title="C(3), MW = 16.04 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20C%20u1%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B4%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A3%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A4%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[CH3](4).png" alt="CH3(4)" title="CH3(4), MW = 15.03 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[H][H](12).png" alt="H2(12)" title="H2(12), MW = 2.02 g/mol"></a></td>
+    <td class="family">H_Abstraction</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="kinetics 2_2_cycloaddition_Cd hide_kinetics">
     <td></td>
@@ -32303,34 +32532,61 @@ C4H7(51)+C4H7(51)=C8H14(237)                        1.384e+11 0.000     43.720
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>-14.0</td><td>-4.4</td><td>-1.2</td><td>+0.4</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(1.384e+11,'cm^3/(mol*s)'), n=0, Ea=(182.924,'kJ/mol'), T0=(1,'K'), Tmin=(723,'K'), Tmax=(786,'K'), comment="""Estimated using template [db;doublebond] for rate rule [db_2H;mb_db_2H]
 Multiplied by reaction path degeneracy 2""")</span></td>
+=======
+    <td>+2.1</td><td>+5.2</td><td>+6.5</td><td>+7.4</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(0.876,'cm^3/(mol*s)'), n=4.34, Ea=(34.3088,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Exact match found for rate rule [C_methane;H_rad]
+Multiplied by reaction path degeneracy 4""")</span></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </tr>
 <tr class="energy 2_2_cycloaddition_Cd hide_energy">
     <td></td>
+<<<<<<< HEAD
     <td colspan="3"><b>H298 (kcal/mol)</b> = 9.22
     <br><b>S298 (cal/mol*K)</b> = -33.98
     <br><b>G298 (kcal/mol)</b> = 19.35</td>
+=======
+    <td colspan="3"><b>H298 (kcal/mol)</b> = 0.60
+    <br><b>S298 (cal/mol*K)</b> = 5.71
+    <br><b>G298 (kcal/mol)</b> = -1.10</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin 2_2_cycloaddition_Cd hide_chemkin">
     <td></td>
+<<<<<<< HEAD
     <td colspan="4">! Template reaction: 2+2_cycloaddition_Cd
 ! Flux pairs: C4H7(51), C8H14(238); C4H7(51), C8H14(238); 
 ! Estimated using template [db;doublebond] for rate rule [db_2H;mb_db_2H]
 ! Multiplied by reaction path degeneracy 2
 C4H7(51)+C4H7(51)=C8H14(238)                        1.384e+11 0.000     43.720   
+=======
+    <td colspan="4">! Template reaction: H_Abstraction
+! Flux pairs: C(3), CH3(4); H(6), H2(12); 
+! Exact match found for rate rule [C_methane;H_rad]
+! Multiplied by reaction path degeneracy 4
+C(3)+H(6)=CH3(4)+H2(12)                             8.760e-01 4.340     8.200    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>
 
 <tbody class="reaction">
 <tr class="R_Recombination rxnStart">
+<<<<<<< HEAD
     <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__reactant2%3Dmultiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A__product1%3D1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CD%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B8%2CD%7D%20%7B18%2CS%7D%0A7%20%20C%20u0%20p0%20c0%20%7B5%2CD%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A" title="Search on RMG website" class="searchlink">638.</a></td>
     <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B5%2CS%7D%20%7B6%2CS%7D%20%7B7%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B3%2CD%7D%20%7B8%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B2%2CD%7D%20%7B4%2CS%7D%20%7B9%2CS%7D%0A4%20%20C%20u1%20p0%20c0%20%7B3%2CS%7D%20%7B10%2CS%7D%20%7B11%2CS%7D%0A5%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A6%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A7%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A8%20%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A"><img src="species/C=C[CH]C(51).png" alt="C4H7(51)" title="C4H7(51), MW = 55.10 g/mol"></a></td>
     <td class="reactionArrow">&hArr;</td>
     <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B3%2CS%7D%20%7B5%2CS%7D%20%7B9%2CS%7D%0A2%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B4%2CS%7D%20%7B6%2CS%7D%20%7B10%2CS%7D%0A3%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B11%2CS%7D%20%7B12%2CS%7D%20%7B13%2CS%7D%0A4%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B14%2CS%7D%20%7B15%2CS%7D%20%7B16%2CS%7D%0A5%20%20C%20u0%20p0%20c0%20%7B1%2CS%7D%20%7B7%2CD%7D%20%7B17%2CS%7D%0A6%20%20C%20u0%20p0%20c0%20%7B2%2CS%7D%20%7B8%2CD%7D%20%7B18%2CS%7D%0A7%20%20C%20u0%20p0%20c0%20%7B5%2CD%7D%20%7B19%2CS%7D%20%7B20%2CS%7D%0A8%20%20C%20u0%20p0%20c0%20%7B6%2CD%7D%20%7B21%2CS%7D%20%7B22%2CS%7D%0A9%20%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A10%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A11%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A12%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A13%20H%20u0%20p0%20c0%20%7B3%2CS%7D%0A14%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A15%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A16%20H%20u0%20p0%20c0%20%7B4%2CS%7D%0A17%20H%20u0%20p0%20c0%20%7B5%2CS%7D%0A18%20H%20u0%20p0%20c0%20%7B6%2CS%7D%0A19%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A20%20H%20u0%20p0%20c0%20%7B7%2CS%7D%0A21%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A22%20H%20u0%20p0%20c0%20%7B8%2CS%7D%0A"><img src="species/C=CC(C)C(C)C=C(239).png" alt="C8H14(239)" title="C8H14(239), MW = 110.20 g/mol"></a></td>
+=======
+    <td class="index"><a href="http://rmg.mit.edu/database/kinetics/reaction/reactant1%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A__reactant2%3Dmultiplicity%202%0A1%20H%20u1%20p0%20c0%0A__product1%3D1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A" title="Search on RMG website" class="searchlink">19.</a></td>
+    <td class="reactants"><a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a> + <a href="http://rmg.mit.edu/database/molecule/multiplicity%202%0A1%20H%20u1%20p0%20c0%0A"><img src="species/[H](6).png" alt="H(6)" title="H(6), MW = 1.01 g/mol"></a></td>
+    <td class="reactionArrow">&hArr;</td>
+    <td class="products"><a href="http://rmg.mit.edu/database/molecule/1%20H%20u0%20p0%20c0%20%7B2%2CS%7D%0A2%20H%20u0%20p0%20c0%20%7B1%2CS%7D%0A"><img src="species/[H][H](12).png" alt="H2(12)" title="H2(12), MW = 2.02 g/mol"></a></td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td class="family">R_Recombination</td>
 </tr>
 <tr class="kinetics R_Recombination hide_kinetics">
@@ -32339,6 +32595,7 @@ C4H7(51)+C4H7(51)=C8H14(238)                        1.384e+11 0.000     43.720
 <tr class="KineticsData_Tdata"><th>T/[K]</th>
 <td>500</td><td>1000</td><td>1500</td><td>2000</td>
 </tr><tr class="KineticsData_kdata"><th>log<sub>10</sub>(k/[mole,m,s])
+<<<<<<< HEAD
     <td>+7.2</td><td>+7.1</td><td>+7.0</td><td>+7.0</td>
 </tr></table><span class='KineticsData_repr'>Arrhenius(A=(1.27475e+08,'m^3/(mol*s)'), n=-0.35, Ea=(0,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [C_sec_rad;C_sec_rad] for rate rule [C_rad/H/CdCs;C_rad/H/CdCs]""")</span></td>
 </tr>
@@ -32347,14 +32604,30 @@ C4H7(51)+C4H7(51)=C8H14(238)                        1.384e+11 0.000     43.720
     <td colspan="3"><b>H298 (kcal/mol)</b> = -59.41
     <br><b>S298 (cal/mol*K)</b> = -38.42
     <br><b>G298 (kcal/mol)</b> = -47.96</td>
+=======
+    <td>+4.4</td><td>+4.7</td><td>+4.8</td><td>+4.9</td>
+</tr></table><span class='KineticsData_repr'>Arrhenius(A=(1.09e+11,'cm^3/(mol*s)'), n=0, Ea=(6.276,'kJ/mol'), T0=(1,'K'), Tmin=(278,'K'), Tmax=(372,'K'), comment="""Exact match found for rate rule [H_rad;H_rad]""")</span></td>
+</tr>
+<tr class="energy R_Recombination hide_energy">
+    <td></td>
+    <td colspan="3"><b>H298 (kcal/mol)</b> = -104.21
+    <br><b>S298 (cal/mol*K)</b> = -23.60
+    <br><b>G298 (kcal/mol)</b> = -97.17</td>
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
     <td></td>
 </tr>
 <tr class="chemkin R_Recombination hide_chemkin">
     <td></td>
     <td colspan="4">! Template reaction: R_Recombination
+<<<<<<< HEAD
 ! Flux pairs: C4H7(51), C8H14(239); C4H7(51), C8H14(239); 
 ! Estimated using template [C_sec_rad;C_sec_rad] for rate rule [C_rad/H/CdCs;C_rad/H/CdCs]
 C4H7(51)+C4H7(51)=C8H14(239)                        1.275e+14 -0.350    0.000    
+=======
+! Flux pairs: H(6), H2(12); H(6), H2(12); 
+! Exact match found for rate rule [H_rad;H_rad]
+H(6)+H(6)=H2(12)                                    1.090e+11 0.000     1.500    
+>>>>>>> 1d6247ea768bc251ee689df3e227905bdc8e8e09
 </td>
 </tr>
 </tbody>

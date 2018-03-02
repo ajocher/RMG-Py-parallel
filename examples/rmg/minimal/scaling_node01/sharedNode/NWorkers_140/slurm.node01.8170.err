@@ -1,0 +1,14 @@
+discarding /data1/ajocher/codes/RMG/miniconda2/bin from PATH
+prepending /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin to PATH
+Launching 140 worker(s) using /bin/bash.
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/broker/brokerzmq.py", line 273, in run
+    address = msg[4]
+IndexError: list index out of range
+
+slurmd[node01]: error: *** JOB 8170 CANCELLED AT 2018-02-27T19:17:03 DUE TO TIME LIMIT ***

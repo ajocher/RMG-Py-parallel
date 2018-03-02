@@ -1,0 +1,51 @@
+[2018-03-01 15:01:08,052] launcher  INFO    SCOOP 0.7 2.0 on linux2 using Python 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) [GCC 4.4.7 20120313 (Red Hat 4.4.7-1)], API: 1013
+[2018-03-01 15:01:08,052] launcher  INFO    Detected SLURM environment.
+[2018-03-01 15:01:08,052] launcher  INFO    Deploying 1 worker(s) over 1 host(s).
+[2018-03-01 15:01:08,052] launcher  DEBUG   Using hostname/ip: "node01" as external broker reference.
+[2018-03-01 15:01:08,052] launcher  DEBUG   The python executable to execute the program with is: /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python.
+[2018-03-01 15:01:08,052] launcher  INFO    Worker d--istribution: 
+[2018-03-01 15:01:08,052] launcher  INFO       node01:	0 + origin
+[2018-03-01 15:01:08,103] brokerLaunch (127.0.0.1:37591) DEBUG   Local broker launched on ports 37591, 42206.
+[2018-03-01 15:01:08,103] launcher  (127.0.0.1:37591) DEBUG   Initialising local origin worker 1 [node01].
+[2018-03-01 15:01:08,103] launcher  (127.0.0.1:37591) DEBUG   node01: Launching 'env PYTHONPATH=:/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/:/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/::/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/:/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py:/data1/ajocher/codes/RMG/RMG_parallel/RMG-database/ /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python -m scoop.launch.__main__ 1 2 --size 1 --workingDirectory /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/minimal/scaling_node01/profiling/NWorkers_1 --brokerHostname 127.0.0.1 --externalBrokerHostname node01 --taskPort 37591 --metaPort 42206 --origin --backend=ZMQ -vv ../../../../../../rmg.py -P input.py'
+Postprocessing the profiler statistics...
+[2018-03-01 15:01:12,182] _control  (192.168.2.1:54604) DEBUG   The following error occured on a worker:
+ValueError(u'Colormap tab20 is not recognized. Possible values are: Accent, Accent_r, Blues, Blues_r, BrBG, BrBG_r, BuGn, BuGn_r, BuPu, BuPu_r, CMRmap, CMRmap_r, Dark2, Dark2_r, GnBu, GnBu_r, Greens, Greens_r, Greys, Greys_r, OrRd, OrRd_r, Oranges, Oranges_r, PRGn, PRGn_r, Paired, Paired_r, Pastel1, Pastel1_r, Pastel2, Pastel2_r, PiYG, PiYG_r, PuBu, PuBuGn, PuBuGn_r, PuBu_r, PuOr, PuOr_r, PuRd, PuRd_r, Purples, Purples_r, RdBu, RdBu_r, RdGy, RdGy_r, RdPu, RdPu_r, RdYlBu, RdYlBu_r, RdYlGn, RdYlGn_r, Reds, Reds_r, Set1, Set1_r, Set2, Set2_r, Set3, Set3_r, Spectral, Spectral_r, Wistia, Wistia_r, YlGn, YlGnBu, YlGnBu_r, YlGn_r, YlOrBr, YlOrBr_r, YlOrRd, YlOrRd_r, afmhot, afmhot_r, autumn, autumn_r, binary, binary_r, bone, bone_r, brg, brg_r, bwr, bwr_r, cool, cool_r, coolwarm, coolwarm_r, copper, copper_r, cubehelix, cubehelix_r, flag, flag_r, gist_earth, gist_earth_r, gist_gray, gist_gray_r, gist_heat, gist_heat_r, gist_ncar, gist_ncar_r, gist_rainbow, gist_rainbow_r, gist_stern, gist_stern_r, gist_yarg, gist_yarg_r, gnuplot, gnuplot2, gnuplot2_r, gnuplot_r, gray, gray_r, hot, hot_r, hsv, hsv_r, inferno, inferno_r, jet, jet_r, magma, magma_r, nipy_spectral, nipy_spectral_r, ocean, ocean_r, pink, pink_r, plasma, plasma_r, prism, prism_r, rainbow, rainbow_r, seismic, seismic_r, spectral, spectral_r, spring, spring_r, summer, summer_r, terrain, terrain_r, viridis, viridis_r, winter, winter_r',)
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../../rmg.py", line 181, in <module>
+    process_profile_history(args.output_directory)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 1279, in process_profile_history
+    cm0 = plt.get_cmap('tab20')
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/matplotlib/cm.py", line 166, in get_cmap
+    % (name, ', '.join(sorted(cmap_d.keys()))))
+ValueError: Colormap tab20 is not recognized. Possible values are: Accent, Accent_r, Blues, Blues_r, BrBG, BrBG_r, BuGn, BuGn_r, BuPu, BuPu_r, CMRmap, CMRmap_r, Dark2, Dark2_r, GnBu, GnBu_r, Greens, Greens_r, Greys, Greys_r, OrRd, OrRd_r, Oranges, Oranges_r, PRGn, PRGn_r, Paired, Paired_r, Pastel1, Pastel1_r, Pastel2, Pastel2_r, PiYG, PiYG_r, PuBu, PuBuGn, PuBuGn_r, PuBu_r, PuOr, PuOr_r, PuRd, PuRd_r, Purples, Purples_r, RdBu, RdBu_r, RdGy, RdGy_r, RdPu, RdPu_r, RdYlBu, RdYlBu_r, RdYlGn, RdYlGn_r, Reds, Reds_r, Set1, Set1_r, Set2, Set2_r, Set3, Set3_r, Spectral, Spectral_r, Wistia, Wistia_r, YlGn, YlGnBu, YlGnBu_r, YlGn_r, YlOrBr, YlOrBr_r, YlOrRd, YlOrRd_r, afmhot, afmhot_r, autumn, autumn_r, binary, binary_r, bone, bone_r, brg, brg_r, bwr, bwr_r, cool, cool_r, coolwarm, coolwarm_r, copper, copper_r, cubehelix, cubehelix_r, flag, flag_r, gist_earth, gist_earth_r, gist_gray, gist_gray_r, gist_heat, gist_heat_r, gist_ncar, gist_ncar_r, gist_rainbow, gist_rainbow_r, gist_stern, gist_stern_r, gist_yarg, gist_yarg_r, gnuplot, gnuplot2, gnuplot2_r, gnuplot_r, gray, gray_r, hot, hot_r, hsv, hsv_r, inferno, inferno_r, jet, jet_r, magma, magma_r, nipy_spectral, nipy_spectral_r, ocean, ocean_r, pink, pink_r, plasma, plasma_r, prism, prism_r, rainbow, rainbow_r, seismic, seismic_r, spectral, spectral_r, spring, spring_r, summer, summer_r, terrain, terrain_r, viridis, viridis_r, winter, winter_r
+
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../../rmg.py", line 181, in <module>
+    process_profile_history(args.output_directory)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/main.py", line 1279, in process_profile_history
+    cm0 = plt.get_cmap('tab20')
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/matplotlib/cm.py", line 166, in get_cmap
+    % (name, ', '.join(sorted(cmap_d.keys()))))
+ValueError: Colormap tab20 is not recognized. Possible values are: Accent, Accent_r, Blues, Blues_r, BrBG, BrBG_r, BuGn, BuGn_r, BuPu, BuPu_r, CMRmap, CMRmap_r, Dark2, Dark2_r, GnBu, GnBu_r, Greens, Greens_r, Greys, Greys_r, OrRd, OrRd_r, Oranges, Oranges_r, PRGn, PRGn_r, Paired, Paired_r, Pastel1, Pastel1_r, Pastel2, Pastel2_r, PiYG, PiYG_r, PuBu, PuBuGn, PuBuGn_r, PuBu_r, PuOr, PuOr_r, PuRd, PuRd_r, Purples, Purples_r, RdBu, RdBu_r, RdGy, RdGy_r, RdPu, RdPu_r, RdYlBu, RdYlBu_r, RdYlGn, RdYlGn_r, Reds, Reds_r, Set1, Set1_r, Set2, Set2_r, Set3, Set3_r, Spectral, Spectral_r, Wistia, Wistia_r, YlGn, YlGnBu, YlGnBu_r, YlGn_r, YlOrBr, YlOrBr_r, YlOrRd, YlOrRd_r, afmhot, afmhot_r, autumn, autumn_r, binary, binary_r, bone, bone_r, brg, brg_r, bwr, bwr_r, cool, cool_r, coolwarm, coolwarm_r, copper, copper_r, cubehelix, cubehelix_r, flag, flag_r, gist_earth, gist_earth_r, gist_gray, gist_gray_r, gist_heat, gist_heat_r, gist_ncar, gist_ncar_r, gist_rainbow, gist_rainbow_r, gist_stern, gist_stern_r, gist_yarg, gist_yarg_r, gnuplot, gnuplot2, gnuplot2_r, gnuplot_r, gray, gray_r, hot, hot_r, hsv, hsv_r, inferno, inferno_r, jet, jet_r, magma, magma_r, nipy_spectral, nipy_spectral_r, ocean, ocean_r, pink, pink_r, plasma, plasma_r, prism, prism_r, rainbow, rainbow_r, seismic, seismic_r, spectral, spectral_r, spring, spring_r, summer, summer_r, terrain, terrain_r, viridis, viridis_r, winter, winter_r
+
+[2018-03-01 15:01:12,267] launcher  (127.0.0.1:37591) INFO    Root process is done.
+[2018-03-01 15:01:12,268] workerLaunch (127.0.0.1:37591) DEBUG   Closing workers on node01 (1 workers).
+[2018-03-01 15:01:12,268] brokerLaunch (127.0.0.1:37591) DEBUG   Closing local broker.
+[2018-03-01 15:01:12,268] launcher  (127.0.0.1:37591) INFO    Finished cleaning spawned subprocesses.

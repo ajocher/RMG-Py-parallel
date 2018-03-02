@@ -1,0 +1,6 @@
+discarding /data1/ajocher/codes/RMG/miniconda2/bin from PATH
+prepending /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin to PATH
+Launching 32 worker(s) using /bin/bash.
+DEBUG:SCOOPLogger:192.168.2.5:59426: Could not send result directly to peer 192.168.2.5:59202, routing through broker.
+DEBUG:SCOOPLogger:192.168.2.5:53886: Could not send result directly to peer 192.168.2.5:59202, routing through broker.
+discarding /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin from PATH

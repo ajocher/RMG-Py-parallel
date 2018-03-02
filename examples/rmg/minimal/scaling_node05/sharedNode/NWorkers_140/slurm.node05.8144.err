@@ -1,0 +1,4 @@
+discarding /data1/ajocher/codes/RMG/miniconda2/bin from PATH
+prepending /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin to PATH
+Launching 140 worker(s) using /bin/bash.
+discarding /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin from PATH

@@ -1,0 +1,26 @@
+discarding /data1/ajocher/codes/RMG/miniconda2/bin from PATH
+prepending /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin to PATH
+Launching 120 worker(s) using /bin/bash.
+DEBUG:SCOOPLogger:192.168.2.5:52229: Could not send result directly to peer 192.168.2.5:54329, routing through broker.
+DEBUG:SCOOPLogger:The following error occured on a worker:
+Exception()
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/scoop_framework/util.py", line 112, in __call__
+    return self.myfn(*args, **kwargs)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/rmg/react.py", line 96, in reactMolecules
+    rxns = family.generateReactions(molecules)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1308, in generateReactions
+    reactionList.extend(self.__generateReactions(reactants, forward=True))
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1439, in __generateReactions
+    productStructures = self.__generateProductStructures(reactantStructures, [mapA, mapB], forward)
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1195, in __generateProductStructures
+    if self.isMoleculeForbidden(struct):
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/kinetics/family.py", line 1233, in isMoleculeForbidden
+    forbidden_structures = getDB('forbidden')
+  File "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/data/rmg.py", line 264, in getDB
+    raise e
+Exception
+
+discarding /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin from PATH
