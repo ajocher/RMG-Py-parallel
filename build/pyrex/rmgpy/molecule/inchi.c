@@ -911,7 +911,7 @@ static char __pyx_k_U_LAYER_SEPARATOR[] = "U_LAYER_SEPARATOR";
 static char __pyx_k_rmgpy_molecule_inchi[] = "rmgpy.molecule.inchi";
 static char __pyx_k_AugmentedInChI___init[] = "AugmentedInChI.__init__";
 static char __pyx_k_AugmentedInChI_is_an_InChI_with[] = "AugmentedInChI is an InChI with inchi, and unpaired electron attributes.";
-static char __pyx_k_Users_agnes_PycharmProjects_RMG[] = "/Users/agnes/PycharmProjects/RMG-parallel/RMG-Py/rmgpy/molecule/inchi.py";
+static char __pyx_k_data1_ajocher_codes_RMG_RMG_par[] = "/data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/rmgpy/molecule/inchi.py";
 static char __pyx_k_Could_not_find_the_N_layer_in_th[] = "Could not find the N-layer in the auxiliary info: {}";
 static char __pyx_k_Could_not_find_the_hydrogen_laye[] = "Could not find the hydrogen layer in the inchi: {}";
 static char __pyx_k_InChI_is_a_type_of_string_in_whi[] = "InChI is a type of string in which the InChI=1 prefix is ignored.";
@@ -938,7 +938,6 @@ static PyObject *__pyx_n_s_P_LAYER_PREFIX;
 static PyObject *__pyx_n_s_P_LAYER_SEPARATOR;
 static PyObject *__pyx_n_s_U_LAYER_PREFIX;
 static PyObject *__pyx_n_s_U_LAYER_SEPARATOR;
-static PyObject *__pyx_kp_s_Users_agnes_PycharmProjects_RMG;
 static PyObject *__pyx_kp_s__15;
 static PyObject *__pyx_kp_s__17;
 static PyObject *__pyx_kp_s__5;
@@ -946,6 +945,7 @@ static PyObject *__pyx_kp_s__6;
 static PyObject *__pyx_kp_s__9;
 static PyObject *__pyx_n_s_aug_inchi;
 static PyObject *__pyx_n_s_compile;
+static PyObject *__pyx_kp_s_data1_ajocher_codes_RMG_RMG_par;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_n_s_filter;
 static PyObject *__pyx_n_s_findall;
@@ -4141,7 +4141,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_P_LAYER_SEPARATOR, __pyx_k_P_LAYER_SEPARATOR, sizeof(__pyx_k_P_LAYER_SEPARATOR), 0, 0, 1, 1},
   {&__pyx_n_s_U_LAYER_PREFIX, __pyx_k_U_LAYER_PREFIX, sizeof(__pyx_k_U_LAYER_PREFIX), 0, 0, 1, 1},
   {&__pyx_n_s_U_LAYER_SEPARATOR, __pyx_k_U_LAYER_SEPARATOR, sizeof(__pyx_k_U_LAYER_SEPARATOR), 0, 0, 1, 1},
-  {&__pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_k_Users_agnes_PycharmProjects_RMG, sizeof(__pyx_k_Users_agnes_PycharmProjects_RMG), 0, 0, 1, 0},
   {&__pyx_kp_s__15, __pyx_k__15, sizeof(__pyx_k__15), 0, 0, 1, 0},
   {&__pyx_kp_s__17, __pyx_k__17, sizeof(__pyx_k__17), 0, 0, 1, 0},
   {&__pyx_kp_s__5, __pyx_k__5, sizeof(__pyx_k__5), 0, 0, 1, 0},
@@ -4149,6 +4148,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s__9, __pyx_k__9, sizeof(__pyx_k__9), 0, 0, 1, 0},
   {&__pyx_n_s_aug_inchi, __pyx_k_aug_inchi, sizeof(__pyx_k_aug_inchi), 0, 0, 1, 1},
   {&__pyx_n_s_compile, __pyx_k_compile, sizeof(__pyx_k_compile), 0, 0, 1, 1},
+  {&__pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_k_data1_ajocher_codes_RMG_RMG_par, sizeof(__pyx_k_data1_ajocher_codes_RMG_RMG_par), 0, 0, 1, 0},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_n_s_filter, __pyx_k_filter, sizeof(__pyx_k_filter), 0, 0, 1, 1},
   {&__pyx_n_s_findall, __pyx_k_findall, sizeof(__pyx_k_findall), 0, 0, 1, 1},
@@ -4327,7 +4327,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__18 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_inchi); if (unlikely(!__pyx_tuple__18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
-  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_n_s_new, 280, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_n_s_new, 280, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
   /* "rmgpy/molecule/inchi.py":289
  * class AugmentedInChI(InChI):
@@ -4339,7 +4339,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__20 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_aug_inchi, __pyx_n_s_inchi, __pyx_n_s_u_indices, __pyx_n_s_p_indices); if (unlikely(!__pyx_tuple__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_agnes_PycharmProjects_RMG, __pyx_n_s_init, 289, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_data1_ajocher_codes_RMG_RMG_par, __pyx_n_s_init, 289, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
