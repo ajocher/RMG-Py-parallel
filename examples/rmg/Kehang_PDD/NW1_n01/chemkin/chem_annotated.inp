@@ -87,7 +87,17 @@ SPECIES
     PDDJ5(80)           ! PDDJ5(80)
     C18H28(81)          ! s2_5_6_ben_c9(81)
     C18H28(82)          ! s2_6_6_ben_c8(82)
+    H(83)               ! [H](83)
     C18H31(91)          ! CCCCCCCCCCCC[C]1C=CC=CC1(91)
+    S(112)              ! CCCCCCCCCC1CCC2=CC=C[CH]C21(112)
+    S(116)              ! CCCCCCCCC1CCCC12[CH]C=CC=C2(116)
+    S(117)              ! CCCCCCCCC1CCCC2=CC=C[CH]C21(117)
+    S(271)              ! CCCCCCCCCCCCC1([CH]C=CC=C1)CCCCCCCCCCC(271)
+    S(272)              ! CCCCCCCCCCCC[C]1C=CC=CC1CCCCCCCCCCC(272)
+    S(273)              ! CCCCCCCCCCCCC1C=C[CH]C(C=1)CCCCCCCCCCC(273)
+    S(274)              ! CCCCCCCCCCCCC1C=CC([CH]C=1)CCCCCCCCCCC(274)
+    S(277)              ! CCCCCCCCCCCC[C]1C=CC=CC1Cc1ccccc1(277)
+    S(278)              ! CCCCCCCCCCCCC1C=C[CH]C(C=1)Cc1ccccc1(278)
 END
 
 
@@ -794,6 +804,12 @@ C18H28(82)              C 18 H 28           G100.000   5000.000  1149.41       1
 -3.19393866E+04-1.21530954E+02-5.01460474E+00 1.69067192E-01-6.00931852E-05    3
 -2.18573436E-08 1.45770937E-11-2.07004152E+04 6.14404257E+01                   4
 
+! Thermo library: primaryThermoLibrary
+H(83)                   H 1                 G100.000   5000.000  4563.27       1
+ 2.50166659E+00-1.43051434E-06 4.60249725E-10-6.57825717E-14 3.52412298E-18    2
+ 2.54726651E+04-4.55577786E-01 2.50000000E+00-1.91242771E-12 2.45328669E-15    3
+-1.02376750E-18 1.31368730E-22 2.54742178E+04-4.44972898E-01                   4
+
 ! Thermo group additivity estimation: group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) +
 ! other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) +
 ! other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)HH) + other(R) + group(Cs-(Cds-Cds)(Cds-
@@ -803,6 +819,106 @@ C18H31(91)              C 18 H 31           G100.000   5000.000  1112.31       1
  3.29402858E+01 1.04846214E-01-4.22747484E-05 7.77623276E-09-5.38965448E-13    2
 -2.40930479E+04-1.32630753E+02-6.15354068E+00 1.92343919E-01-8.86769119E-05    3
 -7.32184671E-09 1.24986913E-11-1.21120374E+04 7.48981135E+01                   4
+
+! Thermo group additivity estimation: group(Cs-CsCsCsH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-
+! Cds)HH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group
+! (Cds-CdsCsH) + other(R) + polycyclic(s2_5_6_diene_0_3) + radical(C=CCJC=C)
+S(112)                  C 18 H 29           G100.000   5000.000  1093.37       1
+ 2.92484609E+01 1.05690322E-01-4.33568424E-05 8.07753777E-09-5.64985780E-13    2
+-1.34051432E+04-1.22337652E+02-5.11268450E+00 1.68474886E-01-4.31668216E-05    3
+-4.46737326E-08 2.35318357E-11-2.13020089E+03 6.37016570E+01                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsCs) + other(R) + group(Cs-CsCsCsH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)HH) +
+! other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH)
+! + other(R) + polycyclic(s1_5_6_diene_1_4) + radical(C=CCJC=C)
+S(116)                  C 18 H 29           G100.000   5000.000  1101.46       1
+ 2.87364442E+01 1.07353820E-01-4.44177259E-05 8.30183074E-09-5.81205199E-13    2
+-1.25243169E+04-1.21276513E+02-5.02125305E+00 1.66346436E-01-3.81440166E-05    3
+-4.79172465E-08 2.40770988E-11-1.22971969E+03 6.23603536E+01                   4
+
+! Thermo group additivity estimation: group(Cs-CsCsCsH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-
+! Cds)HH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group
+! (Cds-CdsCsH) + other(R) + polycyclic(s2_6_6_diene_0_3) + radical(C=CCJC=C)
+S(117)                  C 18 H 29           G100.000   5000.000  1081.04       1
+ 2.82565365E+01 1.07297341E-01-4.40561141E-05 8.23264537E-09-5.77659833E-13    2
+-1.65078946E+04-1.20268026E+02-4.84329740E+00 1.61380311E-01-2.42030272E-05    3
+-6.25319220E-08 2.93208261E-11-5.35518662E+03 6.04821805E+01                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsCs) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group
+! (Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)HH) +
+! other(R) + group(Cs-CsHHH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) +
+! other(R) + group(Cds-CdsCsH) + other(R) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
+S(271)                  C 29 H 53           G100.000   5000.000  1585.69       1
+ 6.12936726E+01 1.69894117E-01-6.97141525E-05 1.25805734E-08-8.46571488E-13    2
+-6.77240291E+04-2.72654865E+02-1.37590388E+01 3.59219266E-01-2.48808341E-04    3
+ 8.78766181E-08-1.27177572E-11-4.39219741E+04 1.24031820E+02                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)HH) +
+! other(R) + group(Cs-CsHHH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH)
+! + other(R) + group(Cds-CdsCsH) + other(R) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
+S(272)                  C 29 H 53           G100.000   5000.000  1478.14       1
+ 5.15012051E+01 1.84231868E-01-7.69274787E-05 1.40597661E-08-9.56269088E-13    2
+-6.35988652E+04-2.15670393E+02-1.30435774E+01 3.58895657E-01-2.54173249E-04    3
+ 9.40001751E-08-1.44766248E-11-4.45175023E+04 1.20944375E+02                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) + group(Cs-(Cds-Cds)(Cds-Cds)HH) +
+! other(R) + group(Cs-CsHHH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH)
+! + other(R) + group(Cds-CdsCsH) + other(R) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
+S(273)                  C 29 H 53           G100.000   5000.000  1478.14       1
+ 5.15012051E+01 1.84231868E-01-7.69274787E-05 1.40597661E-08-9.56269088E-13    2
+-6.35988652E+04-2.15670393E+02-1.30435774E+01 3.58895657E-01-2.54173249E-04    3
+ 9.40001751E-08-1.44766248E-11-4.45175023E+04 1.20944375E+02                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)CsCsH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH)
+! + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH)
+! + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH)
+! + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH)
+! + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) +
+! group(Cs-CsHHH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-Cds(Cds-Cds)Cs) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) +
+! other(R) + group(Cds-Cds(Cds-Cds)H) + other(R) + ring(1,3-Cyclohexadiene) + radical(Allyl_S)
+S(274)                  C 29 H 53           G100.000   5000.000  1529.23       1
+ 5.55103985E+01 1.77723831E-01-7.38752817E-05 1.34504826E-08-9.11481224E-13    2
+-6.10562084E+04-2.40432202E+02-1.32423428E+01 3.57560575E-01-2.50275089E-04    3
+ 9.03520634E-08-1.34834616E-11-4.00285169E+04 1.20463551E+02                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) + group(Cs-CbCsHH) + other(R) +
+! group(Cs-(Cds-Cds)(Cds-Cds)HH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cb-Cs) + other(R) + group(Cds-CdsCsH) +
+! other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cb-H) + other(R) + group(Cb-H) + other(R) + group(Cb-H) + other(R) +
+! group(Cb-H) + other(R) + group(Cb-H) + other(R) + ring(Benzene) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
+S(277)                  C 25 H 37           G100.000   5000.000  1144.48       1
+ 4.49202738E+01 1.31333884E-01-5.35169661E-05 9.86877569E-09-6.83507989E-13    2
+-1.99666627E+04-1.93429874E+02-9.66329142E+00 2.60224121E-01-1.41341735E-04    3
+ 1.37839689E-08 8.78103111E-12-3.41997141E+03 9.49758740E+01                   4
+
+! Thermo group additivity estimation: group(Cs-(Cds-Cds)(Cds-Cds)CsH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-
+! CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CsCsHH) + other(R) + group(Cs-CbCsHH) + other(R) + group(Cs-(Cds-Cds)CsHH) + other(R) +
+! group(Cs-(Cds-Cds)(Cds-Cds)HH) + other(R) + group(Cs-CsHHH) + other(R) + group(Cds-CdsCsCs) + other(R) + group(Cb-Cs) + other(R) + group(Cds-CdsCsH) +
+! other(R) + group(Cds-CdsCsH) + other(R) + group(Cds-CdsCsH) + other(R) + group(Cb-H) + other(R) + group(Cb-H) + other(R) + group(Cb-H) + other(R) +
+! group(Cb-H) + other(R) + group(Cb-H) + other(R) + ring(Benzene) + ring(1,4-Cyclohexadiene) + radical(C=CCJC=C)
+S(278)                  C 25 H 37           G100.000   5000.000  1144.48       1
+ 4.49202738E+01 1.31333884E-01-5.35169661E-05 9.86877569E-09-6.83507989E-13    2
+-1.99666627E+04-1.93429874E+02-9.66329142E+00 2.60224121E-01-1.41341735E-04    3
+ 1.37839689E-08 8.78103111E-12-3.41997141E+03 9.49758740E+01                   4
 
 END
 
@@ -8115,6 +8231,3265 @@ A10yl(68)+A10yl(68)=A10ene(76)+BENZ10(12)           2.900e+12 0.000     0.000
 ! Estimated using template [C_rad/H2/Cs;Cpri_Rrad] for rate rule [C_rad/H2/Cs;C/H2/De_Csrad]
 ! Multiplied by reaction path degeneracy 2
 C18H31(91)+A10yl(68)=BENZ10(12)+PDD(1)              2.900e+12 0.000     0.000    
+
+! Reaction index: Chemkin #1058; RMG #3
+! Template reaction: R_Recombination
+! Flux pairs: RAD10(23), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD10(23)=PDD(1)                              2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1059; RMG #5
+! Template reaction: R_Recombination
+! Flux pairs: RAD9(22), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD9(22)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1060; RMG #7
+! Template reaction: R_Recombination
+! Flux pairs: RAD8(21), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD8(21)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1061; RMG #9
+! Template reaction: R_Recombination
+! Flux pairs: RAD7(20), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD7(20)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1062; RMG #11
+! Template reaction: R_Recombination
+! Flux pairs: RAD6(19), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD6(19)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1063; RMG #13
+! Template reaction: R_Recombination
+! Flux pairs: RAD5(18), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD5(18)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1064; RMG #15
+! Template reaction: R_Recombination
+! Flux pairs: RAD4(17), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD4(17)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1065; RMG #17
+! Template reaction: R_Recombination
+! Flux pairs: RAD3(16), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD3(16)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1066; RMG #19
+! Template reaction: R_Recombination
+! Flux pairs: RAD2(15), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD2(15)=PDD(1)                               2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1067; RMG #21
+! Template reaction: R_Recombination
+! Flux pairs: RAD11(24), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H/NonDeC;H_rad]
+H(83)+RAD11(24)=PDD(1)                              2.000e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1068; RMG #23
+! Template reaction: R_Recombination
+! Flux pairs: RAD1(14), PDD(1); H(83), PDD(1); 
+! Estimated using template [C_rad/H/OneDeC;H_rad] for rate rule [C_rad/H/CdCs;H_rad]
+H(83)+RAD1(14)=PDD(1)                               2.920e+13 0.180     0.124    
+
+! Reaction index: Chemkin #1069; RMG #24
+! Template reaction: R_Recombination
+! Flux pairs: RAD12(25), PDD(1); H(83), PDD(1); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+RAD12(25)=PDD(1)                              1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1070; RMG #167
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C2ene(37), ETHYL(48); H(83), ETHYL(48); 
+! Exact match found for rate rule [Cds-HH_Cds-HH;HJ]
+! Multiplied by reaction path degeneracy 2
+H(83)+C2ene(37)=ETHYL(48)                           4.620e+08 1.640     1.010    
+
+! Reaction index: Chemkin #1071; RMG #168
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C3ene(38), PROPYL(49); H(83), PROPYL(49); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C3ene(38)=PROPYL(49)                          1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1072; RMG #170
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C4ene(39), BUTYL(50); H(83), BUTYL(50); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C4ene(39)=BUTYL(50)                           1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1073; RMG #172
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C5ene(40), PENTYL(51); H(83), PENTYL(51); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C5ene(40)=PENTYL(51)                          1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1074; RMG #174
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C6ene(41), HEXYL(52); H(83), HEXYL(52); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C6ene(41)=HEXYL(52)                           1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1075; RMG #176
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C7ene(42), HEPTYL(53); H(83), HEPTYL(53); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C7ene(42)=HEPTYL(53)                          1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1076; RMG #178
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C8ene(43), OCTYL(54); H(83), OCTYL(54); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C8ene(43)=OCTYL(54)                           1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1077; RMG #180
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C9ene(44), NONYL(55); H(83), NONYL(55); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C9ene(44)=NONYL(55)                           1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1078; RMG #182
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C10ene(45), DECYL(56); H(83), DECYL(56); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C10ene(45)=DECYL(56)                          1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1079; RMG #184
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C11ene(46), UDECYL(57); H(83), UDECYL(57); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+C11ene(46)=UDECYL(57)                         1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1080; RMG #201
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: STYRENE(3), EBZYL(59); H(83), EBZYL(59); 
+! Exact match found for rate rule [Cds-CbH_Cds-HH;HJ]
+H(83)+STYRENE(3)=EBZYL(59)                          4.700e+07 1.640     4.530    
+
+! Reaction index: Chemkin #1081; RMG #210
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A3ene(69), A3yl(61); H(83), A3yl(61); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A3ene(69)=A3yl(61)                            1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1082; RMG #219
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A4ene(70), A4yl(62); H(83), A4yl(62); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A4ene(70)=A4yl(62)                            1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1083; RMG #228
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A5ene(71), A5yl(63); H(83), A5yl(63); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A5ene(71)=A5yl(63)                            1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1084; RMG #236
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A6ene(72), A6yl(64); H(83), A6yl(64); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A6ene(72)=A6yl(64)                            1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1085; RMG #242
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A7ene(73), A7yl(65); H(83), A7yl(65); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A7ene(73)=A7yl(65)                            1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1086; RMG #246
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A8ene(74), A8yl(66); H(83), A8yl(66); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A8ene(74)=A8yl(66)                            1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1087; RMG #248
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A9ene(75), A9yl(67); H(83), A9yl(67); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A9ene(75)=A9yl(67)                            1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1088; RMG #250
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: A10ene(76), A10yl(68); H(83), A10yl(68); 
+! Exact match found for rate rule [Cds-CsH_Cds-HH;HJ]
+H(83)+A10ene(76)=A10yl(68)                          1.170e+08 1.680     2.030    
+
+! Reaction index: Chemkin #1089; RMG #259
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), C18H31(91); H(83), C18H31(91); 
+! Cds-CdH_Cds-CdCs;HJ from training reaction 41
+! Exact match found for rate rule [Cds-CdH_Cds-CdCs;HJ]
+! Multiplied by reaction path degeneracy 2
+H(83)+PDD(1)=C18H31(91)                             1.380e+07 2.321     -15.268  
+
+! Reaction index: Chemkin #1090; RMG #3512
+! Template reaction: R_Recombination
+! Flux pairs: BENZYL(58), TOLUENE(2); H(83), TOLUENE(2); 
+! Estimated using template [C_pri_rad;H_rad] for rate rule [C_rad/H2/Cb;H_rad]
+H(83)+BENZYL(58)=TOLUENE(2)                         1.134e+13 0.277     -0.082   
+
+! Reaction index: Chemkin #1091; RMG #3522
+! Template reaction: R_Recombination
+! Flux pairs: BENZYL(58), ETHBENZ(4); METHYL(47), ETHBENZ(4); 
+! Estimated using template [C_pri_rad;C_methyl] for rate rule [C_rad/H2/Cb;C_methyl]
+METHYL(47)+BENZYL(58)=ETHBENZ(4)                    5.863e+13 -0.160    -0.065   
+
+! Reaction index: Chemkin #1092; RMG #3524
+! Template reaction: R_Recombination
+! Flux pairs: EBZYL2(60), ETHBENZ(4); H(83), ETHBENZ(4); 
+! Exact match found for rate rule [C_rad/H/OneDeC;H_rad]
+H(83)+EBZYL2(60)=ETHBENZ(4)                         2.920e+13 0.180     0.124    
+
+! Reaction index: Chemkin #1093; RMG #3525
+! Template reaction: R_Recombination
+! Flux pairs: EBZYL(59), ETHBENZ(4); H(83), ETHBENZ(4); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+EBZYL(59)=ETHBENZ(4)                          1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1094; RMG #3529
+! Template reaction: R_Recombination
+! Flux pairs: EBZYL(59), BENZ3(5); METHYL(47), BENZ3(5); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+EBZYL(59)=BENZ3(5)                       3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1095; RMG #3533
+! Template reaction: R_Recombination
+! Flux pairs: A3yl(61), BENZ3(5); H(83), BENZ3(5); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A3yl(61)=BENZ3(5)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1096; RMG #3538
+! Template reaction: R_Recombination
+! Flux pairs: A3yl(61), BENZ4(6); METHYL(47), BENZ4(6); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A3yl(61)+METHYL(47)=BENZ4(6)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1097; RMG #3542
+! Template reaction: R_Recombination
+! Flux pairs: A4yl(62), BENZ4(6); H(83), BENZ4(6); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A4yl(62)=BENZ4(6)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1098; RMG #3548
+! Template reaction: R_Recombination
+! Flux pairs: A4yl(62), BENZ5(7); METHYL(47), BENZ5(7); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A4yl(62)+METHYL(47)=BENZ5(7)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1099; RMG #3552
+! Template reaction: R_Recombination
+! Flux pairs: A5yl(63), BENZ5(7); H(83), BENZ5(7); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A5yl(63)=BENZ5(7)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1100; RMG #3559
+! Template reaction: R_Recombination
+! Flux pairs: A5yl(63), BENZ6(8); METHYL(47), BENZ6(8); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A5yl(63)+METHYL(47)=BENZ6(8)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1101; RMG #3563
+! Template reaction: R_Recombination
+! Flux pairs: A6yl(64), BENZ6(8); H(83), BENZ6(8); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A6yl(64)=BENZ6(8)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1102; RMG #3571
+! Template reaction: R_Recombination
+! Flux pairs: A6yl(64), BENZ7(9); METHYL(47), BENZ7(9); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A6yl(64)+METHYL(47)=BENZ7(9)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1103; RMG #3575
+! Template reaction: R_Recombination
+! Flux pairs: A7yl(65), BENZ7(9); H(83), BENZ7(9); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A7yl(65)=BENZ7(9)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1104; RMG #3584
+! Template reaction: R_Recombination
+! Flux pairs: A7yl(65), BENZ8(10); METHYL(47), BENZ8(10); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A7yl(65)+METHYL(47)=BENZ8(10)                       3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1105; RMG #3588
+! Template reaction: R_Recombination
+! Flux pairs: A8yl(66), BENZ8(10); H(83), BENZ8(10); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A8yl(66)=BENZ8(10)                            1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1106; RMG #3598
+! Template reaction: R_Recombination
+! Flux pairs: A8yl(66), BENZ9(11); METHYL(47), BENZ9(11); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A8yl(66)+METHYL(47)=BENZ9(11)                       3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1107; RMG #3602
+! Template reaction: R_Recombination
+! Flux pairs: A9yl(67), BENZ9(11); H(83), BENZ9(11); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A9yl(67)=BENZ9(11)                            1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1108; RMG #3613
+! Template reaction: R_Recombination
+! Flux pairs: A9yl(67), BENZ10(12); METHYL(47), BENZ10(12); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A9yl(67)+METHYL(47)=BENZ10(12)                      3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1109; RMG #3617
+! Template reaction: R_Recombination
+! Flux pairs: A10yl(68), BENZ10(12); H(83), BENZ10(12); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+A10yl(68)=BENZ10(12)                          1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1110; RMG #3629
+! Template reaction: R_Recombination
+! Flux pairs: A10yl(68), BENZ11(13); METHYL(47), BENZ11(13); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+A10yl(68)+METHYL(47)=BENZ11(13)                     3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1111; RMG #3637
+! Template reaction: R_Recombination
+! Flux pairs: METHYL(47), C2(27); METHYL(47), C2(27); 
+! Exact match found for rate rule [C_methyl;C_methyl]
+METHYL(47)+METHYL(47)=C2(27)                        8.260e+17 -1.400    1.000    
+
+! Reaction index: Chemkin #1112; RMG #3638
+! Template reaction: R_Recombination
+! Flux pairs: ETHYL(48), C2(27); H(83), C2(27); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+ETHYL(48)=C2(27)                              1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1113; RMG #3639
+! Template reaction: R_Recombination
+! Flux pairs: ETHYL(48), C3(28); METHYL(47), C3(28); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+ETHYL(48)=C3(28)                         3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1114; RMG #3641
+! Template reaction: R_Recombination
+! Flux pairs: PROPYL(49), C3(28); H(83), C3(28); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+PROPYL(49)=C3(28)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1115; RMG #3642
+! Template reaction: R_Recombination
+! Flux pairs: PROPYL(49), C4(29); METHYL(47), C4(29); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+PROPYL(49)=C4(29)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1116; RMG #3644
+! Template reaction: R_Recombination
+! Flux pairs: BUTYL(50), C4(29); H(83), C4(29); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+BUTYL(50)=C4(29)                              1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1117; RMG #3646
+! Template reaction: R_Recombination
+! Flux pairs: BUTYL(50), C5(30); METHYL(47), C5(30); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+BUTYL(50)=C5(30)                         3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1118; RMG #3648
+! Template reaction: R_Recombination
+! Flux pairs: PENTYL(51), C5(30); H(83), C5(30); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+PENTYL(51)=C5(30)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1119; RMG #3650
+! Template reaction: R_Recombination
+! Flux pairs: PENTYL(51), C6(31); METHYL(47), C6(31); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+PENTYL(51)=C6(31)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1120; RMG #3652
+! Template reaction: R_Recombination
+! Flux pairs: HEXYL(52), C6(31); H(83), C6(31); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+HEXYL(52)=C6(31)                              1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1121; RMG #3655
+! Template reaction: R_Recombination
+! Flux pairs: HEXYL(52), C7(32); METHYL(47), C7(32); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+HEXYL(52)=C7(32)                         3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1122; RMG #3657
+! Template reaction: R_Recombination
+! Flux pairs: HEPTYL(53), C7(32); H(83), C7(32); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+HEPTYL(53)=C7(32)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1123; RMG #3660
+! Template reaction: R_Recombination
+! Flux pairs: HEPTYL(53), C8(33); METHYL(47), C8(33); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+HEPTYL(53)=C8(33)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1124; RMG #3662
+! Template reaction: R_Recombination
+! Flux pairs: OCTYL(54), C8(33); H(83), C8(33); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+OCTYL(54)=C8(33)                              1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1125; RMG #3666
+! Template reaction: R_Recombination
+! Flux pairs: OCTYL(54), C9(34); METHYL(47), C9(34); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+OCTYL(54)=C9(34)                         3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1126; RMG #3668
+! Template reaction: R_Recombination
+! Flux pairs: NONYL(55), C9(34); H(83), C9(34); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+NONYL(55)=C9(34)                              1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1127; RMG #3672
+! Template reaction: R_Recombination
+! Flux pairs: NONYL(55), C10(35); METHYL(47), C10(35); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+NONYL(55)=C10(35)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1128; RMG #3674
+! Template reaction: R_Recombination
+! Flux pairs: DECYL(56), C10(35); H(83), C10(35); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+DECYL(56)=C10(35)                             1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1129; RMG #3679
+! Template reaction: R_Recombination
+! Flux pairs: DECYL(56), C11(36); METHYL(47), C11(36); 
+! Exact match found for rate rule [C_rad/H2/Cs;C_methyl]
+METHYL(47)+DECYL(56)=C11(36)                        3.370e+13 0.000     0.000    
+
+! Reaction index: Chemkin #1130; RMG #3681
+! Template reaction: R_Recombination
+! Flux pairs: UDECYL(57), C11(36); H(83), C11(36); 
+! Exact match found for rate rule [C_rad/H2/Cs;H_rad]
+H(83)+UDECYL(57)=C11(36)                            1.000e+14 0.000     0.000    
+
+! Reaction index: Chemkin #1131; RMG #3962
+! Template reaction: Disproportionation
+! Flux pairs: RAD10(23), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD10(23)=PDD(1)+STYRENE(3)              6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1132; RMG #3963
+! Template reaction: Disproportionation
+! Flux pairs: RAD9(22), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD9(22)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1133; RMG #3964
+! Template reaction: Disproportionation
+! Flux pairs: RAD8(21), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD8(21)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1134; RMG #3965
+! Template reaction: Disproportionation
+! Flux pairs: RAD7(20), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD7(20)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1135; RMG #3966
+! Template reaction: Disproportionation
+! Flux pairs: RAD6(19), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD6(19)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1136; RMG #3967
+! Template reaction: Disproportionation
+! Flux pairs: RAD5(18), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD5(18)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1137; RMG #3968
+! Template reaction: Disproportionation
+! Flux pairs: RAD4(17), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD4(17)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1138; RMG #3969
+! Template reaction: Disproportionation
+! Flux pairs: RAD3(16), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD3(16)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1139; RMG #3970
+! Template reaction: Disproportionation
+! Flux pairs: RAD2(15), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD2(15)=PDD(1)+STYRENE(3)               6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1140; RMG #3971
+! Template reaction: Disproportionation
+! Flux pairs: RAD11(24), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD11(24)=PDD(1)+STYRENE(3)              6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1141; RMG #3972
+! Template reaction: Disproportionation
+! Flux pairs: RAD1(14), PDD(1); EBZYL2(60), STYRENE(3); 
+! Estimated using average of templates [C_sec_rad;Cmethyl_Csrad] + [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD1(14)=PDD(1)+STYRENE(3)               2.356e+12 -0.117    -0.275   
+
+! Reaction index: Chemkin #1142; RMG #3973
+! Template reaction: Disproportionation
+! Flux pairs: RAD12(25), PDD(1); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+RAD12(25)=PDD(1)+STYRENE(3)              6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1143; RMG #4076
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); C18H31(91), PDD(1); 
+! Estimated using template [C_rad/H/OneDeC;Cpri_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/De_Csrad]
+! Multiplied by reaction path degeneracy 2
+C18H31(91)+EBZYL2(60)=PDD(1)+ETHBENZ(4)             1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1144; RMG #5215
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD10(23); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD10(23)+C1(26)                  1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1145; RMG #5216
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD9(22); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD9(22)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1146; RMG #5217
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD8(21); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD8(21)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1147; RMG #5218
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD7(20); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD7(20)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1148; RMG #5219
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD6(19); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD6(19)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1149; RMG #5220
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD5(18); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD5(18)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1150; RMG #5221
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD4(17); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD4(17)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1151; RMG #5222
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD3(16); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD3(16)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1152; RMG #5223
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD2(15); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD2(15)+C1(26)                   1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1153; RMG #5224
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD11(24); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/NonDeC;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD11(24)+C1(26)                  1.606e-02 4.340     6.000    
+
+! Reaction index: Chemkin #1154; RMG #5225
+! Template reaction: H_Abstraction
+! Flux pairs: PDD(1), RAD1(14); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/CbCs;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PDD(1)=RAD1(14)+C1(26)                   5.160e-03 4.340     4.800    
+
+! Reaction index: Chemkin #1155; RMG #5226
+! Template reaction: H_Abstraction
+! Flux pairs: RAD12(25), PDD(1); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+RAD12(25)+C1(26)=METHYL(47)+PDD(1)                  8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1156; RMG #5912
+! Template reaction: Disproportionation
+! Flux pairs: BENZYL(58), TOLUENE(2); EBZYL2(60), STYRENE(3); 
+! Estimated using template [C_pri_rad;Cmethyl_Csrad] for rate rule [C_rad/H2/Cb;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+BENZYL(58)=TOLUENE(2)+STYRENE(3)         3.451e+13 -0.233    -0.043   
+
+! Reaction index: Chemkin #1157; RMG #6690
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H3/Cb;C_methyl]
+! Multiplied by reaction path degeneracy 3
+METHYL(47)+TOLUENE(2)=BENZYL(58)+C1(26)             5.250e-03 4.340     6.500    
+
+! Reaction index: Chemkin #1158; RMG #6698
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); ETHYL(48), C2(27); 
+! Estimated using template [C/H3/Cb;C_rad/H2/Cs] for rate rule [C/H3/Cb;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 3
+ETHYL(48)+TOLUENE(2)=BENZYL(58)+C2(27)              7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1159; RMG #6706
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); PROPYL(49), C3(28); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+TOLUENE(2)=BENZYL(58)+C3(28)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1160; RMG #6714
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); BUTYL(50), C4(29); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+BUTYL(50)+TOLUENE(2)=BENZYL(58)+C4(29)              7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1161; RMG #6722
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); PENTYL(51), C5(30); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PENTYL(51)+TOLUENE(2)=BENZYL(58)+C5(30)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1162; RMG #6730
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); HEXYL(52), C6(31); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+HEXYL(52)+TOLUENE(2)=BENZYL(58)+C6(31)              7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1163; RMG #6738
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); HEPTYL(53), C7(32); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+HEPTYL(53)+TOLUENE(2)=BENZYL(58)+C7(32)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1164; RMG #6746
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); OCTYL(54), C8(33); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+OCTYL(54)+TOLUENE(2)=BENZYL(58)+C8(33)              7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1165; RMG #6754
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); NONYL(55), C9(34); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+NONYL(55)+TOLUENE(2)=BENZYL(58)+C9(34)              7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1166; RMG #6762
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); DECYL(56), C10(35); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+DECYL(56)+TOLUENE(2)=BENZYL(58)+C10(35)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1167; RMG #6770
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); UDECYL(57), C11(36); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+UDECYL(57)+TOLUENE(2)=C11(36)+BENZYL(58)            7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1168; RMG #6801
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); EBZYL(59), ETHBENZ(4); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+EBZYL(59)+TOLUENE(2)=BENZYL(58)+ETHBENZ(4)          7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1169; RMG #6809
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A3yl(61), BENZ3(5); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A3yl(61)+TOLUENE(2)=BENZYL(58)+BENZ3(5)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1170; RMG #6817
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A4yl(62), BENZ4(6); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+TOLUENE(2)=BENZYL(58)+BENZ4(6)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1171; RMG #6825
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A5yl(63), BENZ5(7); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A5yl(63)+TOLUENE(2)=BENZYL(58)+BENZ5(7)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1172; RMG #6833
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A6yl(64), BENZ6(8); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A6yl(64)+TOLUENE(2)=BENZYL(58)+BENZ6(8)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1173; RMG #6841
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A7yl(65), BENZ7(9); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+TOLUENE(2)=BENZYL(58)+BENZ7(9)             7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1174; RMG #6849
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A8yl(66), BENZ8(10); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A8yl(66)+TOLUENE(2)=BENZYL(58)+BENZ8(10)            7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1175; RMG #6857
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A9yl(67), BENZ9(11); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A9yl(67)+TOLUENE(2)=BENZYL(58)+BENZ9(11)            7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1176; RMG #6865
+! Template reaction: H_Abstraction
+! Flux pairs: TOLUENE(2), BENZYL(58); A10yl(68), BENZ10(12); 
+! Exact match found for rate rule [C/H3/Cb;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+TOLUENE(2)=BENZYL(58)+BENZ10(12)          7.380e-04 4.340     6.900    
+
+! Reaction index: Chemkin #1177; RMG #7119
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); EBZYL(59), STYRENE(3); 
+! Estimated using template [C_rad/H/OneDeC;Cpri_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/De_Csrad]
+! Multiplied by reaction path degeneracy 5
+EBZYL2(60)+EBZYL(59)=STYRENE(3)+ETHBENZ(4)          3.815e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1178; RMG #7120
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); EBZYL2(60), STYRENE(3); 
+! Estimated using average of templates [C_sec_rad;Cmethyl_Csrad] + [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+EBZYL2(60)=STYRENE(3)+ETHBENZ(4)         2.356e+12 -0.117    -0.275   
+
+! Reaction index: Chemkin #1179; RMG #7137
+! Template reaction: Disproportionation
+! Flux pairs: A3yl(61), BENZ3(5); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A3yl(61)+EBZYL2(60)=STYRENE(3)+BENZ3(5)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1180; RMG #7160
+! Template reaction: Disproportionation
+! Flux pairs: A4yl(62), BENZ4(6); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+EBZYL2(60)=STYRENE(3)+BENZ4(6)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1181; RMG #7189
+! Template reaction: Disproportionation
+! Flux pairs: A5yl(63), BENZ5(7); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A5yl(63)+EBZYL2(60)=STYRENE(3)+BENZ5(7)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1182; RMG #7224
+! Template reaction: Disproportionation
+! Flux pairs: A6yl(64), BENZ6(8); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A6yl(64)+EBZYL2(60)=STYRENE(3)+BENZ6(8)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1183; RMG #7265
+! Template reaction: Disproportionation
+! Flux pairs: A7yl(65), BENZ7(9); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+EBZYL2(60)=STYRENE(3)+BENZ7(9)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1184; RMG #7312
+! Template reaction: Disproportionation
+! Flux pairs: A8yl(66), BENZ8(10); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A8yl(66)+EBZYL2(60)=BENZ8(10)+STYRENE(3)            6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1185; RMG #7365
+! Template reaction: Disproportionation
+! Flux pairs: A9yl(67), BENZ9(11); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A9yl(67)+EBZYL2(60)=BENZ9(11)+STYRENE(3)            6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1186; RMG #7424
+! Template reaction: Disproportionation
+! Flux pairs: A10yl(68), BENZ10(12); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+EBZYL2(60)=BENZ10(12)+STYRENE(3)          6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1187; RMG #7693
+! Template reaction: Disproportionation
+! Flux pairs: ETHYL(48), C2(27); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+ETHYL(48)=C2(27)+STYRENE(3)              6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1188; RMG #7700
+! Template reaction: Disproportionation
+! Flux pairs: PROPYL(49), C3(28); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+PROPYL(49)=C3(28)+STYRENE(3)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1189; RMG #7711
+! Template reaction: Disproportionation
+! Flux pairs: BUTYL(50), C4(29); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+BUTYL(50)=C4(29)+STYRENE(3)              6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1190; RMG #7724
+! Template reaction: Disproportionation
+! Flux pairs: PENTYL(51), C5(30); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+PENTYL(51)=C5(30)+STYRENE(3)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1191; RMG #7741
+! Template reaction: Disproportionation
+! Flux pairs: HEXYL(52), C6(31); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+HEXYL(52)=C6(31)+STYRENE(3)              6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1192; RMG #7760
+! Template reaction: Disproportionation
+! Flux pairs: HEPTYL(53), C7(32); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+HEPTYL(53)=C7(32)+STYRENE(3)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1193; RMG #7783
+! Template reaction: Disproportionation
+! Flux pairs: OCTYL(54), C8(33); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+OCTYL(54)=C8(33)+STYRENE(3)              6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1194; RMG #7808
+! Template reaction: Disproportionation
+! Flux pairs: NONYL(55), C9(34); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+NONYL(55)=C9(34)+STYRENE(3)              6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1195; RMG #7837
+! Template reaction: Disproportionation
+! Flux pairs: DECYL(56), C10(35); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+DECYL(56)=C10(35)+STYRENE(3)             6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1196; RMG #7868
+! Template reaction: Disproportionation
+! Flux pairs: UDECYL(57), C11(36); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_rad/H2/Cs;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+UDECYL(57)=C11(36)+STYRENE(3)            6.900e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1197; RMG #8341
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: STYRENE(3), PDDJ2(77); DECYL(56), PDDJ2(77); 
+! Exact match found for rate rule [Cds-CbH_Cds-HH;CsJ-CsHH]
+DECYL(56)+STYRENE(3)=PDDJ2(77)                      3.800e+02 2.410     7.970    
+
+! Reaction index: Chemkin #1198; RMG #9171
+! Template reaction: H_Abstraction
+! Flux pairs: EBZYL2(60), ETHBENZ(4); PDD(1), RAD1(14); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/CbCs]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+PDD(1)=RAD1(14)+ETHBENZ(4)               9.500e-04 4.340     10.000   
+
+! Reaction index: Chemkin #1199; RMG #9197
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD2(15), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD2(15)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1200; RMG #9205
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD3(16), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD3(16)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1201; RMG #9213
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD4(17), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD4(17)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1202; RMG #9221
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD5(18), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD5(18)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1203; RMG #9229
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD6(19), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD6(19)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1204; RMG #9237
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD7(20), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD7(20)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1205; RMG #9245
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD8(21), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD8(21)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1206; RMG #9253
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD9(22), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD9(22)+ETHBENZ(4)=EBZYL2(60)+PDD(1)               5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1207; RMG #9261
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD10(23), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD10(23)+ETHBENZ(4)=EBZYL2(60)+PDD(1)              5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1208; RMG #9269
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD11(24), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H/NonDeC]
+! Multiplied by reaction path degeneracy 2
+RAD11(24)+ETHBENZ(4)=EBZYL2(60)+PDD(1)              5.620e-04 4.340     4.500    
+
+! Reaction index: Chemkin #1209; RMG #9277
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); RAD12(25), PDD(1); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+RAD12(25)+ETHBENZ(4)=EBZYL2(60)+PDD(1)              5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1210; RMG #9425
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); ETHYL(48), C2ene(37); 
+! Estimated using average of templates [C_sec_rad;Cmethyl_Csrad] + [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+ETHYL(48)=C2ene(37)+ETHBENZ(4)           2.356e+12 -0.117    -0.275   
+
+! Reaction index: Chemkin #1211; RMG #9430
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); PROPYL(49), C3ene(38); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+PROPYL(49)=C3ene(38)+ETHBENZ(4)          1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1212; RMG #9441
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); BUTYL(50), C4ene(39); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+BUTYL(50)=C4ene(39)+ETHBENZ(4)           1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1213; RMG #9456
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); PENTYL(51), C5ene(40); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+PENTYL(51)=C5ene(40)+ETHBENZ(4)          1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1214; RMG #9475
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); HEXYL(52), C6ene(41); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+HEXYL(52)=C6ene(41)+ETHBENZ(4)           1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1215; RMG #9498
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); HEPTYL(53), C7ene(42); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+HEPTYL(53)=C7ene(42)+ETHBENZ(4)          1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1216; RMG #9525
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); OCTYL(54), C8ene(43); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+OCTYL(54)=C8ene(43)+ETHBENZ(4)           1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1217; RMG #9556
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); NONYL(55), C9ene(44); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+NONYL(55)=C9ene(44)+ETHBENZ(4)           1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1218; RMG #9591
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); DECYL(56), C10ene(45); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+DECYL(56)=C10ene(45)+ETHBENZ(4)          1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1219; RMG #9630
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); UDECYL(57), C11ene(46); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+EBZYL2(60)+UDECYL(57)=C11ene(46)+ETHBENZ(4)         1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1220; RMG #9673
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H2/CbCs;C_methyl]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+ETHBENZ(4)=EBZYL2(60)+C1(26)             5.160e-03 4.340     4.800    
+
+! Reaction index: Chemkin #1221; RMG #9674
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); METHYL(47), C1(26); 
+! Exact match found for rate rule [C/H3/Cs;C_methyl]
+! Multiplied by reaction path degeneracy 3
+METHYL(47)+ETHBENZ(4)=EBZYL(59)+C1(26)              2.244e-05 4.990     8.000    
+
+! Reaction index: Chemkin #1222; RMG #9682
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); ETHYL(48), C2(27); 
+! Estimated using template [C/H2/CbCs;C_rad/H2/Cs] for rate rule [C/H2/CbCs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 2
+ETHYL(48)+ETHBENZ(4)=EBZYL2(60)+C2(27)              5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1223; RMG #9683
+! Template reaction: H_Abstraction
+! Flux pairs: EBZYL(59), ETHBENZ(4); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+EBZYL(59)+C2(27)=ETHYL(48)+ETHBENZ(4)               1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1224; RMG #9691
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); PROPYL(49), C3(28); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+PROPYL(49)+ETHBENZ(4)=EBZYL2(60)+C3(28)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1225; RMG #9692
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); PROPYL(49), C3(28); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+ETHBENZ(4)=EBZYL(59)+C3(28)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1226; RMG #9700
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); BUTYL(50), C4(29); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+BUTYL(50)+ETHBENZ(4)=EBZYL2(60)+C4(29)              5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1227; RMG #9701
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); BUTYL(50), C4(29); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+BUTYL(50)+ETHBENZ(4)=EBZYL(59)+C4(29)               2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1228; RMG #9709
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); PENTYL(51), C5(30); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+PENTYL(51)+ETHBENZ(4)=EBZYL2(60)+C5(30)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1229; RMG #9710
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); PENTYL(51), C5(30); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PENTYL(51)+ETHBENZ(4)=EBZYL(59)+C5(30)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1230; RMG #9718
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); HEXYL(52), C6(31); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+HEXYL(52)+ETHBENZ(4)=EBZYL2(60)+C6(31)              5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1231; RMG #9719
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); HEXYL(52), C6(31); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+HEXYL(52)+ETHBENZ(4)=EBZYL(59)+C6(31)               2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1232; RMG #9727
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); HEPTYL(53), C7(32); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+HEPTYL(53)+ETHBENZ(4)=EBZYL2(60)+C7(32)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1233; RMG #9728
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); HEPTYL(53), C7(32); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+HEPTYL(53)+ETHBENZ(4)=EBZYL(59)+C7(32)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1234; RMG #9736
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); OCTYL(54), C8(33); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+OCTYL(54)+ETHBENZ(4)=EBZYL2(60)+C8(33)              5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1235; RMG #9737
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); OCTYL(54), C8(33); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+OCTYL(54)+ETHBENZ(4)=EBZYL(59)+C8(33)               2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1236; RMG #9745
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); NONYL(55), C9(34); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+NONYL(55)+ETHBENZ(4)=EBZYL2(60)+C9(34)              5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1237; RMG #9746
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); NONYL(55), C9(34); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+NONYL(55)+ETHBENZ(4)=EBZYL(59)+C9(34)               2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1238; RMG #9754
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); DECYL(56), C10(35); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+DECYL(56)+ETHBENZ(4)=EBZYL2(60)+C10(35)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1239; RMG #9755
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); DECYL(56), C10(35); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+DECYL(56)+ETHBENZ(4)=EBZYL(59)+C10(35)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1240; RMG #9763
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); UDECYL(57), C11(36); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+UDECYL(57)+ETHBENZ(4)=C11(36)+EBZYL2(60)            5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1241; RMG #9764
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); UDECYL(57), C11(36); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+UDECYL(57)+ETHBENZ(4)=C11(36)+EBZYL(59)             2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1242; RMG #9772
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); BENZYL(58), TOLUENE(2); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cb]
+! Multiplied by reaction path degeneracy 2
+BENZYL(58)+ETHBENZ(4)=EBZYL2(60)+TOLUENE(2)         2.760e-03 4.340     10.400   
+
+! Reaction index: Chemkin #1243; RMG #9798
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); EBZYL(59), ETHBENZ(4); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+EBZYL(59)+ETHBENZ(4)=EBZYL2(60)+ETHBENZ(4)          5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1244; RMG #9806
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A3yl(61), BENZ3(5); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A3yl(61)+ETHBENZ(4)=EBZYL2(60)+BENZ3(5)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1245; RMG #9807
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A3yl(61), BENZ3(5); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A3yl(61)+ETHBENZ(4)=EBZYL(59)+BENZ3(5)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1246; RMG #9815
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A4yl(62), BENZ4(6); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A4yl(62)+ETHBENZ(4)=EBZYL2(60)+BENZ4(6)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1247; RMG #9816
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A4yl(62), BENZ4(6); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+ETHBENZ(4)=EBZYL(59)+BENZ4(6)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1248; RMG #9824
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A5yl(63), BENZ5(7); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A5yl(63)+ETHBENZ(4)=EBZYL2(60)+BENZ5(7)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1249; RMG #9825
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A5yl(63), BENZ5(7); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A5yl(63)+ETHBENZ(4)=EBZYL(59)+BENZ5(7)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1250; RMG #9833
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A6yl(64), BENZ6(8); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A6yl(64)+ETHBENZ(4)=EBZYL2(60)+BENZ6(8)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1251; RMG #9834
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A6yl(64), BENZ6(8); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A6yl(64)+ETHBENZ(4)=EBZYL(59)+BENZ6(8)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1252; RMG #9842
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A7yl(65), BENZ7(9); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A7yl(65)+ETHBENZ(4)=EBZYL2(60)+BENZ7(9)             5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1253; RMG #9843
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A7yl(65), BENZ7(9); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+ETHBENZ(4)=EBZYL(59)+BENZ7(9)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1254; RMG #9851
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A8yl(66), BENZ8(10); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A8yl(66)+ETHBENZ(4)=EBZYL2(60)+BENZ8(10)            5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1255; RMG #9852
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A8yl(66), BENZ8(10); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A8yl(66)+ETHBENZ(4)=EBZYL(59)+BENZ8(10)             2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1256; RMG #9860
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A9yl(67), BENZ9(11); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A9yl(67)+ETHBENZ(4)=EBZYL2(60)+BENZ9(11)            5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1257; RMG #9861
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A9yl(67), BENZ9(11); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A9yl(67)+ETHBENZ(4)=EBZYL(59)+BENZ9(11)             2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1258; RMG #9869
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL2(60); A10yl(68), BENZ10(12); 
+! Exact match found for rate rule [C/H2/CbCs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 2
+A10yl(68)+ETHBENZ(4)=EBZYL2(60)+BENZ10(12)          5.940e-04 4.340     4.900    
+
+! Reaction index: Chemkin #1259; RMG #9870
+! Template reaction: H_Abstraction
+! Flux pairs: ETHBENZ(4), EBZYL(59); A10yl(68), BENZ10(12); 
+! Exact match found for rate rule [C/H3/Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+ETHBENZ(4)=EBZYL(59)+BENZ10(12)           2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1260; RMG #9878
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A3yl(61), A3ene(69); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A3yl(61)+EBZYL2(60)=A3ene(69)+ETHBENZ(4)            1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1261; RMG #9897
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A4yl(62), A4ene(70); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A4yl(62)+EBZYL2(60)=A4ene(70)+ETHBENZ(4)            1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1262; RMG #9920
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A5yl(63), A5ene(71); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A5yl(63)+EBZYL2(60)=A5ene(71)+ETHBENZ(4)            1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1263; RMG #9947
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A6yl(64), A6ene(72); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A6yl(64)+EBZYL2(60)=A6ene(72)+ETHBENZ(4)            1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1264; RMG #9978
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A7yl(65), A7ene(73); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A7yl(65)+EBZYL2(60)=A7ene(73)+ETHBENZ(4)            1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1265; RMG #10013
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A8yl(66), A8ene(74); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A8yl(66)+EBZYL2(60)=A8ene(74)+ETHBENZ(4)            1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1266; RMG #10052
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A9yl(67), A9ene(75); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A9yl(67)+EBZYL2(60)=A9ene(75)+ETHBENZ(4)            1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1267; RMG #10095
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); A10yl(68), A10ene(76); 
+! Estimated using template [C_rad/H/OneDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/OneDeC;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A10yl(68)+EBZYL2(60)=A10ene(76)+ETHBENZ(4)          1.526e+12 0.000     -0.550   
+
+! Reaction index: Chemkin #1268; RMG #11054
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A3yl(61)+C1(26)=METHYL(47)+BENZ3(5)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1269; RMG #11064
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C2(27)=ETHYL(48)+BENZ3(5)                  1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1270; RMG #11074
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ3(5), A3yl(61); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ3(5)=A3yl(61)+C3(28)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1271; RMG #11084
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C4(29)=BUTYL(50)+BENZ3(5)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1272; RMG #11094
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C5(30)=PENTYL(51)+BENZ3(5)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1273; RMG #11104
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C6(31)=HEXYL(52)+BENZ3(5)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1274; RMG #11114
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C7(32)=HEPTYL(53)+BENZ3(5)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1275; RMG #11124
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C8(33)=OCTYL(54)+BENZ3(5)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1276; RMG #11134
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C9(34)=NONYL(55)+BENZ3(5)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1277; RMG #11144
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C10(35)=DECYL(56)+BENZ3(5)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1278; RMG #11154
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A3yl(61)+C11(36)=UDECYL(57)+BENZ3(5)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1279; RMG #11211
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ3(5), A3yl(61); A4yl(62), BENZ4(6); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+BENZ3(5)=A3yl(61)+BENZ4(6)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1280; RMG #11221
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); BENZ5(7), A5yl(63); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A3yl(61)+BENZ5(7)=A5yl(63)+BENZ3(5)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1281; RMG #11231
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); BENZ6(8), A6yl(64); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A3yl(61)+BENZ6(8)=A6yl(64)+BENZ3(5)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1282; RMG #11241
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ3(5), A3yl(61); A7yl(65), BENZ7(9); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+BENZ3(5)=A3yl(61)+BENZ7(9)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1283; RMG #11251
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); BENZ8(10), A8yl(66); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A3yl(61)+BENZ8(10)=A8yl(66)+BENZ3(5)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1284; RMG #11261
+! Template reaction: H_Abstraction
+! Flux pairs: A3yl(61), BENZ3(5); BENZ9(11), A9yl(67); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A3yl(61)+BENZ9(11)=A9yl(67)+BENZ3(5)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1285; RMG #11271
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ3(5), A3yl(61); A10yl(68), BENZ10(12); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+BENZ3(5)=A3yl(61)+BENZ10(12)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1286; RMG #12543
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A4yl(62)+C1(26)=METHYL(47)+BENZ4(6)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1287; RMG #12554
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C2(27)=ETHYL(48)+BENZ4(6)                  1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1288; RMG #12565
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ4(6), A4yl(62); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ4(6)=A4yl(62)+C3(28)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1289; RMG #12576
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C4(29)=BUTYL(50)+BENZ4(6)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1290; RMG #12587
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C5(30)=PENTYL(51)+BENZ4(6)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1291; RMG #12598
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C6(31)=HEXYL(52)+BENZ4(6)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1292; RMG #12609
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C7(32)=HEPTYL(53)+BENZ4(6)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1293; RMG #12620
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C8(33)=OCTYL(54)+BENZ4(6)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1294; RMG #12631
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C9(34)=NONYL(55)+BENZ4(6)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1295; RMG #12642
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C10(35)=DECYL(56)+BENZ4(6)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1296; RMG #12653
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A4yl(62)+C11(36)=UDECYL(57)+BENZ4(6)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1297; RMG #12726
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); BENZ5(7), A5yl(63); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+BENZ5(7)=A5yl(63)+BENZ4(6)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1298; RMG #12737
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); BENZ6(8), A6yl(64); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+BENZ6(8)=A6yl(64)+BENZ4(6)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1299; RMG #12748
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); BENZ7(9), A7yl(65); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+BENZ7(9)=A7yl(65)+BENZ4(6)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1300; RMG #12759
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); BENZ8(10), A8yl(66); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+BENZ8(10)=A8yl(66)+BENZ4(6)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1301; RMG #12770
+! Template reaction: H_Abstraction
+! Flux pairs: A4yl(62), BENZ4(6); BENZ9(11), A9yl(67); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A4yl(62)+BENZ9(11)=A9yl(67)+BENZ4(6)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1302; RMG #12781
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ4(6), A4yl(62); A10yl(68), BENZ10(12); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+BENZ4(6)=A4yl(62)+BENZ10(12)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1303; RMG #14130
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A5yl(63)+C1(26)=METHYL(47)+BENZ5(7)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1304; RMG #14142
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C2(27)=ETHYL(48)+BENZ5(7)                  1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1305; RMG #14154
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ5(7), A5yl(63); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ5(7)=A5yl(63)+C3(28)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1306; RMG #14166
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C4(29)=BUTYL(50)+BENZ5(7)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1307; RMG #14178
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C5(30)=PENTYL(51)+BENZ5(7)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1308; RMG #14190
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C6(31)=HEXYL(52)+BENZ5(7)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1309; RMG #14202
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C7(32)=HEPTYL(53)+BENZ5(7)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1310; RMG #14214
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C8(33)=OCTYL(54)+BENZ5(7)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1311; RMG #14226
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C9(34)=NONYL(55)+BENZ5(7)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1312; RMG #14238
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C10(35)=DECYL(56)+BENZ5(7)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1313; RMG #14250
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A5yl(63)+C11(36)=UDECYL(57)+BENZ5(7)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1314; RMG #14341
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); BENZ6(8), A6yl(64); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A5yl(63)+BENZ6(8)=A6yl(64)+BENZ5(7)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1315; RMG #14353
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ5(7), A5yl(63); A7yl(65), BENZ7(9); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+BENZ5(7)=A5yl(63)+BENZ7(9)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1316; RMG #14365
+! Template reaction: H_Abstraction
+! Flux pairs: A5yl(63), BENZ5(7); BENZ8(10), A8yl(66); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A5yl(63)+BENZ8(10)=A8yl(66)+BENZ5(7)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1317; RMG #14377
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ5(7), A5yl(63); A9yl(67), BENZ9(11); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A9yl(67)+BENZ5(7)=A5yl(63)+BENZ9(11)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1318; RMG #14389
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ5(7), A5yl(63); A10yl(68), BENZ10(12); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+BENZ5(7)=A5yl(63)+BENZ10(12)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1319; RMG #15803
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A6yl(64)+C1(26)=METHYL(47)+BENZ6(8)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1320; RMG #15816
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C2(27)=ETHYL(48)+BENZ6(8)                  1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1321; RMG #15829
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ6(8), A6yl(64); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ6(8)=A6yl(64)+C3(28)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1322; RMG #15842
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C4(29)=BUTYL(50)+BENZ6(8)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1323; RMG #15855
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C5(30)=PENTYL(51)+BENZ6(8)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1324; RMG #15868
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C6(31)=HEXYL(52)+BENZ6(8)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1325; RMG #15881
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C7(32)=HEPTYL(53)+BENZ6(8)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1326; RMG #15894
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C8(33)=OCTYL(54)+BENZ6(8)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1327; RMG #15907
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C9(34)=NONYL(55)+BENZ6(8)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1328; RMG #15920
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C10(35)=DECYL(56)+BENZ6(8)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1329; RMG #15933
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A6yl(64)+C11(36)=UDECYL(57)+BENZ6(8)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1330; RMG #16044
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ6(8), A6yl(64); A7yl(65), BENZ7(9); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+BENZ6(8)=A6yl(64)+BENZ7(9)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1331; RMG #16057
+! Template reaction: H_Abstraction
+! Flux pairs: A6yl(64), BENZ6(8); BENZ8(10), A8yl(66); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A6yl(64)+BENZ8(10)=A8yl(66)+BENZ6(8)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1332; RMG #16070
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ6(8), A6yl(64); A9yl(67), BENZ9(11); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A9yl(67)+BENZ6(8)=A6yl(64)+BENZ9(11)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1333; RMG #16083
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ6(8), A6yl(64); A10yl(68), BENZ10(12); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+BENZ6(8)=A6yl(64)+BENZ10(12)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1334; RMG #17550
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A7yl(65)+C1(26)=METHYL(47)+BENZ7(9)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1335; RMG #17564
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C2(27)=ETHYL(48)+BENZ7(9)                  1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1336; RMG #17578
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ7(9), A7yl(65); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ7(9)=A7yl(65)+C3(28)                 2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1337; RMG #17592
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C4(29)=BUTYL(50)+BENZ7(9)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1338; RMG #17606
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C5(30)=PENTYL(51)+BENZ7(9)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1339; RMG #17620
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C6(31)=HEXYL(52)+BENZ7(9)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1340; RMG #17634
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C7(32)=HEPTYL(53)+BENZ7(9)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1341; RMG #17648
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C8(33)=OCTYL(54)+BENZ7(9)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1342; RMG #17662
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C9(34)=NONYL(55)+BENZ7(9)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1343; RMG #17676
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C10(35)=DECYL(56)+BENZ7(9)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1344; RMG #17690
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A7yl(65)+C11(36)=UDECYL(57)+BENZ7(9)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1345; RMG #17823
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); BENZ8(10), A8yl(66); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+BENZ8(10)=A8yl(66)+BENZ7(9)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1346; RMG #17837
+! Template reaction: H_Abstraction
+! Flux pairs: A7yl(65), BENZ7(9); BENZ9(11), A9yl(67); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A7yl(65)+BENZ9(11)=A9yl(67)+BENZ7(9)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1347; RMG #17851
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ7(9), A7yl(65); A10yl(68), BENZ10(12); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+BENZ7(9)=A7yl(65)+BENZ10(12)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1348; RMG #19359
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A8yl(66)+C1(26)=METHYL(47)+BENZ8(10)                8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1349; RMG #19374
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C2(27)=ETHYL(48)+BENZ8(10)                 1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1350; RMG #19389
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ8(10), A8yl(66); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ8(10)=A8yl(66)+C3(28)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1351; RMG #19404
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C4(29)=BUTYL(50)+BENZ8(10)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1352; RMG #19419
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C5(30)=PENTYL(51)+BENZ8(10)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1353; RMG #19434
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C6(31)=HEXYL(52)+BENZ8(10)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1354; RMG #19449
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C7(32)=HEPTYL(53)+BENZ8(10)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1355; RMG #19464
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C8(33)=OCTYL(54)+BENZ8(10)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1356; RMG #19479
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C9(34)=NONYL(55)+BENZ8(10)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1357; RMG #19494
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C10(35)=DECYL(56)+BENZ8(10)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1358; RMG #19509
+! Template reaction: H_Abstraction
+! Flux pairs: A8yl(66), BENZ8(10); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A8yl(66)+C11(36)=UDECYL(57)+BENZ8(10)               5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1359; RMG #19666
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ8(10), A8yl(66); A9yl(67), BENZ9(11); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A9yl(67)+BENZ8(10)=A8yl(66)+BENZ9(11)               2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1360; RMG #19681
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ8(10), A8yl(66); A10yl(68), BENZ10(12); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+BENZ8(10)=A8yl(66)+BENZ10(12)             2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1361; RMG #21218
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A9yl(67)+C1(26)=METHYL(47)+BENZ9(11)                8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1362; RMG #21234
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C2(27)=ETHYL(48)+BENZ9(11)                 1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1363; RMG #21250
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ9(11), A9yl(67); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ9(11)=A9yl(67)+C3(28)                2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1364; RMG #21266
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C4(29)=BUTYL(50)+BENZ9(11)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1365; RMG #21282
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C5(30)=PENTYL(51)+BENZ9(11)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1366; RMG #21298
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C6(31)=HEXYL(52)+BENZ9(11)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1367; RMG #21314
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C7(32)=HEPTYL(53)+BENZ9(11)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1368; RMG #21330
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C8(33)=OCTYL(54)+BENZ9(11)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1369; RMG #21346
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C9(34)=NONYL(55)+BENZ9(11)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1370; RMG #21362
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C10(35)=DECYL(56)+BENZ9(11)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1371; RMG #21378
+! Template reaction: H_Abstraction
+! Flux pairs: A9yl(67), BENZ9(11); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A9yl(67)+C11(36)=UDECYL(57)+BENZ9(11)               5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1372; RMG #21561
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ9(11), A9yl(67); A10yl(68), BENZ10(12); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+A10yl(68)+BENZ9(11)=A9yl(67)+BENZ10(12)             2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1373; RMG #23115
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+A10yl(68)+C1(26)=METHYL(47)+BENZ10(12)              8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1374; RMG #23132
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C2(27), ETHYL(48); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C2(27)=ETHYL(48)+BENZ10(12)               1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1375; RMG #23149
+! Template reaction: H_Abstraction
+! Flux pairs: BENZ10(12), A10yl(68); PROPYL(49), C3(28); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 3
+PROPYL(49)+BENZ10(12)=A10yl(68)+C3(28)              2.760e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1376; RMG #23166
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C4(29)=BUTYL(50)+BENZ10(12)               5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1377; RMG #23183
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C5(30)=PENTYL(51)+BENZ10(12)              5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1378; RMG #23200
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C6(31)=HEXYL(52)+BENZ10(12)               5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1379; RMG #23217
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C7(32)=HEPTYL(53)+BENZ10(12)              5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1380; RMG #23234
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C8(33)=OCTYL(54)+BENZ10(12)               5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1381; RMG #23251
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C9(34)=NONYL(55)+BENZ10(12)               5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1382; RMG #23268
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C10(35)=DECYL(56)+BENZ10(12)              5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1383; RMG #23285
+! Template reaction: H_Abstraction
+! Flux pairs: A10yl(68), BENZ10(12); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+A10yl(68)+C11(36)=UDECYL(57)+BENZ10(12)             5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1384; RMG #29322
+! Template reaction: H_Abstraction
+! Flux pairs: C2(27), ETHYL(48); METHYL(47), C1(26); 
+! Estimated using average of templates [C/H3/Cs;C_methyl] + [C/H3/Cs\H3;Cs_rad] for rate rule [C/H3/Cs\H3;C_methyl]
+! Multiplied by reaction path degeneracy 6
+METHYL(47)+C2(27)=ETHYL(48)+C1(26)                  2.940e-05 5.135     7.890    
+
+! Reaction index: Chemkin #1385; RMG #29323
+! Template reaction: H_Abstraction
+! Flux pairs: C2(27), ETHYL(48); PROPYL(49), C3(28); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C2(27)=ETHYL(48)+C3(28)                  1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1386; RMG #29324
+! Template reaction: H_Abstraction
+! Flux pairs: C2(27), ETHYL(48); BUTYL(50), C4(29); 
+! Estimated using an average for rate rule [C/H3/Cs\H3;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+BUTYL(50)+C2(27)=ETHYL(48)+C4(29)                   1.926e-05 5.280     7.780    
+
+! Reaction index: Chemkin #1387; RMG #29325
+! Template reaction: H_Abstraction
+! Flux pairs: ETHYL(48), C2(27); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 6
+ETHYL(48)+C5(30)=PENTYL(51)+C2(27)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1388; RMG #29326
+! Template reaction: H_Abstraction
+! Flux pairs: ETHYL(48), C2(27); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 6
+ETHYL(48)+C6(31)=HEXYL(52)+C2(27)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1389; RMG #29327
+! Template reaction: H_Abstraction
+! Flux pairs: ETHYL(48), C2(27); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 6
+ETHYL(48)+C7(32)=HEPTYL(53)+C2(27)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1390; RMG #29328
+! Template reaction: H_Abstraction
+! Flux pairs: ETHYL(48), C2(27); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 6
+ETHYL(48)+C8(33)=OCTYL(54)+C2(27)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1391; RMG #29329
+! Template reaction: H_Abstraction
+! Flux pairs: ETHYL(48), C2(27); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 6
+ETHYL(48)+C9(34)=NONYL(55)+C2(27)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1392; RMG #29330
+! Template reaction: H_Abstraction
+! Flux pairs: ETHYL(48), C2(27); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 6
+ETHYL(48)+C10(35)=DECYL(56)+C2(27)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1393; RMG #29331
+! Template reaction: H_Abstraction
+! Flux pairs: ETHYL(48), C2(27); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs\H3]
+! Multiplied by reaction path degeneracy 6
+C11(36)+ETHYL(48)=UDECYL(57)+C2(27)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1394; RMG #29405
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+PROPYL(49)+C1(26)=METHYL(47)+C3(28)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1395; RMG #29409
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C4(29), BUTYL(50); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C4(29)=BUTYL(50)+C3(28)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1396; RMG #29411
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C5(30)=PENTYL(51)+C3(28)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1397; RMG #29413
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C6(31)=HEXYL(52)+C3(28)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1398; RMG #29415
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C7(32)=HEPTYL(53)+C3(28)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1399; RMG #29417
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C8(33)=OCTYL(54)+C3(28)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1400; RMG #29419
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C9(34)=NONYL(55)+C3(28)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1401; RMG #29421
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PROPYL(49)+C10(35)=DECYL(56)+C3(28)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1402; RMG #29423
+! Template reaction: H_Abstraction
+! Flux pairs: PROPYL(49), C3(28); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+PROPYL(49)=UDECYL(57)+C3(28)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1403; RMG #29560
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+BUTYL(50)+C1(26)=METHYL(47)+C4(29)                  8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1404; RMG #29565
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C5(30), PENTYL(51); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+BUTYL(50)+C5(30)=PENTYL(51)+C4(29)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1405; RMG #29567
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+BUTYL(50)+C6(31)=HEXYL(52)+C4(29)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1406; RMG #29569
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+BUTYL(50)+C7(32)=HEPTYL(53)+C4(29)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1407; RMG #29571
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C8(33), OCTYL(54); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+BUTYL(50)+C8(33)=OCTYL(54)+C4(29)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1408; RMG #29573
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+BUTYL(50)+C9(34)=NONYL(55)+C4(29)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1409; RMG #29575
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C10(35), DECYL(56); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+BUTYL(50)+C10(35)=DECYL(56)+C4(29)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1410; RMG #29577
+! Template reaction: H_Abstraction
+! Flux pairs: BUTYL(50), C4(29); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+BUTYL(50)=UDECYL(57)+C4(29)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1411; RMG #29734
+! Template reaction: H_Abstraction
+! Flux pairs: PENTYL(51), C5(30); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+PENTYL(51)+C1(26)=METHYL(47)+C5(30)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1412; RMG #29745
+! Template reaction: H_Abstraction
+! Flux pairs: PENTYL(51), C5(30); C6(31), HEXYL(52); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PENTYL(51)+C6(31)=HEXYL(52)+C5(30)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1413; RMG #29748
+! Template reaction: H_Abstraction
+! Flux pairs: PENTYL(51), C5(30); C7(32), HEPTYL(53); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PENTYL(51)+C7(32)=HEPTYL(53)+C5(30)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1414; RMG #29751
+! Template reaction: H_Abstraction
+! Flux pairs: C5(30), PENTYL(51); OCTYL(54), C8(33); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+OCTYL(54)+C5(30)=PENTYL(51)+C8(33)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1415; RMG #29754
+! Template reaction: H_Abstraction
+! Flux pairs: PENTYL(51), C5(30); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+PENTYL(51)+C9(34)=NONYL(55)+C5(30)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1416; RMG #29757
+! Template reaction: H_Abstraction
+! Flux pairs: C5(30), PENTYL(51); DECYL(56), C10(35); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+DECYL(56)+C5(30)=PENTYL(51)+C10(35)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1417; RMG #29760
+! Template reaction: H_Abstraction
+! Flux pairs: PENTYL(51), C5(30); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+PENTYL(51)=UDECYL(57)+C5(30)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1418; RMG #29980
+! Template reaction: H_Abstraction
+! Flux pairs: HEXYL(52), C6(31); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+HEXYL(52)+C1(26)=METHYL(47)+C6(31)                  8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1419; RMG #29993
+! Template reaction: H_Abstraction
+! Flux pairs: C6(31), HEXYL(52); HEPTYL(53), C7(32); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+HEPTYL(53)+C6(31)=HEXYL(52)+C7(32)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1420; RMG #29996
+! Template reaction: H_Abstraction
+! Flux pairs: C6(31), HEXYL(52); OCTYL(54), C8(33); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+OCTYL(54)+C6(31)=HEXYL(52)+C8(33)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1421; RMG #29999
+! Template reaction: H_Abstraction
+! Flux pairs: HEXYL(52), C6(31); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+HEXYL(52)+C9(34)=NONYL(55)+C6(31)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1422; RMG #30002
+! Template reaction: H_Abstraction
+! Flux pairs: C6(31), HEXYL(52); DECYL(56), C10(35); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+DECYL(56)+C6(31)=HEXYL(52)+C10(35)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1423; RMG #30005
+! Template reaction: H_Abstraction
+! Flux pairs: HEXYL(52), C6(31); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+HEXYL(52)=UDECYL(57)+C6(31)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1424; RMG #30245
+! Template reaction: H_Abstraction
+! Flux pairs: HEPTYL(53), C7(32); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+HEPTYL(53)+C1(26)=METHYL(47)+C7(32)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1425; RMG #30267
+! Template reaction: H_Abstraction
+! Flux pairs: C7(32), HEPTYL(53); OCTYL(54), C8(33); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+OCTYL(54)+C7(32)=HEPTYL(53)+C8(33)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1426; RMG #30271
+! Template reaction: H_Abstraction
+! Flux pairs: HEPTYL(53), C7(32); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+HEPTYL(53)+C9(34)=NONYL(55)+C7(32)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1427; RMG #30275
+! Template reaction: H_Abstraction
+! Flux pairs: C7(32), HEPTYL(53); DECYL(56), C10(35); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+DECYL(56)+C7(32)=HEPTYL(53)+C10(35)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1428; RMG #30279
+! Template reaction: H_Abstraction
+! Flux pairs: HEPTYL(53), C7(32); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+HEPTYL(53)=UDECYL(57)+C7(32)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1429; RMG #30582
+! Template reaction: H_Abstraction
+! Flux pairs: OCTYL(54), C8(33); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+OCTYL(54)+C1(26)=METHYL(47)+C8(33)                  8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1430; RMG #30607
+! Template reaction: H_Abstraction
+! Flux pairs: OCTYL(54), C8(33); C9(34), NONYL(55); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+OCTYL(54)+C9(34)=NONYL(55)+C8(33)                   5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1431; RMG #30611
+! Template reaction: H_Abstraction
+! Flux pairs: C8(33), OCTYL(54); DECYL(56), C10(35); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+DECYL(56)+C8(33)=OCTYL(54)+C10(35)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1432; RMG #30615
+! Template reaction: H_Abstraction
+! Flux pairs: OCTYL(54), C8(33); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+OCTYL(54)=UDECYL(57)+C8(33)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1433; RMG #30938
+! Template reaction: H_Abstraction
+! Flux pairs: NONYL(55), C9(34); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+NONYL(55)+C1(26)=METHYL(47)+C9(34)                  8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1434; RMG #30975
+! Template reaction: H_Abstraction
+! Flux pairs: C9(34), NONYL(55); DECYL(56), C10(35); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+DECYL(56)+C9(34)=NONYL(55)+C10(35)                  5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1435; RMG #30980
+! Template reaction: H_Abstraction
+! Flux pairs: NONYL(55), C9(34); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+NONYL(55)=UDECYL(57)+C9(34)                 5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1436; RMG #31351
+! Template reaction: H_Abstraction
+! Flux pairs: DECYL(56), C10(35); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+DECYL(56)+C1(26)=METHYL(47)+C10(35)                 8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1437; RMG #31392
+! Template reaction: H_Abstraction
+! Flux pairs: DECYL(56), C10(35); C11(36), UDECYL(57); 
+! Estimated using template [C/H3/Cs;C_rad/H2/Cs] for rate rule [C/H3/Cs\H2\Cs;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 6
+C11(36)+DECYL(56)=UDECYL(57)+C10(35)                5.520e-03 4.340     9.200    
+
+! Reaction index: Chemkin #1438; RMG #31798
+! Template reaction: H_Abstraction
+! Flux pairs: UDECYL(57), C11(36); C1(26), METHYL(47); 
+! Exact match found for rate rule [C_methane;C_rad/H2/Cs]
+! Multiplied by reaction path degeneracy 4
+UDECYL(57)+C1(26)=C11(36)+METHYL(47)                8.640e-02 4.140     12.560   
+
+! Reaction index: Chemkin #1439; RMG #644
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(272); UDECYL(57), S(272); 
+! Exact match found for rate rule [Cds-CdH_Cds-CdCs;CsJ-CsHH]
+! Multiplied by reaction path degeneracy 2
+UDECYL(57)+PDD(1)=S(272)                            3.440e+03 2.410     2.970    
+
+! Reaction index: Chemkin #1440; RMG #44129
+! Template reaction: R_Recombination
+! Flux pairs: METHYL(47), C1(26); H(83), C1(26); 
+! Exact match found for rate rule [C_methyl;H_rad]
+H(83)+METHYL(47)=C1(26)                             1.930e+14 0.000     0.270    
+
+! Reaction index: Chemkin #1441; RMG #44130
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: STYRENE(3), EBZYL2(60); H(83), EBZYL2(60); 
+! Exact match found for rate rule [Cds-HH_Cds-CbH;HJ]
+H(83)+STYRENE(3)=EBZYL2(60)                         6.000e+07 1.640     1.550    
+
+! Reaction index: Chemkin #1442; RMG #44173
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); C18H31(91), PDD(1); 
+! Estimated using template [C_methyl;Cpri_Rrad] for rate rule [C_methyl;C/H2/De_Csrad]
+! Multiplied by reaction path degeneracy 2
+C18H31(91)+METHYL(47)=C1(26)+PDD(1)                 2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1443; RMG #44332
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); EBZYL(59), STYRENE(3); 
+! Estimated using template [C_methyl;Cpri_Rrad] for rate rule [C_methyl;C/H2/De_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+EBZYL(59)=C1(26)+STYRENE(3)              2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1444; RMG #44333
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); EBZYL2(60), STYRENE(3); 
+! Exact match found for rate rule [C_methyl;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+EBZYL2(60)+METHYL(47)=C1(26)+STYRENE(3)             6.570e+14 -0.680    0.000    
+
+! Reaction index: Chemkin #1445; RMG #44974
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); ETHYL(48), C2ene(37); 
+! Exact match found for rate rule [C_methyl;Cmethyl_Csrad]
+! Multiplied by reaction path degeneracy 3
+METHYL(47)+ETHYL(48)=C2ene(37)+C1(26)               6.570e+14 -0.680    0.000    
+
+! Reaction index: Chemkin #1446; RMG #44975
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); PROPYL(49), C3ene(38); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PROPYL(49)=C3ene(38)+C1(26)              2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1447; RMG #44977
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); BUTYL(50), C4ene(39); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+BUTYL(50)=C4ene(39)+C1(26)               2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1448; RMG #44979
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); PENTYL(51), C5ene(40); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+PENTYL(51)=C5ene(40)+C1(26)              2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1449; RMG #44981
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); HEXYL(52), C6ene(41); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+HEXYL(52)=C6ene(41)+C1(26)               2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1450; RMG #44983
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); HEPTYL(53), C7ene(42); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+HEPTYL(53)=C7ene(42)+C1(26)              2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1451; RMG #44985
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); OCTYL(54), C8ene(43); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+OCTYL(54)=C8ene(43)+C1(26)               2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1452; RMG #44987
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); NONYL(55), C9ene(44); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+NONYL(55)=C9ene(44)+C1(26)               2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1453; RMG #44989
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); DECYL(56), C10ene(45); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+DECYL(56)=C10ene(45)+C1(26)              2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1454; RMG #44991
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); UDECYL(57), C11ene(46); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+METHYL(47)+UDECYL(57)=C11ene(46)+C1(26)             2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1455; RMG #44997
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A3yl(61), A3ene(69); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A3yl(61)+METHYL(47)=A3ene(69)+C1(26)                2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1456; RMG #45003
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A4yl(62), A4ene(70); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A4yl(62)+METHYL(47)=A4ene(70)+C1(26)                2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1457; RMG #45009
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A5yl(63), A5ene(71); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A5yl(63)+METHYL(47)=A5ene(71)+C1(26)                2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1458; RMG #45015
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A6yl(64), A6ene(72); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A6yl(64)+METHYL(47)=A6ene(72)+C1(26)                2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1459; RMG #45021
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A7yl(65), A7ene(73); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A7yl(65)+METHYL(47)=A7ene(73)+C1(26)                2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1460; RMG #45027
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A8yl(66), A8ene(74); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A8yl(66)+METHYL(47)=A8ene(74)+C1(26)                2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1461; RMG #45033
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A9yl(67), A9ene(75); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A9yl(67)+METHYL(47)=A9ene(75)+C1(26)                2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1462; RMG #45039
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); A10yl(68), A10ene(76); 
+! Exact match found for rate rule [C_methyl;C/H2/Nd_Csrad]
+! Multiplied by reaction path degeneracy 2
+A10yl(68)+METHYL(47)=A10ene(76)+C1(26)              2.300e+13 -0.320    0.000    
+
+! Reaction index: Chemkin #1463; RMG #120
+! Template reaction: Intra_R_Add_Exocyclic
+! Flux pairs: RAD4(17), S(117); 
+! Exact match found for rate rule [R7_SSSS_D;doublebond_intra_HCd_pri;radadd_intra_csHNd]
+RAD4(17)=S(117)                                     6.960e+10 0.210     5.780    
+DUPLICATE
+
+! Reaction index: Chemkin #1464; RMG #123
+! Template reaction: Intra_R_Add_Endocyclic
+! Flux pairs: RAD4(17), S(117); 
+! Estimated using average of templates [R6_SSS_D;doublebond_intra_secDe_HCd;radadd_intra_csHNd] + [R6_CsCsCs_HH_D;doublebond_intra;radadd_intra_csHNd]
+! for rate rule [R6_CsCsCs_HH_D;doublebond_intra_secDe_HCd;radadd_intra_csHNd]
+RAD4(17)=S(117)                                     7.219e+07 0.680     6.830    
+DUPLICATE
+
+! Reaction index: Chemkin #1465; RMG #645
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(273); UDECYL(57), S(273); 
+! Exact match found for rate rule [Cds-CdH_Cds-CdH;CsJ-CsHH]
+! Multiplied by reaction path degeneracy 2
+UDECYL(57)+PDD(1)=S(273)                            3.020e+03 2.410     3.390    
+
+! Reaction index: Chemkin #1466; RMG #46010
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C18H28(82), S(117); H(83), S(117); 
+! Exact match found for rate rule [Cds-CdCs_Cds-CdCs;HJ]
+H(83)+C18H28(82)=S(117)                             1.160e+08 1.640     1.430    
+
+! Reaction index: Chemkin #1467; RMG #646
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(274); UDECYL(57), S(274); 
+! Exact match found for rate rule [Cds-CdH_Cds-CdH;CsJ-CsHH]
+UDECYL(57)+PDD(1)=S(274)                            1.510e+03 2.410     3.390    
+
+! Reaction index: Chemkin #1468; RMG #109
+! Template reaction: Intra_R_Add_Exocyclic
+! Flux pairs: RAD3(16), S(112); 
+! Exact match found for rate rule [R6_SSS_D;doublebond_intra_HCd_pri;radadd_intra_csHNd]
+RAD3(16)=S(112)                                     2.040e+10 0.210     4.320    
+DUPLICATE
+
+! Reaction index: Chemkin #1469; RMG #112
+! Template reaction: Intra_R_Add_Endocyclic
+! Flux pairs: RAD3(16), S(112); 
+! Estimated using average of templates [R5_SS_D;doublebond_intra_secDe_HCd;radadd_intra_csHNd] + [R5_CsCs_HH_D;doublebond_intra;radadd_intra_csHNd] for
+! rate rule [R5_CsCs_HH_D;doublebond_intra_secDe_HCd;radadd_intra_csHNd]
+! Multiplied by reaction path degeneracy 2
+RAD3(16)=S(112)                                     1.776e+09 0.670     14.010   
+DUPLICATE
+
+! Reaction index: Chemkin #1470; RMG #47200
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: C18H28(81), S(112); H(83), S(112); 
+! Cds-CdCs_Cds-CdH;HJ from training reaction 52
+! Exact match found for rate rule [Cds-CdCs_Cds-CdH;HJ]
+H(83)+C18H28(81)=S(112)                             9.090e+07 1.710     2.900    
+
+! Reaction index: Chemkin #1471; RMG #47212
+! Template reaction: Disproportionation
+! Flux pairs: RAD10(23), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD10(23)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1472; RMG #47218
+! Template reaction: Disproportionation
+! Flux pairs: RAD9(22), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD9(22)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1473; RMG #47224
+! Template reaction: Disproportionation
+! Flux pairs: RAD8(21), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD8(21)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1474; RMG #47230
+! Template reaction: Disproportionation
+! Flux pairs: RAD7(20), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD7(20)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1475; RMG #47236
+! Template reaction: Disproportionation
+! Flux pairs: RAD6(19), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD6(19)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1476; RMG #47242
+! Template reaction: Disproportionation
+! Flux pairs: RAD5(18), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD5(18)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1477; RMG #47248
+! Template reaction: Disproportionation
+! Flux pairs: RAD4(17), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD4(17)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1478; RMG #47254
+! Template reaction: Disproportionation
+! Flux pairs: RAD3(16), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD3(16)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1479; RMG #47260
+! Template reaction: Disproportionation
+! Flux pairs: RAD2(15), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD2(15)=C18H28(82)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1480; RMG #47266
+! Template reaction: Disproportionation
+! Flux pairs: RAD11(24), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(117)+RAD11(24)=C18H28(82)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1481; RMG #47272
+! Template reaction: Disproportionation
+! Flux pairs: RAD1(14), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;C/H/NdDe_Csrad]
+S(117)+RAD1(14)=C18H28(82)+PDD(1)                   7.630e+11 0.000     -0.550   
+
+! Reaction index: Chemkin #1482; RMG #47278
+! Template reaction: Disproportionation
+! Flux pairs: RAD12(25), PDD(1); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+RAD12(25)=C18H28(82)+PDD(1)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1483; RMG #47385
+! Template reaction: Disproportionation
+! Flux pairs: BENZYL(58), TOLUENE(2); S(117), C18H28(82); 
+! Estimated using template [C_pri_rad;Csec_Rrad] for rate rule [C_rad/H2/Cb;C/H/NdDe_Csrad]
+S(117)+BENZYL(58)=C18H28(82)+TOLUENE(2)             5.418e+11 0.000     -0.043   
+
+! Reaction index: Chemkin #1484; RMG #47507
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); S(117), C18H28(82); 
+! Estimated using template [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;C/H/NdDe_Csrad]
+S(117)+EBZYL2(60)=C18H28(82)+ETHBENZ(4)             7.630e+11 0.000     -0.550   
+
+! Reaction index: Chemkin #1485; RMG #47513
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL(59), ETHBENZ(4); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+EBZYL(59)=C18H28(82)+ETHBENZ(4)              8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1486; RMG #47575
+! Template reaction: Disproportionation
+! Flux pairs: A3yl(61), BENZ3(5); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A3yl(61)=C18H28(82)+BENZ3(5)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1487; RMG #47643
+! Template reaction: Disproportionation
+! Flux pairs: A4yl(62), BENZ4(6); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A4yl(62)=C18H28(82)+BENZ4(6)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1488; RMG #47717
+! Template reaction: Disproportionation
+! Flux pairs: A5yl(63), BENZ5(7); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A5yl(63)=C18H28(82)+BENZ5(7)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1489; RMG #47797
+! Template reaction: Disproportionation
+! Flux pairs: A6yl(64), BENZ6(8); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A6yl(64)=C18H28(82)+BENZ6(8)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1490; RMG #47883
+! Template reaction: Disproportionation
+! Flux pairs: A7yl(65), BENZ7(9); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A7yl(65)=C18H28(82)+BENZ7(9)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1491; RMG #47975
+! Template reaction: Disproportionation
+! Flux pairs: A8yl(66), BENZ8(10); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A8yl(66)=C18H28(82)+BENZ8(10)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1492; RMG #48073
+! Template reaction: Disproportionation
+! Flux pairs: A9yl(67), BENZ9(11); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A9yl(67)=C18H28(82)+BENZ9(11)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1493; RMG #48177
+! Template reaction: Disproportionation
+! Flux pairs: A10yl(68), BENZ10(12); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+A10yl(68)=C18H28(82)+BENZ10(12)              8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1494; RMG #48696
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); S(117), C18H28(82); 
+! Estimated using template [C_methyl;Csec_Rrad] for rate rule [C_methyl;C/H/NdDe_Csrad]
+S(117)+METHYL(47)=C18H28(82)+C1(26)                 6.020e+12 -0.320    0.000    
+
+! Reaction index: Chemkin #1495; RMG #48702
+! Template reaction: Disproportionation
+! Flux pairs: ETHYL(48), C2(27); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+ETHYL(48)=C18H28(82)+C2(27)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1496; RMG #48714
+! Template reaction: Disproportionation
+! Flux pairs: PROPYL(49), C3(28); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+PROPYL(49)=C18H28(82)+C3(28)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1497; RMG #48726
+! Template reaction: Disproportionation
+! Flux pairs: BUTYL(50), C4(29); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+BUTYL(50)=C18H28(82)+C4(29)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1498; RMG #48744
+! Template reaction: Disproportionation
+! Flux pairs: PENTYL(51), C5(30); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+PENTYL(51)=C18H28(82)+C5(30)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1499; RMG #48762
+! Template reaction: Disproportionation
+! Flux pairs: HEXYL(52), C6(31); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+HEXYL(52)=C18H28(82)+C6(31)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1500; RMG #48786
+! Template reaction: Disproportionation
+! Flux pairs: HEPTYL(53), C7(32); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+HEPTYL(53)=C18H28(82)+C7(32)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1501; RMG #48810
+! Template reaction: Disproportionation
+! Flux pairs: OCTYL(54), C8(33); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+OCTYL(54)=C18H28(82)+C8(33)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1502; RMG #48840
+! Template reaction: Disproportionation
+! Flux pairs: NONYL(55), C9(34); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+NONYL(55)=C18H28(82)+C9(34)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1503; RMG #48870
+! Template reaction: Disproportionation
+! Flux pairs: DECYL(56), C10(35); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+DECYL(56)=C18H28(82)+C10(35)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1504; RMG #48906
+! Template reaction: Disproportionation
+! Flux pairs: UDECYL(57), C11(36); S(117), C18H28(82); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(117)+UDECYL(57)=C18H28(82)+C11(36)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1505; RMG #693
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(277); BENZYL(58), S(277); 
+! Exact match found for rate rule [Cds-CdH_Cds-CdCs;CsJ-CbHH]
+! Multiplied by reaction path degeneracy 2
+BENZYL(58)+PDD(1)=S(277)                            1.656e+04 2.410     7.500    
+
+! Reaction index: Chemkin #1506; RMG #51032
+! Template reaction: Disproportionation
+! Flux pairs: RAD10(23), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD10(23)=C18H28(81)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1507; RMG #51038
+! Template reaction: Disproportionation
+! Flux pairs: RAD9(22), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD9(22)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1508; RMG #51044
+! Template reaction: Disproportionation
+! Flux pairs: RAD8(21), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD8(21)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1509; RMG #51050
+! Template reaction: Disproportionation
+! Flux pairs: RAD7(20), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD7(20)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1510; RMG #51056
+! Template reaction: Disproportionation
+! Flux pairs: RAD6(19), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD6(19)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1511; RMG #51062
+! Template reaction: Disproportionation
+! Flux pairs: RAD5(18), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD5(18)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1512; RMG #51068
+! Template reaction: Disproportionation
+! Flux pairs: RAD4(17), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD4(17)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1513; RMG #51074
+! Template reaction: Disproportionation
+! Flux pairs: RAD3(16), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD3(16)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1514; RMG #51080
+! Template reaction: Disproportionation
+! Flux pairs: RAD2(15), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD2(15)=C18H28(81)+PDD(1)                   2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1515; RMG #51086
+! Template reaction: Disproportionation
+! Flux pairs: RAD11(24), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/NonDeC;Csec_Rrad] for rate rule [C_rad/H/NonDeC;C/H/NdDe_Csrad]
+S(112)+RAD11(24)=C18H28(81)+PDD(1)                  2.560e+13 -0.350    0.000    
+
+! Reaction index: Chemkin #1516; RMG #51092
+! Template reaction: Disproportionation
+! Flux pairs: RAD1(14), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;C/H/NdDe_Csrad]
+S(112)+RAD1(14)=C18H28(81)+PDD(1)                   7.630e+11 0.000     -0.550   
+
+! Reaction index: Chemkin #1517; RMG #51098
+! Template reaction: Disproportionation
+! Flux pairs: RAD12(25), PDD(1); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+RAD12(25)=C18H28(81)+PDD(1)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1518; RMG #51205
+! Template reaction: Disproportionation
+! Flux pairs: BENZYL(58), TOLUENE(2); S(112), C18H28(81); 
+! Estimated using template [C_pri_rad;Csec_Rrad] for rate rule [C_rad/H2/Cb;C/H/NdDe_Csrad]
+S(112)+BENZYL(58)=C18H28(81)+TOLUENE(2)             5.418e+11 0.000     -0.043   
+
+! Reaction index: Chemkin #1519; RMG #51384
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL2(60), ETHBENZ(4); S(112), C18H28(81); 
+! Estimated using template [C_rad/H/OneDeC;XH_s_Rrad] for rate rule [C_rad/H/OneDeC;C/H/NdDe_Csrad]
+S(112)+EBZYL2(60)=C18H28(81)+ETHBENZ(4)             7.630e+11 0.000     -0.550   
+
+! Reaction index: Chemkin #1520; RMG #51390
+! Template reaction: Disproportionation
+! Flux pairs: EBZYL(59), ETHBENZ(4); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+EBZYL(59)=C18H28(81)+ETHBENZ(4)              8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1521; RMG #51479
+! Template reaction: Disproportionation
+! Flux pairs: A3yl(61), BENZ3(5); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A3yl(61)=C18H28(81)+BENZ3(5)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1522; RMG #51577
+! Template reaction: Disproportionation
+! Flux pairs: A4yl(62), BENZ4(6); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A4yl(62)=C18H28(81)+BENZ4(6)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1523; RMG #51684
+! Template reaction: Disproportionation
+! Flux pairs: A5yl(63), BENZ5(7); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A5yl(63)=C18H28(81)+BENZ5(7)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1524; RMG #51800
+! Template reaction: Disproportionation
+! Flux pairs: A6yl(64), BENZ6(8); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A6yl(64)=C18H28(81)+BENZ6(8)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1525; RMG #51925
+! Template reaction: Disproportionation
+! Flux pairs: A7yl(65), BENZ7(9); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A7yl(65)=C18H28(81)+BENZ7(9)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1526; RMG #52059
+! Template reaction: Disproportionation
+! Flux pairs: A8yl(66), BENZ8(10); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A8yl(66)=C18H28(81)+BENZ8(10)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1527; RMG #52202
+! Template reaction: Disproportionation
+! Flux pairs: A9yl(67), BENZ9(11); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A9yl(67)=C18H28(81)+BENZ9(11)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1528; RMG #52354
+! Template reaction: Disproportionation
+! Flux pairs: A10yl(68), BENZ10(12); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+A10yl(68)=C18H28(81)+BENZ10(12)              8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1529; RMG #52822
+! Template reaction: Disproportionation
+! Flux pairs: METHYL(47), C1(26); S(112), C18H28(81); 
+! Estimated using template [C_methyl;Csec_Rrad] for rate rule [C_methyl;C/H/NdDe_Csrad]
+S(112)+METHYL(47)=C18H28(81)+C1(26)                 6.020e+12 -0.320    0.000    
+
+! Reaction index: Chemkin #1530; RMG #52828
+! Template reaction: Disproportionation
+! Flux pairs: ETHYL(48), C2(27); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+ETHYL(48)=C18H28(81)+C2(27)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1531; RMG #52840
+! Template reaction: Disproportionation
+! Flux pairs: PROPYL(49), C3(28); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+PROPYL(49)=C18H28(81)+C3(28)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1532; RMG #52858
+! Template reaction: Disproportionation
+! Flux pairs: BUTYL(50), C4(29); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+BUTYL(50)=C18H28(81)+C4(29)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1533; RMG #52876
+! Template reaction: Disproportionation
+! Flux pairs: PENTYL(51), C5(30); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+PENTYL(51)=C18H28(81)+C5(30)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1534; RMG #52903
+! Template reaction: Disproportionation
+! Flux pairs: HEXYL(52), C6(31); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+HEXYL(52)=C18H28(81)+C6(31)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1535; RMG #52936
+! Template reaction: Disproportionation
+! Flux pairs: HEPTYL(53), C7(32); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+HEPTYL(53)=C18H28(81)+C7(32)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1536; RMG #52972
+! Template reaction: Disproportionation
+! Flux pairs: OCTYL(54), C8(33); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+OCTYL(54)=C18H28(81)+C8(33)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1537; RMG #53014
+! Template reaction: Disproportionation
+! Flux pairs: NONYL(55), C9(34); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+NONYL(55)=C18H28(81)+C9(34)                  8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1538; RMG #53059
+! Template reaction: Disproportionation
+! Flux pairs: DECYL(56), C10(35); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+DECYL(56)=C18H28(81)+C10(35)                 8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1539; RMG #53110
+! Template reaction: Disproportionation
+! Flux pairs: UDECYL(57), C11(36); S(112), C18H28(81); 
+! Estimated using template [C_rad/H2/Cs;Csec_Rrad] for rate rule [C_rad/H2/Cs;C/H/NdDe_Csrad]
+S(112)+UDECYL(57)=C18H28(81)+C11(36)                8.430e+11 0.000     0.000    
+
+! Reaction index: Chemkin #1540; RMG #119
+! Template reaction: Intra_R_Add_Exocyclic
+! Flux pairs: RAD4(17), S(116); 
+! Estimated using template [R6_SSS_D;doublebond_intra;radadd_intra_cs] for rate rule [R6_SSS_D;doublebond_intra_HDe_secDe;radadd_intra_csHNd]
+RAD4(17)=S(116)                                     2.510e+10 0.000     6.850    
+
+! Reaction index: Chemkin #1541; RMG #55627
+! Template reaction: Intra_R_Add_Exocyclic
+! Flux pairs: PDDJ4(79), S(116); 
+! Estimated using template [R6_SSS_D;doublebond_intra;radadd_intra_cs2H] for rate rule [R6_SSS_D;doublebond_intra_HDe_secDe;radadd_intra_cs2H]
+PDDJ4(79)=S(116)                                    2.510e+10 0.000     6.850    
+
+! Reaction index: Chemkin #1542; RMG #643
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(271); UDECYL(57), S(271); 
+! Exact match found for rate rule [Cds-CdCs_Cds-CdH;CsJ-CsHH]
+UDECYL(57)+PDD(1)=S(271)                            7.600e+02 2.410     4.450    
+
+! Reaction index: Chemkin #1543; RMG #694
+! Template reaction: R_Addition_MultipleBond
+! Flux pairs: PDD(1), S(278); BENZYL(58), S(278); 
+! Exact match found for rate rule [Cds-CdH_Cds-CdH;CsJ-CbHH]
+! Multiplied by reaction path degeneracy 2
+BENZYL(58)+PDD(1)=S(278)                            1.460e+04 2.410     7.920    
 
 END
 

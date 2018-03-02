@@ -1,0 +1,1377 @@
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         28402033 function calls (26789433 primitive calls) in 36.037 seconds
+
+   Ordered by: internal time
+   List reduced from 2366 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+1287501/37    6.841    0.000   17.874    0.483 rules.py:443(fillRulesByAveragingUp)
+       82    4.502    0.055    4.544    0.055 {cPickle.dumps}
+       64    3.655    0.057    3.707    0.058 {cPickle.loads}
+  1287505    2.817    0.000    4.840    0.000 rules.py:419(getAllRules)
+  1090071    2.622    0.000    2.622    0.000 base.py:1230(getAllCombinations)
+       96    2.411    0.025    2.411    0.025 {time.sleep}
+  1287505    1.340    0.000    6.328    0.000 rules.py:399(getRule)
+  1287505    1.181    0.000    1.697    0.000 posixpath.py:82(split)
+      130    0.865    0.007    2.702    0.021 base.py:189(load)
+6370424/6325817    0.855    0.000    0.910    0.000 {method 'join' of 'str' objects}
+     8193    0.769    0.000    1.015    0.000 adjlist.py:419(fromAdjacencyList)
+      575    0.502    0.001    0.502    0.001 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+    70958    0.488    0.000    0.488    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      258    0.392    0.002    0.421    0.002 context.py:1940(text_extents)
+5593858/5589894    0.340    0.000    0.341    0.000 {len}
+97235/88205    0.321    0.000    1.035    0.000 base.py:889(matchNodeToStructure)
+185540/6018    0.309    0.000    0.933    0.000 copy.py:145(deepcopy)
+  1291857    0.245    0.000    0.245    0.000 {method 'rfind' of 'str' objects}
+     1703    0.234    0.000    0.234    0.000 {posix.remove}
+      566    0.231    0.000    0.231    0.000 {method 'copy' of 'rmgpy.molecule.group.Group' objects}
+    12799    0.221    0.000    0.232    0.000 rules.py:535(__getAverageKinetics)
+  1288087    0.187    0.000    0.187    0.000 {method 'rstrip' of 'str' objects}
+31133/5575    0.183    0.000    0.880    0.000 copy.py:306(_reconstruct)
+  1291320    0.162    0.000    0.162    0.000 {method 'lower' of 'str' objects}
+31126/5574    0.144    0.000    0.750    0.000 copy.py:234(_deepcopy_tuple)
+
+
+================================================================================
+                         Profiling Data for Iteration 0                         
+================================================================================
+         351564 function calls (332784 primitive calls) in 0.657 seconds
+
+   Ordered by: internal time
+   List reduced from 1719 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.149    0.075    0.149    0.075 {matplotlib._png.write_png}
+    12868    0.017    0.000    0.039    0.000 nodes.py:164(iter_child_nodes)
+    50419    0.017    0.000    0.017    0.000 {isinstance}
+     6390    0.015    0.000    0.015    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    28434    0.013    0.000    0.017    0.000 nodes.py:148(iter_fields)
+       20    0.012    0.001    0.012    0.001 poll.py:77(poll)
+     1704    0.010    0.000    0.029    0.000 lexer.py:597(tokeniter)
+    27982    0.009    0.000    0.010    0.000 {getattr}
+     1873    0.007    0.000    0.011    0.000 weakref.py:47(__init__)
+       19    0.007    0.000    0.007    0.000 {open}
+   4662/2    0.007    0.000    0.088    0.044 visitor.py:34(visit)
+      102    0.007    0.000    0.007    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+     2761    0.006    0.000    0.006    0.000 {numpy.core.multiarray.array}
+       42    0.006    0.000    0.007    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+     1507    0.006    0.000    0.006    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+ 3892/196    0.006    0.000    0.025    0.000 nodes.py:184(find_all)
+     5425    0.006    0.000    0.006    0.000 __init__.py:888(__getitem__)
+        8    0.006    0.001    0.006    0.001 {method 'close' of 'file' objects}
+5257/4683    0.005    0.000    0.008    0.000 artist.py:256(stale)
+       62    0.005    0.000    0.008    0.000 adjlist.py:717(toAdjacencyList)
+      738    0.005    0.000    0.011    0.000 path.py:212(_update_values)
+      130    0.005    0.000    0.058    0.000 lines.py:252(__init__)
+ 1200/280    0.005    0.000    0.016    0.000 visitor.py:58(generic_visit)
+       34    0.005    0.000    0.005    0.000 {method 'draw_text_image' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+      746    0.005    0.000    0.006    0.000 nodes.py:127(__init__)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 1                         
+================================================================================
+         407206 function calls (387391 primitive calls) in 0.783 seconds
+
+   Ordered by: internal time
+   List reduced from 1772 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.165    0.083    0.165    0.083 {matplotlib._png.write_png}
+    55030    0.019    0.000    0.020    0.000 {isinstance}
+    12868    0.018    0.000    0.041    0.000 nodes.py:164(iter_child_nodes)
+     6390    0.015    0.000    0.015    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    28434    0.014    0.000    0.018    0.000 nodes.py:148(iter_fields)
+        1    0.012    0.012    0.418    0.418 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+     1704    0.011    0.000    0.031    0.000 lexer.py:597(tokeniter)
+    29009    0.011    0.000    0.012    0.000 {getattr}
+     8687    0.009    0.000    0.009    0.000 {method 'format' of 'str' objects}
+      119    0.008    0.000    0.014    0.000 adjlist.py:717(toAdjacencyList)
+     1935    0.008    0.000    0.008    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     1881    0.007    0.000    0.011    0.000 weakref.py:47(__init__)
+     2836    0.007    0.000    0.007    0.000 {numpy.core.multiarray.array}
+       50    0.007    0.000    0.008    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+   4662/2    0.007    0.000    0.093    0.047 visitor.py:34(visit)
+      138    0.007    0.000    0.007    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+        8    0.006    0.001    0.006    0.001 {method 'close' of 'file' objects}
+       19    0.006    0.000    0.006    0.000 {open}
+ 3892/196    0.006    0.000    0.027    0.000 nodes.py:184(find_all)
+     5798    0.006    0.000    0.006    0.000 __init__.py:888(__getitem__)
+      206    0.005    0.000    0.014    0.000 base.py:1260(isMoleculeForbidden)
+5498/4847    0.005    0.000    0.008    0.000 artist.py:256(stale)
+      746    0.005    0.000    0.007    0.000 nodes.py:127(__init__)
+      132    0.005    0.000    0.060    0.000 lines.py:252(__init__)
+      759    0.005    0.000    0.012    0.000 path.py:212(_update_values)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 2                         
+================================================================================
+         397757 function calls (378131 primitive calls) in 0.776 seconds
+
+   Ordered by: internal time
+   List reduced from 1727 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.166    0.083    0.166    0.083 {matplotlib._png.write_png}
+    12868    0.019    0.000    0.041    0.000 nodes.py:164(iter_child_nodes)
+    51563    0.018    0.000    0.019    0.000 {isinstance}
+     6390    0.015    0.000    0.015    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    28434    0.014    0.000    0.018    0.000 nodes.py:148(iter_fields)
+        1    0.012    0.012    0.437    0.437 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      134    0.012    0.000    0.020    0.000 adjlist.py:717(toAdjacencyList)
+    29209    0.011    0.000    0.012    0.000 {getattr}
+     1704    0.011    0.000    0.031    0.000 lexer.py:597(tokeniter)
+     1953    0.009    0.000    0.009    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     1934    0.009    0.000    0.012    0.000 weakref.py:47(__init__)
+     9278    0.008    0.000    0.008    0.000 {method 'format' of 'str' objects}
+     2887    0.008    0.000    0.008    0.000 {numpy.core.multiarray.array}
+      152    0.007    0.000    0.007    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+       54    0.007    0.000    0.008    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+       19    0.007    0.000    0.007    0.000 {open}
+   4662/2    0.007    0.000    0.094    0.047 visitor.py:34(visit)
+        8    0.007    0.001    0.007    0.001 {method 'close' of 'file' objects}
+     5990    0.006    0.000    0.006    0.000 __init__.py:888(__getitem__)
+ 3892/196    0.006    0.000    0.027    0.000 nodes.py:184(find_all)
+5640/4958    0.005    0.000    0.009    0.000 artist.py:256(stale)
+      781    0.005    0.000    0.013    0.000 path.py:212(_update_values)
+      135    0.005    0.000    0.064    0.000 lines.py:252(__init__)
+ 1200/280    0.005    0.000    0.017    0.000 visitor.py:58(generic_visit)
+      746    0.005    0.000    0.007    0.000 nodes.py:127(__init__)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 3                         
+================================================================================
+         411029 function calls (390385 primitive calls) in 0.817 seconds
+
+   Ordered by: internal time
+   List reduced from 1641 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.178    0.089    0.178    0.089 {matplotlib._png.write_png}
+    54847    0.020    0.000    0.020    0.000 {isinstance}
+    12868    0.018    0.000    0.042    0.000 nodes.py:164(iter_child_nodes)
+     6390    0.016    0.000    0.016    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    28434    0.014    0.000    0.018    0.000 nodes.py:148(iter_fields)
+      173    0.014    0.000    0.023    0.000 adjlist.py:717(toAdjacencyList)
+    29760    0.012    0.000    0.013    0.000 {getattr}
+        1    0.011    0.011    0.445    0.445 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+     1704    0.011    0.000    0.032    0.000 lexer.py:597(tokeniter)
+       19    0.011    0.001    0.011    0.001 {open}
+      746    0.010    0.000    0.012    0.000 nodes.py:127(__init__)
+    11001    0.009    0.000    0.009    0.000 {method 'format' of 'str' objects}
+      160    0.009    0.000    0.009    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+     1802    0.008    0.000    0.008    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+        8    0.008    0.001    0.008    0.001 {method 'close' of 'file' objects}
+     1877    0.008    0.000    0.012    0.000 weakref.py:47(__init__)
+  1857/77    0.008    0.000    0.042    0.001 copy.py:145(deepcopy)
+     2749    0.007    0.000    0.007    0.000 {numpy.core.multiarray.array}
+       54    0.007    0.000    0.008    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+   4662/2    0.007    0.000    0.094    0.047 visitor.py:34(visit)
+     5870    0.006    0.000    0.006    0.000 __init__.py:888(__getitem__)
+ 3892/196    0.006    0.000    0.027    0.000 nodes.py:184(find_all)
+      753    0.005    0.000    0.013    0.000 path.py:212(_update_values)
+5480/4811    0.005    0.000    0.009    0.000 artist.py:256(stale)
+      132    0.005    0.000    0.065    0.000 lines.py:252(__init__)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 4                         
+================================================================================
+         531724 function calls (509310 primitive calls) in 0.961 seconds
+
+   Ordered by: internal time
+   List reduced from 1767 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.168    0.084    0.168    0.084 {matplotlib._png.write_png}
+    64815    0.022    0.000    0.023    0.000 {isinstance}
+      266    0.022    0.000    0.037    0.000 adjlist.py:717(toAdjacencyList)
+    12868    0.018    0.000    0.040    0.000 nodes.py:164(iter_child_nodes)
+      718    0.016    0.000    0.040    0.000 base.py:1260(isMoleculeForbidden)
+     6390    0.015    0.000    0.015    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    19069    0.014    0.000    0.014    0.000 {method 'format' of 'str' objects}
+    28434    0.013    0.000    0.017    0.000 nodes.py:148(iter_fields)
+    31388    0.012    0.000    0.014    0.000 {getattr}
+        1    0.011    0.011    0.437    0.437 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+     9046    0.011    0.000    0.011    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1704    0.010    0.000    0.030    0.000 lexer.py:597(tokeniter)
+     1872    0.009    0.000    0.013    0.000 weakref.py:47(__init__)
+      168    0.009    0.000    0.009    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+     1984    0.009    0.000    0.009    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+1971/1471    0.008    0.000    0.020    0.000 base.py:889(matchNodeToStructure)
+     2894    0.007    0.000    0.007    0.000 {numpy.core.multiarray.array}
+        8    0.007    0.001    0.007    0.001 {method 'close' of 'file' objects}
+       56    0.007    0.000    0.008    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+        5    0.007    0.001    0.007    0.001 surfaces.py:576(write_to_png)
+  2322/99    0.007    0.000    0.047    0.000 copy.py:145(deepcopy)
+       19    0.007    0.000    0.007    0.000 {open}
+   4662/2    0.007    0.000    0.091    0.046 visitor.py:34(visit)
+     5899    0.006    0.000    0.006    0.000 __init__.py:888(__getitem__)
+ 3892/196    0.006    0.000    0.026    0.000 nodes.py:184(find_all)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 5                         
+================================================================================
+         460933 function calls (439461 primitive calls) in 0.848 seconds
+
+   Ordered by: internal time
+   List reduced from 1619 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.171    0.085    0.171    0.085 {matplotlib._png.write_png}
+        1    0.022    0.022    0.485    0.485 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    58367    0.019    0.000    0.019    0.000 {isinstance}
+      267    0.017    0.000    0.028    0.000 adjlist.py:717(toAdjacencyList)
+    12868    0.016    0.000    0.035    0.000 nodes.py:164(iter_child_nodes)
+       64    0.016    0.000    0.016    0.000 poll.py:77(poll)
+    18888    0.014    0.000    0.014    0.000 {method 'format' of 'str' objects}
+     6390    0.013    0.000    0.013    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    28434    0.012    0.000    0.015    0.000 nodes.py:148(iter_fields)
+      208    0.011    0.000    0.011    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+    31253    0.011    0.000    0.012    0.000 {getattr}
+     2452    0.010    0.000    0.010    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     3103    0.009    0.000    0.009    0.000 {numpy.core.multiarray.array}
+     1704    0.009    0.000    0.025    0.000 lexer.py:597(tokeniter)
+     2107    0.009    0.000    0.012    0.000 weakref.py:47(__init__)
+       66    0.008    0.000    0.009    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+        8    0.007    0.001    0.007    0.001 {method 'close' of 'file' objects}
+     6668    0.007    0.000    0.007    0.000 __init__.py:888(__getitem__)
+       19    0.007    0.000    0.007    0.000 {open}
+  2026/91    0.006    0.000    0.049    0.001 copy.py:145(deepcopy)
+   4662/2    0.006    0.000    0.082    0.041 visitor.py:34(visit)
+6066/5291    0.006    0.000    0.009    0.000 artist.py:256(stale)
+       46    0.005    0.000    0.006    0.000 {method 'draw_text_image' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+      847    0.005    0.000    0.013    0.000 path.py:212(_update_values)
+      144    0.005    0.000    0.063    0.000 lines.py:252(__init__)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 6                         
+================================================================================
+         666411 function calls (641312 primitive calls) in 1.290 seconds
+
+   Ordered by: internal time
+   List reduced from 1757 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.174    0.087    0.174    0.087 {matplotlib._png.write_png}
+        1    0.050    0.050    0.553    0.553 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      104    0.043    0.000    0.043    0.000 poll.py:77(poll)
+      474    0.040    0.000    0.069    0.000 adjlist.py:717(toAdjacencyList)
+    41070    0.026    0.000    0.027    0.000 {method 'format' of 'str' objects}
+    70860    0.024    0.000    0.025    0.000 {isinstance}
+    12868    0.017    0.000    0.038    0.000 nodes.py:164(iter_child_nodes)
+     9616    0.017    0.000    0.017    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      787    0.017    0.000    0.049    0.000 base.py:1260(isMoleculeForbidden)
+     3968    0.016    0.000    0.016    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     6390    0.015    0.000    0.015    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    34588    0.014    0.000    0.016    0.000 {getattr}
+        1    0.013    0.013    0.013    0.013 {method 'writerows' of '_csv.writer' objects}
+      228    0.013    0.000    0.013    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+    28434    0.013    0.000    0.017    0.000 nodes.py:148(iter_fields)
+       35    0.012    0.000    0.012    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 3719/144    0.011    0.000    0.068    0.000 copy.py:145(deepcopy)
+     3459    0.010    0.000    0.010    0.000 {numpy.core.multiarray.array}
+     1704    0.010    0.000    0.029    0.000 lexer.py:597(tokeniter)
+        7    0.010    0.001    0.010    0.001 surfaces.py:576(write_to_png)
+        8    0.009    0.001    0.009    0.001 {method 'close' of 'file' objects}
+       72    0.009    0.000    0.010    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+     2250    0.008    0.000    0.012    0.000 weakref.py:47(__init__)
+1795/1291    0.008    0.000    0.020    0.000 base.py:889(matchNodeToStructure)
+      586    0.008    0.000    0.121    0.000 <template>:5(root)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 7                         
+================================================================================
+         744532 function calls (719100 primitive calls) in 1.304 seconds
+
+   Ordered by: internal time
+   List reduced from 1763 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.176    0.088    0.176    0.088 {matplotlib._png.write_png}
+        1    0.061    0.061    0.605    0.605 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      641    0.049    0.000    0.084    0.000 adjlist.py:717(toAdjacencyList)
+    54064    0.031    0.000    0.031    0.000 {method 'format' of 'str' objects}
+    76407    0.025    0.000    0.026    0.000 {isinstance}
+     1098    0.022    0.000    0.057    0.000 base.py:1260(isMoleculeForbidden)
+     4450    0.018    0.000    0.018    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+        1    0.017    0.017    0.017    0.017 {method 'writerows' of '_csv.writer' objects}
+    12868    0.016    0.000    0.037    0.000 nodes.py:164(iter_child_nodes)
+    36391    0.015    0.000    0.017    0.000 {getattr}
+      240    0.014    0.000    0.014    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+     6390    0.014    0.000    0.014    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    12915    0.013    0.000    0.013    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3478    0.013    0.000    0.013    0.000 {numpy.core.multiarray.array}
+    28434    0.012    0.000    0.016    0.000 nodes.py:148(iter_fields)
+       40    0.011    0.000    0.011    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        8    0.010    0.001    0.010    0.001 {method 'close' of 'file' objects}
+ 3633/153    0.010    0.000    0.070    0.000 copy.py:145(deepcopy)
+      785    0.010    0.000    0.151    0.000 <template>:5(root)
+     2219    0.009    0.000    0.014    0.000 weakref.py:47(__init__)
+2516/1758    0.009    0.000    0.021    0.000 base.py:889(matchNodeToStructure)
+     1704    0.009    0.000    0.026    0.000 lexer.py:597(tokeniter)
+       74    0.009    0.000    0.011    0.000 {method 'draw_path' of 'matplotlib.backends._backend_agg.RendererAgg' objects}
+     4953    0.009    0.000    0.027    0.000 numeric.py:79(zeros_like)
+     5781    0.009    0.000    0.009    0.000 {numpy.core.multiarray.zeros}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 8                         
+================================================================================
+         740552 function calls (714494 primitive calls) in 1.377 seconds
+
+   Ordered by: internal time
+   List reduced from 1764 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.173    0.087    0.173    0.087 {matplotlib._png.write_png}
+      778    0.080    0.000    0.140    0.000 adjlist.py:717(toAdjacencyList)
+    64393    0.053    0.000    0.053    0.000 {method 'format' of 'str' objects}
+        1    0.039    0.039    0.527    0.527 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    75308    0.027    0.000    0.028    0.000 {isinstance}
+      126    0.022    0.000    0.022    0.000 poll.py:77(poll)
+       48    0.021    0.000    0.021    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+    12868    0.018    0.000    0.042    0.000 nodes.py:164(iter_child_nodes)
+      478    0.018    0.000    0.018    0.000 {map}
+    38152    0.018    0.000    0.020    0.000 {getattr}
+     6390    0.017    0.000    0.017    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+      688    0.015    0.000    0.036    0.000 base.py:1260(isMoleculeForbidden)
+      252    0.015    0.000    0.015    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+    28434    0.014    0.000    0.018    0.000 nodes.py:148(iter_fields)
+     3414    0.014    0.000    0.014    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     3138    0.012    0.000    0.038    0.000 chemkin.py:1262(getSpeciesIdentifier)
+     2994    0.012    0.000    0.258    0.000 runtime.py:233(call)
+     1704    0.011    0.000    0.033    0.000 lexer.py:597(tokeniter)
+        8    0.011    0.001    0.011    0.001 {method 'close' of 'file' objects}
+ 3887/163    0.011    0.000    0.075    0.000 copy.py:145(deepcopy)
+       67    0.010    0.000    0.010    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+     3504    0.010    0.000    0.010    0.000 {numpy.core.multiarray.array}
+     9793    0.010    0.000    0.010    0.000 {hasattr}
+     2218    0.009    0.000    0.013    0.000 weakref.py:47(__init__)
+     2473    0.009    0.000    0.009    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 9                         
+================================================================================
+         995815 function calls (966315 primitive calls) in 1.662 seconds
+
+   Ordered by: internal time
+   List reduced from 1758 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.179    0.090    0.179    0.090 {matplotlib._png.write_png}
+     1137    0.082    0.000    0.139    0.000 adjlist.py:717(toAdjacencyList)
+        1    0.077    0.077    0.657    0.657 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    98244    0.050    0.000    0.050    0.000 {method 'format' of 'str' objects}
+     1713    0.034    0.000    0.098    0.000 base.py:1260(isMoleculeForbidden)
+    20241    0.030    0.000    0.030    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+    87152    0.028    0.000    0.029    0.000 {isinstance}
+        1    0.026    0.026    0.026    0.026 {method 'writerows' of '_csv.writer' objects}
+       65    0.021    0.000    0.021    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+     5501    0.020    0.000    0.020    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    42979    0.018    0.000    0.020    0.000 {getattr}
+    12868    0.016    0.000    0.036    0.000 nodes.py:164(iter_child_nodes)
+     3773    0.016    0.000    0.016    0.000 {numpy.core.multiarray.array}
+      276    0.016    0.000    0.016    0.000 {method 'set_text' of 'matplotlib.ft2font.FT2Font' objects}
+ 5880/225    0.015    0.000    0.089    0.000 copy.py:145(deepcopy)
+       12    0.014    0.001    0.015    0.001 surfaces.py:576(write_to_png)
+      703    0.014    0.000    0.014    0.000 {map}
+        8    0.014    0.002    0.014    0.002 {method 'close' of 'file' objects}
+     6390    0.014    0.000    0.014    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+     4446    0.013    0.000    0.039    0.000 chemkin.py:1262(getSpeciesIdentifier)
+     4336    0.013    0.000    0.258    0.000 runtime.py:233(call)
+    28434    0.012    0.000    0.016    0.000 nodes.py:148(iter_fields)
+3215/2221    0.012    0.000    0.028    0.000 base.py:889(matchNodeToStructure)
+     2461    0.011    0.000    0.011    0.000 {method 'isIsomorphic' of 'rmgpy.reaction.Reaction' objects}
+    23654    0.011    0.000    0.011    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 10                         
+================================================================================
+         1810710 function calls (1771077 primitive calls) in 2.986 seconds
+
+   Ordered by: internal time
+   List reduced from 1780 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.177    0.088    0.177    0.088 {matplotlib._png.write_png}
+     1968    0.167    0.000    0.287    0.000 adjlist.py:717(toAdjacencyList)
+    59453    0.129    0.000    0.129    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   207111    0.105    0.000    0.105    0.000 {method 'format' of 'str' objects}
+     4551    0.095    0.000    0.291    0.000 base.py:1260(isMoleculeForbidden)
+        1    0.079    0.079    0.652    0.652 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+       37    0.069    0.002    0.070    0.002 surfaces.py:576(write_to_png)
+15544/12168    0.059    0.000    0.157    0.000 base.py:889(matchNodeToStructure)
+   150923    0.052    0.000    0.053    0.000 {isinstance}
+      127    0.050    0.000    0.050    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+    70531    0.039    0.000    0.039    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1254    0.038    0.000    0.038    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+      452    0.029    0.000    0.090    0.000 draw.py:1025(__renderAtom)
+     1174    0.029    0.000    0.029    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+     4685    0.029    0.000    0.045    0.000 collections.py:121(values)
+    74852    0.028    0.000    0.028    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+     1225    0.028    0.000    0.028    0.000 {map}
+        1    0.027    0.027    0.027    0.027 {method 'writerows' of '_csv.writer' objects}
+    54890    0.024    0.000    0.030    0.000 {getattr}
+      392    0.024    0.000    0.024    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+     7481    0.024    0.000    0.074    0.000 chemkin.py:1262(getSpeciesIdentifier)
+     6141    0.024    0.000    0.024    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+       11    0.024    0.002    0.024    0.002 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+      168    0.023    0.000    0.023    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+        8    0.022    0.003    0.022    0.003 {method 'close' of 'file' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 11                         
+================================================================================
+         1549534 function calls (1516912 primitive calls) in 2.590 seconds
+
+   Ordered by: internal time
+   List reduced from 1774 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     2413    0.205    0.000    0.352    0.000 adjlist.py:717(toAdjacencyList)
+        2    0.178    0.089    0.178    0.089 {matplotlib._png.write_png}
+   262670    0.125    0.000    0.125    0.000 {method 'format' of 'str' objects}
+        1    0.076    0.076    0.646    0.646 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    28737    0.070    0.000    0.070    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      212    0.061    0.000    0.061    0.000 poll.py:77(poll)
+      126    0.052    0.000    0.052    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+     2262    0.048    0.000    0.154    0.000 base.py:1260(isMoleculeForbidden)
+   111068    0.038    0.000    0.039    0.000 {isinstance}
+     3501    0.037    0.000    0.653    0.000 <template>:5(root)
+     1504    0.037    0.000    0.037    0.000 {map}
+       18    0.034    0.002    0.034    0.002 surfaces.py:576(write_to_png)
+6601/5237    0.028    0.000    0.077    0.000 base.py:889(matchNodeToStructure)
+     9098    0.027    0.000    0.086    0.000 chemkin.py:1262(getSpeciesIdentifier)
+      207    0.026    0.000    0.026    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+     9238    0.025    0.000    0.613    0.000 runtime.py:233(call)
+    57850    0.025    0.000    0.030    0.000 {getattr}
+        8    0.025    0.003    0.025    0.003 {method 'close' of 'file' objects}
+    20876    0.024    0.000    0.025    0.000 {method 'sort' of 'list' objects}
+     7951    0.023    0.000    0.023    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+     2364    0.023    0.000    0.023    0.000 {method 'findSubgraphIsomorphisms' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.021    0.021    0.021    0.021 {method 'writerows' of '_csv.writer' objects}
+     5082    0.020    0.000    0.020    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    36741    0.020    0.000    0.020    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+      206    0.020    0.000    0.031    0.000 model.py:234(checkForExistingSpecies)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 12                         
+================================================================================
+         2155697 function calls (2117005 primitive calls) in 3.352 seconds
+
+   Ordered by: internal time
+   List reduced from 1769 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     3070    0.271    0.000    0.470    0.000 adjlist.py:717(toAdjacencyList)
+        2    0.180    0.090    0.180    0.090 {matplotlib._png.write_png}
+   353028    0.167    0.000    0.167    0.000 {method 'format' of 'str' objects}
+    54846    0.134    0.000    0.134    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.090    0.090    0.667    0.667 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+     3858    0.078    0.000    0.232    0.000 base.py:1260(isMoleculeForbidden)
+18081/15326    0.072    0.000    0.203    0.000 base.py:889(matchNodeToStructure)
+      178    0.069    0.000    0.069    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+       35    0.065    0.002    0.066    0.002 surfaces.py:576(write_to_png)
+   167041    0.055    0.000    0.056    0.000 {isinstance}
+     1916    0.045    0.000    0.045    0.000 {map}
+       17    0.040    0.002    0.040    0.002 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+      282    0.037    0.000    0.037    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+    64851    0.036    0.000    0.036    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+    11578    0.035    0.000    0.110    0.000 chemkin.py:1262(getSpeciesIdentifier)
+    28069    0.032    0.000    0.034    0.000 {method 'sort' of 'list' objects}
+        8    0.032    0.004    0.032    0.004 {method 'close' of 'file' objects}
+    11824    0.031    0.000    0.776    0.000 runtime.py:233(call)
+    10383    0.030    0.000    0.030    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+    66952    0.030    0.000    0.035    0.000 {getattr}
+     1170    0.029    0.000    0.029    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+    69985    0.026    0.000    0.026    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+        1    0.026    0.026    0.026    0.026 {method 'writerows' of '_csv.writer' objects}
+     6340    0.024    0.000    0.024    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     3962    0.024    0.000    0.024    0.000 {method 'findSubgraphIsomorphisms' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 13                         
+================================================================================
+         4330968 function calls (4267620 primitive calls) in 7.162 seconds
+
+   Ordered by: internal time
+   List reduced from 1780 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     3411    0.653    0.000    0.653    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+     5023    0.422    0.000    0.727    0.000 adjlist.py:717(toAdjacencyList)
+   166042    0.346    0.000    0.346    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   639945    0.256    0.000    0.256    0.000 {method 'format' of 'str' objects}
+      100    0.216    0.002    0.218    0.002 surfaces.py:576(write_to_png)
+        1    0.209    0.209    0.239    0.239 listener.py:36(update)
+    12494    0.202    0.000    0.622    0.000 base.py:1260(isMoleculeForbidden)
+        2    0.179    0.090    0.179    0.090 {matplotlib._png.write_png}
+      938    0.160    0.000    0.160    0.000 poll.py:77(poll)
+46576/38222    0.148    0.000    0.440    0.000 base.py:889(matchNodeToStructure)
+      343    0.139    0.000    0.139    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.102    0.102    0.911    0.911 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+   199597    0.092    0.000    0.092    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   320128    0.091    0.000    0.094    0.000 {isinstance}
+      625    0.090    0.000    0.090    0.000 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1424    0.079    0.000    0.217    0.000 draw.py:1025(__renderAtom)
+       36    0.078    0.002    0.078    0.002 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1214    0.074    0.000    0.074    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+     3140    0.072    0.000    0.072    0.000 {map}
+      483    0.070    0.000    0.070    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+     7646    0.069    0.000    1.325    0.000 <template>:5(root)
+    20143    0.064    0.000    0.064    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+    12816    0.063    0.000    0.100    0.000 collections.py:121(values)
+   211437    0.062    0.000    0.062    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+      254    0.062    0.000    0.062    0.000 chemkin.py:1653(markDuplicateReaction)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 14                         
+================================================================================
+         3458035 function calls (3411999 primitive calls) in 4.455 seconds
+
+   Ordered by: internal time
+   List reduced from 1772 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     6016    0.460    0.000    0.791    0.000 adjlist.py:717(toAdjacencyList)
+   770901    0.272    0.000    0.272    0.000 {method 'format' of 'str' objects}
+        2    0.177    0.088    0.177    0.088 {matplotlib._png.write_png}
+    70706    0.141    0.000    0.141    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      341    0.140    0.000    0.140    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.134    0.134    0.704    0.704 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+     5062    0.096    0.000    0.285    0.000 base.py:1260(isMoleculeForbidden)
+       49    0.095    0.002    0.096    0.002 surfaces.py:576(write_to_png)
+     3762    0.079    0.000    0.079    0.000 {map}
+      480    0.078    0.000    0.078    0.000 poll.py:77(poll)
+24014/19392    0.074    0.000    0.203    0.000 base.py:889(matchNodeToStructure)
+      584    0.066    0.000    0.066    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+   219846    0.061    0.000    0.063    0.000 {isinstance}
+        8    0.060    0.007    0.060    0.007 {method 'close' of 'file' objects}
+    61627    0.056    0.000    0.057    0.000 {method 'sort' of 'list' objects}
+    22621    0.053    0.000    0.170    0.000 chemkin.py:1262(getSpeciesIdentifier)
+    23316    0.050    0.000    1.377    0.000 runtime.py:233(call)
+    21145    0.049    0.000    0.049    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+    84614    0.041    0.000    0.041    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+      584    0.039    0.000    0.057    0.000 textwrap.py:243(_wrap_chunks)
+    71985    0.039    0.000    0.039    0.000 {hasattr}
+      142    0.039    0.000    0.039    0.000 chemkin.py:1653(markDuplicateReaction)
+   101206    0.038    0.000    0.045    0.000 {getattr}
+     1425    0.038    0.000    0.038    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+      628    0.034    0.000    0.096    0.000 draw.py:1025(__renderAtom)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 15                         
+================================================================================
+         3238717 function calls (3202091 primitive calls) in 4.054 seconds
+
+   Ordered by: internal time
+   List reduced from 1769 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     6547    0.511    0.000    0.880    0.000 adjlist.py:717(toAdjacencyList)
+   841528    0.301    0.000    0.301    0.000 {method 'format' of 'str' objects}
+        2    0.179    0.090    0.179    0.090 {matplotlib._png.write_png}
+        1    0.162    0.162    0.766    0.766 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      332    0.135    0.000    0.135    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+     4094    0.087    0.000    0.087    0.000 {map}
+    49060    0.087    0.000    0.087    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      625    0.087    0.000    0.087    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+     9837    0.083    0.000    1.623    0.000 <template>:5(root)
+     4006    0.077    0.000    0.232    0.000 base.py:1260(isMoleculeForbidden)
+        8    0.063    0.008    0.063    0.008 {method 'close' of 'file' objects}
+    67284    0.063    0.000    0.064    0.000 {method 'sort' of 'list' objects}
+    24625    0.061    0.000    0.193    0.000 chemkin.py:1262(getSpeciesIdentifier)
+    25313    0.057    0.000    1.518    0.000 runtime.py:233(call)
+    22748    0.055    0.000    0.055    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+      625    0.051    0.000    0.073    0.000 textwrap.py:243(_wrap_chunks)
+   165191    0.049    0.000    0.050    0.000 {isinstance}
+    77306    0.041    0.000    0.041    0.000 {hasattr}
+   104086    0.039    0.000    0.044    0.000 {getattr}
+        1    0.036    0.036    0.036    0.036 {method 'writerows' of '_csv.writer' objects}
+       20    0.036    0.002    0.036    0.002 surfaces.py:576(write_to_png)
+10525/8279    0.035    0.000    0.092    0.000 base.py:889(matchNodeToStructure)
+     2613    0.031    0.000    0.172    0.000 chemkin.py:1462(writeKineticsEntry)
+456496/456440    0.030    0.000    0.031    0.000 {len}
+    60105    0.030    0.000    0.030    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 16                         
+================================================================================
+         3768392 function calls (3722781 primitive calls) in 4.960 seconds
+
+   Ordered by: internal time
+   List reduced from 1780 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     7492    0.578    0.000    0.994    0.000 adjlist.py:717(toAdjacencyList)
+   952966    0.339    0.000    0.339    0.000 {method 'format' of 'str' objects}
+        1    0.181    0.181    0.777    0.777 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+        2    0.177    0.089    0.177    0.089 {matplotlib._png.write_png}
+      406    0.163    0.000    0.163    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+    55284    0.108    0.000    0.108    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     4685    0.098    0.000    0.098    0.000 {map}
+     4062    0.096    0.000    0.278    0.000 base.py:1260(isMoleculeForbidden)
+      719    0.092    0.000    0.092    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+       47    0.087    0.002    0.087    0.002 surfaces.py:576(write_to_png)
+        8    0.071    0.009    0.071    0.009 {method 'close' of 'file' objects}
+    76172    0.069    0.000    0.071    0.000 {method 'sort' of 'list' objects}
+    28155    0.068    0.000    0.217    0.000 chemkin.py:1262(getSpeciesIdentifier)
+   206038    0.067    0.000    0.069    0.000 {isinstance}
+16848/12931    0.066    0.000    0.161    0.000 base.py:889(matchNodeToStructure)
+    28980    0.064    0.000    1.717    0.000 runtime.py:233(call)
+    25370    0.061    0.000    0.061    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+      125    0.055    0.000    0.055    0.000 chemkin.py:1653(markDuplicateReaction)
+      719    0.055    0.000    0.079    0.000 textwrap.py:243(_wrap_chunks)
+   117074    0.048    0.000    0.055    0.000 {getattr}
+    88845    0.048    0.000    0.048    0.000 {hasattr}
+        1    0.043    0.043    0.043    0.043 {method 'writerows' of '_csv.writer' objects}
+     2982    0.039    0.000    0.202    0.000 chemkin.py:1462(writeKineticsEntry)
+    66358    0.038    0.000    0.038    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1175    0.036    0.000    0.036    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 17                         
+================================================================================
+         4080551 function calls (4037715 primitive calls) in 4.678 seconds
+
+   Ordered by: internal time
+   List reduced from 1770 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     8351    0.607    0.000    1.047    0.000 adjlist.py:717(toAdjacencyList)
+  1052897    0.357    0.000    0.357    0.000 {method 'format' of 'str' objects}
+        1    0.192    0.192    0.808    0.808 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+        2    0.179    0.089    0.179    0.089 {matplotlib._png.write_png}
+      411    0.161    0.000    0.161    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+     6172    0.112    0.000    0.324    0.000 base.py:1260(isMoleculeForbidden)
+    73261    0.106    0.000    0.106    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     5222    0.104    0.000    0.104    0.000 {map}
+      772    0.083    0.000    0.083    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+        8    0.078    0.010    0.078    0.010 {method 'close' of 'file' objects}
+    84142    0.073    0.000    0.075    0.000 {method 'sort' of 'list' objects}
+    31475    0.071    0.000    0.227    0.000 chemkin.py:1262(getSpeciesIdentifier)
+    32144    0.067    0.000    1.817    0.000 runtime.py:233(call)
+    28391    0.064    0.000    0.064    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+   207838    0.058    0.000    0.059    0.000 {isinstance}
+15808/11293    0.051    0.000    0.122    0.000 base.py:889(matchNodeToStructure)
+      772    0.050    0.000    0.073    0.000 textwrap.py:243(_wrap_chunks)
+    98192    0.050    0.000    0.050    0.000 {hasattr}
+      121    0.048    0.000    0.048    0.000 chemkin.py:1653(markDuplicateReaction)
+       26    0.047    0.002    0.047    0.002 surfaces.py:576(write_to_png)
+   124397    0.046    0.000    0.051    0.000 {getattr}
+        1    0.042    0.042    0.042    0.042 {method 'writerows' of '_csv.writer' objects}
+    90026    0.040    0.000    0.040    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3346    0.038    0.000    0.207    0.000 chemkin.py:1462(writeKineticsEntry)
+     1582    0.035    0.000    0.035    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 18                         
+================================================================================
+         5412218 function calls (5353979 primitive calls) in 7.285 seconds
+
+   Ordered by: internal time
+   List reduced from 1772 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     9916    0.774    0.000    1.328    0.000 adjlist.py:717(toAdjacencyList)
+  1255386    0.458    0.000    0.459    0.000 {method 'format' of 'str' objects}
+   116764    0.230    0.000    0.230    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      555    0.223    0.000    0.223    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        2    0.209    0.104    0.350    0.175 chemkin.py:1695(saveSpeciesDictionary)
+        1    0.183    0.183    0.790    0.790 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+       85    0.178    0.002    0.179    0.002 surfaces.py:576(write_to_png)
+        2    0.178    0.089    0.178    0.089 {matplotlib._png.write_png}
+     8286    0.145    0.000    0.428    0.000 base.py:1260(isMoleculeForbidden)
+     6203    0.127    0.000    0.127    0.000 {map}
+39169/32032    0.125    0.000    0.347    0.000 base.py:889(matchNodeToStructure)
+      216    0.124    0.001    0.124    0.001 chemkin.py:1653(markDuplicateReaction)
+      943    0.119    0.000    0.119    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+    14797    0.119    0.000    2.317    0.000 <template>:5(root)
+   324956    0.097    0.000    0.099    0.000 {isinstance}
+    37425    0.095    0.000    0.307    0.000 chemkin.py:1262(getSpeciesIdentifier)
+   100290    0.092    0.000    0.094    0.000 {method 'sort' of 'list' objects}
+        8    0.091    0.011    0.091    0.011 {method 'close' of 'file' objects}
+    34365    0.091    0.000    0.091    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+    38311    0.083    0.000    2.237    0.000 runtime.py:233(call)
+     1068    0.074    0.000    0.228    0.000 draw.py:1025(__renderAtom)
+      943    0.070    0.000    0.102    0.000 textwrap.py:243(_wrap_chunks)
+   147552    0.063    0.000    0.072    0.000 {getattr}
+   137866    0.062    0.000    0.062    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   117815    0.061    0.000    0.061    0.000 {hasattr}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 19                         
+================================================================================
+         5235089 function calls (5186801 primitive calls) in 6.635 seconds
+
+   Ordered by: internal time
+   List reduced from 1782 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10889    0.821    0.000    1.416    0.000 adjlist.py:717(toAdjacencyList)
+  1372024    0.491    0.000    0.492    0.000 {method 'format' of 'str' objects}
+        1    0.237    0.237    0.850    0.850 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      584    0.227    0.000    0.227    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        2    0.178    0.089    0.178    0.089 {matplotlib._png.write_png}
+    85206    0.147    0.000    0.147    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1058    0.145    0.000    0.145    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+     6811    0.135    0.000    0.135    0.000 {map}
+    16252    0.127    0.000    2.475    0.000 <template>:5(root)
+     6236    0.116    0.000    0.333    0.000 base.py:1260(isMoleculeForbidden)
+       57    0.114    0.002    0.115    0.002 surfaces.py:576(write_to_png)
+    41185    0.104    0.000    0.331    0.000 chemkin.py:1262(getSpeciesIdentifier)
+        8    0.099    0.012    0.099    0.012 {method 'close' of 'file' objects}
+   109538    0.098    0.000    0.100    0.000 {method 'sort' of 'list' objects}
+    37815    0.096    0.000    0.096    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+      606    0.094    0.000    0.095    0.000 poll.py:77(poll)
+      137    0.094    0.001    0.094    0.001 chemkin.py:1653(markDuplicateReaction)
+25589/20575    0.090    0.000    0.226    0.000 base.py:889(matchNodeToStructure)
+    42167    0.088    0.000    2.390    0.000 runtime.py:233(call)
+     1058    0.084    0.000    0.122    0.000 textwrap.py:243(_wrap_chunks)
+   271813    0.081    0.000    0.083    0.000 {isinstance}
+   128576    0.065    0.000    0.065    0.000 {hasattr}
+   155514    0.061    0.000    0.070    0.000 {getattr}
+     4373    0.058    0.000    0.305    0.000 chemkin.py:1462(writeKineticsEntry)
+755520/755372    0.050    0.000    0.050    0.000 {len}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 20                         
+================================================================================
+         8630320 function calls (8535987 primitive calls) in 10.181 seconds
+
+   Ordered by: internal time
+   List reduced from 1801 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    13490    0.940    0.000    1.625    0.000 adjlist.py:717(toAdjacencyList)
+  1674347    0.572    0.000    0.573    0.000 {method 'format' of 'str' objects}
+   249580    0.344    0.000    0.344    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      163    0.322    0.002    0.324    0.002 surfaces.py:576(write_to_png)
+      853    0.301    0.000    0.301    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+    17023    0.266    0.000    0.764    0.000 base.py:1260(isMoleculeForbidden)
+        1    0.254    0.254    0.879    0.879 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+96230/79353    0.248    0.000    0.604    0.000 base.py:889(matchNodeToStructure)
+      362    0.209    0.001    0.209    0.001 chemkin.py:1653(markDuplicateReaction)
+        2    0.179    0.090    0.179    0.090 {matplotlib._png.write_png}
+     1387    0.168    0.000    0.168    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+    20249    0.164    0.000    3.014    0.000 <template>:5(root)
+     8438    0.162    0.000    0.162    0.000 {map}
+   605309    0.146    0.000    0.150    0.000 {isinstance}
+     1336    0.137    0.000    0.137    0.000 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+        8    0.130    0.016    0.130    0.016 {method 'close' of 'file' objects}
+     2000    0.123    0.000    0.362    0.000 draw.py:1025(__renderAtom)
+    51217    0.116    0.000    0.373    0.000 chemkin.py:1262(getSpeciesIdentifier)
+   133369    0.115    0.000    0.117    0.000 {method 'sort' of 'list' objects}
+    47973    0.111    0.000    0.111    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+   292654    0.109    0.000    0.109    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+    17499    0.108    0.000    0.174    0.000 collections.py:121(values)
+    52594    0.107    0.000    2.856    0.000 runtime.py:233(call)
+     1385    0.100    0.000    0.145    0.000 textwrap.py:243(_wrap_chunks)
+      104    0.097    0.001    0.097    0.001 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 21                         
+================================================================================
+         8393529 function calls (8312969 primitive calls) in 10.021 seconds
+
+   Ordered by: internal time
+   List reduced from 1787 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    15855    1.099    0.000    1.894    0.000 adjlist.py:717(toAdjacencyList)
+  1988210    0.649    0.000    0.650    0.000 {method 'format' of 'str' objects}
+        1    0.383    0.383    1.037    1.037 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      118    0.333    0.003    0.334    0.003 surfaces.py:576(write_to_png)
+      926    0.324    0.000    0.324    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+   178069    0.295    0.000    0.295    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+    12518    0.203    0.000    0.626    0.000 base.py:1260(isMoleculeForbidden)
+      299    0.194    0.001    0.194    0.001 chemkin.py:1653(markDuplicateReaction)
+     9918    0.190    0.000    0.190    0.000 {map}
+    24082    0.186    0.000    3.509    0.000 <template>:5(root)
+        2    0.180    0.090    0.180    0.090 {matplotlib._png.write_png}
+     1622    0.176    0.000    0.176    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+65688/55273    0.170    0.000    0.423    0.000 base.py:889(matchNodeToStructure)
+        8    0.145    0.018    0.145    0.018 {method 'close' of 'file' objects}
+   158528    0.132    0.000    0.135    0.000 {method 'sort' of 'list' objects}
+    59862    0.128    0.000    0.409    0.000 chemkin.py:1262(getSpeciesIdentifier)
+    61780    0.122    0.000    3.301    0.000 runtime.py:233(call)
+   481780    0.121    0.000    0.123    0.000 {isinstance}
+    55991    0.119    0.000    0.119    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1888    0.112    0.000    0.318    0.000 draw.py:1025(__renderAtom)
+     1622    0.105    0.000    0.152    0.000 textwrap.py:243(_wrap_chunks)
+       60    0.095    0.002    0.095    0.002 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+   189144    0.089    0.000    0.089    0.000 {hasattr}
+   210309    0.089    0.000    0.089    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3529    0.086    0.000    0.086    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 22                         
+================================================================================
+         9856509 function calls (9770041 primitive calls) in 11.659 seconds
+
+   Ordered by: internal time
+   List reduced from 1782 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    18440    1.404    0.000    2.415    0.000 adjlist.py:717(toAdjacencyList)
+  2377839    0.825    0.000    0.826    0.000 {method 'format' of 'str' objects}
+   227086    0.400    0.000    0.400    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1058    0.373    0.000    0.373    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.319    0.319    0.962    0.962 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      125    0.297    0.002    0.299    0.002 surfaces.py:576(write_to_png)
+      327    0.268    0.001    0.268    0.001 chemkin.py:1653(markDuplicateReaction)
+     1875    0.235    0.000    0.235    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+    15951    0.234    0.000    0.742    0.000 base.py:1260(isMoleculeForbidden)
+    11536    0.231    0.000    0.231    0.000 {map}
+    28253    0.218    0.000    4.178    0.000 <template>:5(root)
+78240/65761    0.194    0.000    0.526    0.000 base.py:889(matchNodeToStructure)
+        2    0.180    0.090    0.180    0.090 {matplotlib._png.write_png}
+   189809    0.170    0.000    0.172    0.000 {method 'sort' of 'list' objects}
+        8    0.168    0.021    0.168    0.021 {method 'close' of 'file' objects}
+    69302    0.163    0.000    0.519    0.000 chemkin.py:1262(getSpeciesIdentifier)
+    65166    0.152    0.000    0.152    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+    71784    0.145    0.000    3.977    0.000 runtime.py:233(call)
+     1875    0.141    0.000    0.204    0.000 textwrap.py:243(_wrap_chunks)
+   553136    0.139    0.000    0.142    0.000 {isinstance}
+       66    0.124    0.002    0.124    0.002 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+     2044    0.118    0.000    0.344    0.000 draw.py:1025(__renderAtom)
+     4426    0.114    0.000    0.114    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+   268412    0.110    0.000    0.110    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   219428    0.105    0.000    0.105    0.000 {hasattr}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 23                         
+================================================================================
+         9712259 function calls (9643098 primitive calls) in 10.637 seconds
+
+   Ordered by: internal time
+   List reduced from 1784 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    20501    1.483    0.000    2.559    0.000 adjlist.py:717(toAdjacencyList)
+  2660242    0.877    0.000    0.878    0.000 {method 'format' of 'str' objects}
+   197229    0.372    0.000    0.372    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1033    0.370    0.000    0.370    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.362    0.362    1.015    1.015 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    12824    0.260    0.000    0.260    0.000 {map}
+    15911    0.246    0.000    0.791    0.000 base.py:1260(isMoleculeForbidden)
+     1982    0.246    0.000    0.246    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+    31323    0.240    0.000    4.638    0.000 <template>:5(root)
+      259    0.228    0.001    0.228    0.001 chemkin.py:1653(markDuplicateReaction)
+        8    0.185    0.023    0.185    0.023 {method 'close' of 'file' objects}
+   212513    0.181    0.000    0.183    0.000 {method 'sort' of 'list' objects}
+        2    0.178    0.089    0.178    0.089 {matplotlib._png.write_png}
+    76671    0.177    0.000    0.573    0.000 chemkin.py:1262(getSpeciesIdentifier)
+    71919    0.166    0.000    0.166    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+    79242    0.160    0.000    4.394    0.000 runtime.py:233(call)
+     1976    0.147    0.000    0.213    0.000 textwrap.py:243(_wrap_chunks)
+47240/36817    0.127    0.000    0.369    0.000 base.py:889(matchNodeToStructure)
+   441830    0.118    0.000    0.119    0.000 {isinstance}
+   240816    0.116    0.000    0.116    0.000 {hasattr}
+       50    0.104    0.002    0.104    0.002 surfaces.py:576(write_to_png)
+   240762    0.102    0.000    0.102    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+     4074    0.097    0.000    0.097    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+   263140    0.096    0.000    0.105    0.000 {getattr}
+     8078    0.091    0.000    0.513    0.000 chemkin.py:1462(writeKineticsEntry)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 24                         
+================================================================================
+         13931512 function calls (13821091 primitive calls) in 16.481 seconds
+
+   Ordered by: internal time
+   List reduced from 1782 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    24172    1.797    0.000    3.115    0.000 adjlist.py:717(toAdjacencyList)
+  3275876    1.078    0.000    1.079    0.000 {method 'format' of 'str' objects}
+   372237    0.894    0.000    0.894    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      195    0.501    0.003    0.504    0.003 surfaces.py:576(write_to_png)
+     1373    0.480    0.000    0.480    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+      465    0.458    0.001    0.458    0.001 chemkin.py:1653(markDuplicateReaction)
+    25718    0.386    0.000    1.281    0.000 base.py:1260(isMoleculeForbidden)
+        1    0.356    0.356    1.000    1.000 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+134802/117402    0.331    0.000    1.072    0.000 base.py:889(matchNodeToStructure)
+    15123    0.317    0.000    0.317    0.000 {map}
+     2369    0.297    0.000    0.297    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+    37344    0.284    0.000    5.591    0.000 <template>:5(root)
+        8    0.222    0.028    0.222    0.028 {method 'close' of 'file' objects}
+   261641    0.222    0.000    0.224    0.000 {method 'sort' of 'list' objects}
+     3294    0.222    0.000    0.690    0.000 draw.py:1025(__renderAtom)
+      107    0.216    0.002    0.216    0.002 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+   831713    0.207    0.000    0.211    0.000 {isinstance}
+    90128    0.203    0.000    0.651    0.000 chemkin.py:1262(getSpeciesIdentifier)
+   435495    0.194    0.000    0.194    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+    85595    0.193    0.000    0.193    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+     7032    0.186    0.000    0.186    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+    93636    0.185    0.000    5.258    0.000 runtime.py:233(call)
+        2    0.178    0.089    0.178    0.089 {matplotlib._png.write_png}
+     2369    0.177    0.000    0.256    0.000 textwrap.py:243(_wrap_chunks)
+     1177    0.160    0.000    0.160    0.000 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 25                         
+================================================================================
+         27978771 function calls (27745233 primitive calls) in 39.893 seconds
+
+   Ordered by: internal time
+   List reduced from 1784 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+  1101992    2.754    0.000    2.754    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+    32157    2.743    0.000    4.748    0.000 adjlist.py:717(toAdjacencyList)
+      324    2.076    0.006    2.076    0.006 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+  4856567    1.630    0.000    1.633    0.000 {method 'format' of 'str' objects}
+     4174    1.603    0.000    1.603    0.000 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1008    1.432    0.001    1.432    0.001 chemkin.py:1653(markDuplicateReaction)
+      464    1.396    0.003    1.402    0.003 surfaces.py:576(write_to_png)
+    20623    1.333    0.000    1.333    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+436609/384326    1.217    0.000    3.659    0.000 base.py:889(matchNodeToStructure)
+    72787    1.078    0.000    3.739    0.000 base.py:1260(isMoleculeForbidden)
+     6066    0.823    0.000    0.823    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+     2106    0.807    0.000    0.807    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+  1294645    0.657    0.000    0.657    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+    74517    0.584    0.000    0.944    0.000 collections.py:121(values)
+  2057103    0.523    0.000    0.531    0.000 {isinstance}
+     9880    0.504    0.000    1.391    0.000 draw.py:1025(__renderAtom)
+    20178    0.492    0.000    0.492    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+   190034    0.487    0.000    0.487    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      654    0.466    0.001    0.466    0.001 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+    20122    0.457    0.000    0.457    0.000 {map}
+     3314    0.419    0.000    0.419    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+        1    0.417    0.417    1.097    1.097 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    50654    0.393    0.000    8.087    0.000 <template>:5(root)
+  1417860    0.378    0.000    0.378    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+  2111390    0.364    0.000    0.364    0.000 collections.py:90(__iter__)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 26                         
+================================================================================
+         23791320 function calls (23630812 primitive calls) in 30.568 seconds
+
+   Ordered by: internal time
+   List reduced from 1784 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    38468    3.348    0.000    5.793    0.000 adjlist.py:717(toAdjacencyList)
+  5973711    1.949    0.000    1.952    0.000 {method 'format' of 'str' objects}
+   689659    1.716    0.000    1.716    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+      798    1.477    0.002    1.477    0.002 chemkin.py:1653(markDuplicateReaction)
+      324    1.018    0.003    1.023    0.003 surfaces.py:576(write_to_png)
+    52818    0.964    0.000    3.227    0.000 base.py:1260(isMoleculeForbidden)
+     2290    0.865    0.000    0.865    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+     2533    0.706    0.000    0.706    0.000 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.605    0.605    1.296    1.296 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    24074    0.576    0.000    0.576    0.000 {map}
+171883/139255    0.566    0.000    1.689    0.000 base.py:889(matchNodeToStructure)
+    14179    0.540    0.000    0.540    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3955    0.509    0.000    0.509    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+   829988    0.465    0.000    0.465    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   479588    0.440    0.000    0.443    0.000 {method 'sort' of 'list' objects}
+     4172    0.397    0.000    0.397    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+        8    0.389    0.049    0.389    0.049 {method 'close' of 'file' objects}
+       99    0.360    0.004    0.360    0.004 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+    13844    0.344    0.000    0.344    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+   137888    0.333    0.000    0.333    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+   142549    0.329    0.000    1.075    0.000 chemkin.py:1262(getSpeciesIdentifier)
+  1164243    0.323    0.000    0.329    0.000 {isinstance}
+     5902    0.318    0.000    0.876    0.000 draw.py:1025(__renderAtom)
+   105540    0.308    0.000    0.308    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+    53867    0.304    0.000    0.476    0.000 collections.py:121(values)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                        Profiling Data for Iteration 27                         
+================================================================================
+         14989692 function calls (14971541 primitive calls) in 13.802 seconds
+
+   Ordered by: internal time
+   List reduced from 1415 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    38468    3.247    0.000    5.619    0.000 adjlist.py:717(toAdjacencyList)
+  5950348    1.855    0.000    1.855    0.000 {method 'format' of 'str' objects}
+     1966    0.741    0.000    0.741    0.000 {method 'toSMILES' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    0.631    0.631    1.282    1.282 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+    24074    0.559    0.000    0.559    0.000 {map}
+     3955    0.492    0.000    0.492    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+   477265    0.420    0.000    0.423    0.000 {method 'sort' of 'list' objects}
+        8    0.410    0.051    0.410    0.051 {method 'close' of 'file' objects}
+   142550    0.324    0.000    1.044    0.000 chemkin.py:1262(getSpeciesIdentifier)
+   135661    0.310    0.000    0.310    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3955    0.295    0.000    0.427    0.000 textwrap.py:243(_wrap_chunks)
+   149948    0.290    0.000    9.123    0.000 runtime.py:233(call)
+   450192    0.212    0.000    0.212    0.000 {hasattr}
+        2    0.180    0.090    0.180    0.090 {matplotlib._png.write_png}
+    79493    0.176    0.000    0.176    0.000 {method 'join' of 'str' objects}
+    14888    0.164    0.000    0.902    0.000 chemkin.py:1462(writeKineticsEntry)
+    19218    0.158    0.000    3.453    0.000 {method 'getURL' of 'rmgpy.molecule.molecule.Molecule' objects}
+  2994119    0.152    0.000    0.152    0.000 {len}
+     1983    0.151    0.000    0.151    0.000 {posix.stat}
+   450186    0.151    0.000    0.158    0.000 {getattr}
+     4856    0.146    0.000    2.758    0.001 {method 'getURL' of 'rmgpy.reaction.Reaction' objects}
+     3996    0.121    0.000    0.752    0.000 chemkin.py:1325(writeThermoEntry)
+     4856    0.118    0.000    0.118    0.000 {method 'toHTML' of 'rmgpy.kinetics.model.KineticsModel' objects}
+   150408    0.115    0.000    0.115    0.000 re.py:230(_compile)
+      165    0.103    0.001   10.223    0.062 {method 'join' of 'unicode' objects}
+
+
+================================================================================
+                     Profiling Data for Job Post-Processing                     
+================================================================================
+         694 function calls in 0.001 seconds
+
+   Ordered by: internal time
+   List reduced from 50 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        7    0.000    0.000    0.000    0.000 __init__.py:237(__init__)
+       28    0.000    0.000    0.000    0.000 threading.py:187(release)
+       28    0.000    0.000    0.000    0.000 threading.py:147(acquire)
+       14    0.000    0.000    0.000    0.000 __init__.py:452(format)
+       14    0.000    0.000    0.000    0.000 __init__.py:849(emit)
+       14    0.000    0.000    0.000    0.000 {method 'flush' of 'file' objects}
+        7    0.000    0.000    0.000    0.000 __init__.py:1233(findCaller)
+       14    0.000    0.000    0.001    0.000 __init__.py:746(handle)
+       14    0.000    0.000    0.000    0.000 __init__.py:838(flush)
+       28    0.000    0.000    0.000    0.000 __init__.py:703(acquire)
+       28    0.000    0.000    0.000    0.000 __init__.py:710(release)
+        7    0.000    0.000    0.001    0.000 __init__.py:1320(callHandlers)
+        7    0.000    0.000    0.001    0.000 __init__.py:1157(info)
+        7    0.000    0.000    0.001    0.000 __init__.py:1267(_log)
+        1    0.000    0.000    0.000    0.000 {time.asctime}
+        7    0.000    0.000    0.001    0.000 __init__.py:1623(info)
+        7    0.000    0.000    0.000    0.000 genericpath.py:93(_splitext)
+       56    0.000    0.000    0.000    0.000 threading.py:64(_note)
+       28    0.000    0.000    0.000    0.000 {isinstance}
+       14    0.000    0.000    0.000    0.000 __init__.py:312(getMessage)
+       14    0.000    0.000    0.000    0.000 __init__.py:446(usesTime)
+       14    0.000    0.000    0.000    0.000 __init__.py:723(format)
+        7    0.000    0.000    0.000    0.000 __init__.py:948(emit)
+        7    0.000    0.000    0.000    0.000 posixpath.py:112(basename)
+        7    0.000    0.000    0.001    0.000 __init__.py:1288(handle)
+
+

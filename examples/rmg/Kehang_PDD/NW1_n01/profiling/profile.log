@@ -1,0 +1,412 @@
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         18864474 function calls (18133350 primitive calls) in 64.189 seconds
+
+   Ordered by: internal time
+   List reduced from 1483 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1142   10.339    0.009   10.339    0.009 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+   549417    9.700    0.000    9.700    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+       48    3.907    0.081    3.937    0.082 {cPickle.dumps}
+   471575    3.801    0.000    3.801    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 449545/6    3.391    0.000    9.802    1.634 rules.py:443(fillRulesByAveragingUp)
+       48    3.082    0.064    3.504    0.073 {cPickle.loads}
+       96    2.412    0.025    2.412    0.025 {time.sleep}
+   450042    1.835    0.000    3.151    0.000 rules.py:419(getAllRules)
+416117/393740    1.640    0.000    5.844    0.000 base.py:889(matchNodeToStructure)
+      369    1.570    0.004    1.570    0.004 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+     6287    1.381    0.000    1.687    0.000 adjlist.py:419(fromAdjacencyList)
+      824    1.376    0.002    2.346    0.003 model.py:234(checkForExistingSpecies)
+     4709    1.232    0.000    1.232    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+   292129    0.942    0.000    0.942    0.000 base.py:1230(getAllCombinations)
+       39    0.941    0.024    3.703    0.095 base.py:189(load)
+   450042    0.769    0.000    1.131    0.000 posixpath.py:82(split)
+      740    0.701    0.001    0.701    0.001 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+   450042    0.671    0.000    3.891    0.000 rules.py:399(getRule)
+   521402    0.652    0.000    0.652    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1327    0.588    0.000    0.588    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+  1449752    0.566    0.000    0.569    0.000 {isinstance}
+     5019    0.523    0.000    0.523    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+     2121    0.521    0.000    0.521    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+    51187    0.464    0.000    0.464    0.000 collections.py:71(__setitem__)
+2049078/2017477    0.454    0.000    0.506    0.000 {method 'join' of 'str' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 0                         
+================================================================================
+         286652194 function calls (285215531 primitive calls) in 1312.187 seconds
+
+   Ordered by: internal time
+   List reduced from 703 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    23844  216.178    0.009  216.178    0.009 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 30851819  204.333    0.000  204.333    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   736872  138.346    0.000  138.346    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1865  108.721    0.058  108.721    0.058 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+   369695   81.357    0.000   81.357    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+  2127199   72.104    0.000   72.104    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   724196   60.893    0.000   60.893    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+  2505152   58.455    0.000  310.717    0.000 base.py:1260(isMoleculeForbidden)
+    34629   56.184    0.002   97.123    0.003 model.py:234(checkForExistingSpecies)
+ 36648941   50.379    0.000   50.379    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   292854   23.527    0.000   23.527    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+    37197   19.190    0.001   19.190    0.001 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+5104705/4741916   18.215    0.000   77.905    0.000 base.py:889(matchNodeToStructure)
+     1676   16.609    0.010   16.609    0.010 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+  2510117   14.204    0.000   21.995    0.000 collections.py:121(values)
+ 37755332   14.026    0.000   14.026    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+    18596   11.829    0.001   11.829    0.001 react.py:158(deflateReaction)
+ 27558697   11.298    0.000   11.298    0.000 {method 'isMappingValid' of 'rmgpy.molecule.graph.Graph' objects}
+  1258302   10.232    0.000  324.522    0.000 family.py:1226(isMoleculeForbidden)
+   369695    8.176    0.000   17.536    0.000 family.py:196(__apply)
+      838    8.091    0.010    8.091    0.010 {method 'calculateCpInf' of 'rmgpy.species.Species' objects}
+ 36534504    7.939    0.000    7.939    0.000 collections.py:90(__iter__)
+ 19796215    7.460    0.000    7.493    0.000 {isinstance}
+   369695    6.430    0.000  309.346    0.001 family.py:1050(applyRecipe)
+   341659    5.402    0.000    5.402    0.000 {method 'findSubgraphIsomorphisms' of 'rmgpy.molecule.molecule.Molecule' objects}
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 1                         
+================================================================================
+         1968817361 function calls (1953122363 primitive calls) in 8806.690 seconds
+
+   Ordered by: internal time
+   List reduced from 674 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   462057 2461.936    0.005 2461.936    0.005 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+161478986  915.056    0.000  915.056    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 61788290  846.654    0.000  846.654    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+    15233  575.547    0.038  575.547    0.038 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+    40650  541.501    0.013  541.501    0.013 chemkin.py:1653(markDuplicateReaction)
+  3109079  527.292    0.000  527.292    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+   327673  345.612    0.001  551.445    0.002 model.py:234(checkForExistingSpecies)
+ 11882348  276.839    0.000 1256.851    0.000 base.py:1260(isMoleculeForbidden)
+  1540654  243.903    0.000  243.903    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+190352012  230.751    0.000  230.751    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+  3083966  219.780    0.000  219.780    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+46266031/40019270  175.553    0.000  677.103    0.000 base.py:889(matchNodeToStructure)
+  2792782  106.759    0.000  106.759    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+     9116  103.694    0.011  103.694    0.011 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+   347138   99.296    0.000   99.296    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+201536013   74.679    0.000   74.679    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+ 11941243   67.744    0.000  103.867    0.000 collections.py:121(values)
+   168368   65.401    0.000   65.401    0.000 react.py:158(deflateReaction)
+174992221   61.327    0.000   61.471    0.000 {isinstance}
+136150354   57.772    0.000   57.772    0.000 {method 'isMappingValid' of 'rmgpy.molecule.graph.Graph' objects}
+  5941174   47.172    0.000 1320.581    0.000 family.py:1226(isMoleculeForbidden)
+181966726   37.966    0.000   37.966    0.000 collections.py:90(__iter__)
+5424499/1932513   35.855    0.000  715.132    0.000 base.py:970(descendTree)
+  1540654   33.149    0.000   66.247    0.000 family.py:196(__apply)
+138786/91023   31.000    0.000 6083.184    0.067 family.py:1369(__generateReactions)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 2                         
+================================================================================
+         145191833 function calls (144251275 primitive calls) in 635.037 seconds
+
+   Ordered by: internal time
+   List reduced from 700 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    20409  131.085    0.006  131.085    0.006 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 12271028   76.701    0.000   76.701    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1632   58.180    0.036   58.180    0.036 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1876   52.965    0.028   52.968    0.028 chemkin.py:1653(markDuplicateReaction)
+   223666   39.423    0.000   39.423    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+  2605941   33.418    0.000   33.418    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   843366   19.674    0.000   89.832    0.000 base.py:1260(isMoleculeForbidden)
+   110635   18.374    0.000   18.374    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+    15763   17.311    0.001   29.678    0.002 model.py:234(checkForExistingSpecies)
+ 14065249   17.253    0.000   17.253    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   221339   15.704    0.000   15.704    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+3969683/3695535   14.549    0.000   63.593    0.000 base.py:889(matchNodeToStructure)
+        6   14.124    2.354   16.160    2.693 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+     1068    9.575    0.009    9.575    0.009 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+   191660    8.249    0.000    8.249    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+ 14968286    5.680    0.000    5.680    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+ 14728903    5.353    0.000    5.367    0.000 {isinstance}
+   847177    5.095    0.000    7.700    0.000 collections.py:121(values)
+     8366    4.580    0.001    4.580    0.001 react.py:158(deflateReaction)
+        1    4.466    4.466    4.466    4.466 {gc.collect}
+    17869    4.350    0.000    4.350    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+  9682228    4.345    0.000    4.345    0.000 {method 'isMappingValid' of 'rmgpy.molecule.graph.Graph' objects}
+  5990330    3.984    0.000    4.014    0.000 {method 'format' of 'str' objects}
+     6116    3.938    0.001    7.361    0.001 adjlist.py:717(toAdjacencyList)
+   421751    3.385    0.000   94.367    0.000 family.py:1226(isMoleculeForbidden)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 3                         
+================================================================================
+         99275377 function calls (98739114 primitive calls) in 463.429 seconds
+
+   Ordered by: internal time
+   List reduced from 702 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      762   68.165    0.089   68.165    0.089 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+  8046144   67.542    0.000   67.542    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     8432   52.102    0.006   52.102    0.006 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+   139919   35.585    0.000   35.585    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1158   33.938    0.029   33.940    0.029 chemkin.py:1653(markDuplicateReaction)
+  1427061   24.227    0.000   24.227    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+    69623   16.175    0.000   16.175    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+        6   14.641    2.440   16.712    2.785 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+  9086517   13.661    0.000   13.661    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   525188   12.551    0.000   64.459    0.000 base.py:1260(isMoleculeForbidden)
+     6551   11.914    0.002   17.574    0.003 model.py:234(checkForExistingSpecies)
+   139241   11.122    0.000   11.122    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+2654405/2455253   10.273    0.000   55.831    0.000 base.py:889(matchNodeToStructure)
+      356    7.814    0.022    7.814    0.022 {method 'calculateCpInf' of 'rmgpy.species.Species' objects}
+    93694    4.647    0.000    4.647    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+     6471    4.028    0.001    7.568    0.001 adjlist.py:717(toAdjacencyList)
+  6212297    3.871    0.000    3.884    0.000 {method 'format' of 'str' objects}
+      712    3.745    0.005    3.745    0.005 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+  9813046    3.693    0.000    3.701    0.000 {isinstance}
+  9493988    3.678    0.000    3.678    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+   527263    3.098    0.000    4.718    0.000 collections.py:121(values)
+  6044488    2.873    0.000    2.873    0.000 {method 'isMappingValid' of 'rmgpy.molecule.graph.Graph' objects}
+     3512    2.476    0.001    2.476    0.001 react.py:158(deflateReaction)
+        1    2.421    2.421    2.421    2.421 {gc.collect}
+   262598    2.233    0.000   67.419    0.000 family.py:1226(isMoleculeForbidden)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 4                         
+================================================================================
+         186851010 function calls (185213965 primitive calls) in 1283.427 seconds
+
+   Ordered by: internal time
+   List reduced from 703 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    46285  335.594    0.007  335.594    0.007 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3056  129.526    0.042  144.803    0.047 model.py:1066(removeSpeciesFromEdge)
+     1653  124.058    0.075  124.058    0.075 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 15450024  120.841    0.000  120.841    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+  9811065  103.016    0.000  103.016    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   261198   80.012    0.000   80.012    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+    31910   40.792    0.001   59.463    0.002 model.py:234(checkForExistingSpecies)
+     3814   37.914    0.010   37.915    0.010 chemkin.py:1653(markDuplicateReaction)
+   129382   29.087    0.000   29.087    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 17955708   26.717    0.000   26.717    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+  1013035   23.724    0.000  120.953    0.000 base.py:1260(isMoleculeForbidden)
+5920442/5150814   22.962    0.000  107.206    0.000 base.py:889(matchNodeToStructure)
+   259578   22.052    0.000   22.052    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+    86533   15.205    0.000   15.205    0.000 {method 'remove' of 'list' objects}
+        6   15.059    2.510   17.197    2.866 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+      938   13.663    0.015   13.663    0.015 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+   454910   13.437    0.000   13.437    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+    16232    8.087    0.000    8.087    0.000 react.py:158(deflateReaction)
+ 21648511    7.718    0.000    7.729    0.000 {isinstance}
+ 19117205    7.435    0.000    7.435    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+      469    6.891    0.015    6.891    0.015 {method 'calculateCpInf' of 'rmgpy.species.Species' objects}
+  1018342    5.923    0.000    8.990    0.000 collections.py:121(values)
+    33975    5.112    0.000    5.112    0.000 {method 'isCyclic' of 'rmgpy.molecule.graph.Graph' objects}
+ 11648839    5.049    0.000    5.049    0.000 {method 'isMappingValid' of 'rmgpy.molecule.graph.Graph' objects}
+602402/222144    4.586    0.000  112.043    0.001 base.py:970(descendTree)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 5                         
+================================================================================
+         310709452 function calls (308555910 primitive calls) in 2075.752 seconds
+
+   Ordered by: internal time
+   List reduced from 711 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    59162  647.765    0.011  647.765    0.011 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 28771280  229.175    0.000  229.175    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     2617  221.733    0.085  221.733    0.085 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 13558995  159.513    0.000  159.513    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   518248  151.352    0.000  151.352    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+   256990   65.494    0.000   65.494    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+    41858   61.049    0.001   95.803    0.002 model.py:234(checkForExistingSpecies)
+     4653   54.965    0.012   54.967    0.012 chemkin.py:1653(markDuplicateReaction)
+ 33310846   51.338    0.000   51.338    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   514996   50.893    0.000   50.893    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+  1985784   49.363    0.000  253.952    0.000 base.py:1260(isMoleculeForbidden)
+9214614/8343069   35.696    0.000  172.229    0.000 base.py:889(matchNodeToStructure)
+     1242   28.926    0.023   28.926    0.023 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+   679615   28.252    0.000   28.252    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+      418   14.969    0.036   15.576    0.037 model.py:1066(removeSpeciesFromEdge)
+ 35182481   13.583    0.000   13.583    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+   513046   12.750    0.000   12.750    0.000 {method 'merge' of 'rmgpy.molecule.molecule.Molecule' objects}
+  1993495   12.225    0.000   18.437    0.000 collections.py:121(values)
+ 33060313   11.925    0.000   11.943    0.000 {isinstance}
+    21518   10.929    0.001   10.929    0.001 react.py:158(deflateReaction)
+ 22832674   10.376    0.000   10.376    0.000 {method 'isMappingValid' of 'rmgpy.molecule.graph.Graph' objects}
+      621   10.189    0.016   10.189    0.016 {method 'calculateCpInf' of 'rmgpy.species.Species' objects}
+        6    9.485    1.581   10.806    1.801 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+   992896    8.402    0.000  265.107    0.000 family.py:1226(isMoleculeForbidden)
+994625/367276    7.466    0.000  180.115    0.000 base.py:970(descendTree)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 6                         
+================================================================================
+         15832193 function calls (15813247 primitive calls) in 62.890 seconds
+
+   Ordered by: internal time
+   List reduced from 705 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      356   15.190    0.043   15.799    0.044 model.py:1066(removeSpeciesFromEdge)
+        6    9.836    1.639   11.207    1.868 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+       27    3.500    0.130    3.500    0.130 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+   326363    2.916    0.000    2.916    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+        1    2.842    2.842    2.842    2.842 {gc.collect}
+      393    2.616    0.007    2.616    0.007 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3750    2.503    0.001    4.723    0.001 adjlist.py:717(toAdjacencyList)
+  3616729    2.214    0.000    2.215    0.000 {method 'format' of 'str' objects}
+    50500    2.152    0.000    2.152    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     5686    1.175    0.000    1.175    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+     3760    1.151    0.000    1.151    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+   145283    0.891    0.000    0.891    0.000 {method 'getFormula' of 'rmgpy.molecule.molecule.Molecule' objects}
+   319441    0.865    0.000    3.216    0.000 chemkin.py:1262(getSpeciesIdentifier)
+     2921    0.814    0.000    0.814    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+   238610    0.704    0.000    0.704    0.000 {method 'sort' of 'list' objects}
+     3720    0.635    0.000    0.951    0.000 textwrap.py:243(_wrap_chunks)
+    51480    0.626    0.000    4.197    0.000 chemkin.py:1462(writeKineticsEntry)
+   102455    0.624    0.000    0.624    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+   367774    0.609    0.000    0.609    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+     2546    0.596    0.000    0.596    0.000 {method 'remove' of 'list' objects}
+       48    0.591    0.012    0.591    0.012 chemkin.py:1653(markDuplicateReaction)
+      292    0.556    0.002    1.036    0.004 model.py:234(checkForExistingSpecies)
+    21799    0.540    0.000    2.923    0.000 base.py:1260(isMoleculeForbidden)
+     5758    0.516    0.000    0.516    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+     7500    0.484    0.000    3.199    0.000 chemkin.py:1325(writeThermoEntry)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+================================================================================
+                         Profiling Data for Iteration 7                         
+================================================================================
+         217600074 function calls (216546879 primitive calls) in 1386.395 seconds
+
+   Ordered by: internal time
+   List reduced from 704 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    21248  386.165    0.018  386.165    0.018 {method 'generateResonanceIsomers' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 21885755  172.365    0.000  172.365    0.000 {method 'isSubgraphIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+     1928  167.930    0.087  167.930    0.087 {method 'getSymmetryNumber' of 'rmgpy.molecule.molecule.Molecule' objects}
+   405650  133.838    0.000  133.838    0.000 {method 'copy' of 'rmgpy.molecule.molecule.Molecule' objects}
+  4880857   86.204    0.000   86.204    0.000 {method 'isIsomorphic' of 'rmgpy.molecule.molecule.Molecule' objects}
+   201552   53.804    0.000   53.804    0.000 {method 'split' of 'rmgpy.molecule.molecule.Molecule' objects}
+ 24968342   39.122    0.000   39.122    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.molecule.Molecule' objects}
+   403454   37.894    0.000   37.894    0.000 {method 'update' of 'rmgpy.molecule.molecule.Molecule' objects}
+  1530765   37.319    0.000  199.333    0.000 base.py:1260(isMoleculeForbidden)
+    16498   30.967    0.002   47.363    0.003 model.py:234(checkForExistingSpecies)
+      976   23.713    0.024   23.713    0.024 {method 'generateResonanceIsomers' of 'rmgpy.species.Species' objects}
+6131590/5832079   23.618    0.000  116.372    0.000 base.py:889(matchNodeToStructure)
+     1524   19.948    0.013   19.950    0.013 chemkin.py:1653(markDuplicateReaction)
+   221051   12.425    0.000   12.425    0.000 {method 'isIsomorphic' of 'rmgpy.species.Species' objects}
+        6   10.179    1.697   11.580    1.930 {method 'simulate' of 'rmgpy.solver.base.ReactionSystem' objects}
+ 26145219   10.032    0.000   10.032    0.000 {method 'getLabeledAtoms' of 'rmgpy.molecule.group.Group' objects}
+  1534570    8.960    0.000   13.662    0.000 collections.py:121(values)
+ 17614204    8.395    0.000    8.395    0.000 {method 'isMappingValid' of 'rmgpy.molecule.graph.Graph' objects}
+      488    8.067    0.017    8.067    0.017 {method 'calculateCpInf' of 'rmgpy.species.Species' objects}
+ 21511975    8.058    0.000    8.073    0.000 {isinstance}
+   765388    6.382    0.000  207.836    0.000 family.py:1226(isMoleculeForbidden)
+     8812    6.116    0.001    6.116    0.001 react.py:158(deflateReaction)
+680267/255176    5.211    0.000  121.885    0.000 base.py:970(descendTree)
+ 23301220    4.928    0.000    4.928    0.000 collections.py:90(__iter__)
+   201552    4.423    0.000    9.323    0.000 family.py:196(__apply)
+
+
+================================================================================
+                     Profiling Data for Job Initialization                      
+================================================================================
+         1 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
