@@ -875,7 +875,7 @@ struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_findIsomorphism;
 struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_isSubgraphIsomorphic;
 struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_findSubgraphIsomorphisms;
 
-/* "rmgpy/molecule/group.pxd":121
+/* "rmgpy/molecule/group.pxd":130
  *     cpdef sortAtoms(self)
  * 
  *     cpdef Graph copy(self, bint deep=?)             # <<<<<<<<<<<<<<
@@ -887,7 +887,7 @@ struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_copy {
   int deep;
 };
 
-/* "rmgpy/molecule/group.pxd":133
+/* "rmgpy/molecule/group.pxd":142
  *     cpdef fromAdjacencyList(self, str adjlist)
  * 
  *     cpdef toAdjacencyList(self, str label=?)             # <<<<<<<<<<<<<<
@@ -899,7 +899,7 @@ struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_toAdjacencyList {
   PyObject *label;
 };
 
-/* "rmgpy/molecule/group.pxd":137
+/* "rmgpy/molecule/group.pxd":146
  *     cpdef updateFingerprint(self)
  * 
  *     cpdef bint isIsomorphic(self, Graph other, dict initialMap=?) except -2             # <<<<<<<<<<<<<<
@@ -911,7 +911,7 @@ struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_isIsomorphic {
   PyObject *initialMap;
 };
 
-/* "rmgpy/molecule/group.pxd":139
+/* "rmgpy/molecule/group.pxd":148
  *     cpdef bint isIsomorphic(self, Graph other, dict initialMap=?) except -2
  * 
  *     cpdef list findIsomorphism(self, Graph other, dict initialMap=?)             # <<<<<<<<<<<<<<
@@ -923,7 +923,7 @@ struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_findIsomorphism {
   PyObject *initialMap;
 };
 
-/* "rmgpy/molecule/group.pxd":141
+/* "rmgpy/molecule/group.pxd":150
  *     cpdef list findIsomorphism(self, Graph other, dict initialMap=?)
  * 
  *     cpdef bint isSubgraphIsomorphic(self, Graph other, dict initialMap=?) except -2             # <<<<<<<<<<<<<<
@@ -935,7 +935,7 @@ struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_isSubgraphIsomorphic {
   PyObject *initialMap;
 };
 
-/* "rmgpy/molecule/group.pxd":143
+/* "rmgpy/molecule/group.pxd":152
  *     cpdef bint isSubgraphIsomorphic(self, Graph other, dict initialMap=?) except -2
  * 
  *     cpdef list findSubgraphIsomorphisms(self, Graph other, dict initialMap=?)             # <<<<<<<<<<<<<<
@@ -1530,7 +1530,7 @@ struct __pyx_obj_5rmgpy_8molecule_8atomtype_AtomType {
 };
 
 
-/* "rmgpy/molecule/group.pxd":32
+/* "rmgpy/molecule/group.pxd":33
  * ################################################################################
  * 
  * cdef class GroupAtom(Vertex):             # <<<<<<<<<<<<<<
@@ -1547,7 +1547,7 @@ struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom {
 };
 
 
-/* "rmgpy/molecule/group.pxd":67
+/* "rmgpy/molecule/group.pxd":74
  * ################################################################################
  * 
  * cdef class GroupBond(Edge):             # <<<<<<<<<<<<<<
@@ -1560,7 +1560,7 @@ struct __pyx_obj_5rmgpy_8molecule_5group_GroupBond {
 };
 
 
-/* "rmgpy/molecule/group.pxd":91
+/* "rmgpy/molecule/group.pxd":100
  * ################################################################################
  * 
  * cdef class Group(Graph):             # <<<<<<<<<<<<<<
@@ -2022,6 +2022,7 @@ struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph {
   PyObject *(*getMonocyclicRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   PyObject *(*getDisparateRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   PyObject *(*getAllCycles)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *, int __pyx_skip_dispatch);
+  PyObject *(*getAllCyclesOfSize)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int, int __pyx_skip_dispatch);
   PyObject *(*__pyx___exploreCyclesRecursively)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, PyObject *, int __pyx_skip_dispatch);
   PyObject *(*getSmallestSetOfSmallestRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   int (*isMappingValid)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, int __pyx_skip_dispatch);
@@ -2045,7 +2046,7 @@ struct __pyx_vtabstruct_5rmgpy_8molecule_8atomtype_AtomType {
 static struct __pyx_vtabstruct_5rmgpy_8molecule_8atomtype_AtomType *__pyx_vtabptr_5rmgpy_8molecule_8atomtype_AtomType;
 
 
-/* "rmgpy/molecule/group.pxd":32
+/* "rmgpy/molecule/group.pxd":33
  * ################################################################################
  * 
  * cdef class GroupAtom(Vertex):             # <<<<<<<<<<<<<<
@@ -2065,11 +2066,14 @@ struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupAtom {
   PyObject *(*applyAction)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom *, PyObject *, int __pyx_skip_dispatch);
   int (*isOxygen)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom *, int __pyx_skip_dispatch);
   int (*isSulfur)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom *, int __pyx_skip_dispatch);
+  int (*hasWildcards)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom *, int __pyx_skip_dispatch);
+  struct __pyx_obj_5rmgpy_8molecule_8molecule_Atom *(*makeSampleAtom)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom *, int __pyx_skip_dispatch);
+  PyObject *(*getBondOrdersForAtom)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom *, int __pyx_skip_dispatch);
 };
 static struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupAtom *__pyx_vtabptr_5rmgpy_8molecule_5group_GroupAtom;
 
 
-/* "rmgpy/molecule/group.pxd":67
+/* "rmgpy/molecule/group.pxd":74
  * ################################################################################
  * 
  * cdef class GroupBond(Edge):             # <<<<<<<<<<<<<<
@@ -2085,11 +2089,12 @@ struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupBond {
   int (*isTriple)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupBond *, int __pyx_skip_dispatch);
   int (*isBenzene)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupBond *, int __pyx_skip_dispatch);
   PyObject *(*applyAction)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupBond *, PyObject *, int __pyx_skip_dispatch);
+  PyObject *(*makeBond)(struct __pyx_obj_5rmgpy_8molecule_5group_GroupBond *, struct __pyx_obj_5rmgpy_8molecule_8molecule_Molecule *, struct __pyx_obj_5rmgpy_8molecule_8molecule_Atom *, struct __pyx_obj_5rmgpy_8molecule_8molecule_Atom *, int __pyx_skip_dispatch);
 };
 static struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupBond *__pyx_vtabptr_5rmgpy_8molecule_5group_GroupBond;
 
 
-/* "rmgpy/molecule/group.pxd":91
+/* "rmgpy/molecule/group.pxd":100
  * ################################################################################
  * 
  * cdef class Group(Graph):             # <<<<<<<<<<<<<<
@@ -2116,9 +2121,14 @@ struct __pyx_vtabstruct_5rmgpy_8molecule_5group_Group {
   PyObject *(*toAdjacencyList)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch, struct __pyx_opt_args_5rmgpy_8molecule_5group_5Group_toAdjacencyList *__pyx_optional_args);
   PyObject *(*updateFingerprint)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
   int (*isIdentical)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
+  int (*isAromaticRing)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
   int (*standardizeAtomType)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
   int (*addExplicitLigands)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
   int (*standardizeGroup)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
+  struct __pyx_obj_5rmgpy_8molecule_5group_Group *(*addImplicitAtomsFromAtomType)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
+  struct __pyx_obj_5rmgpy_8molecule_8molecule_Molecule *(*makeSampleMolecule)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
+  struct __pyx_obj_5rmgpy_8molecule_5group_Group *(*addImplicitBenzene)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
+  int (*isBenzeneExplicit)(struct __pyx_obj_5rmgpy_8molecule_5group_Group *, int __pyx_skip_dispatch);
 };
 static struct __pyx_vtabstruct_5rmgpy_8molecule_5group_Group *__pyx_vtabptr_5rmgpy_8molecule_5group_Group;
 
@@ -32275,12 +32285,12 @@ PyMODINIT_FUNC PyInit_reaction(void)
   __pyx_vtabptr_5rmgpy_8molecule_5graph_Graph = (struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_5graph_Graph->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_5graph_Graph)) {__pyx_filename = __pyx_f[9]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5rmgpy_8molecule_8atomtype_AtomType = __Pyx_ImportType("rmgpy.molecule.atomtype", "AtomType", sizeof(struct __pyx_obj_5rmgpy_8molecule_8atomtype_AtomType), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_8atomtype_AtomType)) {__pyx_filename = __pyx_f[10]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_vtabptr_5rmgpy_8molecule_8atomtype_AtomType = (struct __pyx_vtabstruct_5rmgpy_8molecule_8atomtype_AtomType*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_8atomtype_AtomType->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_8atomtype_AtomType)) {__pyx_filename = __pyx_f[10]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_5rmgpy_8molecule_5group_GroupAtom = __Pyx_ImportType("rmgpy.molecule.group", "GroupAtom", sizeof(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_5group_GroupAtom)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_5rmgpy_8molecule_5group_GroupAtom = (struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupAtom*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_5group_GroupAtom->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_5group_GroupAtom)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_5rmgpy_8molecule_5group_GroupBond = __Pyx_ImportType("rmgpy.molecule.group", "GroupBond", sizeof(struct __pyx_obj_5rmgpy_8molecule_5group_GroupBond), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_5group_GroupBond)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_5rmgpy_8molecule_5group_GroupBond = (struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupBond*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_5group_GroupBond->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_5group_GroupBond)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_5rmgpy_8molecule_5group_Group = __Pyx_ImportType("rmgpy.molecule.group", "Group", sizeof(struct __pyx_obj_5rmgpy_8molecule_5group_Group), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_5group_Group)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_5rmgpy_8molecule_5group_Group = (struct __pyx_vtabstruct_5rmgpy_8molecule_5group_Group*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_5group_Group->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_5group_Group)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_5rmgpy_8molecule_5group_GroupAtom = __Pyx_ImportType("rmgpy.molecule.group", "GroupAtom", sizeof(struct __pyx_obj_5rmgpy_8molecule_5group_GroupAtom), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_5group_GroupAtom)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_5rmgpy_8molecule_5group_GroupAtom = (struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupAtom*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_5group_GroupAtom->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_5group_GroupAtom)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_5rmgpy_8molecule_5group_GroupBond = __Pyx_ImportType("rmgpy.molecule.group", "GroupBond", sizeof(struct __pyx_obj_5rmgpy_8molecule_5group_GroupBond), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_5group_GroupBond)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_5rmgpy_8molecule_5group_GroupBond = (struct __pyx_vtabstruct_5rmgpy_8molecule_5group_GroupBond*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_5group_GroupBond->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_5group_GroupBond)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_5rmgpy_8molecule_5group_Group = __Pyx_ImportType("rmgpy.molecule.group", "Group", sizeof(struct __pyx_obj_5rmgpy_8molecule_5group_Group), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_5group_Group)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_5rmgpy_8molecule_5group_Group = (struct __pyx_vtabstruct_5rmgpy_8molecule_5group_Group*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_5group_Group->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_5group_Group)) {__pyx_filename = __pyx_f[11]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5rmgpy_8molecule_7element_Element = __Pyx_ImportType("rmgpy.molecule.element", "Element", sizeof(struct __pyx_obj_5rmgpy_8molecule_7element_Element), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_7element_Element)) {__pyx_filename = __pyx_f[12]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5rmgpy_8molecule_8molecule_Atom = __Pyx_ImportType("rmgpy.molecule.molecule", "Atom", sizeof(struct __pyx_obj_5rmgpy_8molecule_8molecule_Atom), 1); if (unlikely(!__pyx_ptype_5rmgpy_8molecule_8molecule_Atom)) {__pyx_filename = __pyx_f[13]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_vtabptr_5rmgpy_8molecule_8molecule_Atom = (struct __pyx_vtabstruct_5rmgpy_8molecule_8molecule_Atom*)__Pyx_GetVtable(__pyx_ptype_5rmgpy_8molecule_8molecule_Atom->tp_dict); if (unlikely(!__pyx_vtabptr_5rmgpy_8molecule_8molecule_Atom)) {__pyx_filename = __pyx_f[13]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}

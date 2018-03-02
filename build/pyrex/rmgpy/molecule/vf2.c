@@ -625,6 +625,7 @@ struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph {
   PyObject *(*getMonocyclicRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   PyObject *(*getDisparateRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   PyObject *(*getAllCycles)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *, int __pyx_skip_dispatch);
+  PyObject *(*getAllCyclesOfSize)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int, int __pyx_skip_dispatch);
   PyObject *(*__pyx___exploreCyclesRecursively)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, PyObject *, int __pyx_skip_dispatch);
   PyObject *(*getSmallestSetOfSmallestRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   int (*isMappingValid)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, int __pyx_skip_dispatch);

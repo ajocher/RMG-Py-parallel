@@ -648,6 +648,7 @@ struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph {
   PyObject *(*getMonocyclicRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   PyObject *(*getDisparateRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   PyObject *(*getAllCycles)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *, int __pyx_skip_dispatch);
+  PyObject *(*getAllCyclesOfSize)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int, int __pyx_skip_dispatch);
   PyObject *(*__pyx___exploreCyclesRecursively)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, PyObject *, int __pyx_skip_dispatch);
   PyObject *(*getSmallestSetOfSmallestRings)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch);
   int (*isMappingValid)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, int __pyx_skip_dispatch);
@@ -903,6 +904,15 @@ static CYTHON_INLINE PyObject* __Pyx_PyTuple_GetSlice(PyObject* src, Py_ssize_t 
 #define __Pyx_PyTuple_GetSlice(seq, start, stop)  PySequence_GetSlice(seq, start, stop)
 #endif
 
+#define __Pyx_SetItemInt(o, i, v, type, is_signed, to_py_func, is_list, wraparound, boundscheck) \
+    (__Pyx_fits_Py_ssize_t(i, type, is_signed) ? \
+    __Pyx_SetItemInt_Fast(o, (Py_ssize_t)i, v, is_list, wraparound, boundscheck) : \
+    (is_list ? (PyErr_SetString(PyExc_IndexError, "list assignment index out of range"), -1) : \
+               __Pyx_SetItemInt_Generic(o, to_py_func(i), v)))
+static CYTHON_INLINE int __Pyx_SetItemInt_Generic(PyObject *o, PyObject *j, PyObject *v);
+static CYTHON_INLINE int __Pyx_SetItemInt_Fast(PyObject *o, Py_ssize_t i, PyObject *v,
+                                               int is_list, int wraparound, int boundscheck);
+
 static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name, PyObject* arg);
 
 #define __Pyx_PyObject_PopIndex(L, ix, is_signed, type, to_py_func) ( \
@@ -913,15 +923,6 @@ static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name
         __Pyx__PyList_PopIndex(L, ix) : __Pyx__PyObject_PopIndex(L, to_py_func(ix)))
 static PyObject* __Pyx__PyList_PopIndex(PyObject* L, Py_ssize_t ix);
 static PyObject* __Pyx__PyObject_PopIndex(PyObject* L, PyObject* py_ix);
-
-#define __Pyx_SetItemInt(o, i, v, type, is_signed, to_py_func, is_list, wraparound, boundscheck) \
-    (__Pyx_fits_Py_ssize_t(i, type, is_signed) ? \
-    __Pyx_SetItemInt_Fast(o, (Py_ssize_t)i, v, is_list, wraparound, boundscheck) : \
-    (is_list ? (PyErr_SetString(PyExc_IndexError, "list assignment index out of range"), -1) : \
-               __Pyx_SetItemInt_Generic(o, to_py_func(i), v)))
-static CYTHON_INLINE int __Pyx_SetItemInt_Generic(PyObject *o, PyObject *j, PyObject *v);
-static CYTHON_INLINE int __Pyx_SetItemInt_Fast(PyObject *o, Py_ssize_t i, PyObject *v,
-                                               int is_list, int wraparound, int boundscheck);
 
 static CYTHON_INLINE PyObject* __Pyx_PyDict_Items(PyObject* d);
 
@@ -956,11 +957,11 @@ static CYTHON_INLINE short __Pyx_PyInt_As_short(PyObject *);
 
 static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
 
+static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
+
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
 
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
-
-static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
 
 static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
 
@@ -1018,6 +1019,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getPolycyclicRings(struc
 static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getMonocyclicRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getDisparateRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCycles(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_startingVertex, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCyclesOfSize(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_v_size, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursively(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, PyObject *__pyx_v_chain, PyObject *__pyx_v_cycles, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallestRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_other, PyObject *__pyx_v_mapping, int __pyx_skip_dispatch); /* proto*/
@@ -1109,9 +1111,10 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_52getPolycyclicRings(st
 static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_54getMonocyclicRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_56getDisparateRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_58getAllCycles(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_startingVertex); /* proto */
-static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecursively(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, PyObject *__pyx_v_chain, PyObject *__pyx_v_cycles); /* proto */
-static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmallestRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_64isMappingValid(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_other, PyObject *__pyx_v_mapping); /* proto */
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_60getAllCyclesOfSize(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_v_size); /* proto */
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_62__exploreCyclesRecursively(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, PyObject *__pyx_v_chain, PyObject *__pyx_v_cycles); /* proto */
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_64getSmallestSetOfSmallestRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_66isMappingValid(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_other, PyObject *__pyx_v_mapping); /* proto */
 static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_8vertices___get__(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self); /* proto */
 static int __pyx_pf_5rmgpy_8molecule_5graph_5Graph_8vertices_2__set__(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
 static int __pyx_pf_5rmgpy_8molecule_5graph_5Graph_8vertices_4__del__(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self); /* proto */
@@ -1175,6 +1178,7 @@ static char __pyx_k_findIsomorphism[] = "findIsomorphism";
 static char __pyx_k_isVertexInCycle[] = "isVertexInCycle";
 static char __pyx_k_isSpecificCaseOf[] = "isSpecificCaseOf";
 static char __pyx_k_getDisparateRings[] = "getDisparateRings";
+static char __pyx_k_getAllCyclesOfSize[] = "getAllCyclesOfSize";
 static char __pyx_k_getMonocyclicRings[] = "getMonocyclicRings";
 static char __pyx_k_getPolycyclicRings[] = "getPolycyclicRings";
 static char __pyx_k_getAllCyclicVertices[] = "getAllCyclicVertices";
@@ -1211,6 +1215,7 @@ static PyObject *__pyx_n_s_exploreCyclesRecursively;
 static PyObject *__pyx_n_s_findIsomorphism;
 static PyObject *__pyx_n_s_findSubgraphIsomorphisms;
 static PyObject *__pyx_n_s_getAllCycles;
+static PyObject *__pyx_n_s_getAllCyclesOfSize;
 static PyObject *__pyx_n_s_getAllCyclicVertices;
 static PyObject *__pyx_n_s_getAllPolycyclicVertices;
 static PyObject *__pyx_n_s_getDisparateRings;
@@ -12085,22 +12090,22 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCycles(struct __py
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "rmgpy/molecule/graph.pyx":694
- *         that vertex.
+  /* "rmgpy/molecule/graph.pyx":697
+ *         is counted as separate from [0,3,2,1]
  *         """
  *         return self.__exploreCyclesRecursively([startingVertex], [])             # <<<<<<<<<<<<<<
  * 
- *     cpdef list __exploreCyclesRecursively(self, list chain, list cycles):
+ *     cpdef list getAllCyclesOfSize(self, int size):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 694; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 697; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(((PyObject *)__pyx_v_startingVertex));
   PyList_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_startingVertex));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_startingVertex));
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 694; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 697; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->__pyx___exploreCyclesRecursively(__pyx_v_self, ((PyObject*)__pyx_t_1), ((PyObject*)__pyx_t_2), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 694; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->__pyx___exploreCyclesRecursively(__pyx_v_self, ((PyObject*)__pyx_t_1), ((PyObject*)__pyx_t_2), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 697; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -12133,7 +12138,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCycles(struct __py
 
 /* Python wrapper */
 static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_59getAllCycles(PyObject *__pyx_v_self, PyObject *__pyx_v_startingVertex); /*proto*/
-static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_58getAllCycles[] = "\n        Given a starting vertex, returns a list of all the cycles containing\n        that vertex.\n        ";
+static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_58getAllCycles[] = "\n        Given a starting vertex, returns a list of all the cycles containing\n        that vertex.\n\n        This function returns a duplicate of each cycle because [0,1,2,3]\n        is counted as separate from [0,3,2,1]\n        ";
 static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_59getAllCycles(PyObject *__pyx_v_self, PyObject *__pyx_v_startingVertex) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
@@ -12179,15 +12184,1257 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_58getAllCycles(struct _
   return __pyx_r;
 }
 
-/* "rmgpy/molecule/graph.pyx":696
+/* "rmgpy/molecule/graph.pyx":699
  *         return self.__exploreCyclesRecursively([startingVertex], [])
+ * 
+ *     cpdef list getAllCyclesOfSize(self, int size):             # <<<<<<<<<<<<<<
+ *         """
+ *         Return a list of the all non-duplicate rings with length 'size'. The
+ */
+
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61getAllCyclesOfSize(PyObject *__pyx_v_self, PyObject *__pyx_arg_size); /*proto*/
+static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCyclesOfSize(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_v_size, int __pyx_skip_dispatch) {
+  struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_graph = 0;
+  int __pyx_v_done;
+  int __pyx_v_found;
+  PyObject *__pyx_v_cycleList = 0;
+  PyObject *__pyx_v_cycles = 0;
+  PyObject *__pyx_v_cycle = 0;
+  PyObject *__pyx_v_graphs = 0;
+  PyObject *__pyx_v_verticesToRemove = 0;
+  PyObject *__pyx_v_vertices = 0;
+  PyObject *__pyx_v_cycleSetList = 0;
+  struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_vertex = 0;
+  struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_rootVertex = 0;
+  PyObject *__pyx_v_set1 = 0;
+  PyObject *__pyx_v_set2 = 0;
+  PyObject *__pyx_v_c = NULL;
+  int __pyx_v_loneCarbon;
+  Py_ssize_t __pyx_v_i;
+  PyObject *__pyx_v_cycle1 = NULL;
+  PyObject *__pyx_v_v = NULL;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
+  struct __pyx_opt_args_5rmgpy_8molecule_5graph_5Graph_copy __pyx_t_7;
+  int __pyx_t_8;
+  Py_ssize_t __pyx_t_9;
+  Py_ssize_t __pyx_t_10;
+  int __pyx_t_11;
+  int __pyx_t_12;
+  short __pyx_t_13;
+  short __pyx_t_14;
+  Py_ssize_t __pyx_t_15;
+  PyObject *(*__pyx_t_16)(PyObject *);
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("getAllCyclesOfSize", 0);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getAllCyclesOfSize); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61getAllCyclesOfSize)) {
+      __Pyx_XDECREF(__pyx_r);
+      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_size); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
+      if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_4))) {
+        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+        if (likely(__pyx_t_5)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+          __Pyx_INCREF(__pyx_t_5);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_4, function);
+        }
+      }
+      if (!__pyx_t_5) {
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+      } else {
+        __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_6);
+        PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
+        PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_3);
+        __Pyx_GIVEREF(__pyx_t_3);
+        __pyx_t_3 = 0;
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_r = ((PyObject*)__pyx_t_2);
+      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
+
+  /* "rmgpy/molecule/graph.pyx":717
+ * 
+ *         # Make a copy of the graph so we don't modify the original
+ *         graph = self.copy(deep=True)             # <<<<<<<<<<<<<<
+ *         vertices = graph.vertices[:]
+ * 
+ */
+  __pyx_t_7.__pyx_n = 1;
+  __pyx_t_7.deep = 1;
+  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->copy(__pyx_v_self, 0, &__pyx_t_7)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 717; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_v_graph = ((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":718
+ *         # Make a copy of the graph so we don't modify the original
+ *         graph = self.copy(deep=True)
+ *         vertices = graph.vertices[:]             # <<<<<<<<<<<<<<
+ * 
+ *         # Step 1: Remove all terminal vertices
+ */
+  if (unlikely(__pyx_v_graph->vertices == Py_None)) {
+    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 718; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  }
+  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_graph->vertices, 0, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 718; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_v_vertices = ((PyObject*)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":721
+ * 
+ *         # Step 1: Remove all terminal vertices
+ *         done = False             # <<<<<<<<<<<<<<
+ *         while not done:
+ *             verticesToRemove = []
+ */
+  __pyx_v_done = 0;
+
+  /* "rmgpy/molecule/graph.pyx":722
+ *         # Step 1: Remove all terminal vertices
+ *         done = False
+ *         while not done:             # <<<<<<<<<<<<<<
+ *             verticesToRemove = []
+ *             for vertex in graph.vertices:
+ */
+  while (1) {
+    __pyx_t_8 = ((!(__pyx_v_done != 0)) != 0);
+    if (!__pyx_t_8) break;
+
+    /* "rmgpy/molecule/graph.pyx":723
+ *         done = False
+ *         while not done:
+ *             verticesToRemove = []             # <<<<<<<<<<<<<<
+ *             for vertex in graph.vertices:
+ *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)
+ */
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 723; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_XDECREF_SET(__pyx_v_verticesToRemove, ((PyObject*)__pyx_t_1));
+    __pyx_t_1 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":724
+ *         while not done:
+ *             verticesToRemove = []
+ *             for vertex in graph.vertices:             # <<<<<<<<<<<<<<
+ *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)
+ *             done = len(verticesToRemove) == 0
+ */
+    if (unlikely(__pyx_v_graph->vertices == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 724; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    }
+    __pyx_t_1 = __pyx_v_graph->vertices; __Pyx_INCREF(__pyx_t_1); __pyx_t_9 = 0;
+    for (;;) {
+      if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_1)) break;
+      #if CYTHON_COMPILING_IN_CPYTHON
+      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 724; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      #else
+      __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 724; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      #endif
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 724; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
+      __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":725
+ *             verticesToRemove = []
+ *             for vertex in graph.vertices:
+ *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)             # <<<<<<<<<<<<<<
+ *             done = len(verticesToRemove) == 0
+ *             # Remove identified vertices from graph
+ */
+      __pyx_t_2 = __pyx_v_vertex->edges;
+      __Pyx_INCREF(__pyx_t_2);
+      if (unlikely(__pyx_t_2 == Py_None)) {
+        PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 725; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      __pyx_t_10 = PyDict_Size(__pyx_t_2); if (unlikely(__pyx_t_10 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 725; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_8 = ((__pyx_t_10 == 1) != 0);
+      if (__pyx_t_8) {
+        __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_11 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 725; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        goto __pyx_L7;
+      }
+      __pyx_L7:;
+
+      /* "rmgpy/molecule/graph.pyx":724
+ *         while not done:
+ *             verticesToRemove = []
+ *             for vertex in graph.vertices:             # <<<<<<<<<<<<<<
+ *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)
+ *             done = len(verticesToRemove) == 0
+ */
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":726
+ *             for vertex in graph.vertices:
+ *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)
+ *             done = len(verticesToRemove) == 0             # <<<<<<<<<<<<<<
+ *             # Remove identified vertices from graph
+ *             for vertex in verticesToRemove:
+ */
+    __pyx_t_9 = PyList_GET_SIZE(__pyx_v_verticesToRemove); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 726; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_v_done = (__pyx_t_9 == 0);
+
+    /* "rmgpy/molecule/graph.pyx":728
+ *             done = len(verticesToRemove) == 0
+ *             # Remove identified vertices from graph
+ *             for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
+ *                 graph.removeVertex(vertex)
+ * 
+ */
+    __pyx_t_1 = __pyx_v_verticesToRemove; __Pyx_INCREF(__pyx_t_1); __pyx_t_9 = 0;
+    for (;;) {
+      if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_1)) break;
+      #if CYTHON_COMPILING_IN_CPYTHON
+      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 728; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      #else
+      __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 728; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      #endif
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 728; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
+      __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":729
+ *             # Remove identified vertices from graph
+ *             for vertex in verticesToRemove:
+ *                 graph.removeVertex(vertex)             # <<<<<<<<<<<<<<
+ * 
+ *         # Step 2: Remove all other vertices that are not part of cycles
+ */
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":728
+ *             done = len(verticesToRemove) == 0
+ *             # Remove identified vertices from graph
+ *             for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
+ *                 graph.removeVertex(vertex)
+ * 
+ */
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
+
+  /* "rmgpy/molecule/graph.pyx":732
+ * 
+ *         # Step 2: Remove all other vertices that are not part of cycles
+ *         verticesToRemove = []             # <<<<<<<<<<<<<<
+ *         for vertex in graph.vertices:
+ *             found = graph.isVertexInCycle(vertex)
+ */
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 732; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_XDECREF_SET(__pyx_v_verticesToRemove, ((PyObject*)__pyx_t_1));
+  __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":733
+ *         # Step 2: Remove all other vertices that are not part of cycles
+ *         verticesToRemove = []
+ *         for vertex in graph.vertices:             # <<<<<<<<<<<<<<
+ *             found = graph.isVertexInCycle(vertex)
+ *             if not found:
+ */
+  if (unlikely(__pyx_v_graph->vertices == Py_None)) {
+    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 733; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  }
+  __pyx_t_1 = __pyx_v_graph->vertices; __Pyx_INCREF(__pyx_t_1); __pyx_t_9 = 0;
+  for (;;) {
+    if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_1)) break;
+    #if CYTHON_COMPILING_IN_CPYTHON
+    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 733; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #else
+    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 733; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #endif
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 733; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
+    __pyx_t_2 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":734
+ *         verticesToRemove = []
+ *         for vertex in graph.vertices:
+ *             found = graph.isVertexInCycle(vertex)             # <<<<<<<<<<<<<<
+ *             if not found:
+ *                 verticesToRemove.append(vertex)
+ */
+    __pyx_t_8 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->isVertexInCycle(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(__pyx_t_8 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 734; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_v_found = __pyx_t_8;
+
+    /* "rmgpy/molecule/graph.pyx":735
+ *         for vertex in graph.vertices:
+ *             found = graph.isVertexInCycle(vertex)
+ *             if not found:             # <<<<<<<<<<<<<<
+ *                 verticesToRemove.append(vertex)
+ *         # Remove identified vertices from graph
+ */
+    __pyx_t_8 = ((!(__pyx_v_found != 0)) != 0);
+    if (__pyx_t_8) {
+
+      /* "rmgpy/molecule/graph.pyx":736
+ *             found = graph.isVertexInCycle(vertex)
+ *             if not found:
+ *                 verticesToRemove.append(vertex)             # <<<<<<<<<<<<<<
+ *         # Remove identified vertices from graph
+ *         for vertex in verticesToRemove:
+ */
+      __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_11 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 736; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      goto __pyx_L12;
+    }
+    __pyx_L12:;
+
+    /* "rmgpy/molecule/graph.pyx":733
+ *         # Step 2: Remove all other vertices that are not part of cycles
+ *         verticesToRemove = []
+ *         for vertex in graph.vertices:             # <<<<<<<<<<<<<<
+ *             found = graph.isVertexInCycle(vertex)
+ *             if not found:
+ */
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":738
+ *                 verticesToRemove.append(vertex)
+ *         # Remove identified vertices from graph
+ *         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
+ *             graph.removeVertex(vertex)
+ * 
+ */
+  __pyx_t_1 = __pyx_v_verticesToRemove; __Pyx_INCREF(__pyx_t_1); __pyx_t_9 = 0;
+  for (;;) {
+    if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_1)) break;
+    #if CYTHON_COMPILING_IN_CPYTHON
+    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 738; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #else
+    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 738; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #endif
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 738; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
+    __pyx_t_2 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":739
+ *         # Remove identified vertices from graph
+ *         for vertex in verticesToRemove:
+ *             graph.removeVertex(vertex)             # <<<<<<<<<<<<<<
+ * 
+ *         # Step 3: Split graph into remaining subgraphs
+ */
+    __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 739; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":738
+ *                 verticesToRemove.append(vertex)
+ *         # Remove identified vertices from graph
+ *         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
+ *             graph.removeVertex(vertex)
+ * 
+ */
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":742
+ * 
+ *         # Step 3: Split graph into remaining subgraphs
+ *         graphs = graph.split()             # <<<<<<<<<<<<<<
+ * 
+ *         # Step 4: Find ring sets in each subgraph
+ */
+  __pyx_t_1 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->split(__pyx_v_graph, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 742; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_v_graphs = ((PyObject*)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":745
+ * 
+ *         # Step 4: Find ring sets in each subgraph
+ *         cycleList = []             # <<<<<<<<<<<<<<
+ * 
+ *         for graph in graphs:
+ */
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 745; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_v_cycleList = ((PyObject*)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":747
+ *         cycleList = []
+ * 
+ *         for graph in graphs:             # <<<<<<<<<<<<<<
+ * 
+ *             while len(graph.vertices) > 0:
+ */
+  if (unlikely(__pyx_v_graphs == Py_None)) {
+    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 747; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  }
+  __pyx_t_1 = __pyx_v_graphs; __Pyx_INCREF(__pyx_t_1); __pyx_t_9 = 0;
+  for (;;) {
+    if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_1)) break;
+    #if CYTHON_COMPILING_IN_CPYTHON
+    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 747; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #else
+    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 747; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #endif
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Graph))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 747; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF_SET(__pyx_v_graph, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_t_2));
+    __pyx_t_2 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":749
+ *         for graph in graphs:
+ * 
+ *             while len(graph.vertices) > 0:             # <<<<<<<<<<<<<<
+ * 
+ *                 # Choose root vertex as vertex with smallest number of edges
+ */
+    while (1) {
+      __pyx_t_2 = __pyx_v_graph->vertices;
+      __Pyx_INCREF(__pyx_t_2);
+      if (unlikely(__pyx_t_2 == Py_None)) {
+        PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 749; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      __pyx_t_10 = PyList_GET_SIZE(__pyx_t_2); if (unlikely(__pyx_t_10 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 749; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_8 = ((__pyx_t_10 > 0) != 0);
+      if (!__pyx_t_8) break;
+
+      /* "rmgpy/molecule/graph.pyx":752
+ * 
+ *                 # Choose root vertex as vertex with smallest number of edges
+ *                 rootVertex = None             # <<<<<<<<<<<<<<
+ *                 graph.updateConnectivityValues()
+ *                 for vertex in graph.vertices:
+ */
+      __Pyx_INCREF(Py_None);
+      __Pyx_XDECREF_SET(__pyx_v_rootVertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)Py_None));
+
+      /* "rmgpy/molecule/graph.pyx":753
+ *                 # Choose root vertex as vertex with smallest number of edges
+ *                 rootVertex = None
+ *                 graph.updateConnectivityValues()             # <<<<<<<<<<<<<<
+ *                 for vertex in graph.vertices:
+ *                     if rootVertex is None:
+ */
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->updateConnectivityValues(__pyx_v_graph, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 753; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":754
+ *                 rootVertex = None
+ *                 graph.updateConnectivityValues()
+ *                 for vertex in graph.vertices:             # <<<<<<<<<<<<<<
+ *                     if rootVertex is None:
+ *                         rootVertex = vertex
+ */
+      if (unlikely(__pyx_v_graph->vertices == Py_None)) {
+        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 754; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      __pyx_t_2 = __pyx_v_graph->vertices; __Pyx_INCREF(__pyx_t_2); __pyx_t_10 = 0;
+      for (;;) {
+        if (__pyx_t_10 >= PyList_GET_SIZE(__pyx_t_2)) break;
+        #if CYTHON_COMPILING_IN_CPYTHON
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_10); __Pyx_INCREF(__pyx_t_4); __pyx_t_10++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 754; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        #else
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 754; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        #endif
+        if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 754; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_4));
+        __pyx_t_4 = 0;
+
+        /* "rmgpy/molecule/graph.pyx":755
+ *                 graph.updateConnectivityValues()
+ *                 for vertex in graph.vertices:
+ *                     if rootVertex is None:             # <<<<<<<<<<<<<<
+ *                         rootVertex = vertex
+ *                     elif getVertexConnectivityValue(vertex) > getVertexConnectivityValue(rootVertex):
+ */
+        __pyx_t_8 = (((PyObject *)__pyx_v_rootVertex) == Py_None);
+        __pyx_t_12 = (__pyx_t_8 != 0);
+        if (__pyx_t_12) {
+
+          /* "rmgpy/molecule/graph.pyx":756
+ *                 for vertex in graph.vertices:
+ *                     if rootVertex is None:
+ *                         rootVertex = vertex             # <<<<<<<<<<<<<<
+ *                     elif getVertexConnectivityValue(vertex) > getVertexConnectivityValue(rootVertex):
+ *                         rootVertex = vertex
+ */
+          __Pyx_INCREF(((PyObject *)__pyx_v_vertex));
+          __Pyx_DECREF_SET(__pyx_v_rootVertex, __pyx_v_vertex);
+          goto __pyx_L21;
+        }
+
+        /* "rmgpy/molecule/graph.pyx":757
+ *                     if rootVertex is None:
+ *                         rootVertex = vertex
+ *                     elif getVertexConnectivityValue(vertex) > getVertexConnectivityValue(rootVertex):             # <<<<<<<<<<<<<<
+ *                         rootVertex = vertex
+ * 
+ */
+        __pyx_t_13 = __pyx_f_5rmgpy_8molecule_5graph_getVertexConnectivityValue(__pyx_v_vertex, 0); if (unlikely(__pyx_t_13 == 1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 757; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_14 = __pyx_f_5rmgpy_8molecule_5graph_getVertexConnectivityValue(__pyx_v_rootVertex, 0); if (unlikely(__pyx_t_14 == 1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 757; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_12 = ((__pyx_t_13 > __pyx_t_14) != 0);
+        if (__pyx_t_12) {
+
+          /* "rmgpy/molecule/graph.pyx":758
+ *                         rootVertex = vertex
+ *                     elif getVertexConnectivityValue(vertex) > getVertexConnectivityValue(rootVertex):
+ *                         rootVertex = vertex             # <<<<<<<<<<<<<<
+ * 
+ *                 # Get all cycles involving the root vertex
+ */
+          __Pyx_INCREF(((PyObject *)__pyx_v_vertex));
+          __Pyx_DECREF_SET(__pyx_v_rootVertex, __pyx_v_vertex);
+          goto __pyx_L21;
+        }
+        __pyx_L21:;
+
+        /* "rmgpy/molecule/graph.pyx":754
+ *                 rootVertex = None
+ *                 graph.updateConnectivityValues()
+ *                 for vertex in graph.vertices:             # <<<<<<<<<<<<<<
+ *                     if rootVertex is None:
+ *                         rootVertex = vertex
+ */
+      }
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":761
+ * 
+ *                 # Get all cycles involving the root vertex
+ *                 cycles = graph.getAllCycles(rootVertex)             # <<<<<<<<<<<<<<
+ *                 if len(cycles) == 0:
+ *                     # This vertex is no longer in a ring, so remove it
+ */
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->getAllCycles(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 761; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_XDECREF_SET(__pyx_v_cycles, ((PyObject*)__pyx_t_2));
+      __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":762
+ *                 # Get all cycles involving the root vertex
+ *                 cycles = graph.getAllCycles(rootVertex)
+ *                 if len(cycles) == 0:             # <<<<<<<<<<<<<<
+ *                     # This vertex is no longer in a ring, so remove it
+ *                     graph.removeVertex(rootVertex)
+ */
+      if (unlikely(__pyx_v_cycles == Py_None)) {
+        PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 762; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      __pyx_t_10 = PyList_GET_SIZE(__pyx_v_cycles); if (unlikely(__pyx_t_10 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 762; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_12 = ((__pyx_t_10 == 0) != 0);
+      if (__pyx_t_12) {
+
+        /* "rmgpy/molecule/graph.pyx":764
+ *                 if len(cycles) == 0:
+ *                     # This vertex is no longer in a ring, so remove it
+ *                     graph.removeVertex(rootVertex)             # <<<<<<<<<<<<<<
+ *                     continue
+ * 
+ */
+        __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+        /* "rmgpy/molecule/graph.pyx":765
+ *                     # This vertex is no longer in a ring, so remove it
+ *                     graph.removeVertex(rootVertex)
+ *                     continue             # <<<<<<<<<<<<<<
+ * 
+ *                 # Keep the smallest of the cycles found above
+ */
+        goto __pyx_L17_continue;
+      }
+
+      /* "rmgpy/molecule/graph.pyx":768
+ * 
+ *                 # Keep the smallest of the cycles found above
+ *                 cycle = cycles[0]             # <<<<<<<<<<<<<<
+ *                 for c in cycles:
+ *                     if len(c) == size: cycleList.append(c)
+ */
+      if (unlikely(__pyx_v_cycles == Py_None)) {
+        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 768; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_cycles, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 768; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __Pyx_GOTREF(__pyx_t_2);
+      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 768; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_XDECREF_SET(__pyx_v_cycle, ((PyObject*)__pyx_t_2));
+      __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":769
+ *                 # Keep the smallest of the cycles found above
+ *                 cycle = cycles[0]
+ *                 for c in cycles:             # <<<<<<<<<<<<<<
+ *                     if len(c) == size: cycleList.append(c)
+ * 
+ */
+      if (unlikely(__pyx_v_cycles == Py_None)) {
+        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 769; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      __pyx_t_2 = __pyx_v_cycles; __Pyx_INCREF(__pyx_t_2); __pyx_t_10 = 0;
+      for (;;) {
+        if (__pyx_t_10 >= PyList_GET_SIZE(__pyx_t_2)) break;
+        #if CYTHON_COMPILING_IN_CPYTHON
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_10); __Pyx_INCREF(__pyx_t_4); __pyx_t_10++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 769; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        #else
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 769; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        #endif
+        __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_4);
+        __pyx_t_4 = 0;
+
+        /* "rmgpy/molecule/graph.pyx":770
+ *                 cycle = cycles[0]
+ *                 for c in cycles:
+ *                     if len(c) == size: cycleList.append(c)             # <<<<<<<<<<<<<<
+ * 
+ *                 # Remove the root vertex to create single edges, note this will not
+ */
+        __pyx_t_15 = PyObject_Length(__pyx_v_c); if (unlikely(__pyx_t_15 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 770; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_12 = ((__pyx_t_15 == __pyx_v_size) != 0);
+        if (__pyx_t_12) {
+          __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_cycleList, __pyx_v_c); if (unlikely(__pyx_t_11 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 770; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          goto __pyx_L25;
+        }
+        __pyx_L25:;
+
+        /* "rmgpy/molecule/graph.pyx":769
+ *                 # Keep the smallest of the cycles found above
+ *                 cycle = cycles[0]
+ *                 for c in cycles:             # <<<<<<<<<<<<<<
+ *                     if len(c) == size: cycleList.append(c)
+ * 
+ */
+      }
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":774
+ *                 # Remove the root vertex to create single edges, note this will not
+ *                 # function properly if there is no vertex with 2 edges (i.e. cubane)
+ *                 graph.removeVertex(rootVertex)             # <<<<<<<<<<<<<<
+ * 
+ *                 # Remove from the graph all vertices in the cycle that have only one edge
+ */
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 774; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":777
+ * 
+ *                 # Remove from the graph all vertices in the cycle that have only one edge
+ *                 loneCarbon = True             # <<<<<<<<<<<<<<
+ *                 while loneCarbon:
+ *                     loneCarbon = False
+ */
+      __pyx_v_loneCarbon = 1;
+
+      /* "rmgpy/molecule/graph.pyx":778
+ *                 # Remove from the graph all vertices in the cycle that have only one edge
+ *                 loneCarbon = True
+ *                 while loneCarbon:             # <<<<<<<<<<<<<<
+ *                     loneCarbon = False
+ *                     verticesToRemove = []
+ */
+      while (1) {
+        __pyx_t_12 = (__pyx_v_loneCarbon != 0);
+        if (!__pyx_t_12) break;
+
+        /* "rmgpy/molecule/graph.pyx":779
+ *                 loneCarbon = True
+ *                 while loneCarbon:
+ *                     loneCarbon = False             # <<<<<<<<<<<<<<
+ *                     verticesToRemove = []
+ * 
+ */
+        __pyx_v_loneCarbon = 0;
+
+        /* "rmgpy/molecule/graph.pyx":780
+ *                 while loneCarbon:
+ *                     loneCarbon = False
+ *                     verticesToRemove = []             # <<<<<<<<<<<<<<
+ * 
+ *                     for vertex in cycle:
+ */
+        __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 780; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF_SET(__pyx_v_verticesToRemove, ((PyObject*)__pyx_t_2));
+        __pyx_t_2 = 0;
+
+        /* "rmgpy/molecule/graph.pyx":782
+ *                     verticesToRemove = []
+ * 
+ *                     for vertex in cycle:             # <<<<<<<<<<<<<<
+ *                         if len(vertex.edges) == 1:
+ *                             loneCarbon = True
+ */
+        if (unlikely(__pyx_v_cycle == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        }
+        __pyx_t_2 = __pyx_v_cycle; __Pyx_INCREF(__pyx_t_2); __pyx_t_10 = 0;
+        for (;;) {
+          if (__pyx_t_10 >= PyList_GET_SIZE(__pyx_t_2)) break;
+          #if CYTHON_COMPILING_IN_CPYTHON
+          __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_10); __Pyx_INCREF(__pyx_t_4); __pyx_t_10++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          #else
+          __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          #endif
+          if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 782; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_4));
+          __pyx_t_4 = 0;
+
+          /* "rmgpy/molecule/graph.pyx":783
+ * 
+ *                     for vertex in cycle:
+ *                         if len(vertex.edges) == 1:             # <<<<<<<<<<<<<<
+ *                             loneCarbon = True
+ *                             verticesToRemove.append(vertex)
+ */
+          __pyx_t_4 = __pyx_v_vertex->edges;
+          __Pyx_INCREF(__pyx_t_4);
+          if (unlikely(__pyx_t_4 == Py_None)) {
+            PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
+            {__pyx_filename = __pyx_f[0]; __pyx_lineno = 783; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          }
+          __pyx_t_15 = PyDict_Size(__pyx_t_4); if (unlikely(__pyx_t_15 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 783; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+          __pyx_t_12 = ((__pyx_t_15 == 1) != 0);
+          if (__pyx_t_12) {
+
+            /* "rmgpy/molecule/graph.pyx":784
+ *                     for vertex in cycle:
+ *                         if len(vertex.edges) == 1:
+ *                             loneCarbon = True             # <<<<<<<<<<<<<<
+ *                             verticesToRemove.append(vertex)
+ *                     else:
+ */
+            __pyx_v_loneCarbon = 1;
+
+            /* "rmgpy/molecule/graph.pyx":785
+ *                         if len(vertex.edges) == 1:
+ *                             loneCarbon = True
+ *                             verticesToRemove.append(vertex)             # <<<<<<<<<<<<<<
+ *                     else:
+ *                         for vertex in verticesToRemove:
+ */
+            __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_11 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 785; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            goto __pyx_L30;
+          }
+          __pyx_L30:;
+
+          /* "rmgpy/molecule/graph.pyx":782
+ *                     verticesToRemove = []
+ * 
+ *                     for vertex in cycle:             # <<<<<<<<<<<<<<
+ *                         if len(vertex.edges) == 1:
+ *                             loneCarbon = True
+ */
+        }
+        /*else*/ {
+
+          /* "rmgpy/molecule/graph.pyx":787
+ *                             verticesToRemove.append(vertex)
+ *                     else:
+ *                         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
+ *                             graph.removeVertex(vertex)
+ * 
+ */
+          __pyx_t_4 = __pyx_v_verticesToRemove; __Pyx_INCREF(__pyx_t_4); __pyx_t_15 = 0;
+          for (;;) {
+            if (__pyx_t_15 >= PyList_GET_SIZE(__pyx_t_4)) break;
+            #if CYTHON_COMPILING_IN_CPYTHON
+            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_15); __Pyx_INCREF(__pyx_t_6); __pyx_t_15++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            #else
+            __pyx_t_6 = PySequence_ITEM(__pyx_t_4, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            #endif
+            if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_6));
+            __pyx_t_6 = 0;
+
+            /* "rmgpy/molecule/graph.pyx":788
+ *                     else:
+ *                         for vertex in verticesToRemove:
+ *                             graph.removeVertex(vertex)             # <<<<<<<<<<<<<<
+ * 
+ *         # Map atoms in cycles back to atoms in original graph
+ */
+            __pyx_t_6 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 788; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __Pyx_GOTREF(__pyx_t_6);
+            __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+            /* "rmgpy/molecule/graph.pyx":787
+ *                             verticesToRemove.append(vertex)
+ *                     else:
+ *                         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
+ *                             graph.removeVertex(vertex)
+ * 
+ */
+          }
+          __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+        }
+
+        /* "rmgpy/molecule/graph.pyx":782
+ *                     verticesToRemove = []
+ * 
+ *                     for vertex in cycle:             # <<<<<<<<<<<<<<
+ *                         if len(vertex.edges) == 1:
+ *                             loneCarbon = True
+ */
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      }
+      __pyx_L17_continue:;
+    }
+
+    /* "rmgpy/molecule/graph.pyx":747
+ *         cycleList = []
+ * 
+ *         for graph in graphs:             # <<<<<<<<<<<<<<
+ * 
+ *             while len(graph.vertices) > 0:
+ */
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":791
+ * 
+ *         # Map atoms in cycles back to atoms in original graph
+ *         for i in range(len(cycleList)):             # <<<<<<<<<<<<<<
+ *             cycleList[i] = [self.vertices[vertices.index(v)] for v in cycleList[i]]
+ * 
+ */
+  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_cycleList); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 791; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
+    __pyx_v_i = __pyx_t_10;
+
+    /* "rmgpy/molecule/graph.pyx":792
+ *         # Map atoms in cycles back to atoms in original graph
+ *         for i in range(len(cycleList)):
+ *             cycleList[i] = [self.vertices[vertices.index(v)] for v in cycleList[i]]             # <<<<<<<<<<<<<<
+ * 
+ *         #remove duplicates if there are more than 2 cycles:
+ */
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_cycleList, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_2);
+    if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
+      __pyx_t_4 = __pyx_t_2; __Pyx_INCREF(__pyx_t_4); __pyx_t_15 = 0;
+      __pyx_t_16 = NULL;
+    } else {
+      __pyx_t_15 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_16 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    }
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    for (;;) {
+      if (likely(!__pyx_t_16)) {
+        if (likely(PyList_CheckExact(__pyx_t_4))) {
+          if (__pyx_t_15 >= PyList_GET_SIZE(__pyx_t_4)) break;
+          #if CYTHON_COMPILING_IN_CPYTHON
+          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_15); __Pyx_INCREF(__pyx_t_2); __pyx_t_15++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          #else
+          __pyx_t_2 = PySequence_ITEM(__pyx_t_4, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          #endif
+        } else {
+          if (__pyx_t_15 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
+          #if CYTHON_COMPILING_IN_CPYTHON
+          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_15); __Pyx_INCREF(__pyx_t_2); __pyx_t_15++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          #else
+          __pyx_t_2 = PySequence_ITEM(__pyx_t_4, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          #endif
+        }
+      } else {
+        __pyx_t_2 = __pyx_t_16(__pyx_t_4);
+        if (unlikely(!__pyx_t_2)) {
+          PyObject* exc_type = PyErr_Occurred();
+          if (exc_type) {
+            if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          }
+          break;
+        }
+        __Pyx_GOTREF(__pyx_t_2);
+      }
+      __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_2);
+      __pyx_t_2 = 0;
+      if (unlikely(__pyx_v_self->vertices == Py_None)) {
+        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_vertices, __pyx_n_s_index); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_6);
+      __pyx_t_3 = NULL;
+      if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_6))) {
+        __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_6);
+        if (likely(__pyx_t_3)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+          __Pyx_INCREF(__pyx_t_3);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_6, function);
+        }
+      }
+      if (!__pyx_t_3) {
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_v_v); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+      } else {
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_5);
+        PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
+        __Pyx_INCREF(__pyx_v_v);
+        PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_v);
+        __Pyx_GIVEREF(__pyx_v_v);
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __pyx_t_6 = PyObject_GetItem(__pyx_v_self->vertices, __pyx_t_2); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_6))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (unlikely(__Pyx_SetItemInt(__pyx_v_cycleList, __pyx_v_i, __pyx_t_1, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 792; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
+
+  /* "rmgpy/molecule/graph.pyx":795
+ * 
+ *         #remove duplicates if there are more than 2 cycles:
+ *         if len(cycleList) <2 : return cycleList             # <<<<<<<<<<<<<<
+ *         cycleSetList = [set(cycleList[0])]
+ *         for cycle1 in cycleList[1:]:
+ */
+  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_cycleList); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 795; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = ((__pyx_t_9 < 2) != 0);
+  if (__pyx_t_12) {
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(__pyx_v_cycleList);
+    __pyx_r = __pyx_v_cycleList;
+    goto __pyx_L0;
+  }
+
+  /* "rmgpy/molecule/graph.pyx":796
+ *         #remove duplicates if there are more than 2 cycles:
+ *         if len(cycleList) <2 : return cycleList
+ *         cycleSetList = [set(cycleList[0])]             # <<<<<<<<<<<<<<
+ *         for cycle1 in cycleList[1:]:
+ *             set1 = set(cycle1)
+ */
+  __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_cycleList, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 796; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = PySet_New(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 796; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 796; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_4);
+  __Pyx_GIVEREF(__pyx_t_4);
+  __pyx_t_4 = 0;
+  __pyx_v_cycleSetList = ((PyObject*)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":797
+ *         if len(cycleList) <2 : return cycleList
+ *         cycleSetList = [set(cycleList[0])]
+ *         for cycle1 in cycleList[1:]:             # <<<<<<<<<<<<<<
+ *             set1 = set(cycle1)
+ *             for set2 in cycleSetList:
+ */
+  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_cycleList, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 797; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __pyx_t_1; __Pyx_INCREF(__pyx_t_4); __pyx_t_9 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  for (;;) {
+    if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_4)) break;
+    #if CYTHON_COMPILING_IN_CPYTHON
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_9); __Pyx_INCREF(__pyx_t_1); __pyx_t_9++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 797; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #else
+    __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 797; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #endif
+    __Pyx_XDECREF_SET(__pyx_v_cycle1, __pyx_t_1);
+    __pyx_t_1 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":798
+ *         cycleSetList = [set(cycleList[0])]
+ *         for cycle1 in cycleList[1:]:
+ *             set1 = set(cycle1)             # <<<<<<<<<<<<<<
+ *             for set2 in cycleSetList:
+ *                 if set1 == set2:
+ */
+    __pyx_t_1 = PySet_New(__pyx_v_cycle1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 798; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_XDECREF_SET(__pyx_v_set1, ((PyObject*)__pyx_t_1));
+    __pyx_t_1 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":799
+ *         for cycle1 in cycleList[1:]:
+ *             set1 = set(cycle1)
+ *             for set2 in cycleSetList:             # <<<<<<<<<<<<<<
+ *                 if set1 == set2:
+ *                     break
+ */
+    __pyx_t_1 = __pyx_v_cycleSetList; __Pyx_INCREF(__pyx_t_1); __pyx_t_10 = 0;
+    for (;;) {
+      if (__pyx_t_10 >= PyList_GET_SIZE(__pyx_t_1)) break;
+      #if CYTHON_COMPILING_IN_CPYTHON
+      __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_10); __Pyx_INCREF(__pyx_t_6); __pyx_t_10++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 799; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      #else
+      __pyx_t_6 = PySequence_ITEM(__pyx_t_1, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 799; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      #endif
+      if (!(likely(PySet_CheckExact(__pyx_t_6))||((__pyx_t_6) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "set", Py_TYPE(__pyx_t_6)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 799; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_XDECREF_SET(__pyx_v_set2, ((PyObject*)__pyx_t_6));
+      __pyx_t_6 = 0;
+
+      /* "rmgpy/molecule/graph.pyx":800
+ *             set1 = set(cycle1)
+ *             for set2 in cycleSetList:
+ *                 if set1 == set2:             # <<<<<<<<<<<<<<
+ *                     break
+ *             #not a duplicate so add it to cycleSetList
+ */
+      __pyx_t_6 = PyObject_RichCompare(__pyx_v_set1, __pyx_v_set2, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 800; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_12 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 800; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      if (__pyx_t_12) {
+
+        /* "rmgpy/molecule/graph.pyx":801
+ *             for set2 in cycleSetList:
+ *                 if set1 == set2:
+ *                     break             # <<<<<<<<<<<<<<
+ *             #not a duplicate so add it to cycleSetList
+ *             else: cycleSetList.append(set1)
+ */
+        goto __pyx_L42_break;
+      }
+
+      /* "rmgpy/molecule/graph.pyx":799
+ *         for cycle1 in cycleList[1:]:
+ *             set1 = set(cycle1)
+ *             for set2 in cycleSetList:             # <<<<<<<<<<<<<<
+ *                 if set1 == set2:
+ *                     break
+ */
+    }
+    /*else*/ {
+
+      /* "rmgpy/molecule/graph.pyx":803
+ *                     break
+ *             #not a duplicate so add it to cycleSetList
+ *             else: cycleSetList.append(set1)             # <<<<<<<<<<<<<<
+ * 
+ *         #transform back to list of lists:
+ */
+      __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_cycleSetList, __pyx_v_set1); if (unlikely(__pyx_t_11 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 803; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    }
+
+    /* "rmgpy/molecule/graph.pyx":799
+ *         for cycle1 in cycleList[1:]:
+ *             set1 = set(cycle1)
+ *             for set2 in cycleSetList:             # <<<<<<<<<<<<<<
+ *                 if set1 == set2:
+ *                     break
+ */
+    __pyx_L42_break:;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "rmgpy/molecule/graph.pyx":797
+ *         if len(cycleList) <2 : return cycleList
+ *         cycleSetList = [set(cycleList[0])]
+ *         for cycle1 in cycleList[1:]:             # <<<<<<<<<<<<<<
+ *             set1 = set(cycle1)
+ *             for set2 in cycleSetList:
+ */
+  }
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":806
+ * 
+ *         #transform back to list of lists:
+ *         cycleSetList = [list(set1) for set1 in cycleSetList]             # <<<<<<<<<<<<<<
+ * 
+ *         return cycleSetList
+ */
+  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_1 = __pyx_v_cycleSetList; __Pyx_INCREF(__pyx_t_1); __pyx_t_9 = 0;
+  for (;;) {
+    if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_1)) break;
+    #if CYTHON_COMPILING_IN_CPYTHON
+    __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_6); __pyx_t_9++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #else
+    __pyx_t_6 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    #endif
+    if (!(likely(PySet_CheckExact(__pyx_t_6))||((__pyx_t_6) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "set", Py_TYPE(__pyx_t_6)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_XDECREF_SET(__pyx_v_set1, ((PyObject*)__pyx_t_6));
+    __pyx_t_6 = 0;
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_INCREF(__pyx_v_set1);
+    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_set1);
+    __Pyx_GIVEREF(__pyx_v_set1);
+    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)(&PyList_Type))), __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_2))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF_SET(__pyx_v_cycleSetList, ((PyObject*)__pyx_t_4));
+  __pyx_t_4 = 0;
+
+  /* "rmgpy/molecule/graph.pyx":808
+ *         cycleSetList = [list(set1) for set1 in cycleSetList]
+ * 
+ *         return cycleSetList             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF(__pyx_v_cycleSetList);
+  __pyx_r = __pyx_v_cycleSetList;
+  goto __pyx_L0;
+
+  /* "rmgpy/molecule/graph.pyx":699
+ *         return self.__exploreCyclesRecursively([startingVertex], [])
+ * 
+ *     cpdef list getAllCyclesOfSize(self, int size):             # <<<<<<<<<<<<<<
+ *         """
+ *         Return a list of the all non-duplicate rings with length 'size'. The
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_AddTraceback("rmgpy.molecule.graph.Graph.getAllCyclesOfSize", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XDECREF((PyObject *)__pyx_v_graph);
+  __Pyx_XDECREF(__pyx_v_cycleList);
+  __Pyx_XDECREF(__pyx_v_cycles);
+  __Pyx_XDECREF(__pyx_v_cycle);
+  __Pyx_XDECREF(__pyx_v_graphs);
+  __Pyx_XDECREF(__pyx_v_verticesToRemove);
+  __Pyx_XDECREF(__pyx_v_vertices);
+  __Pyx_XDECREF(__pyx_v_cycleSetList);
+  __Pyx_XDECREF((PyObject *)__pyx_v_vertex);
+  __Pyx_XDECREF((PyObject *)__pyx_v_rootVertex);
+  __Pyx_XDECREF(__pyx_v_set1);
+  __Pyx_XDECREF(__pyx_v_set2);
+  __Pyx_XDECREF(__pyx_v_c);
+  __Pyx_XDECREF(__pyx_v_cycle1);
+  __Pyx_XDECREF(__pyx_v_v);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61getAllCyclesOfSize(PyObject *__pyx_v_self, PyObject *__pyx_arg_size); /*proto*/
+static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_60getAllCyclesOfSize[] = "\n        Return a list of the all non-duplicate rings with length 'size'. The\n        algorithm implements was adapted from a description by Fan, Panaye,\n        Doucet, and Barbu (doi: 10.1021/ci00015a002)\n\n        B. T. Fan, A. Panaye, J. P. Doucet, and A. Barbu. \"Ring Perception: A\n        New Algorithm for Directly Finding the Smallest Set of Smallest Rings\n        from a Connection Table.\" *J. Chem. Inf. Comput. Sci.* **33**,\n        p. 657-662 (1993).\n        ";
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61getAllCyclesOfSize(PyObject *__pyx_v_self, PyObject *__pyx_arg_size) {
+  int __pyx_v_size;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getAllCyclesOfSize (wrapper)", 0);
+  assert(__pyx_arg_size); {
+    __pyx_v_size = __Pyx_PyInt_As_int(__pyx_arg_size); if (unlikely((__pyx_v_size == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("rmgpy.molecule.graph.Graph.getAllCyclesOfSize", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_5rmgpy_8molecule_5graph_5Graph_60getAllCyclesOfSize(((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self), ((int)__pyx_v_size));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_60getAllCyclesOfSize(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_v_size) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("getAllCyclesOfSize", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCyclesOfSize(__pyx_v_self, __pyx_v_size, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 699; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("rmgpy.molecule.graph.Graph.getAllCyclesOfSize", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "rmgpy/molecule/graph.pyx":811
+ * 
  * 
  *     cpdef list __exploreCyclesRecursively(self, list chain, list cycles):             # <<<<<<<<<<<<<<
  *         """
  *         Search the graph for cycles by recursive spidering. Given a `chain`
  */
 
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecursively(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63__exploreCyclesRecursively(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursively(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, PyObject *__pyx_v_chain, PyObject *__pyx_v_cycles, int __pyx_skip_dispatch) {
   struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_vertex1 = 0;
   struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_vertex2 = 0;
@@ -12216,9 +13463,9 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_exploreCyclesRecursively); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_exploreCyclesRecursively); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecursively)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63__exploreCyclesRecursively)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -12233,7 +13480,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
           __pyx_t_5 = 1;
         }
       }
-      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_6);
       if (__pyx_t_4) {
         PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
@@ -12244,11 +13491,11 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
       __Pyx_INCREF(__pyx_v_cycles);
       PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_cycles);
       __Pyx_GIVEREF(__pyx_v_cycles);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_r = ((PyObject*)__pyx_t_2);
       __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -12257,7 +13504,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "rmgpy/molecule/graph.pyx":705
+  /* "rmgpy/molecule/graph.pyx":823
  *         cdef Vertex vertex1, vertex2
  * 
  *         vertex1 = chain[-1]             # <<<<<<<<<<<<<<
@@ -12266,15 +13513,15 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
  */
   if (unlikely(__pyx_v_chain == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 705; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 823; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_chain, -1, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 705; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_chain, -1, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 823; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 705; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 823; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_vertex1 = ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":707
+  /* "rmgpy/molecule/graph.pyx":825
  *         vertex1 = chain[-1]
  *         # Loop over each of the atoms neighboring the last atom in the chain
  *         for vertex2 in vertex1.edges:             # <<<<<<<<<<<<<<
@@ -12284,9 +13531,9 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
   __pyx_t_5 = 0;
   if (unlikely(__pyx_v_vertex1->edges == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 707; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 825; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_2 = __Pyx_dict_iterator(__pyx_v_vertex1->edges, 1, ((PyObject *)NULL), (&__pyx_t_7), (&__pyx_t_8)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 707; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_dict_iterator(__pyx_v_vertex1->edges, 1, ((PyObject *)NULL), (&__pyx_t_7), (&__pyx_t_8)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 825; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_1);
   __pyx_t_1 = __pyx_t_2;
@@ -12294,13 +13541,13 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
   while (1) {
     __pyx_t_9 = __Pyx_dict_iter_next(__pyx_t_1, __pyx_t_7, &__pyx_t_5, &__pyx_t_2, NULL, NULL, __pyx_t_8);
     if (unlikely(__pyx_t_9 == 0)) break;
-    if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 707; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 825; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 707; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 825; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_XDECREF_SET(__pyx_v_vertex2, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":708
+    /* "rmgpy/molecule/graph.pyx":826
  *         # Loop over each of the atoms neighboring the last atom in the chain
  *         for vertex2 in vertex1.edges:
  *             if vertex2 is chain[0] and len(chain) > 2:             # <<<<<<<<<<<<<<
@@ -12309,9 +13556,9 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
  */
     if (unlikely(__pyx_v_chain == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 708; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 826; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_chain, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 708; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_chain, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 826; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_11 = (((PyObject *)__pyx_v_vertex2) == __pyx_t_2);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -12325,15 +13572,15 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
     __pyx_L7_next_and:;
     if (unlikely(__pyx_v_chain == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 708; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 826; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_13 = PyList_GET_SIZE(__pyx_v_chain); if (unlikely(__pyx_t_13 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 708; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_13 = PyList_GET_SIZE(__pyx_v_chain); if (unlikely(__pyx_t_13 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 826; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_12 = ((__pyx_t_13 > 2) != 0);
     __pyx_t_10 = __pyx_t_12;
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_10) {
 
-      /* "rmgpy/molecule/graph.pyx":710
+      /* "rmgpy/molecule/graph.pyx":828
  *             if vertex2 is chain[0] and len(chain) > 2:
  *                 # It is the first atom in the chain, so the chain is a cycle!
  *                 cycles.append(chain[:])             # <<<<<<<<<<<<<<
@@ -12342,31 +13589,31 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
  */
       if (unlikely(__pyx_v_cycles == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "append");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 710; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 828; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       if (unlikely(__pyx_v_chain == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 710; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 828; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_2 = __Pyx_PyList_GetSlice(__pyx_v_chain, 0, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 710; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyList_GetSlice(__pyx_v_chain, 0, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 828; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_cycles, __pyx_t_2); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 710; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_cycles, __pyx_t_2); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 828; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       goto __pyx_L5;
     }
 
-    /* "rmgpy/molecule/graph.pyx":711
+    /* "rmgpy/molecule/graph.pyx":829
  *                 # It is the first atom in the chain, so the chain is a cycle!
  *                 cycles.append(chain[:])
  *             elif vertex2 not in chain:             # <<<<<<<<<<<<<<
  *                 # Make the chain a little longer and explore again
  *                 chain.append(vertex2)
  */
-    __pyx_t_10 = (__Pyx_PySequence_Contains(((PyObject *)__pyx_v_vertex2), __pyx_v_chain, Py_NE)); if (unlikely(__pyx_t_10 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 711; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_10 = (__Pyx_PySequence_Contains(((PyObject *)__pyx_v_vertex2), __pyx_v_chain, Py_NE)); if (unlikely(__pyx_t_10 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_12 = (__pyx_t_10 != 0);
     if (__pyx_t_12) {
 
-      /* "rmgpy/molecule/graph.pyx":713
+      /* "rmgpy/molecule/graph.pyx":831
  *             elif vertex2 not in chain:
  *                 # Make the chain a little longer and explore again
  *                 chain.append(vertex2)             # <<<<<<<<<<<<<<
@@ -12375,23 +13622,23 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
  */
       if (unlikely(__pyx_v_chain == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "append");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 713; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 831; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_chain, ((PyObject *)__pyx_v_vertex2)); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 713; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_chain, ((PyObject *)__pyx_v_vertex2)); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 831; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-      /* "rmgpy/molecule/graph.pyx":714
+      /* "rmgpy/molecule/graph.pyx":832
  *                 # Make the chain a little longer and explore again
  *                 chain.append(vertex2)
  *                 cycles = self.__exploreCyclesRecursively(chain, cycles)             # <<<<<<<<<<<<<<
  *                 # Any cycles down this path have now been found, so remove vertex2 from the chain
  *                 chain.pop(-1)
  */
-      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->__pyx___exploreCyclesRecursively(__pyx_v_self, __pyx_v_chain, __pyx_v_cycles, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 714; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->__pyx___exploreCyclesRecursively(__pyx_v_self, __pyx_v_chain, __pyx_v_cycles, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 832; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF_SET(__pyx_v_cycles, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":716
+      /* "rmgpy/molecule/graph.pyx":834
  *                 cycles = self.__exploreCyclesRecursively(chain, cycles)
  *                 # Any cycles down this path have now been found, so remove vertex2 from the chain
  *                 chain.pop(-1)             # <<<<<<<<<<<<<<
@@ -12400,9 +13647,9 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
  */
       if (unlikely(__pyx_v_chain == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "pop");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 716; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 834; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_2 = __Pyx_PyList_PopIndex(__pyx_v_chain, -1, 1, Py_ssize_t, PyInt_FromSsize_t); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 716; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyList_PopIndex(__pyx_v_chain, -1, 1, Py_ssize_t, PyInt_FromSsize_t); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 834; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       goto __pyx_L5;
@@ -12411,7 +13658,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":718
+  /* "rmgpy/molecule/graph.pyx":836
  *                 chain.pop(-1)
  *         # At this point we should have discovered all of the cycles involving the current chain
  *         return cycles             # <<<<<<<<<<<<<<
@@ -12423,8 +13670,8 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
   __pyx_r = __pyx_v_cycles;
   goto __pyx_L0;
 
-  /* "rmgpy/molecule/graph.pyx":696
- *         return self.__exploreCyclesRecursively([startingVertex], [])
+  /* "rmgpy/molecule/graph.pyx":811
+ * 
  * 
  *     cpdef list __exploreCyclesRecursively(self, list chain, list cycles):             # <<<<<<<<<<<<<<
  *         """
@@ -12450,9 +13697,9 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursive
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecursively(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecursively[] = "\n        Search the graph for cycles by recursive spidering. Given a `chain`\n        (list) of connected atoms and a list of `cycles` found so far, find any\n        cycles involving the chain of atoms and append them to the list of\n        cycles. This function recursively calls itself.\n        ";
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecursively(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63__exploreCyclesRecursively(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_62__exploreCyclesRecursively[] = "\n        Search the graph for cycles by recursive spidering. Given a `chain`\n        (list) of connected atoms and a list of `cycles` found so far, find any\n        cycles involving the chain of atoms and append them to the list of\n        cycles. This function recursively calls itself.\n\n        This function returns a duplicate of each cycle because [0,1,2,3]\n        is counted as separate from [0,3,2,1]\n        ";
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63__exploreCyclesRecursively(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_chain = 0;
   PyObject *__pyx_v_cycles = 0;
   int __pyx_lineno = 0;
@@ -12481,11 +13728,11 @@ static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecurs
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_cycles)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__exploreCyclesRecursively", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__exploreCyclesRecursively", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__exploreCyclesRecursively") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__exploreCyclesRecursively") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -12498,15 +13745,15 @@ static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecurs
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__exploreCyclesRecursively", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__exploreCyclesRecursively", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("rmgpy.molecule.graph.Graph.__exploreCyclesRecursively", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_chain), (&PyList_Type), 1, "chain", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_cycles), (&PyList_Type), 1, "cycles", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecursively(((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self), __pyx_v_chain, __pyx_v_cycles);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_chain), (&PyList_Type), 1, "chain", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_cycles), (&PyList_Type), 1, "cycles", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_r = __pyx_pf_5rmgpy_8molecule_5graph_5Graph_62__exploreCyclesRecursively(((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self), __pyx_v_chain, __pyx_v_cycles);
 
   /* function exit code */
   goto __pyx_L0;
@@ -12517,7 +13764,7 @@ static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecurs
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecursively(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, PyObject *__pyx_v_chain, PyObject *__pyx_v_cycles) {
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_62__exploreCyclesRecursively(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, PyObject *__pyx_v_chain, PyObject *__pyx_v_cycles) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12526,7 +13773,7 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecurs
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__exploreCyclesRecursively", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursively(__pyx_v_self, __pyx_v_chain, __pyx_v_cycles, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 696; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursively(__pyx_v_self, __pyx_v_chain, __pyx_v_cycles, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 811; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12543,7 +13790,7 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecurs
   return __pyx_r;
 }
 
-/* "rmgpy/molecule/graph.pyx":720
+/* "rmgpy/molecule/graph.pyx":838
  *         return cycles
  * 
  *     cpdef list getSmallestSetOfSmallestRings(self):             # <<<<<<<<<<<<<<
@@ -12551,7 +13798,7 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecurs
  *         Return a list of the smallest set of smallest rings in the graph. The
  */
 
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63getSmallestSetOfSmallestRings(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65getSmallestSetOfSmallestRings(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
 static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallestRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, int __pyx_skip_dispatch) {
   struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_graph = 0;
   int __pyx_v_done;
@@ -12595,9 +13842,9 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getSmallestSetOfSmallestRings); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 720; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getSmallestSetOfSmallestRings); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63getSmallestSetOfSmallestRings)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65getSmallestSetOfSmallestRings)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -12611,14 +13858,14 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 720; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 720; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 720; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_r = ((PyObject*)__pyx_t_2);
       __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -12627,7 +13874,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "rmgpy/molecule/graph.pyx":737
+  /* "rmgpy/molecule/graph.pyx":855
  * 
  *         # Make a copy of the graph so we don't modify the original
  *         graph = self.copy(deep=True)             # <<<<<<<<<<<<<<
@@ -12636,12 +13883,12 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
   __pyx_t_5.__pyx_n = 1;
   __pyx_t_5.deep = 1;
-  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->copy(__pyx_v_self, 0, &__pyx_t_5)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 737; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->copy(__pyx_v_self, 0, &__pyx_t_5)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 855; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_graph = ((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":738
+  /* "rmgpy/molecule/graph.pyx":856
  *         # Make a copy of the graph so we don't modify the original
  *         graph = self.copy(deep=True)
  *         vertices = graph.vertices[:]             # <<<<<<<<<<<<<<
@@ -12650,14 +13897,14 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
   if (unlikely(__pyx_v_graph->vertices == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 738; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 856; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_graph->vertices, 0, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 738; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_graph->vertices, 0, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 856; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_vertices = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":741
+  /* "rmgpy/molecule/graph.pyx":859
  * 
  *         # Step 1: Remove all terminal vertices
  *         done = False             # <<<<<<<<<<<<<<
@@ -12666,7 +13913,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
   __pyx_v_done = 0;
 
-  /* "rmgpy/molecule/graph.pyx":742
+  /* "rmgpy/molecule/graph.pyx":860
  *         # Step 1: Remove all terminal vertices
  *         done = False
  *         while not done:             # <<<<<<<<<<<<<<
@@ -12677,19 +13924,19 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
     __pyx_t_6 = ((!(__pyx_v_done != 0)) != 0);
     if (!__pyx_t_6) break;
 
-    /* "rmgpy/molecule/graph.pyx":743
+    /* "rmgpy/molecule/graph.pyx":861
  *         done = False
  *         while not done:
  *             verticesToRemove = []             # <<<<<<<<<<<<<<
  *             for vertex in graph.vertices:
  *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)
  */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 743; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 861; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_verticesToRemove, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":744
+    /* "rmgpy/molecule/graph.pyx":862
  *         while not done:
  *             verticesToRemove = []
  *             for vertex in graph.vertices:             # <<<<<<<<<<<<<<
@@ -12698,21 +13945,21 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
     if (unlikely(__pyx_v_graph->vertices == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 744; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 862; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     __pyx_t_1 = __pyx_v_graph->vertices; __Pyx_INCREF(__pyx_t_1); __pyx_t_7 = 0;
     for (;;) {
       if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_1)) break;
       #if CYTHON_COMPILING_IN_CPYTHON
-      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 744; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 862; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       #else
-      __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 744; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 862; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       #endif
-      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 744; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 862; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":745
+      /* "rmgpy/molecule/graph.pyx":863
  *             verticesToRemove = []
  *             for vertex in graph.vertices:
  *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)             # <<<<<<<<<<<<<<
@@ -12723,18 +13970,18 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
       __Pyx_INCREF(__pyx_t_2);
       if (unlikely(__pyx_t_2 == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 745; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 863; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_8 = PyDict_Size(__pyx_t_2); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 745; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyDict_Size(__pyx_t_2); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 863; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_6 = ((__pyx_t_8 == 1) != 0);
       if (__pyx_t_6) {
-        __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 745; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 863; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         goto __pyx_L7;
       }
       __pyx_L7:;
 
-      /* "rmgpy/molecule/graph.pyx":744
+      /* "rmgpy/molecule/graph.pyx":862
  *         while not done:
  *             verticesToRemove = []
  *             for vertex in graph.vertices:             # <<<<<<<<<<<<<<
@@ -12744,17 +13991,17 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":746
+    /* "rmgpy/molecule/graph.pyx":864
  *             for vertex in graph.vertices:
  *                 if len(vertex.edges) == 1: verticesToRemove.append(vertex)
  *             done = len(verticesToRemove) == 0             # <<<<<<<<<<<<<<
  *             # Remove identified vertices from graph
  *             for vertex in verticesToRemove:
  */
-    __pyx_t_7 = PyList_GET_SIZE(__pyx_v_verticesToRemove); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 746; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = PyList_GET_SIZE(__pyx_v_verticesToRemove); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_done = (__pyx_t_7 == 0);
 
-    /* "rmgpy/molecule/graph.pyx":748
+    /* "rmgpy/molecule/graph.pyx":866
  *             done = len(verticesToRemove) == 0
  *             # Remove identified vertices from graph
  *             for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
@@ -12765,26 +14012,26 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
     for (;;) {
       if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_1)) break;
       #if CYTHON_COMPILING_IN_CPYTHON
-      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 748; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 866; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       #else
-      __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 748; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 866; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       #endif
-      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 748; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 866; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":749
+      /* "rmgpy/molecule/graph.pyx":867
  *             # Remove identified vertices from graph
  *             for vertex in verticesToRemove:
  *                 graph.removeVertex(vertex)             # <<<<<<<<<<<<<<
  * 
  *         # Step 2: Remove all other vertices that are not part of cycles
  */
-      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 749; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 867; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":748
+      /* "rmgpy/molecule/graph.pyx":866
  *             done = len(verticesToRemove) == 0
  *             # Remove identified vertices from graph
  *             for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
@@ -12795,19 +14042,19 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "rmgpy/molecule/graph.pyx":752
+  /* "rmgpy/molecule/graph.pyx":870
  * 
  *         # Step 2: Remove all other vertices that are not part of cycles
  *         verticesToRemove = []             # <<<<<<<<<<<<<<
  *         for vertex in graph.vertices:
  *             found = graph.isVertexInCycle(vertex)
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 752; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 870; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XDECREF_SET(__pyx_v_verticesToRemove, ((PyObject*)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":753
+  /* "rmgpy/molecule/graph.pyx":871
  *         # Step 2: Remove all other vertices that are not part of cycles
  *         verticesToRemove = []
  *         for vertex in graph.vertices:             # <<<<<<<<<<<<<<
@@ -12816,31 +14063,31 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
   if (unlikely(__pyx_v_graph->vertices == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 753; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 871; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_t_1 = __pyx_v_graph->vertices; __Pyx_INCREF(__pyx_t_1); __pyx_t_7 = 0;
   for (;;) {
     if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_COMPILING_IN_CPYTHON
-    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 753; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 871; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     #else
-    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 753; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 871; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     #endif
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 753; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 871; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":754
+    /* "rmgpy/molecule/graph.pyx":872
  *         verticesToRemove = []
  *         for vertex in graph.vertices:
  *             found = graph.isVertexInCycle(vertex)             # <<<<<<<<<<<<<<
  *             if not found:
  *                 verticesToRemove.append(vertex)
  */
-    __pyx_t_6 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->isVertexInCycle(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(__pyx_t_6 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 754; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->isVertexInCycle(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(__pyx_t_6 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 872; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_found = __pyx_t_6;
 
-    /* "rmgpy/molecule/graph.pyx":755
+    /* "rmgpy/molecule/graph.pyx":873
  *         for vertex in graph.vertices:
  *             found = graph.isVertexInCycle(vertex)
  *             if not found:             # <<<<<<<<<<<<<<
@@ -12850,19 +14097,19 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
     __pyx_t_6 = ((!(__pyx_v_found != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "rmgpy/molecule/graph.pyx":756
+      /* "rmgpy/molecule/graph.pyx":874
  *             found = graph.isVertexInCycle(vertex)
  *             if not found:
  *                 verticesToRemove.append(vertex)             # <<<<<<<<<<<<<<
  *         # Remove identified vertices from graph
  *         for vertex in verticesToRemove:
  */
-      __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 756; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 874; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       goto __pyx_L12;
     }
     __pyx_L12:;
 
-    /* "rmgpy/molecule/graph.pyx":753
+    /* "rmgpy/molecule/graph.pyx":871
  *         # Step 2: Remove all other vertices that are not part of cycles
  *         verticesToRemove = []
  *         for vertex in graph.vertices:             # <<<<<<<<<<<<<<
@@ -12872,7 +14119,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":758
+  /* "rmgpy/molecule/graph.pyx":876
  *                 verticesToRemove.append(vertex)
  *         # Remove identified vertices from graph
  *         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
@@ -12883,26 +14130,26 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
   for (;;) {
     if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_COMPILING_IN_CPYTHON
-    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 758; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 876; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     #else
-    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 758; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 876; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     #endif
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 758; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 876; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":759
+    /* "rmgpy/molecule/graph.pyx":877
  *         # Remove identified vertices from graph
  *         for vertex in verticesToRemove:
  *             graph.removeVertex(vertex)             # <<<<<<<<<<<<<<
  * 
  *         # Step 3: Split graph into remaining subgraphs
  */
-    __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 759; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 877; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":758
+    /* "rmgpy/molecule/graph.pyx":876
  *                 verticesToRemove.append(vertex)
  *         # Remove identified vertices from graph
  *         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
@@ -12912,31 +14159,31 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":762
+  /* "rmgpy/molecule/graph.pyx":880
  * 
  *         # Step 3: Split graph into remaining subgraphs
  *         graphs = graph.split()             # <<<<<<<<<<<<<<
  * 
  *         # Step 4: Find ring sets in each subgraph
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->split(__pyx_v_graph, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 762; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->split(__pyx_v_graph, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 880; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_graphs = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":765
+  /* "rmgpy/molecule/graph.pyx":883
  * 
  *         # Step 4: Find ring sets in each subgraph
  *         cycleList = []             # <<<<<<<<<<<<<<
  *         for graph in graphs:
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 765; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 883; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_cycleList = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":766
+  /* "rmgpy/molecule/graph.pyx":884
  *         # Step 4: Find ring sets in each subgraph
  *         cycleList = []
  *         for graph in graphs:             # <<<<<<<<<<<<<<
@@ -12945,21 +14192,21 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
   if (unlikely(__pyx_v_graphs == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 766; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 884; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_t_1 = __pyx_v_graphs; __Pyx_INCREF(__pyx_t_1); __pyx_t_7 = 0;
   for (;;) {
     if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_COMPILING_IN_CPYTHON
-    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 766; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 884; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     #else
-    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 766; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 884; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     #endif
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Graph))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 766; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Graph))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 884; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF_SET(__pyx_v_graph, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":768
+    /* "rmgpy/molecule/graph.pyx":886
  *         for graph in graphs:
  * 
  *             while len(graph.vertices) > 0:             # <<<<<<<<<<<<<<
@@ -12971,14 +14218,14 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
       __Pyx_INCREF(__pyx_t_2);
       if (unlikely(__pyx_t_2 == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 768; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 886; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_8 = PyList_GET_SIZE(__pyx_t_2); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 768; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyList_GET_SIZE(__pyx_t_2); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 886; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_6 = ((__pyx_t_8 > 0) != 0);
       if (!__pyx_t_6) break;
 
-      /* "rmgpy/molecule/graph.pyx":771
+      /* "rmgpy/molecule/graph.pyx":889
  * 
  *                 # Choose root vertex as vertex with smallest number of edges
  *                 rootVertex = None             # <<<<<<<<<<<<<<
@@ -12988,18 +14235,18 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
       __Pyx_INCREF(Py_None);
       __Pyx_XDECREF_SET(__pyx_v_rootVertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)Py_None));
 
-      /* "rmgpy/molecule/graph.pyx":772
+      /* "rmgpy/molecule/graph.pyx":890
  *                 # Choose root vertex as vertex with smallest number of edges
  *                 rootVertex = None
  *                 graph.updateConnectivityValues()             # <<<<<<<<<<<<<<
  *                 for vertex in graph.vertices:
  *                     if rootVertex is None:
  */
-      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->updateConnectivityValues(__pyx_v_graph, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 772; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->updateConnectivityValues(__pyx_v_graph, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 890; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":773
+      /* "rmgpy/molecule/graph.pyx":891
  *                 rootVertex = None
  *                 graph.updateConnectivityValues()
  *                 for vertex in graph.vertices:             # <<<<<<<<<<<<<<
@@ -13008,21 +14255,21 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
       if (unlikely(__pyx_v_graph->vertices == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 773; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 891; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __pyx_t_2 = __pyx_v_graph->vertices; __Pyx_INCREF(__pyx_t_2); __pyx_t_8 = 0;
       for (;;) {
         if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_8); __Pyx_INCREF(__pyx_t_3); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 773; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_8); __Pyx_INCREF(__pyx_t_3); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 891; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 773; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 891; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #endif
-        if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 773; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 891; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_3));
         __pyx_t_3 = 0;
 
-        /* "rmgpy/molecule/graph.pyx":774
+        /* "rmgpy/molecule/graph.pyx":892
  *                 graph.updateConnectivityValues()
  *                 for vertex in graph.vertices:
  *                     if rootVertex is None:             # <<<<<<<<<<<<<<
@@ -13033,7 +14280,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         __pyx_t_10 = (__pyx_t_6 != 0);
         if (__pyx_t_10) {
 
-          /* "rmgpy/molecule/graph.pyx":775
+          /* "rmgpy/molecule/graph.pyx":893
  *                 for vertex in graph.vertices:
  *                     if rootVertex is None:
  *                         rootVertex = vertex             # <<<<<<<<<<<<<<
@@ -13045,19 +14292,19 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
           goto __pyx_L21;
         }
 
-        /* "rmgpy/molecule/graph.pyx":776
+        /* "rmgpy/molecule/graph.pyx":894
  *                     if rootVertex is None:
  *                         rootVertex = vertex
  *                     elif getVertexConnectivityValue(vertex) > getVertexConnectivityValue(rootVertex):             # <<<<<<<<<<<<<<
  *                         rootVertex = vertex
  * 
  */
-        __pyx_t_11 = __pyx_f_5rmgpy_8molecule_5graph_getVertexConnectivityValue(__pyx_v_vertex, 0); if (unlikely(__pyx_t_11 == 1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 776; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __pyx_t_12 = __pyx_f_5rmgpy_8molecule_5graph_getVertexConnectivityValue(__pyx_v_rootVertex, 0); if (unlikely(__pyx_t_12 == 1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 776; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_11 = __pyx_f_5rmgpy_8molecule_5graph_getVertexConnectivityValue(__pyx_v_vertex, 0); if (unlikely(__pyx_t_11 == 1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 894; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_12 = __pyx_f_5rmgpy_8molecule_5graph_getVertexConnectivityValue(__pyx_v_rootVertex, 0); if (unlikely(__pyx_t_12 == 1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 894; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __pyx_t_10 = ((__pyx_t_11 > __pyx_t_12) != 0);
         if (__pyx_t_10) {
 
-          /* "rmgpy/molecule/graph.pyx":777
+          /* "rmgpy/molecule/graph.pyx":895
  *                         rootVertex = vertex
  *                     elif getVertexConnectivityValue(vertex) > getVertexConnectivityValue(rootVertex):
  *                         rootVertex = vertex             # <<<<<<<<<<<<<<
@@ -13070,7 +14317,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         }
         __pyx_L21:;
 
-        /* "rmgpy/molecule/graph.pyx":773
+        /* "rmgpy/molecule/graph.pyx":891
  *                 rootVertex = None
  *                 graph.updateConnectivityValues()
  *                 for vertex in graph.vertices:             # <<<<<<<<<<<<<<
@@ -13080,19 +14327,19 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":780
+      /* "rmgpy/molecule/graph.pyx":898
  * 
  *                 # Get all cycles involving the root vertex
  *                 cycles = graph.getAllCycles(rootVertex)             # <<<<<<<<<<<<<<
  *                 if len(cycles) == 0:
  *                     # This vertex is no longer in a ring, so remove it
  */
-      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->getAllCycles(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 780; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->getAllCycles(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 898; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_XDECREF_SET(__pyx_v_cycles, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":781
+      /* "rmgpy/molecule/graph.pyx":899
  *                 # Get all cycles involving the root vertex
  *                 cycles = graph.getAllCycles(rootVertex)
  *                 if len(cycles) == 0:             # <<<<<<<<<<<<<<
@@ -13101,24 +14348,24 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
       if (unlikely(__pyx_v_cycles == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 781; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 899; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_8 = PyList_GET_SIZE(__pyx_v_cycles); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 781; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyList_GET_SIZE(__pyx_v_cycles); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 899; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_t_10 = ((__pyx_t_8 == 0) != 0);
       if (__pyx_t_10) {
 
-        /* "rmgpy/molecule/graph.pyx":783
+        /* "rmgpy/molecule/graph.pyx":901
  *                 if len(cycles) == 0:
  *                     # This vertex is no longer in a ring, so remove it
  *                     graph.removeVertex(rootVertex)             # <<<<<<<<<<<<<<
  *                     continue
  * 
  */
-        __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 783; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 901; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "rmgpy/molecule/graph.pyx":784
+        /* "rmgpy/molecule/graph.pyx":902
  *                     # This vertex is no longer in a ring, so remove it
  *                     graph.removeVertex(rootVertex)
  *                     continue             # <<<<<<<<<<<<<<
@@ -13128,7 +14375,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         goto __pyx_L17_continue;
       }
 
-      /* "rmgpy/molecule/graph.pyx":787
+      /* "rmgpy/molecule/graph.pyx":905
  * 
  *                 # Keep the smallest of the cycles found above
  *                 cycle = cycles[0]             # <<<<<<<<<<<<<<
@@ -13137,15 +14384,15 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
       if (unlikely(__pyx_v_cycles == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 905; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_cycles, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_cycles, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 905; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_2);
-      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 905; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_XDECREF_SET(__pyx_v_cycle, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":788
+      /* "rmgpy/molecule/graph.pyx":906
  *                 # Keep the smallest of the cycles found above
  *                 cycle = cycles[0]
  *                 for c in cycles[1:]:             # <<<<<<<<<<<<<<
@@ -13154,46 +14401,46 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
       if (unlikely(__pyx_v_cycles == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 788; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 906; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_2 = __Pyx_PyList_GetSlice(__pyx_v_cycles, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 788; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyList_GetSlice(__pyx_v_cycles, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 906; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_3 = __pyx_t_2; __Pyx_INCREF(__pyx_t_3); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       for (;;) {
         if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 788; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 906; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 788; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 906; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #endif
         __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "rmgpy/molecule/graph.pyx":789
+        /* "rmgpy/molecule/graph.pyx":907
  *                 cycle = cycles[0]
  *                 for c in cycles[1:]:
  *                     if len(c) < len(cycle):             # <<<<<<<<<<<<<<
  *                         cycle = c
  *                 cycleList.append(cycle)
  */
-        __pyx_t_13 = PyObject_Length(__pyx_v_c); if (unlikely(__pyx_t_13 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 789; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_13 = PyObject_Length(__pyx_v_c); if (unlikely(__pyx_t_13 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 907; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         if (unlikely(__pyx_v_cycle == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 789; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 907; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
-        __pyx_t_14 = PyList_GET_SIZE(__pyx_v_cycle); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 789; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_14 = PyList_GET_SIZE(__pyx_v_cycle); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 907; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __pyx_t_10 = ((__pyx_t_13 < __pyx_t_14) != 0);
         if (__pyx_t_10) {
 
-          /* "rmgpy/molecule/graph.pyx":790
+          /* "rmgpy/molecule/graph.pyx":908
  *                 for c in cycles[1:]:
  *                     if len(c) < len(cycle):
  *                         cycle = c             # <<<<<<<<<<<<<<
  *                 cycleList.append(cycle)
  * 
  */
-          if (!(likely(PyList_CheckExact(__pyx_v_c))||((__pyx_v_c) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_c)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 790; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          if (!(likely(PyList_CheckExact(__pyx_v_c))||((__pyx_v_c) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_c)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 908; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           __pyx_t_2 = __pyx_v_c;
           __Pyx_INCREF(__pyx_t_2);
           __Pyx_DECREF_SET(__pyx_v_cycle, ((PyObject*)__pyx_t_2));
@@ -13202,7 +14449,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         }
         __pyx_L25:;
 
-        /* "rmgpy/molecule/graph.pyx":788
+        /* "rmgpy/molecule/graph.pyx":906
  *                 # Keep the smallest of the cycles found above
  *                 cycle = cycles[0]
  *                 for c in cycles[1:]:             # <<<<<<<<<<<<<<
@@ -13212,27 +14459,27 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":791
+      /* "rmgpy/molecule/graph.pyx":909
  *                     if len(c) < len(cycle):
  *                         cycle = c
  *                 cycleList.append(cycle)             # <<<<<<<<<<<<<<
  * 
  *                 # Remove the root vertex to create single edges, note this will not
  */
-      __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_cycleList, __pyx_v_cycle); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 791; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_cycleList, __pyx_v_cycle); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 909; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-      /* "rmgpy/molecule/graph.pyx":795
+      /* "rmgpy/molecule/graph.pyx":913
  *                 # Remove the root vertex to create single edges, note this will not
  *                 # function properly if there is no vertex with 2 edges (i.e. cubane)
  *                 graph.removeVertex(rootVertex)             # <<<<<<<<<<<<<<
  * 
  *                 # Remove from the graph all vertices in the cycle that have only one edge
  */
-      __pyx_t_3 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 795; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_rootVertex, 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 913; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "rmgpy/molecule/graph.pyx":798
+      /* "rmgpy/molecule/graph.pyx":916
  * 
  *                 # Remove from the graph all vertices in the cycle that have only one edge
  *                 loneCarbon = True             # <<<<<<<<<<<<<<
@@ -13241,7 +14488,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
       __pyx_v_loneCarbon = 1;
 
-      /* "rmgpy/molecule/graph.pyx":799
+      /* "rmgpy/molecule/graph.pyx":917
  *                 # Remove from the graph all vertices in the cycle that have only one edge
  *                 loneCarbon = True
  *                 while loneCarbon:             # <<<<<<<<<<<<<<
@@ -13252,7 +14499,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         __pyx_t_10 = (__pyx_v_loneCarbon != 0);
         if (!__pyx_t_10) break;
 
-        /* "rmgpy/molecule/graph.pyx":800
+        /* "rmgpy/molecule/graph.pyx":918
  *                 loneCarbon = True
  *                 while loneCarbon:
  *                     loneCarbon = False             # <<<<<<<<<<<<<<
@@ -13261,19 +14508,19 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
         __pyx_v_loneCarbon = 0;
 
-        /* "rmgpy/molecule/graph.pyx":801
+        /* "rmgpy/molecule/graph.pyx":919
  *                 while loneCarbon:
  *                     loneCarbon = False
  *                     verticesToRemove = []             # <<<<<<<<<<<<<<
  * 
  *                     for vertex in cycle:
  */
-        __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 801; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 919; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF_SET(__pyx_v_verticesToRemove, ((PyObject*)__pyx_t_3));
         __pyx_t_3 = 0;
 
-        /* "rmgpy/molecule/graph.pyx":803
+        /* "rmgpy/molecule/graph.pyx":921
  *                     verticesToRemove = []
  * 
  *                     for vertex in cycle:             # <<<<<<<<<<<<<<
@@ -13282,21 +14529,21 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
         if (unlikely(__pyx_v_cycle == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 803; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 921; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
         __pyx_t_3 = __pyx_v_cycle; __Pyx_INCREF(__pyx_t_3); __pyx_t_8 = 0;
         for (;;) {
           if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 803; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 921; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 803; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 921; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
-          if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 803; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 921; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2));
           __pyx_t_2 = 0;
 
-          /* "rmgpy/molecule/graph.pyx":804
+          /* "rmgpy/molecule/graph.pyx":922
  * 
  *                     for vertex in cycle:
  *                         if len(vertex.edges) == 1:             # <<<<<<<<<<<<<<
@@ -13307,14 +14554,14 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
           __Pyx_INCREF(__pyx_t_2);
           if (unlikely(__pyx_t_2 == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-            {__pyx_filename = __pyx_f[0]; __pyx_lineno = 804; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            {__pyx_filename = __pyx_f[0]; __pyx_lineno = 922; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           }
-          __pyx_t_14 = PyDict_Size(__pyx_t_2); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 804; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_14 = PyDict_Size(__pyx_t_2); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 922; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __pyx_t_10 = ((__pyx_t_14 == 1) != 0);
           if (__pyx_t_10) {
 
-            /* "rmgpy/molecule/graph.pyx":805
+            /* "rmgpy/molecule/graph.pyx":923
  *                     for vertex in cycle:
  *                         if len(vertex.edges) == 1:
  *                             loneCarbon = True             # <<<<<<<<<<<<<<
@@ -13323,19 +14570,19 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
  */
             __pyx_v_loneCarbon = 1;
 
-            /* "rmgpy/molecule/graph.pyx":806
+            /* "rmgpy/molecule/graph.pyx":924
  *                         if len(vertex.edges) == 1:
  *                             loneCarbon = True
  *                             verticesToRemove.append(vertex)             # <<<<<<<<<<<<<<
  *                     else:
  *                         for vertex in verticesToRemove:
  */
-            __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_verticesToRemove, ((PyObject *)__pyx_v_vertex)); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 924; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             goto __pyx_L30;
           }
           __pyx_L30:;
 
-          /* "rmgpy/molecule/graph.pyx":803
+          /* "rmgpy/molecule/graph.pyx":921
  *                     verticesToRemove = []
  * 
  *                     for vertex in cycle:             # <<<<<<<<<<<<<<
@@ -13345,7 +14592,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         }
         /*else*/ {
 
-          /* "rmgpy/molecule/graph.pyx":808
+          /* "rmgpy/molecule/graph.pyx":926
  *                             verticesToRemove.append(vertex)
  *                     else:
  *                         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
@@ -13356,26 +14603,26 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
           for (;;) {
             if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_2)) break;
             #if CYTHON_COMPILING_IN_CPYTHON
-            __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_14); __Pyx_INCREF(__pyx_t_4); __pyx_t_14++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 808; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_14); __Pyx_INCREF(__pyx_t_4); __pyx_t_14++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 926; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             #else
-            __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 808; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 926; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             #endif
-            if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 808; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 926; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             __Pyx_XDECREF_SET(__pyx_v_vertex, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_4));
             __pyx_t_4 = 0;
 
-            /* "rmgpy/molecule/graph.pyx":809
+            /* "rmgpy/molecule/graph.pyx":927
  *                     else:
  *                         for vertex in verticesToRemove:
  *                             graph.removeVertex(vertex)             # <<<<<<<<<<<<<<
  * 
  *         # Map atoms in cycles back to atoms in original graph
  */
-            __pyx_t_4 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 809; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_4 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_graph->__pyx_vtab)->removeVertex(__pyx_v_graph, __pyx_v_vertex, 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 927; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "rmgpy/molecule/graph.pyx":808
+            /* "rmgpy/molecule/graph.pyx":926
  *                             verticesToRemove.append(vertex)
  *                     else:
  *                         for vertex in verticesToRemove:             # <<<<<<<<<<<<<<
@@ -13386,7 +14633,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         }
 
-        /* "rmgpy/molecule/graph.pyx":803
+        /* "rmgpy/molecule/graph.pyx":921
  *                     verticesToRemove = []
  * 
  *                     for vertex in cycle:             # <<<<<<<<<<<<<<
@@ -13398,7 +14645,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
       __pyx_L17_continue:;
     }
 
-    /* "rmgpy/molecule/graph.pyx":766
+    /* "rmgpy/molecule/graph.pyx":884
  *         # Step 4: Find ring sets in each subgraph
  *         cycleList = []
  *         for graph in graphs:             # <<<<<<<<<<<<<<
@@ -13408,35 +14655,35 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":812
+  /* "rmgpy/molecule/graph.pyx":930
  * 
  *         # Map atoms in cycles back to atoms in original graph
  *         for i in range(len(cycleList)):             # <<<<<<<<<<<<<<
  *             cycleList[i] = [self.vertices[vertices.index(v)] for v in cycleList[i]]
  * 
  */
-  __pyx_t_7 = PyList_GET_SIZE(__pyx_v_cycleList); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 812; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyList_GET_SIZE(__pyx_v_cycleList); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 930; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "rmgpy/molecule/graph.pyx":813
+    /* "rmgpy/molecule/graph.pyx":931
  *         # Map atoms in cycles back to atoms in original graph
  *         for i in range(len(cycleList)):
  *             cycleList[i] = [self.vertices[vertices.index(v)] for v in cycleList[i]]             # <<<<<<<<<<<<<<
  * 
  *         return cycleList
  */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_cycleList, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_cycleList, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
     __Pyx_GOTREF(__pyx_t_3);
     if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
       __pyx_t_2 = __pyx_t_3; __Pyx_INCREF(__pyx_t_2); __pyx_t_14 = 0;
       __pyx_t_15 = NULL;
     } else {
-      __pyx_t_14 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_14 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_15 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_15 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     for (;;) {
@@ -13444,16 +14691,16 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         if (likely(PyList_CheckExact(__pyx_t_2))) {
           if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         } else {
           if (__pyx_t_14 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         }
       } else {
@@ -13462,7 +14709,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           }
           break;
         }
@@ -13472,9 +14719,9 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
       __pyx_t_3 = 0;
       if (unlikely(__pyx_v_self->vertices == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_vertices, __pyx_n_s_index); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_vertices, __pyx_n_s_index); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_16 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -13487,32 +14734,32 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
         }
       }
       if (!__pyx_t_16) {
-        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_v); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_v); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_3);
       } else {
-        __pyx_t_17 = PyTuple_New(1+1); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_17 = PyTuple_New(1+1); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_17);
         PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_16); __Pyx_GIVEREF(__pyx_t_16); __pyx_t_16 = NULL;
         __Pyx_INCREF(__pyx_v_v);
         PyTuple_SET_ITEM(__pyx_t_17, 0+1, __pyx_v_v);
         __Pyx_GIVEREF(__pyx_v_v);
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_17, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_17, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyObject_GetItem(__pyx_v_self->vertices, __pyx_t_3); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_4 = PyObject_GetItem(__pyx_v_self->vertices, __pyx_t_3); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(__Pyx_SetItemInt(__pyx_v_cycleList, __pyx_v_i, __pyx_t_1, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 813; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (unlikely(__Pyx_SetItemInt(__pyx_v_cycleList, __pyx_v_i, __pyx_t_1, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 931; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "rmgpy/molecule/graph.pyx":815
+  /* "rmgpy/molecule/graph.pyx":933
  *             cycleList[i] = [self.vertices[vertices.index(v)] for v in cycleList[i]]
  * 
  *         return cycleList             # <<<<<<<<<<<<<<
@@ -13524,7 +14771,7 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
   __pyx_r = __pyx_v_cycleList;
   goto __pyx_L0;
 
-  /* "rmgpy/molecule/graph.pyx":720
+  /* "rmgpy/molecule/graph.pyx":838
  *         return cycles
  * 
  *     cpdef list getSmallestSetOfSmallestRings(self):             # <<<<<<<<<<<<<<
@@ -13560,20 +14807,20 @@ static PyObject *__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallest
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63getSmallestSetOfSmallestRings(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmallestRings[] = "\n        Return a list of the smallest set of smallest rings in the graph. The\n        algorithm implements was adapted from a description by Fan, Panaye,\n        Doucet, and Barbu (doi: 10.1021/ci00015a002)\n\n        B. T. Fan, A. Panaye, J. P. Doucet, and A. Barbu. \"Ring Perception: A\n        New Algorithm for Directly Finding the Smallest Set of Smallest Rings\n        from a Connection Table.\" *J. Chem. Inf. Comput. Sci.* **33**,\n        p. 657-662 (1993).\n        ";
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63getSmallestSetOfSmallestRings(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65getSmallestSetOfSmallestRings(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_64getSmallestSetOfSmallestRings[] = "\n        Return a list of the smallest set of smallest rings in the graph. The\n        algorithm implements was adapted from a description by Fan, Panaye,\n        Doucet, and Barbu (doi: 10.1021/ci00015a002)\n\n        B. T. Fan, A. Panaye, J. P. Doucet, and A. Barbu. \"Ring Perception: A\n        New Algorithm for Directly Finding the Smallest Set of Smallest Rings\n        from a Connection Table.\" *J. Chem. Inf. Comput. Sci.* **33**,\n        p. 657-662 (1993).\n        ";
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65getSmallestSetOfSmallestRings(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getSmallestSetOfSmallestRings (wrapper)", 0);
-  __pyx_r = __pyx_pf_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmallestRings(((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self));
+  __pyx_r = __pyx_pf_5rmgpy_8molecule_5graph_5Graph_64getSmallestSetOfSmallestRings(((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmallestRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self) {
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_64getSmallestSetOfSmallestRings(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13582,7 +14829,7 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmall
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getSmallestSetOfSmallestRings", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallestRings(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 720; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallestRings(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -13599,7 +14846,7 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmall
   return __pyx_r;
 }
 
-/* "rmgpy/molecule/graph.pyx":817
+/* "rmgpy/molecule/graph.pyx":935
  *         return cycleList
  * 
  *     cpdef bint isMappingValid(self, Graph other, dict mapping) except -2:             # <<<<<<<<<<<<<<
@@ -13607,7 +14854,7 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmall
  *         Check that a proposed `mapping` of vertices from `self` to `other`
  */
 
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_67isMappingValid(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_other, PyObject *__pyx_v_mapping, int __pyx_skip_dispatch) {
   struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_vertex1 = 0;
   struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *__pyx_v_vertex2 = 0;
@@ -13642,9 +14889,9 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_isMappingValid); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_isMappingValid); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_67isMappingValid)) {
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
       __pyx_t_5 = 0;
@@ -13658,7 +14905,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
           __pyx_t_5 = 1;
         }
       }
-      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_6);
       if (__pyx_t_4) {
         PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
@@ -13669,11 +14916,11 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       __Pyx_INCREF(__pyx_v_mapping);
       PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_mapping);
       __Pyx_GIVEREF(__pyx_v_mapping);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_r = __pyx_t_7;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13682,7 +14929,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "rmgpy/molecule/graph.pyx":829
+  /* "rmgpy/molecule/graph.pyx":947
  * 
  *         # Check that the mapped pairs of vertices are equivalent
  *         for vertex1, vertex2 in mapping.items():             # <<<<<<<<<<<<<<
@@ -13691,17 +14938,17 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
   if (unlikely(__pyx_v_mapping == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "items");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_Items(__pyx_v_mapping); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_Items(__pyx_v_mapping); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
     __pyx_t_8 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_8 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_8 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -13709,16 +14956,16 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #endif
       }
     } else {
@@ -13727,7 +14974,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
         break;
       }
@@ -13743,7 +14990,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       #if CYTHON_COMPILING_IN_CPYTHON
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -13756,15 +15003,15 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_6);
       #else
-      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_9 = Py_TYPE(__pyx_t_4)->tp_iternext;
@@ -13772,7 +15019,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       __Pyx_GOTREF(__pyx_t_3);
       index = 1; __pyx_t_6 = __pyx_t_9(__pyx_t_4); if (unlikely(!__pyx_t_6)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_4), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_4), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_t_9 = NULL;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       goto __pyx_L6_unpacking_done;
@@ -13780,28 +15027,28 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_9 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_L6_unpacking_done:;
     }
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 829; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 947; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_XDECREF_SET(__pyx_v_vertex1, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_3));
     __pyx_t_3 = 0;
     __Pyx_XDECREF_SET(__pyx_v_vertex2, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_6));
     __pyx_t_6 = 0;
 
-    /* "rmgpy/molecule/graph.pyx":830
+    /* "rmgpy/molecule/graph.pyx":948
  *         # Check that the mapped pairs of vertices are equivalent
  *         for vertex1, vertex2 in mapping.items():
  *             if not vertex1.equivalent(vertex2):             # <<<<<<<<<<<<<<
  *                 return False
  * 
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Vertex *)__pyx_v_vertex1->__pyx_vtab)->equivalent(__pyx_v_vertex1, __pyx_v_vertex2, 0); if (unlikely(__pyx_t_7 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 830; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Vertex *)__pyx_v_vertex1->__pyx_vtab)->equivalent(__pyx_v_vertex1, __pyx_v_vertex2, 0); if (unlikely(__pyx_t_7 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 948; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_10 = ((!(__pyx_t_7 != 0)) != 0);
     if (__pyx_t_10) {
 
-      /* "rmgpy/molecule/graph.pyx":831
+      /* "rmgpy/molecule/graph.pyx":949
  *         for vertex1, vertex2 in mapping.items():
  *             if not vertex1.equivalent(vertex2):
  *                 return False             # <<<<<<<<<<<<<<
@@ -13813,7 +15060,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       goto __pyx_L0;
     }
 
-    /* "rmgpy/molecule/graph.pyx":829
+    /* "rmgpy/molecule/graph.pyx":947
  * 
  *         # Check that the mapped pairs of vertices are equivalent
  *         for vertex1, vertex2 in mapping.items():             # <<<<<<<<<<<<<<
@@ -13823,7 +15070,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":834
+  /* "rmgpy/molecule/graph.pyx":952
  * 
  *         # Check that any edges connected mapped vertices are equivalent
  *         vertices1 = mapping.keys()             # <<<<<<<<<<<<<<
@@ -13832,15 +15079,15 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
   if (unlikely(__pyx_v_mapping == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "keys");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 834; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 952; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_2 = __Pyx_PyDict_Keys(__pyx_v_mapping); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 834; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyDict_Keys(__pyx_v_mapping); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 952; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 834; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 952; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_vertices1 = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":835
+  /* "rmgpy/molecule/graph.pyx":953
  *         # Check that any edges connected mapped vertices are equivalent
  *         vertices1 = mapping.keys()
  *         vertices2 = mapping.values()             # <<<<<<<<<<<<<<
@@ -13849,15 +15096,15 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
   if (unlikely(__pyx_v_mapping == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "values");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 835; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 953; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_2 = __Pyx_PyDict_Values(__pyx_v_mapping); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 835; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyDict_Values(__pyx_v_mapping); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 953; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 835; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 953; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_vertices2 = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "rmgpy/molecule/graph.pyx":836
+  /* "rmgpy/molecule/graph.pyx":954
  *         vertices1 = mapping.keys()
  *         vertices2 = mapping.values()
  *         for i in range(len(vertices1)):             # <<<<<<<<<<<<<<
@@ -13866,13 +15113,13 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
   if (unlikely(__pyx_v_vertices1 == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 836; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 954; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_5 = PyList_GET_SIZE(__pyx_v_vertices1); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 836; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyList_GET_SIZE(__pyx_v_vertices1); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 954; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_5; __pyx_t_11+=1) {
     __pyx_v_i = __pyx_t_11;
 
-    /* "rmgpy/molecule/graph.pyx":837
+    /* "rmgpy/molecule/graph.pyx":955
  *         vertices2 = mapping.values()
  *         for i in range(len(vertices1)):
  *             for j in range(i+1, len(vertices1)):             # <<<<<<<<<<<<<<
@@ -13881,13 +15128,13 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
     if (unlikely(__pyx_v_vertices1 == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 837; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 955; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_12 = PyList_GET_SIZE(__pyx_v_vertices1); if (unlikely(__pyx_t_12 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 837; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_12 = PyList_GET_SIZE(__pyx_v_vertices1); if (unlikely(__pyx_t_12 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 955; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     for (__pyx_t_13 = (__pyx_v_i + 1); __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v_j = __pyx_t_13;
 
-      /* "rmgpy/molecule/graph.pyx":838
+      /* "rmgpy/molecule/graph.pyx":956
  *         for i in range(len(vertices1)):
  *             for j in range(i+1, len(vertices1)):
  *                 selfHasEdge = self.hasEdge(vertices1[i], vertices1[j])             # <<<<<<<<<<<<<<
@@ -13896,24 +15143,24 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
       if (unlikely(__pyx_v_vertices1 == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 956; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_2);
-      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       if (unlikely(__pyx_v_vertices1 == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 956; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_1);
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __pyx_t_10 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->hasEdge(__pyx_v_self, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), 0); if (unlikely(__pyx_t_10 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_10 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->hasEdge(__pyx_v_self, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), 0); if (unlikely(__pyx_t_10 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_v_selfHasEdge = __pyx_t_10;
 
-      /* "rmgpy/molecule/graph.pyx":839
+      /* "rmgpy/molecule/graph.pyx":957
  *             for j in range(i+1, len(vertices1)):
  *                 selfHasEdge = self.hasEdge(vertices1[i], vertices1[j])
  *                 otherHasEdge = other.hasEdge(vertices2[i], vertices2[j])             # <<<<<<<<<<<<<<
@@ -13922,24 +15169,24 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
       if (unlikely(__pyx_v_vertices2 == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 839; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 839; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_1);
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 839; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       if (unlikely(__pyx_v_vertices2 == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 839; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 839; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_2);
-      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 839; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __pyx_t_10 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_other->__pyx_vtab)->hasEdge(__pyx_v_other, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2), 0); if (unlikely(__pyx_t_10 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 839; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_10 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_other->__pyx_vtab)->hasEdge(__pyx_v_other, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2), 0); if (unlikely(__pyx_t_10 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_v_otherHasEdge = __pyx_t_10;
 
-      /* "rmgpy/molecule/graph.pyx":840
+      /* "rmgpy/molecule/graph.pyx":958
  *                 selfHasEdge = self.hasEdge(vertices1[i], vertices1[j])
  *                 otherHasEdge = other.hasEdge(vertices2[i], vertices2[j])
  *                 if selfHasEdge and otherHasEdge:             # <<<<<<<<<<<<<<
@@ -13959,7 +15206,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       __pyx_L13_bool_binop_done:;
       if (__pyx_t_10) {
 
-        /* "rmgpy/molecule/graph.pyx":842
+        /* "rmgpy/molecule/graph.pyx":960
  *                 if selfHasEdge and otherHasEdge:
  *                     # Both graphs have the edge, so we must check it for equivalence
  *                     edge1 = self.getEdge(vertices1[i], vertices1[j])             # <<<<<<<<<<<<<<
@@ -13968,26 +15215,26 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
         if (unlikely(__pyx_v_vertices1 == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 842; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 960; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
-        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 842; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 960; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
         __Pyx_GOTREF(__pyx_t_2);
-        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 842; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 960; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         if (unlikely(__pyx_v_vertices1 == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 842; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 960; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
-        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 842; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices1, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 960; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
         __Pyx_GOTREF(__pyx_t_1);
-        if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 842; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __pyx_t_6 = ((PyObject *)((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->getEdge(__pyx_v_self, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 842; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 960; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_6 = ((PyObject *)((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self->__pyx_vtab)->getEdge(__pyx_v_self, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_2), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 960; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF_SET(__pyx_v_edge1, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Edge *)__pyx_t_6));
         __pyx_t_6 = 0;
 
-        /* "rmgpy/molecule/graph.pyx":843
+        /* "rmgpy/molecule/graph.pyx":961
  *                     # Both graphs have the edge, so we must check it for equivalence
  *                     edge1 = self.getEdge(vertices1[i], vertices1[j])
  *                     edge2 = other.getEdge(vertices2[i], vertices2[j])             # <<<<<<<<<<<<<<
@@ -13996,37 +15243,37 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
  */
         if (unlikely(__pyx_v_vertices2 == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 843; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 961; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
-        __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 843; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+        __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 961; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
         __Pyx_GOTREF(__pyx_t_6);
-        if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 843; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 961; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         if (unlikely(__pyx_v_vertices2 == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 843; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 961; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
-        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 843; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_vertices2, __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 961; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
         __Pyx_GOTREF(__pyx_t_1);
-        if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 843; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __pyx_t_2 = ((PyObject *)((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_other->__pyx_vtab)->getEdge(__pyx_v_other, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_6), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 843; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5rmgpy_8molecule_5graph_Vertex))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 961; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = ((PyObject *)((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Graph *)__pyx_v_other->__pyx_vtab)->getEdge(__pyx_v_other, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_6), ((struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 961; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF_SET(__pyx_v_edge2, ((struct __pyx_obj_5rmgpy_8molecule_5graph_Edge *)__pyx_t_2));
         __pyx_t_2 = 0;
 
-        /* "rmgpy/molecule/graph.pyx":844
+        /* "rmgpy/molecule/graph.pyx":962
  *                     edge1 = self.getEdge(vertices1[i], vertices1[j])
  *                     edge2 = other.getEdge(vertices2[i], vertices2[j])
  *                     if not edge1.equivalent(edge2):             # <<<<<<<<<<<<<<
  *                         return False
  *                 elif selfHasEdge or otherHasEdge:
  */
-        __pyx_t_10 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Edge *)__pyx_v_edge1->__pyx_vtab)->equivalent(__pyx_v_edge1, __pyx_v_edge2, 0); if (unlikely(__pyx_t_10 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 844; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_10 = ((struct __pyx_vtabstruct_5rmgpy_8molecule_5graph_Edge *)__pyx_v_edge1->__pyx_vtab)->equivalent(__pyx_v_edge1, __pyx_v_edge2, 0); if (unlikely(__pyx_t_10 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 962; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __pyx_t_7 = ((!(__pyx_t_10 != 0)) != 0);
         if (__pyx_t_7) {
 
-          /* "rmgpy/molecule/graph.pyx":845
+          /* "rmgpy/molecule/graph.pyx":963
  *                     edge2 = other.getEdge(vertices2[i], vertices2[j])
  *                     if not edge1.equivalent(edge2):
  *                         return False             # <<<<<<<<<<<<<<
@@ -14039,7 +15286,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
         goto __pyx_L12;
       }
 
-      /* "rmgpy/molecule/graph.pyx":846
+      /* "rmgpy/molecule/graph.pyx":964
  *                     if not edge1.equivalent(edge2):
  *                         return False
  *                 elif selfHasEdge or otherHasEdge:             # <<<<<<<<<<<<<<
@@ -14059,7 +15306,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
       __pyx_L16_bool_binop_done:;
       if (__pyx_t_7) {
 
-        /* "rmgpy/molecule/graph.pyx":848
+        /* "rmgpy/molecule/graph.pyx":966
  *                 elif selfHasEdge or otherHasEdge:
  *                     # Only one of the graphs has the edge, so the mapping must be invalid
  *                     return False             # <<<<<<<<<<<<<<
@@ -14073,7 +15320,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
     }
   }
 
-  /* "rmgpy/molecule/graph.pyx":852
+  /* "rmgpy/molecule/graph.pyx":970
  *         # If we're here then the vertices and edges are equivalent, so the
  *         # mapping is valid
  *         return True             # <<<<<<<<<<<<<<
@@ -14081,7 +15328,7 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "rmgpy/molecule/graph.pyx":817
+  /* "rmgpy/molecule/graph.pyx":935
  *         return cycleList
  * 
  *     cpdef bint isMappingValid(self, Graph other, dict mapping) except -2:             # <<<<<<<<<<<<<<
@@ -14110,9 +15357,9 @@ static int __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(struct __pyx_ob
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_64isMappingValid[] = "\n        Check that a proposed `mapping` of vertices from `self` to `other`\n        is valid by checking that the vertices and edges involved in the\n        mapping are mutually equivalent.\n        ";
-static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_67isMappingValid(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_5rmgpy_8molecule_5graph_5Graph_66isMappingValid[] = "\n        Check that a proposed `mapping` of vertices from `self` to `other`\n        is valid by checking that the vertices and edges involved in the\n        mapping are mutually equivalent.\n        ";
+static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_67isMappingValid(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_other = 0;
   PyObject *__pyx_v_mapping = 0;
   int __pyx_lineno = 0;
@@ -14141,11 +15388,11 @@ static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid(PyObje
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_mapping)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("isMappingValid", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("isMappingValid", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "isMappingValid") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "isMappingValid") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -14158,15 +15405,15 @@ static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid(PyObje
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("isMappingValid", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("isMappingValid", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("rmgpy.molecule.graph.Graph.isMappingValid", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_5rmgpy_8molecule_5graph_Graph, 1, "other", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mapping), (&PyDict_Type), 1, "mapping", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_5rmgpy_8molecule_5graph_5Graph_64isMappingValid(((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self), __pyx_v_other, __pyx_v_mapping);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_5rmgpy_8molecule_5graph_Graph, 1, "other", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mapping), (&PyDict_Type), 1, "mapping", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_r = __pyx_pf_5rmgpy_8molecule_5graph_5Graph_66isMappingValid(((struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *)__pyx_v_self), __pyx_v_other, __pyx_v_mapping);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14177,7 +15424,7 @@ static PyObject *__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid(PyObje
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_64isMappingValid(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_other, PyObject *__pyx_v_mapping) {
+static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_66isMappingValid(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_self, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *__pyx_v_other, PyObject *__pyx_v_mapping) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -14187,8 +15434,8 @@ static PyObject *__pyx_pf_5rmgpy_8molecule_5graph_5Graph_64isMappingValid(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("isMappingValid", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(__pyx_v_self, __pyx_v_other, __pyx_v_mapping, 1); if (unlikely(__pyx_t_1 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 817; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid(__pyx_v_self, __pyx_v_other, __pyx_v_mapping, 1); if (unlikely(__pyx_t_1 == -2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 935; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -14797,9 +16044,10 @@ static PyMethodDef __pyx_methods_5rmgpy_8molecule_5graph_Graph[] = {
   {"getMonocyclicRings", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_55getMonocyclicRings, METH_NOARGS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_54getMonocyclicRings},
   {"getDisparateRings", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_57getDisparateRings, METH_NOARGS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_56getDisparateRings},
   {"getAllCycles", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_59getAllCycles, METH_O, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_58getAllCycles},
-  {"__exploreCyclesRecursively", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61__exploreCyclesRecursively, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_60__exploreCyclesRecursively},
-  {"getSmallestSetOfSmallestRings", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63getSmallestSetOfSmallestRings, METH_NOARGS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_62getSmallestSetOfSmallestRings},
-  {"isMappingValid", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65isMappingValid, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_64isMappingValid},
+  {"getAllCyclesOfSize", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_61getAllCyclesOfSize, METH_O, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_60getAllCyclesOfSize},
+  {"__exploreCyclesRecursively", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_63__exploreCyclesRecursively, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_62__exploreCyclesRecursively},
+  {"getSmallestSetOfSmallestRings", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_65getSmallestSetOfSmallestRings, METH_NOARGS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_64getSmallestSetOfSmallestRings},
+  {"isMappingValid", (PyCFunction)__pyx_pw_5rmgpy_8molecule_5graph_5Graph_67isMappingValid, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5rmgpy_8molecule_5graph_5Graph_66isMappingValid},
   {0, 0, 0, 0}
 };
 
@@ -14911,6 +16159,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_findIsomorphism, __pyx_k_findIsomorphism, sizeof(__pyx_k_findIsomorphism), 0, 0, 1, 1},
   {&__pyx_n_s_findSubgraphIsomorphisms, __pyx_k_findSubgraphIsomorphisms, sizeof(__pyx_k_findSubgraphIsomorphisms), 0, 0, 1, 1},
   {&__pyx_n_s_getAllCycles, __pyx_k_getAllCycles, sizeof(__pyx_k_getAllCycles), 0, 0, 1, 1},
+  {&__pyx_n_s_getAllCyclesOfSize, __pyx_k_getAllCyclesOfSize, sizeof(__pyx_k_getAllCyclesOfSize), 0, 0, 1, 1},
   {&__pyx_n_s_getAllCyclicVertices, __pyx_k_getAllCyclicVertices, sizeof(__pyx_k_getAllCyclicVertices), 0, 0, 1, 1},
   {&__pyx_n_s_getAllPolycyclicVertices, __pyx_k_getAllPolycyclicVertices, sizeof(__pyx_k_getAllPolycyclicVertices), 0, 0, 1, 1},
   {&__pyx_n_s_getDisparateRings, __pyx_k_getDisparateRings, sizeof(__pyx_k_getDisparateRings), 0, 0, 1, 1},
@@ -14967,7 +16216,7 @@ static int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 431; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 812; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 791; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -15155,6 +16404,7 @@ PyMODINIT_FUNC PyInit_graph(void)
   __pyx_vtable_5rmgpy_8molecule_5graph_Graph.getMonocyclicRings = (PyObject *(*)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch))__pyx_f_5rmgpy_8molecule_5graph_5Graph_getMonocyclicRings;
   __pyx_vtable_5rmgpy_8molecule_5graph_Graph.getDisparateRings = (PyObject *(*)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch))__pyx_f_5rmgpy_8molecule_5graph_5Graph_getDisparateRings;
   __pyx_vtable_5rmgpy_8molecule_5graph_Graph.getAllCycles = (PyObject *(*)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Vertex *, int __pyx_skip_dispatch))__pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCycles;
+  __pyx_vtable_5rmgpy_8molecule_5graph_Graph.getAllCyclesOfSize = (PyObject *(*)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int, int __pyx_skip_dispatch))__pyx_f_5rmgpy_8molecule_5graph_5Graph_getAllCyclesOfSize;
   __pyx_vtable_5rmgpy_8molecule_5graph_Graph.__pyx___exploreCyclesRecursively = (PyObject *(*)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, PyObject *, int __pyx_skip_dispatch))__pyx_f_5rmgpy_8molecule_5graph_5Graph___exploreCyclesRecursively;
   __pyx_vtable_5rmgpy_8molecule_5graph_Graph.getSmallestSetOfSmallestRings = (PyObject *(*)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, int __pyx_skip_dispatch))__pyx_f_5rmgpy_8molecule_5graph_5Graph_getSmallestSetOfSmallestRings;
   __pyx_vtable_5rmgpy_8molecule_5graph_Graph.isMappingValid = (int (*)(struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, struct __pyx_obj_5rmgpy_8molecule_5graph_Graph *, PyObject *, int __pyx_skip_dispatch))__pyx_f_5rmgpy_8molecule_5graph_5Graph_isMappingValid;
@@ -16210,6 +17460,54 @@ static CYTHON_INLINE PyObject* __Pyx_PyTuple_GetSlice(
 }
 #endif
 
+static CYTHON_INLINE int __Pyx_SetItemInt_Generic(PyObject *o, PyObject *j, PyObject *v) {
+    int r;
+    if (!j) return -1;
+    r = PyObject_SetItem(o, j, v);
+    Py_DECREF(j);
+    return r;
+}
+static CYTHON_INLINE int __Pyx_SetItemInt_Fast(PyObject *o, Py_ssize_t i, PyObject *v,
+                                               int is_list, int wraparound, int boundscheck) {
+#if CYTHON_COMPILING_IN_CPYTHON
+    if (is_list || PyList_CheckExact(o)) {
+        Py_ssize_t n = (!wraparound) ? i : ((likely(i >= 0)) ? i : i + PyList_GET_SIZE(o));
+        if ((!boundscheck) || likely((n >= 0) & (n < PyList_GET_SIZE(o)))) {
+            PyObject* old = PyList_GET_ITEM(o, n);
+            Py_INCREF(v);
+            PyList_SET_ITEM(o, n, v);
+            Py_DECREF(old);
+            return 1;
+        }
+    } else {
+        PySequenceMethods *m = Py_TYPE(o)->tp_as_sequence;
+        if (likely(m && m->sq_ass_item)) {
+            if (wraparound && unlikely(i < 0) && likely(m->sq_length)) {
+                Py_ssize_t l = m->sq_length(o);
+                if (likely(l >= 0)) {
+                    i += l;
+                } else {
+                    if (PyErr_ExceptionMatches(PyExc_OverflowError))
+                        PyErr_Clear();
+                    else
+                        return -1;
+                }
+            }
+            return m->sq_ass_item(o, i, v);
+        }
+    }
+#else
+#if CYTHON_COMPILING_IN_PYPY
+    if (is_list || (PySequence_Check(o) && !PyDict_Check(o))) {
+#else
+    if (is_list || PySequence_Check(o)) {
+#endif
+        return PySequence_SetItem(o, i, v);
+    }
+#endif
+    return __Pyx_SetItemInt_Generic(o, PyInt_FromSsize_t(i), v);
+}
+
 static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name, PyObject* arg) {
     PyObject *method, *result = NULL;
     method = __Pyx_PyObject_GetAttrStr(obj, method_name);
@@ -16266,54 +17564,6 @@ static PyObject* __Pyx__PyList_PopIndex(PyObject* L, Py_ssize_t ix) {
     }
 #endif
     return __Pyx__PyObject_PopIndex(L, PyInt_FromSsize_t(ix));
-}
-
-static CYTHON_INLINE int __Pyx_SetItemInt_Generic(PyObject *o, PyObject *j, PyObject *v) {
-    int r;
-    if (!j) return -1;
-    r = PyObject_SetItem(o, j, v);
-    Py_DECREF(j);
-    return r;
-}
-static CYTHON_INLINE int __Pyx_SetItemInt_Fast(PyObject *o, Py_ssize_t i, PyObject *v,
-                                               int is_list, int wraparound, int boundscheck) {
-#if CYTHON_COMPILING_IN_CPYTHON
-    if (is_list || PyList_CheckExact(o)) {
-        Py_ssize_t n = (!wraparound) ? i : ((likely(i >= 0)) ? i : i + PyList_GET_SIZE(o));
-        if ((!boundscheck) || likely((n >= 0) & (n < PyList_GET_SIZE(o)))) {
-            PyObject* old = PyList_GET_ITEM(o, n);
-            Py_INCREF(v);
-            PyList_SET_ITEM(o, n, v);
-            Py_DECREF(old);
-            return 1;
-        }
-    } else {
-        PySequenceMethods *m = Py_TYPE(o)->tp_as_sequence;
-        if (likely(m && m->sq_ass_item)) {
-            if (wraparound && unlikely(i < 0) && likely(m->sq_length)) {
-                Py_ssize_t l = m->sq_length(o);
-                if (likely(l >= 0)) {
-                    i += l;
-                } else {
-                    if (PyErr_ExceptionMatches(PyExc_OverflowError))
-                        PyErr_Clear();
-                    else
-                        return -1;
-                }
-            }
-            return m->sq_ass_item(o, i, v);
-        }
-    }
-#else
-#if CYTHON_COMPILING_IN_PYPY
-    if (is_list || (PySequence_Check(o) && !PyDict_Check(o))) {
-#else
-    if (is_list || PySequence_Check(o)) {
-#endif
-        return PySequence_SetItem(o, i, v);
-    }
-#endif
-    return __Pyx_SetItemInt_Generic(o, PyInt_FromSsize_t(i), v);
 }
 
 static CYTHON_INLINE PyObject* __Pyx_PyDict_Items(PyObject* d) {
@@ -16747,58 +17997,6 @@ bad:
     return module;
 }
 
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
-    const long neg_one = (long) -1, const_zero = 0;
-    const int is_unsigned = neg_one > const_zero;
-    if (is_unsigned) {
-        if (sizeof(long) < sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(long) <= sizeof(unsigned long)) {
-            return PyLong_FromUnsignedLong((unsigned long) value);
-        } else if (sizeof(long) <= sizeof(unsigned long long)) {
-            return PyLong_FromUnsignedLongLong((unsigned long long) value);
-        }
-    } else {
-        if (sizeof(long) <= sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(long) <= sizeof(long long)) {
-            return PyLong_FromLongLong((long long) value);
-        }
-    }
-    {
-        int one = 1; int little = (int)*(unsigned char *)&one;
-        unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(long),
-                                     little, !is_unsigned);
-    }
-}
-
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
-    const int neg_one = (int) -1, const_zero = 0;
-    const int is_unsigned = neg_one > const_zero;
-    if (is_unsigned) {
-        if (sizeof(int) < sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(int) <= sizeof(unsigned long)) {
-            return PyLong_FromUnsignedLong((unsigned long) value);
-        } else if (sizeof(int) <= sizeof(unsigned long long)) {
-            return PyLong_FromUnsignedLongLong((unsigned long long) value);
-        }
-    } else {
-        if (sizeof(int) <= sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(int) <= sizeof(long long)) {
-            return PyLong_FromLongLong((long long) value);
-        }
-    }
-    {
-        int one = 1; int little = (int)*(unsigned char *)&one;
-        unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(int),
-                                     little, !is_unsigned);
-    }
-}
-
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {
     const int neg_one = (int) -1, const_zero = 0;
     const int is_unsigned = neg_one > const_zero;
@@ -16892,6 +18090,58 @@ raise_neg_overflow:
     PyErr_SetString(PyExc_OverflowError,
         "can't convert negative value to int");
     return (int) -1;
+}
+
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
+    const long neg_one = (long) -1, const_zero = 0;
+    const int is_unsigned = neg_one > const_zero;
+    if (is_unsigned) {
+        if (sizeof(long) < sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(long) <= sizeof(unsigned long)) {
+            return PyLong_FromUnsignedLong((unsigned long) value);
+        } else if (sizeof(long) <= sizeof(unsigned long long)) {
+            return PyLong_FromUnsignedLongLong((unsigned long long) value);
+        }
+    } else {
+        if (sizeof(long) <= sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(long) <= sizeof(long long)) {
+            return PyLong_FromLongLong((long long) value);
+        }
+    }
+    {
+        int one = 1; int little = (int)*(unsigned char *)&one;
+        unsigned char *bytes = (unsigned char *)&value;
+        return _PyLong_FromByteArray(bytes, sizeof(long),
+                                     little, !is_unsigned);
+    }
+}
+
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
+    const int neg_one = (int) -1, const_zero = 0;
+    const int is_unsigned = neg_one > const_zero;
+    if (is_unsigned) {
+        if (sizeof(int) < sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(int) <= sizeof(unsigned long)) {
+            return PyLong_FromUnsignedLong((unsigned long) value);
+        } else if (sizeof(int) <= sizeof(unsigned long long)) {
+            return PyLong_FromUnsignedLongLong((unsigned long long) value);
+        }
+    } else {
+        if (sizeof(int) <= sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(int) <= sizeof(long long)) {
+            return PyLong_FromLongLong((long long) value);
+        }
+    }
+    {
+        int one = 1; int little = (int)*(unsigned char *)&one;
+        unsigned char *bytes = (unsigned char *)&value;
+        return _PyLong_FromByteArray(bytes, sizeof(int),
+                                     little, !is_unsigned);
+    }
 }
 
 static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {

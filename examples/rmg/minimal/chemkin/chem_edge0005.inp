@@ -74,7 +74,7 @@ END
 
 REACTIONS    KCAL/MOLE   MOLES
 
-CH2(2)+C(3)=ethane(1)                               3.494e+12 0.189     -0.354   
+C(3)+CH2(2)=ethane(1)                               3.494e+12 0.189     -0.354   
 
 CH3(4)+CH3(4)=ethane(1)                             8.260e+17 -1.400    1.000    
 
