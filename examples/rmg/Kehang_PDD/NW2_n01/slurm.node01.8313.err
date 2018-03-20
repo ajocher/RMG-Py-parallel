@@ -1,0 +1,22 @@
+discarding /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin from PATH
+prepending /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin to PATH
+Launching 2 worker(s) using /bin/bash.
+DEBUG:SCOOPLogger:192.168.2.1:54444: Could not send result directly to peer 192.168.2.1:61423, routing through broker.
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 298, in <module>
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 92, in main
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 285, in run
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 266, in futures_startup
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/futures.py", line 65, in _startup
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 258, in runController
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_types.py", line 352, in pop
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_types.py", line 375, in updateQueue
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_comm/scoopzmq.py", line 350, in recvFuture
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_comm/scoopzmq.py", line 251, in _recv
+AttributeError: 'tuple' object has no attribute 'sendResultBack'
+Resource temporarily unavailable (src/signaler.cpp:301)
+discarding /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin from PATH

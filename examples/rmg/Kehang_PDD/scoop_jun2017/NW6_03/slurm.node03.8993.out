@@ -1,0 +1,62 @@
+[2018-03-20 12:22:50,522] launcher  INFO    SCOOP 0.7 2.0 on linux2 using Python 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) [GCC 4.4.7 20120313 (Red Hat 4.4.7-1)], API: 1013
+[2018-03-20 12:22:50,522] launcher  INFO    Detected SLURM environment.
+[2018-03-20 12:22:50,522] launcher  INFO    Deploying 6 worker(s) over 1 host(s).
+[2018-03-20 12:22:50,522] launcher  DEBUG   Using hostname/ip: "node03" as external broker reference.
+[2018-03-20 12:22:50,522] launcher  DEBUG   The python executable to execute the program with is: /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python.
+[2018-03-20 12:22:50,522] launcher  INFO    Worker d--istribution: 
+[2018-03-20 12:22:50,522] launcher  INFO       node03:	5 + origin
+[2018-03-20 12:22:50,870] brokerLaunch (127.0.0.1:43406) DEBUG   Local broker launched on ports 43406, 37444.
+[2018-03-20 12:22:50,870] launcher  (127.0.0.1:43406) DEBUG   Initialising local origin worker 6 [node03].
+[2018-03-20 12:22:50,870] launcher  (127.0.0.1:43406) DEBUG   node03: Launching 'env PYTHONPATH=:/data1/ajocher/codes/RMG/RMG-Py:/data1/ajocher/codes/RMG/RMG-database/::/data1/ajocher/codes/RMG/RMG-Py:/data1/ajocher/codes/RMG/RMG-database/ /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin/python -m scoop.launch.__main__ 6 2 --size 6 --workingDirectory /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/Kehang_PDD/scoop_jun2017/NW6_03 --brokerHostname 127.0.0.1 --externalBrokerHostname node03 --taskPort 43406 --metaPort 37444 --origin --backend=ZMQ -vv ../../../../../rmg.py -pi input_pdd_pruning.py'
+[2018-03-20 12:22:52,932] _control  (192.168.2.3:49732) DEBUG   The following error occured on a worker:
+ImportError('No module named py_rdl',)
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../rmg.py", line 41, in <module>
+    from rmgpy.rmg.main import RMG, initializeLog, process_profile_stats, make_profile_graph, process_profile_history
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/rmg/main.py", line 46, in <module>
+    from rmgpy.constraints import failsSpeciesConstraints
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/constraints.py", line 33, in <module>
+    from rmgpy.molecule.element import getElement
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/molecule/__init__.py", line 33, in <module>
+    from .molecule import *
+  File "rmgpy/molecule/molecule.py", line 1, in init rmgpy.molecule.molecule
+    #!/usr/bin/env python
+  File "rmgpy/molecule/graph.pyx", line 37, in init rmgpy.molecule.graph
+    import py_rdl
+ImportError: No module named py_rdl
+
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_control.py", line 150, in runFuture
+    future.resultValue = future.callable(*future.args, **future.kargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 252, in run_path
+    return _run_module_code(code, init_globals, run_name, path_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 82, in _run_module_code
+    mod_name, mod_fname, mod_loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "../../../../../rmg.py", line 41, in <module>
+    from rmgpy.rmg.main import RMG, initializeLog, process_profile_stats, make_profile_graph, process_profile_history
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/rmg/main.py", line 46, in <module>
+    from rmgpy.constraints import failsSpeciesConstraints
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/constraints.py", line 33, in <module>
+    from rmgpy.molecule.element import getElement
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/molecule/__init__.py", line 33, in <module>
+    from .molecule import *
+  File "rmgpy/molecule/molecule.py", line 1, in init rmgpy.molecule.molecule
+    #!/usr/bin/env python
+  File "rmgpy/molecule/graph.pyx", line 37, in init rmgpy.molecule.graph
+    import py_rdl
+ImportError: No module named py_rdl
+
+[2018-03-20 12:22:52,962] launcher  (127.0.0.1:43406) INFO    Root process is done.
+[2018-03-20 12:22:52,963] workerLaunch (127.0.0.1:43406) DEBUG   Closing workers on node03 (6 workers).
+[2018-03-20 12:22:52,963] brokerLaunch (127.0.0.1:43406) DEBUG   Closing local broker.
+[2018-03-20 12:22:52,963] launcher  (127.0.0.1:43406) INFO    Finished cleaning spawned subprocesses.

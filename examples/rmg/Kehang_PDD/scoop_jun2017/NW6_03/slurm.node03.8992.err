@@ -1,0 +1,31 @@
+[2018-03-20 12:20:44,594] launcher  INFO    SCOOP 0.7 2.0 on linux2 using Python 2.7.14 |Anaconda, Inc.| (default, Mar 12 2018, 12:37:12) [GCC 7.2.0], API: 1013
+[2018-03-20 12:20:44,594] launcher  INFO    Detected SLURM environment.
+[2018-03-20 12:20:44,594] launcher  INFO    Deploying 6 worker(s) over 1 host(s).
+[2018-03-20 12:20:44,594] launcher  DEBUG   Using hostname/ip: "node03" as external broker reference.
+[2018-03-20 12:20:44,594] launcher  DEBUG   The python executable to execute the program with is: /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/bin/python.
+[2018-03-20 12:20:44,594] launcher  INFO    Worker d--istribution: 
+[2018-03-20 12:20:44,594] launcher  INFO       node03:	5 + origin
+[2018-03-20 12:20:44,764] brokerLaunch (127.0.0.1:45835) DEBUG   Local broker launched on ports 45835, 35908.
+[2018-03-20 12:20:44,764] launcher  (127.0.0.1:45835) DEBUG   Initialising local origin worker 6 [node03].
+[2018-03-20 12:20:44,764] launcher  (127.0.0.1:45835) DEBUG   node03: Launching 'env PYTHONPATH=:/data1/ajocher/codes/RMG/RMG-Py:/data1/ajocher/codes/RMG/RMG-database/::/data1/ajocher/codes/RMG/RMG-Py:/data1/ajocher/codes/RMG/RMG-database/ /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/bin/python -m scoop.launch.__main__ 6 2 --size 6 --workingDirectory /data1/ajocher/codes/RMG/RMG_parallel/RMG-Py/examples/rmg/Kehang_PDD/scoop_jun2017/NW6_03 --brokerHostname 127.0.0.1 --externalBrokerHostname node03 --taskPort 45835 --metaPort 35908 --origin --backend=ZMQ -vv ../../../../../rmg.py -pi input_pdd_pruning.py'
+Launching 6 worker(s) using /bin/bash.
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/lib/python2.7/site-packages/scoop/bootstrap/__main__.py", line 298, in <module>
+    b.main()
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/lib/python2.7/site-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/lib/python2.7/site-packages/scoop/bootstrap/__main__.py", line 255, in run
+    from scoop import futures
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/lib/python2.7/site-packages/scoop/futures.py", line 27, in <module>
+    from ._types import Future, CallbackType
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_scoop_env/lib/python2.7/site-packages/scoop/_types.py", line 21, in <module>
+    import greenlet
+ImportError: No module named greenlet
+[2018-03-20 12:20:45,051] launcher  (127.0.0.1:45835) INFO    Root process is done.
+[2018-03-20 12:20:45,051] workerLaunch (127.0.0.1:45835) DEBUG   Closing workers on node03 (6 workers).
+[2018-03-20 12:20:45,051] brokerLaunch (127.0.0.1:45835) DEBUG   Closing local broker.
+[2018-03-20 12:20:45,051] launcher  (127.0.0.1:45835) INFO    Finished cleaning spawned subprocesses.

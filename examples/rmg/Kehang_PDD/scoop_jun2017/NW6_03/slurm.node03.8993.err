@@ -1,0 +1,101 @@
+Launching 6 worker(s) using /bin/bash.
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+        "__main__", fname, loader, pkg_name)
+"__main__", fname, loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    "__main__", fname, loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    "__main__", fname, loader, pkg_name)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 298, in <module>
+    exec code in run_globals
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 298, in <module>
+    exec code in run_globals
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 298, in <module>
+    exec code in run_globals
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 298, in <module>
+    exec code in run_globals
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 298, in <module>
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 92, in main
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 92, in main
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 92, in main
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 92, in main
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 92, in main
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 252, in run
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 252, in run
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 252, in run
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 252, in run
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 213, in setupEnvironment
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 252, in run
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 213, in setupEnvironment
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 213, in setupEnvironment
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 213, in setupEnvironment
+  File "../../../../../rmg.py", line 41, in <module>
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/bootstrap/__main__.py", line 213, in setupEnvironment
+  File "../../../../../rmg.py", line 41, in <module>
+  File "../../../../../rmg.py", line 41, in <module>
+  File "../../../../../rmg.py", line 41, in <module>
+  File "../../../../../rmg.py", line 41, in <module>
+    from rmgpy.rmg.main import RMG, initializeLog, process_profile_stats, make_profile_graph, process_profile_history
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/rmg/main.py", line 46, in <module>
+        from rmgpy.rmg.main import RMG, initializeLog, process_profile_stats, make_profile_graph, process_profile_history
+from rmgpy.rmg.main import RMG, initializeLog, process_profile_stats, make_profile_graph, process_profile_history
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/rmg/main.py", line 46, in <module>
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/rmg/main.py", line 46, in <module>
+    from rmgpy.rmg.main import RMG, initializeLog, process_profile_stats, make_profile_graph, process_profile_history
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/rmg/main.py", line 46, in <module>
+    from rmgpy.rmg.main import RMG, initializeLog, process_profile_stats, make_profile_graph, process_profile_history
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/rmg/main.py", line 46, in <module>
+    from rmgpy.constraints import failsSpeciesConstraints
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/constraints.py", line 33, in <module>
+        from rmgpy.constraints import failsSpeciesConstraints
+from rmgpy.constraints import failsSpeciesConstraints
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/constraints.py", line 33, in <module>
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/constraints.py", line 33, in <module>
+    from rmgpy.constraints import failsSpeciesConstraints
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/constraints.py", line 33, in <module>
+    from rmgpy.constraints import failsSpeciesConstraints
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/constraints.py", line 33, in <module>
+    from rmgpy.molecule.element import getElement
+      File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/molecule/__init__.py", line 33, in <module>
+from rmgpy.molecule.element import getElement
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/molecule/__init__.py", line 33, in <module>
+    from rmgpy.molecule.element import getElement
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/molecule/__init__.py", line 33, in <module>
+    from rmgpy.molecule.element import getElement
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/molecule/__init__.py", line 33, in <module>
+    from rmgpy.molecule.element import getElement
+  File "/data1/ajocher/codes/RMG/RMG-Py/rmgpy/molecule/__init__.py", line 33, in <module>
+    from .molecule import *
+  File "rmgpy/molecule/molecule.py", line 1, in init rmgpy.molecule.molecule
+    from .molecule import *
+  File "rmgpy/molecule/molecule.py", line 1, in init rmgpy.molecule.molecule
+    from .molecule import *
+      File "rmgpy/molecule/molecule.py", line 1, in init rmgpy.molecule.molecule
+from .molecule import *
+  File "rmgpy/molecule/molecule.py", line 1, in init rmgpy.molecule.molecule
+    from .molecule import *
+  File "rmgpy/molecule/molecule.py", line 1, in init rmgpy.molecule.molecule
+  File "rmgpy/molecule/graph.pyx", line 37, in init rmgpy.molecule.graph
+  File "rmgpy/molecule/graph.pyx", line 37, in init rmgpy.molecule.graph
+  File "rmgpy/molecule/graph.pyx", line 37, in init rmgpy.molecule.graph
+  File "rmgpy/molecule/graph.pyx", line 37, in init rmgpy.molecule.graph
+  File "rmgpy/molecule/graph.pyx", line 37, in init rmgpy.molecule.graph
+ImportError: ImportErrorImportErrorNo module named py_rdl: : 
+No module named py_rdl
+No module named py_rdl
+ImportErrorImportError: : No module named py_rdlNo module named py_rdl
+

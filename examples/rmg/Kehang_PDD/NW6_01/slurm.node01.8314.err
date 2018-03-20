@@ -1,0 +1,18 @@
+discarding /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin from PATH
+prepending /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin to PATH
+Launching 6 worker(s) using /bin/bash.
+DEBUG:SCOOPLogger:192.168.2.1:57580: Could not send result directly to peer 192.168.2.1:55315, routing through broker.
+DEBUG:SCOOPLogger:192.168.2.1:58551: Could not send result directly to peer 192.168.2.1:55315, routing through broker.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_comm/scoopzmq.py", line 191, in _reportFutures
+    fids.update(set(x.id for x in scoop._control.execQueue.inprogress))
+  File "/data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/lib/python2.7/site-packages/scoop-0.7.2.0-py2.7.egg/scoop/_comm/scoopzmq.py", line 191, in <genexpr>
+    fids.update(set(x.id for x in scoop._control.execQueue.inprogress))
+RuntimeError: Set changed size during iteration
+
+discarding /data1/ajocher/codes/RMG/miniconda2/envs/rmg_parallel_env/bin from PATH
